@@ -28,6 +28,7 @@ export default {
   },
   mounted() {
     this.token = this.$route.query.token;
+    window.axios.defaults.headers.common['Authorization'] = 'jwt ' + this.token
     let temp = VueJwtDecode.decode(this.token)
     temp['token'] = this.token
     localStorage.setItem('user', JSON.stringify(temp));
