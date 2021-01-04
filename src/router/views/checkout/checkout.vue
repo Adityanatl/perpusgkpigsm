@@ -111,7 +111,7 @@ export default {
 <!--            <div class="card">-->
 <!--              <div class="card-body">-->
 
-{{selectedKonter}}
+
                   <h4 class="card-title mb-4">Metode Pembayaran</h4>
         <hr>
         <b-card  class="custom-accordion shadow-none mb-3" style="margin-left: -20px; margin-right: -20px">
@@ -238,8 +238,6 @@ export default {
               <p style="color:#373334">Subtotal</p>
               <h5 style="color:#00AFEF;"><b>Rp {{product.price}}</b></h5>
             </div>
-            {{selectedKonter}}
-            {{product}}
             <div class="text-center">
               <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
             </div>
