@@ -4,7 +4,7 @@ import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 
 // import { tableData } from "./dataAdvancedtable";
-
+import VueJwtDecode from 'vue-jwt-decode'
 /**
  * Advanced table component
  */
@@ -13,7 +13,7 @@ export default {
     title: "Products",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout, PageHeader },
+  components: { Layout, PageHeader, VueJwtDecode },
   data() {
     return {
       // tableData: [],
@@ -28,7 +28,9 @@ export default {
   },
   mounted() {
     this.token = this.$route.query.token;
-    axios.defaults.headers.common['Authorization'] = 'jwt ' + this.token;
+    let temp = VueJwtDecode.decode(this.token)
+    temp['token'] = this.token
+    localStorage.setItem('user', JSON.stringify(temp));
     this.getListProduct();
 
   },
@@ -47,8 +49,9 @@ export default {
       })
     },
     updateCart(itemProduct){
+      localStorage.setItem('cart', JSON.stringify(itemProduct))
       this.$store.dispatch('product/UPDATE_PRODUCT_CART',itemProduct)
-      this.$router.push('/checkout?token='+this.token)
+      this.$router.push('/checkout')
     }
 
   },

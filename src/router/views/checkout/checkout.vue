@@ -35,9 +35,9 @@ export default {
   computed: {
   },
   mounted() {
-    this.token = this.$route.query.token;
-    axios.defaults.headers.common['Authorization'] = 'jwt ' + this.token;
-    this.product = this.$store.getters['product/cart']
+    //this.product = this.$store.getters['product/cart']
+    this.product = JSON.parse(localStorage.getItem('cart'))
+    console.log('this.product ',this.product)
     this.getListPaymentMethodes()
 
   },
@@ -69,10 +69,16 @@ export default {
       ).then(() => {
         let resp = this.$store.getters['transaction/transaction']
         this.successmsg()
+        localStorage.removeItem('cart');
         window.location = resp.redirect_url
-        // this.$router.go(resp.redirect_url)
       }).catch(function () {
-        this.warningmessage('Failed to procces')
+        Vue.swal({
+          position: "top-end",
+          icon: "warning",
+          title: 'Failed to procces',
+          showConfirmButton: false,
+          timer: 1500
+        });
       })
 
 

@@ -37,7 +37,6 @@ export const actions = {
     },
   GET_PRODUCTS: async({commit}, args) => {
     commit("LOADING")
-      console.log('args ',args)
     var params = queryString.stringify({
       ...{
           limit: 10,
