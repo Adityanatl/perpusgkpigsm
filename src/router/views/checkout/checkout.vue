@@ -2,6 +2,7 @@
 import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
+import Vue from "vue";
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -23,7 +24,12 @@ export default {
       listPaymentMethodes: [],
       monthly_price: [],
       product:{},
-      selectedKonter: null
+      selectedKonter: null,
+      payload:{
+        "product_id":0,
+        "qty":0,
+        "payment_methode_id":0
+      }
     };
   },
   computed: {
@@ -49,10 +55,46 @@ export default {
       this.$store.dispatch('paymentmethode/GET_PAYMENT_METHODES',{params:paramsTemp}).then(()=>{
         this.listPaymentMethodes = this.$store.getters['paymentmethode/payment_methodes']
       })
-    },    updateCart(itemProduct){
+    },
+    updateCart(itemProduct){
       this.$store.dispatch('product/GET_PRODUCTS',itemProduct)
-    }
+    },
+    postCheckout(){
+      this.payload.product_id = this.product.id
+      this.payload.qty = 1
+      this.payload.payment_methode_id = this.selectedKonter.id
 
+      this.$store.dispatch(
+              'transaction/POST_TRANSACTION', this.payload
+      ).then(() => {
+        let resp = this.$store.getters['transaction/transaction']
+        this.successmsg()
+        window.location = resp.redirect_url
+        // this.$router.go(resp.redirect_url)
+      }).catch(function () {
+        this.warningmessage('Failed to procces')
+      })
+
+
+    },
+    warningmessage(text_data) {
+      Vue.swal({
+        position: "top-end",
+        icon: "warning",
+        title: text_data,
+        showConfirmButton: false,
+        timer: 1500
+      });
+    },
+    successmsg() {
+      Vue.swal({
+        position: "top-end",
+        icon: "success",
+        title: "Your transaction has been procced",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    },
   },
 
 };
@@ -196,8 +238,10 @@ export default {
               <p style="color:#373334">Subtotal</p>
               <h5 style="color:#00AFEF;"><b>Rp {{product.price}}</b></h5>
             </div>
+            {{selectedKonter}}
+            {{product}}
             <div class="text-center">
-              <b-button class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
+              <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
             </div>
           </div>
         </div>
