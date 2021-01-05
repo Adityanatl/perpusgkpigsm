@@ -77,7 +77,7 @@ Vue.component('apexchart', VueApexCharts)
 if(process.env.NODE_ENV === 'production') {
   window.axios.defaults.baseURL = "https://api.paideia.id/"
 } else {
-  window.axios.defaults.baseURL = "http://localhost:9911/"
+  window.axios.defaults.baseURL = "https://api.paideia.id/"
 }
 window.axios.defaults.headers.post['Content-Type'] = "application/json"
 let user = JSON.parse(localStorage.getItem('user'));

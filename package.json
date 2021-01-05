@@ -5,6 +5,7 @@
   "scripts": {
     "start": "NODE_ENV=production vue-cli-service serve --port 9921",
     "dev": "NODE_ENV=development vue-cli-service serve --port 9921",
+    "serve": "NODE_ENV=development vue-cli-service serve --port 9921",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
@@ -39,6 +40,7 @@
     "sweetalert2": "^9.17.0",
     "v-click-outside": "^3.0.1",
     "v-mask": "^2.2.1",
+    "v-model": "0.0.9",
     "vue": "^2.6.12",
     "vue-apexcharts": "^1.5.1",
     "vue-axios": "^3.0.1",
