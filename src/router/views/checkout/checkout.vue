@@ -2,6 +2,8 @@
 import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
+import Vue from 'vue';
+import Model from 'v-model';
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -62,17 +64,27 @@ export default {
   <Layout >
     <PageHeader :title="title" />
 
-<!--    <div class="row mt-5">-->
-      <div class="col-xl-4" >
-<!--        <div class="vertical-nav">-->
-<!--          <b-card-text>-->
-<!--            <div class="card">-->
-<!--              <div class="card-body">-->
-
+   <div class="row mt-5">
+      <div class="col-xl-8" >
+       <div class="vertical-nav">
+         <b-card-text>
+           <div class="card">
+             <div class="card-body">
+                <div role="tablist">
+                <b-card-body>
+                  <div>
+                    <b-form-group v-slot="{ ariaDescribedby }">
+                      <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="A">
+                        <b>Semester</b><span> (Lebih hemat 20.000/1 Bulan)</span></b-form-radio><br>
+                      <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">
+                        <b>Tahun</b><span> (Lebih hemat 40.000/2 Bulan)</span></b-form-radio>
+                    </b-form-group>
+                  </div>
+                </b-card-body>
 {{selectedKonter}}
-                  <h4 class="card-title mb-4">Metode Pembayaran</h4>
+                  <h3 class="card-title mb-4">Metode Pembayaran</h3>
         <hr>
-        <b-card  class="custom-accordion shadow-none mb-3" style="margin-left: -20px; margin-right: -20px">
+        <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
           <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
 
             <a
@@ -82,7 +94,7 @@ export default {
                     style="background:white; "
             >
               <div>Pembayaran Konter</div>
-              <i class="mdi accor-plus-icon mdi-chevron-down"></i>
+              <i class="mdi chevron-up chevron-down"></i>
             </a>
           </b-card-header>
           <b-collapse
@@ -93,7 +105,7 @@ export default {
           >
 
             <b-card-body style="margin-left: -20px; margin-right: -20px">
-              <div class="row ">
+              <div>
                 <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
                      v-if="itemPaymentMethode.payment_type=='konter'"
                 >
@@ -117,7 +129,7 @@ export default {
                     style="background:white;"
             >
               <div>Direct Debit</div>
-              <i class="mdi mdi-minus accor-plus-icon"  style="background=white;"></i>
+              <i class="mdi chevron-up mdi-chevron-down"  style="background=white;"></i>
             </a>
           </b-card-header>
           <b-collapse
@@ -147,7 +159,7 @@ export default {
                     style="background:white;"
             >
               <div>E-Wallet</div>
-              <i class="mdi mdi-minus accor-plus-icon" style="background=white;"></i>
+              <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
             </a>
           </b-card-header>
           <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
@@ -170,13 +182,11 @@ export default {
               <img :src="itemPaymentMethode.image_url" alt="" width="35px" height="25px" class="mr-2">{{ itemPaymentMethode.payment_name}}</b-form-radio>
           </div>
         </b-card>
-
-
-
-
-<!--            </div>-->
-<!--          </b-card-text>-->
-<!--        </div>-->
+                </div>
+              </div>
+            </div>
+         </b-card-text>
+       </div>
       </div>
       <!-- end col -->
       <div class="col-xl-4">
@@ -203,7 +213,7 @@ export default {
         </div>
       </div>
       <!-- end col -->
-<!--    </div>-->
+   </div>
     <!-- end row -->
   </Layout>
 </template>
