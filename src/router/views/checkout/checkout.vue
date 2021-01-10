@@ -2,8 +2,7 @@
 import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
-import Vue from 'vue';
-import Model from 'v-model';
+import Vue from "vue";
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -25,15 +24,20 @@ export default {
       listPaymentMethodes: [],
       monthly_price: [],
       product:{},
-      selectedKonter: null
+      selectedKonter: null,
+      payload:{
+        "product_id":0,
+        "qty":0,
+        "payment_methode_id":0
+      }
     };
   },
   computed: {
   },
   mounted() {
-    this.token = this.$route.query.token;
-    axios.defaults.headers.common['Authorization'] = 'jwt ' + this.token;
-    this.product = this.$store.getters['product/cart']
+    //this.product = this.$store.getters['product/cart']
+    this.product = JSON.parse(localStorage.getItem('cart'))
+    console.log('this.product ',this.product)
     this.getListPaymentMethodes()
 
   },
@@ -51,10 +55,52 @@ export default {
       this.$store.dispatch('paymentmethode/GET_PAYMENT_METHODES',{params:paramsTemp}).then(()=>{
         this.listPaymentMethodes = this.$store.getters['paymentmethode/payment_methodes']
       })
-    },    updateCart(itemProduct){
+    },
+    updateCart(itemProduct){
       this.$store.dispatch('product/GET_PRODUCTS',itemProduct)
-    }
+    },
+    postCheckout(){
+      this.payload.product_id = this.product.id
+      this.payload.qty = 1
+      this.payload.payment_methode_id = this.selectedKonter.id
 
+      this.$store.dispatch(
+              'transaction/POST_TRANSACTION', this.payload
+      ).then(() => {
+        let resp = this.$store.getters['transaction/transaction']
+        this.successmsg()
+        localStorage.removeItem('cart');
+        window.location = resp.redirect_url
+      }).catch(function () {
+        Vue.swal({
+          position: "top-end",
+          icon: "warning",
+          title: 'Failed to procces',
+          showConfirmButton: false,
+          timer: 1500
+        });
+      })
+
+
+    },
+    warningmessage(text_data) {
+      Vue.swal({
+        position: "top-end",
+        icon: "warning",
+        title: text_data,
+        showConfirmButton: false,
+        timer: 1500
+      });
+    },
+    successmsg() {
+      Vue.swal({
+        position: "top-end",
+        icon: "success",
+        title: "Your transaction has been procced",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    },
   },
 
 };
@@ -64,25 +110,15 @@ export default {
   <Layout >
     <PageHeader :title="title" />
 
-   <div class="row mt-5">
-      <div class="col-xl-8" >
-       <div class="vertical-nav">
-         <b-card-text>
-           <div class="card">
-             <div class="card-body">
-                <div role="tablist">
-                <b-card-body>
-                  <div>
-                    <b-form-group v-slot="{ ariaDescribedby }">
-                      <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="A">
-                        <b>Semester</b><span> (Lebih hemat 20.000/1 Bulan)</span></b-form-radio><br>
-                      <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">
-                        <b>Tahun</b><span> (Lebih hemat 40.000/2 Bulan)</span></b-form-radio>
-                    </b-form-group>
-                  </div>
-                </b-card-body>
-{{selectedKonter}}
-                  <h3 class="card-title mb-4">Metode Pembayaran</h3>
+<!--    <div class="row mt-5">-->
+      <div class="col-xl-4" >
+<!--        <div class="vertical-nav">-->
+<!--          <b-card-text>-->
+<!--            <div class="card">-->
+<!--              <div class="card-body">-->
+
+
+                  <h4 class="card-title mb-4">Metode Pembayaran</h4>
         <hr>
         <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
           <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
@@ -207,7 +243,7 @@ export default {
               <h5 style="color:#00AFEF;"><b>Rp {{product.price}}</b></h5>
             </div>
             <div class="text-center">
-              <b-button class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
+              <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
             </div>
           </div>
         </div>
