@@ -100,15 +100,15 @@ export default {
 
 <template>
   <!-- ========== Left Sidebar Start ========== -->
-<!--  <div class="vertical-menu">-->
-<!--    <simplebar v-if="!isCondensed" :settings="settings" class="h-100">-->
-<!--      <SideNav />-->
-<!--    </simplebar>-->
+  <div class="vertical-menu">
+    <simplebar v-if="!isCondensed" :settings="settings" class="h-100">
+      <SideNav />
+    </simplebar>
 
-<!--    <simplebar v-else class="h-100">-->
-<!--      <SideNav />-->
-<!--    </simplebar>-->
-<!--  </div>-->
+    <simplebar v-else class="h-100">
+      <SideNav />
+    </simplebar>
+  </div>
   <!-- Left Sidebar End -->
 </template>
 

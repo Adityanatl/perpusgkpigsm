@@ -7,8 +7,18 @@ export default [
     meta: {
       authRequired: true,
     },
-    component: () => import('./views/dashboards/default'),
+    component: () => import('./views/home/default'),
   },
+
+  {
+    path: '/dashboards/index',
+    name: 'index',
+    meta: {
+      authRequired: true,
+    },
+    component: () => import('./views/dashboards/index'),
+  },
+
   {
     path: '/login',
     name: 'login',
@@ -18,10 +28,10 @@ export default [
         // If the user is already logged in
         if (store.getters['auth/loggedIn']) {
           // Redirect to the home page instead
-          next({ name: 'default' })
+          next({ name: 'index' })
         } else {
           // Continue to the login page
-          next()
+          next('index')
         }
       },
     },
@@ -35,7 +45,7 @@ export default [
         // If the user is already logged in
         if (store.getters['auth/loggedIn']) {
           // Redirect to the home page instead
-          next({ name: 'default' })
+          next({ name: 'dashboard' })
         } else {
           // Continue to the login page
           next()
@@ -55,6 +65,21 @@ export default [
     meta: { authRequired: true },
     component: () => import('./views/checkout/checkout')
   },
+
+  {
+    path: '/user',
+    name: 'User',
+    meta: { authRequired: true },
+    component: () => import('./views/user/user')
+  },
+
+  {
+    path: '/subscription',
+    name: 'Subscription',
+    meta: { authRequired: true },
+    component: () => import('./views/subscriptions/subscription')
+  },
+
   {
     path: '/strategic',
     name: 'List of Strategic',
@@ -295,6 +320,48 @@ export default [
     component: () => import('./views/subtema/add-subtema')
   },
 
+  // {
+  //   path: '/home/index',
+  //   name: 'home gurukreator',
+  //   meta: { authRequired: true },
+  //   component: () => import('./views/home/index.vue')
+  // },
+
+  {
+    path: '/features/features',
+    name: 'features',
+    meta: { authRequired:true },
+    component: () => import('./views/features/features.vue')
+  },
+
+  {
+    path: '/sign_up/sign-up',
+    name: 'sign up',
+    meta: { authRequired: true },
+    component: () => import('./views/sign_up/sign-up.vue')
+  },   
+
+  {
+    path: '/sign_in/sign-in',
+    name: 'sign in',
+    meta: { authRequired: true },
+    component: () => import('./views/sign_in/sign-in.vue')
+  },   
+
+  {
+    path: '/reset_password/reset-password',
+    name: 'reset password',
+    meta: { authRequired: true },
+    component: () => import('./views/reset_password/reset-password.vue')
+  },    
+  
+  {
+    path: '/change_password/change-password',
+    name: 'change password',
+    meta: { authRequired: true },
+    component: () => import('./views/change_password/change-password.vue')
+  },   
+
   {
     path: '/forgot-password',
     name: 'Forgot password',
@@ -304,7 +371,7 @@ export default [
         // If the user is already logged in
         if (store.getters['auth/loggedIn']) {
           // Redirect to the home page instead
-          next({ name: 'default' })
+          next({ name: 'dashboard' })
         } else {
           // Continue to the login page
           next()
@@ -327,7 +394,7 @@ export default [
           (route) => route.push('/login')
         )
         // Navigate back to previous page, or home as a fallback
-        next(authRequiredOnPreviousRoute ? { name: 'default' } : { ...routeFrom })
+        next(authRequiredOnPreviousRoute ? { name: 'dashboard' } : { ...routeFrom })
       },
     },
   },

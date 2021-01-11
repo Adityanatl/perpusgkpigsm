@@ -23,9 +23,9 @@ export default {
     <div class="account-section bg_akun" data-background="./assets/images/akun-bg.png">
         <div class="container">
             <div class="account-title text-center mb-120">
-                <a href="index.html" class="back-home"><i class="fas fa-angle-left"></i><span>Kembali <span class="d-none d-sm-inline-block">ke Beranda</span></span></a>
+                    <router-link tag="a" to="/" class="back-home"><i class="fas fa-angle-left"></i><span>Kembali <span class="d-none d-sm-inline-block">ke Beranda</span></span></router-link>
                 <a href="#0" class="logo">
-                    <img src='@/assets/images/new-gurukreator-logo.png' alt="logo">
+                    <!-- <img src='@/assets/images/new-gurukreator-logo.png' alt="logo"> -->
                 </a>
             </div>
             <div class="account-wrapper top-gap">
@@ -47,7 +47,7 @@ export default {
                             <button type="submit" class="mt-40 mb-2">Ubah Password</button>
                         </div>
                     </form>
-                    <span class="d-block mt-15">Remember your password? <a href="sign-in.html"> Log In</a></span>
+                    <span class="d-block mt-15">Ingat password? <a href="sign-in.html" style="color:#0b507d"> Masuk.</a></span>
                 </div>
             </div>
         </div>

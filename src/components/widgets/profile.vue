@@ -17,8 +17,8 @@ export default {
       <div class="row">
         <div class="col-7">
           <div class="text-primary p-3">
-            <h5 class="text-primary">Welcome Back !</h5>
-            <p>Skote Dashboard</p>
+            <h5 class="text-primary mt-1 mb-1">Welcome Back !</h5>
+            <!-- <p>Skote Dashboard</p> -->
           </div>
         </div>
         <div class="col-5 align-self-end">
@@ -47,12 +47,12 @@ export default {
                 <h5 class="font-size-15">$1245</h5>
                 <p class="text-muted mb-0">Revenue</p>
               </div>
-            </div>
-            <div class="mt-4">
-              <a href class="btn btn-primary btn-sm">
+            </div><br><br><br>
+            <div class="mt-4" style="float:right">
+              <router-link tag="a" to="/user" class="btn btn-primary btn-sm">
                 View Profile
                 <i class="mdi mdi-arrow-right ml-1"></i>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>

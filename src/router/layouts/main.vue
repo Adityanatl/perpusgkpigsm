@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div style="background-color: #ffffff">
+  <div style="background:transparant">
     <vertical v-if="layoutType === 'vertical'" :layout="layoutType">
       <slot />
     </vertical>

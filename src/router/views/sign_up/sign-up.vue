@@ -23,9 +23,9 @@ export default {
     <div class="account-section bg_akun" data-background="./assets/images/akun-bg.png">
         <div class="container">
             <div class="account-title text-center">
-                <a href="index.html" class="back-home"><i class="fas fa-angle-left"></i><span>Kembali <span class="d-none d-sm-inline-block">ke Beranda</span></span></a>
+                    <router-link tag="a" to="/" class="back-home"><i class="fas fa-angle-left"></i><span>Kembali <span class="d-none d-sm-inline-block">ke Beranda</span></span></router-link>
                 <a href="#0" class="logo">
-                    <img src='@/assets/images/new-gurukreator-logo.png' alt="logo">
+                    <!-- <img src='@/assets/images/new-gurukreator-logo.png' alt="logo"> -->
                 </a>
             </div>
             <div class="account-wrapper">
@@ -34,7 +34,7 @@ export default {
                     <a href="#0" class="sign-in-with"><img src='@/assets/images/google.png' alt="icon"><span>Daftar dengan Google</span></a>
                 </div>
                 <div class="or">
-                    <span>Atau</span>
+                    <span style="color:#0b507d">Atau</span>
                 </div>
                 <div class="account-body">
                     <span class="d-block mb-20">Daftar dengan email yang kamu miliki</span>
@@ -43,9 +43,9 @@ export default {
                             <label for="sign-up">Email </label>
                             <input type="text" placeholder="Masukkan email disini " id="sign-up">
                         </div>
-                        <div class="form-group text-center">
+                        <div class="form-group active text-center">
                             <button type="submit">Guru Kreator!</button>
-                            <span class="d-block mt-15">Sudah punya akun? <a href="sign-in.html">Masuk</a></span>
+                            <span class="d-block mt-15">Sudah punya akun? <a href="sign-in.html" style="color:#0b507d">Masuk</a></span>
                         </div>
                     </form>
                 </div>

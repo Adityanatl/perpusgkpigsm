@@ -4,183 +4,198 @@ export const menuItems = [
         label: "menuitems.menu.text",
         isTitle: true
     },
-    {
-        id: 2,
-        label: "menuitems.dashboards.text",
-        icon: "bx-home-circle",
-        badge: {
-            variant: "info",
-            text: "menuitems.dashboards.badge"
-        },
-        subItems: [
-            {
-                id: 3,
-                label: "menuitems.dashboards.list.default",
-                link: "/",
-                parentId: 2
-            },
-            {
-                id: 4,
-                label: "menuitems.dashboards.list.saas",
-                link: "/dashboard/saas",
-                parentId: 2
-            },
-            {
-                id: 5,
-                label: "menuitems.dashboards.list.crypto",
-                link: "/dashboard/crypto",
-                parentId: 2
-            }
-        ]
-    },
+    // {
+    //     id: 2,
+    //     label: "Beranda",
+    //     icon: "bx-home-circle",
+    //     // badge: {
+    //     //     variant: "info",
+    //     //     text: "menuitems.dashboards.badge"
+    //     // },
+    //     subItems: [
+    //         {
+    //             // id: 3,
+    //             // label: "menuitems.dashboards.list.default",
+    //             // link: "/",
+    //             // parentId: 2
+    //         },
+    //         // {
+    //         //     id: 4,
+    //         //     label: "menuitems.dashboards.list.saas",
+    //         //     link: "/dashboard/saas",
+    //         //     parentId: 2
+    //         // },
+    //         // {
+    //         //     id: 5,
+    //         //     label: "menuitems.dashboards.list.crypto",
+    //         //     link: "/dashboard/crypto",
+    //         //     parentId: 2
+    //         // }
+    //     ]
+    // },
     {
         id: 6,
         isLayout: true
     },
-    {
-        id: 7,
-        label: "menuitems.apps.text",
-        isTitle: true
-    },
-    {
-        id: 271,
-        label: "menuitems.gurucreator.text",
-        icon: "bx-store",
-        subItems: [
-            {
-                id: 272,
-                label: "menuitems.gurucreator.list.strategic",
-                link: "/strategic",
-                parentId: 271
-            },
-            {
-                id: 273,
-                label: "menuitems.gurucreator.list.silabus",
-                link: "/silabus",
-                parentId: 271
-            },
-            {
-                id: 274,
-                label: "menuitems.gurucreator.list.rubrik",
-                link: "/rubrik",
-                parentId: 271
-            },
-            {
-                id: 275,
-                label: "menuitems.gurucreator.list.penilaian",
-                link: "/penilaian",
-                parentId: 271
-            },
-            {
-                id: 276,
-                label: "menuitems.gurucreator.list.lessonplan",
-                link: "/lessonplan",
-                parentId: 271
-            },
-        ]
-    },
-    {
-        id: 281,
-        label: "menuitems.master.text",
-        icon: "bx-store",
-        subItems: [
-            {
-                id: 282,
-                label: "menuitems.master.list.files",
-                link: "/files",
-                parentId: 281
-            },
-            {
-                id: 282,
-                label: "menuitems.master.list.provinsi",
-                link: "/provinsi",
-                parentId: 281
-            },
-            {
-                id: 283,
-                label: "menuitems.master.list.city",
-                link: "/city",
-                parentId: 281
-            },
-            {
-                id: 284,
-                label: "menuitems.master.list.ki",
-                link: "/ki",
-                parentId: 281
-            },
-            {
-                id: 285,
-                label: "menuitems.master.list.kd",
-                link: "/kd",
-                parentId: 281
-            },
-            {
-                id: 286,
-                label: "menuitems.master.list.rumpun",
-                link: "/rumpun",
-                parentId: 281
-            },
-            {
-                id: 287,
-                label: "menuitems.master.list.mapel",
-                link: "/mapel",
-                parentId: 281
-            },
-            {
-                id: 2871,
-                label: "menuitems.master.list.materi",
-                link: "/materi",
-                parentId: 281
-            },
-            {
-                id: 288,
-                label: "menuitems.master.list.profil_pembelajaran",
-                link: "/profil_pembelajaran",
-                parentId: 281
-            },
-            {
-                id: 289,
-                label: "menuitems.master.list.domain_pembelajaran",
-                link: "/domain_pembelajaran",
-                parentId: 281
-            },
-            {
-                id: 290,
-                label: "menuitems.master.list.kunci_pembelajaran",
-                link: "/kunci_pembelajaran",
-                parentId: 281
-            },
-            // {
-            //     id: 291,
-            //     label: "menuitems.master.list.ruang_lingkup",
-            //     link: "/ruang_lingkup",
-            //     parentId: 281
-            // },
-            {
-                id: 292,
-                label: "menuitems.master.list.kompetensi",
-                link: "/kompetensi",
-                parentId: 281
-            },
-            {
-                id: 293,
-                label: "menuitems.master.list.tema",
-                link: "/tema",
-                parentId: 281
-            },
-            {
-                id: 294,
-                label: "menuitems.master.list.subtema",
-                link: "/subtema",
-                parentId: 281
-            },
-        ]
-    },
     // {
-    //     id: 8,
-    //     label: "menuitems.calendar.text",
-    //     icon: "bx-calendar",
-    //     link: "/calendar"
+    //     id: 7,
+    //     label: "menuitems.apps.text",
+    //     isTitle: true
+    // },
+    // {
+    //     id: 271,
+    //     label: "Subscription",
+    //     icon: "bx-store",
+    //     subItems: [
+    //         {
+    //             id: 272,
+    //             label: "menuitems.gurucreator.list.strategic",
+    //             link: "/strategic",
+    //             parentId: 271
+    //         },
+    //         {
+    //             id: 273,
+    //             label: "menuitems.gurucreator.list.silabus",
+    //             link: "/silabus",
+    //             parentId: 271
+    //         },
+    //         {
+    //             id: 274,
+    //             label: "menuitems.gurucreator.list.rubrik",
+    //             link: "/rubrik",
+    //             parentId: 271
+    //         },
+    //         {
+    //             id: 275,
+    //             label: "menuitems.gurucreator.list.penilaian",
+    //             link: "/penilaian",
+    //             parentId: 271
+    //         },
+    //         {
+    //             id: 276,
+    //             label: "menuitems.gurucreator.list.lessonplan",
+    //             link: "/lessonplan",
+    //             parentId: 271
+    //         },
+    //     ]
+    // },
+    // {
+    //     id: 281,
+    //     label: "Invoice",
+    //     icon: "bx-store",
+    //     subItems: [
+    //         {
+    //             id: 282,
+    //             label: "menuitems.master.list.files",
+    //             link: "/files",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 282,
+    //             label: "menuitems.master.list.provinsi",
+    //             link: "/provinsi",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 283,
+    //             label: "menuitems.master.list.city",
+    //             link: "/city",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 284,
+    //             label: "menuitems.master.list.ki",
+    //             link: "/ki",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 285,
+    //             label: "menuitems.master.list.kd",
+    //             link: "/kd",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 286,
+    //             label: "menuitems.master.list.rumpun",
+    //             link: "/rumpun",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 287,
+    //             label: "menuitems.master.list.mapel",
+    //             link: "/mapel",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 2871,
+    //             label: "menuitems.master.list.materi",
+    //             link: "/materi",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 288,
+    //             label: "menuitems.master.list.profil_pembelajaran",
+    //             link: "/profil_pembelajaran",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 289,
+    //             label: "menuitems.master.list.domain_pembelajaran",
+    //             link: "/domain_pembelajaran",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 290,
+    //             label: "menuitems.master.list.kunci_pembelajaran",
+    //             link: "/kunci_pembelajaran",
+    //             parentId: 281
+    //         },
+    //         // {
+    //         //     id: 291,
+    //         //     label: "menuitems.master.list.ruang_lingkup",
+    //         //     link: "/ruang_lingkup",
+    //         //     parentId: 281
+    //         // },
+    //         {
+    //             id: 292,
+    //             label: "menuitems.master.list.kompetensi",
+    //             link: "/kompetensi",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 293,
+    //             label: "menuitems.master.list.tema",
+    //             link: "/tema",
+    //             parentId: 281
+    //         },
+    //         {
+    //             id: 294,
+    //             label: "menuitems.master.list.subtema",
+    //             link: "/subtema",
+    //             parentId: 281
+    //         },
+    //     ]
+    // },
+
+    {
+        id: 1,
+        label: "Beranda",
+        icon: "bx-home-circle",
+        link: "/dashboards/index"
+    },
+
+    {
+        id: 2,
+        label: "Subscription",
+        icon: "bx-calendar",
+        link: "/subscription"
+    },
+
+    // {
+    //     id: 3,
+    //     label: "Invoice",
+    //     icon: "bx-receipt",
+    //     link: "/invoice"
     // },
     // {
     //     id: 9,

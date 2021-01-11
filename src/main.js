@@ -10,7 +10,16 @@ import router from './router/index'
 import Scrollspy from 'vue2-scrollspy';
 import VueSweetalert2 from 'vue-sweetalert2';
 
-import "@/design/index.scss";
+import "@/design/index.scss"
+// import "@/assets/css/all.min.css"
+import "@/assets/css/animate.css"
+import "@/assets/css/flaticon.css"
+// import "@/assets/css/jquery-ui.min.css"
+import "@/assets/css/magnific-popup.css"
+import "@/assets/css/main.css"
+import "@/assets/css/nice-select.css"
+// import "@/assets/css/owl.min.css"
+import "@/assets/css/style.css"
 
 
 import store from '@/state/store'

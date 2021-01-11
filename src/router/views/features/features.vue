@@ -772,5 +772,5 @@ export default {
     </footer>
     <!--============= Footer Section Ends Here =============-->
     </div>
-    </div>
-</template>~
+    <!-- </div> -->
+</template>
