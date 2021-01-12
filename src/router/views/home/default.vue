@@ -1,6 +1,8 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
 
+
+
 /**
  * Crypto ICO-landing page
  */
@@ -20,6 +22,14 @@ export default {
     };
   },
   created() {
+    var scripts = [
+      "@/assets/js/magnific-popup.min.js"
+    ];
+    scripts.forEach(script => {
+      let tag = document.createElement("script");
+      tag.setAttribute("src", script);
+      document.head.appendChild(tag);
+    });
     window.addEventListener("scroll", this.windowScroll);
   },
   destroyed() {
