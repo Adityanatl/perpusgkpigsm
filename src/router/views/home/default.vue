@@ -743,30 +743,50 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="coverage-wrapper coverage_img" data-background='@/assets/images/world-map.png'>
-                <div class="border-item-1">
-                    <span class="name">North America</span>
-                    <h2 class="title">70.7%</h2>
+            <div class="coverage-wrapper coverage_img">
+                <div class="border-item-1 text-center">
+                    <span class="name">Sumatera Utara</span><br>
+                    <h4 class="title">4</h4>
                 </div>
-                <div class="border-item-2">
-                    <span class="name">Asia</span>
-                    <h2 class="title">14.4%</h2>
+                <div class="border-item-2 text-center">
+                    <span class="name">Sumatera Barat</span>
+                    <h4 class="title">1</h4>
                 </div>
-                <div class="border-item-3">
-                    <span class="name">North Europe</span>
-                    <h2 class="title">8.4%</h2>
+                <div class="border-item-3 text-center">
+                    <span class="name">Sumatera Selatan</span>
+                    <h4 class="title">1</h4>
                 </div>
-                <div class="border-item-4">
-                    <span class="name">South America</span>
-                    <h2 class="title">1.8%</h2>
+                <div class="border-item-4 text-center">
+                    <span class="name">Lampung</span>
+                    <h4 class="title">1</h4>
                 </div>
-                <div class="border-item-5">
-                    <span class="name">Africa</span>
-                    <h2 class="title">1.8%</h2>
+                <div class="border-item-5 text-center">
+                    <span class="name">Sulawesi Tengah</span>
+                    <h4 class="title">1</h4>
                 </div>
-                <div class="border-item-6">
-                    <span class="name">Australia</span>
-                    <h2 class="title">3%</h2>
+                <div class="border-item-6 text-center">
+                    <span class="name">Maluku Utara</span>
+                    <h4 class="title">2</h4>
+                </div>
+                <div class="border-item-7">
+                    <span class="name">Nusa Tenggara Barat</span>
+                    <h2 class="title">1</h2>
+                </div>
+                <div class="border-item-8">
+                    <span class="name">Nusa Tenggara Timur</span>
+                    <h2 class="title">13</h2>
+                </div>
+                <div class="border-item-9">
+                    <span class="name">Maluku</span>
+                    <h2 class="title">6</h2>
+                </div>
+                <div class="border-item-10">
+                    <span class="name">Papua Barat</span>
+                    <h2 class="title">8</h2>
+                </div>
+                <div class="border-item-11">
+                    <span class="name">Papua</span>
+                    <h2 class="title">22</h2>
                 </div>
             </div>
         </div>
