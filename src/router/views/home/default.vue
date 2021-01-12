@@ -54,7 +54,7 @@ export default {
             <div class="header-wrapper">
                 <div class="logo">
                     <a href="index.vue">
-                        <img src='@/assets/images/new-gurukreator-logo.png' alt="logo">
+                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
                     </a>
                 </div>
                 <ul class="menu">
