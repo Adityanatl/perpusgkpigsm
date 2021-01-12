@@ -163,7 +163,7 @@ export default {
                 <div class="account-header pb-0">
                     <span class="d-block mb-30 mt-2">Daftar dengan email yang kamu miliki</span>
                     <a href="#0" class="sign-in-with"><img src='@/assets/images/google.png' alt="icon"><span>Sign Up with Google</span></a>
-                    <span class="d-block mt-15">Tidak memiliki akun? <a href="sign-up.html" style="color:#0b507d">DAFTAR disini</a></span>
+                    <span class="d-block mt-15">Tidak memiliki akun? <router-link tag="a" to="/sign_up/sign-up" style="color:#0b507d">DAFTAR disini</router-link></span>
                 </div>
             </div>
         </div>

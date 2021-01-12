@@ -3,7 +3,7 @@ import store from '@/state/store'
 export default [
   {
     path: '/',
-    name: 'default',
+    name: 'index',
     meta: {
       authRequired: true,
     },
@@ -12,7 +12,7 @@ export default [
 
   {
     path: '/dashboards/index',
-    name: 'index',
+    name: 'default',
     meta: {
       authRequired: true,
     },
@@ -28,10 +28,10 @@ export default [
         // If the user is already logged in
         if (store.getters['auth/loggedIn']) {
           // Redirect to the home page instead
-          next({ name: 'index' })
+          next({ name: 'default' })
         } else {
           // Continue to the login page
-          next('index')
+          next()
         }
       },
     },
@@ -331,35 +331,35 @@ export default [
     path: '/features/features',
     name: 'features',
     meta: { authRequired:true },
-    component: () => import('./views/features/features.vue')
+    component: () => import('./views/features/features')
   },
 
   {
     path: '/sign_up/sign-up',
     name: 'sign up',
     meta: { authRequired: true },
-    component: () => import('./views/sign_up/sign-up.vue')
+    component: () => import('./views/sign_up/sign-up')
   },   
 
   {
     path: '/sign_in/sign-in',
     name: 'sign in',
     meta: { authRequired: true },
-    component: () => import('./views/sign_in/sign-in.vue')
+    component: () => import('./views/sign_in/sign-in')
   },   
 
   {
     path: '/reset_password/reset-password',
     name: 'reset password',
     meta: { authRequired: true },
-    component: () => import('./views/reset_password/reset-password.vue')
+    component: () => import('./views/reset_password/reset-password')
   },    
   
   {
     path: '/change_password/change-password',
     name: 'change password',
     meta: { authRequired: true },
-    component: () => import('./views/change_password/change-password.vue')
+    component: () => import('./views/change_password/change-password')
   },   
 
   {
