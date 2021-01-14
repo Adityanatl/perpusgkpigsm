@@ -67,6 +67,20 @@ export default [
   },
 
   {
+    path: '/pembayaran-pending',
+    name: 'pembayaran pending',
+    meta: { authRequired: true },
+    component: () => import('./views/pembayaran_pending/pembayaran-pending')
+  },
+
+  {
+    path: '/pembayaran-berhasil',
+    name: 'pembayaran berhasil',
+    meta: { authRequired: true },
+    component: () => import('./views/pembayaran_berhasil/pembayaran-berhasil')
+  },
+
+  {
     path: '/user',
     name: 'User',
     meta: { authRequired: true },
