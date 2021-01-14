@@ -3,6 +3,12 @@ import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 
+import Profile from "@/components/widgets/profile";
+import Earning from "@/components/widgets/earning";
+import Stat from "@/components/widgets/stat";
+import Transaction from "@/components/widgets/transaction";
+import Emailsent from "@/components/widgets/emailsent";
+
 // import { tableData } from "./dataAdvancedtable";
 import VueJwtDecode from 'vue-jwt-decode'
 /**
@@ -64,7 +70,7 @@ export default {
   <Layout>
     <PageHeader :title="title" />
 
-    <div >
+    <div>
       <b-tabs pills align="center">
         <b-tab title="Personal" active color-tab><b-card-text>
           <div class="row mt-5">
@@ -80,8 +86,8 @@ export default {
                         "
               >
                 <div class="card-body">
-                  <h5 style="margin-left:10px; color:#373334" class="ml-4">{{itemProduct.product_name}}
-                  <p style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p></h5>
+                  <h5 style="margin-left:10px; color:#373334" class="ml-2 mt-1 mb-1">{{itemProduct.product_name}}
+                  <p style="color:#c6c6c6"><span class="blue-paideia ml-2"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p></h5>
                   <div class="col" v-if="itemProduct.recommended" >
                   <p class="ml-4"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
                   <p style="color:#373334" class="ml-4">Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
@@ -128,19 +134,19 @@ export default {
                   <p v-if="itemProduct.recommended" class="blue-paideia" style="margin-top:0px; margin-left:90px; margin-bottom:100px;"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
                   <p style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p>
 
-                  <div class="table-responsive mt-4">
+                  <div class="table-responsive mt-2">
                     <table class="table table-centered">
                       <tbody>
                         <tr>
-                          <b-form-group v-slot="{ ariaDescribedby }">
-                            <b-form-radio class="mb-3 mt-3" v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">
+                          <b-form-group style="margin-left:70px;" v-slot="{ ariaDescribedby }">
+                            <b-form-radio class="mb-3" v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">
                               {{itemProduct.semester_price}}</b-form-radio>
                             <b-form-radio class="mb-3 mt-3" v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">
                               {{itemProduct.yearly_price}}</b-form-radio>
                           </b-form-group>
                         </tr>
                         <tr>
-                          <b-button @click="updateCart(itemProduct)" class="mb-3" style="background-color: #00AFEF; border-style:none" variant="primary rounded-pill">Berlangganan Sekarang
+                          <b-button @click="updateCart(itemProduct)" style="background-color: #00AFEF; border-style:none" variant="primary rounded-pill">Berlangganan Sekarang
                             <router-link tag="a" to="/checkout" class="header-button d-none d-sm-inline-block"></router-link>
                           </b-button>
                         </tr>  

@@ -413,20 +413,12 @@ export default {
             <p style="color:#c6c6c6"><span class="blue-paideia ml-2"><b style="color:#00AFEF">Rp 20,000</b></span> / bulan</p>
             <div class="col">
               <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
-              <p style="color:#373334" class="">Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
+              <p style="color:#373334" class=""> semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
             </div>
 
-            <div class="table-responsive">
+            <div class="table-responsive mt-4">
               <table class="table table-centered">
                 <tbody>
-                  <tr>
-                    <b-form-group>
-                      <b-form-radio class="mb-3 mt-3" name="some-radios" value="B">
-                        Semester</b-form-radio>
-                      <b-form-radio class="mb-3 mt-3" name="some-radios" value="B">
-                        Yearly</b-form-radio>
-                    </b-form-group>
-                  </tr>
                   <tr>
                     <b-button @click="updateCart(itemProduct)" class="" style="background-color: #00AFEF; border-style:none;" variant="primary rounded-pill">Berlangganan Sekarang
                       <router-link tag="a" to="/checkout" class="header-button d-none d-sm-inline-block pb-2"></router-link>
