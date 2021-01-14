@@ -86,10 +86,20 @@ export default {
                         "
               >
                 <div class="card-body">
-                  <h5 style="margin-left:10px; color:#373334" class="ml-2 mt-3 mb-1">{{itemProduct.product_name}}
-                  <p style="color:#c6c6c6"><span class="blue-paideia ml-1 mt-1"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p></h5>
-                  <div class="col" v-if="itemProduct.recommended" >
-                  <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h5 style="margin-left:10px; color:#373334" class="ml-2 mt-3 mb-1">{{itemProduct.product_name}}</h5>
+                      </td>
+                      <td>
+                        <div class="col" v-if="itemProduct.recommended" >
+                        <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <p style="color:#c6c6c6"><span class="blue-paideia ml-1 mt-1"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p>
+
+                  <div class="col">
                   <p style="color:#373334" class="ml-2">Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
                   </div>
 
@@ -115,7 +125,7 @@ export default {
           <!-- end col -->
         </b-card-text></b-tab>
 
-        <b-tab title="donasi"><b-card-text>
+        <b-tab title="Kontribusi"><b-card-text>
           <div class="row mt-5">
 
 
@@ -129,10 +139,20 @@ export default {
                         "
               >
                 <div class="card-body">
-                  <h5 style="margin-left:10px; color:#373334"><img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left">{{itemProduct.product_name}}</h5>
-                  <p style="color:#707070">{{itemProduct.description}}</p>
-                  <p v-if="itemProduct.recommended" class="blue-paideia" style="margin-top:0px; margin-left:90px; margin-bottom:100px;"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
-                  <p style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p>
+                  <tbody> 
+                    <tr>
+                      <td>
+                        <img class="mt-1 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left">
+                      </td>
+                      <td>
+                        <h5 style="margin-left:10px; color:#373334">{{itemProduct.product_name}}</h5>
+                        <p v-if="itemProduct.recommended" class="blue-paideia mt-5" style="margin-top:0px; margin-left:90px; margin-bottom:100px;"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
+                        <p style="color:#707070">{{itemProduct.description}}</p>
+                        <p class="mt-2" style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p>
+                      </td>
+                    </tr>
+                  </tbody>
+
 
                   <div class="table-responsive mt-2">
                     <table class="table table-centered">
@@ -146,7 +166,7 @@ export default {
                           </b-form-group>
                         </tr>
                         <tr>
-                          <b-button @click="updateCart(itemProduct)" style="background-color: #00AFEF; border-style:none" variant="primary rounded-pill">Berlangganan Sekarang
+                          <b-button @click="updateCart(itemProduct)" style="background-color: #00AFEF; border-style:none" variant="primary rounded-pill">Kontribusi Sekarang
                             <router-link tag="a" to="/checkout" class="header-button d-none d-sm-inline-block"></router-link>
                           </b-button>
                         </tr>  
