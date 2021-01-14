@@ -86,7 +86,7 @@ export default {
                         "
               >
                 <div class="card-body">
-                  <h5 style="margin-left:10px; color:#373334" class="ml-2 mt-1 mb-1">{{itemProduct.product_name}}
+                  <h5 style="margin-left:10px; color:#373334" class="ml-2 mt-3 mb-1">{{itemProduct.product_name}}
                   <p style="color:#c6c6c6"><span class="blue-paideia ml-1 mt-1"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p></h5>
                   <div class="col" v-if="itemProduct.recommended" >
                   <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
