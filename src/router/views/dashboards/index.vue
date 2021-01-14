@@ -336,6 +336,7 @@ export default {
         </div>
       </div> -->
       <!-- end col -->
+      
       <div class="col-xl-6">
         <div class="card">
           <div class="card-body">
@@ -398,6 +399,47 @@ export default {
         </div>
       </div>
       <!-- end col -->
+
+      <!-- <div class="col-xl-4">
+        <div class="card"
+             style= "
+                    border-radius: 8px;
+                    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.10);
+                    margin: 0rem 1rem 1rem 1rem;
+                  "
+        >
+          <div class="card-body">
+            <h5 class="text-primary ml-2 mt-1 mb-1">Monthly</h5>
+            <p style="color:#c6c6c6"><span class="blue-paideia ml-2"><b style="color:#00AFEF">Rp 20,000</b></span> / bulan</p>
+            <div class="col">
+              <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
+              <p style="color:#373334" class="">Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-centered">
+                <tbody>
+                  <tr>
+                    <b-form-group>
+                      <b-form-radio class="mb-3 mt-3" name="some-radios" value="B">
+                        Semester</b-form-radio>
+                      <b-form-radio class="mb-3 mt-3" name="some-radios" value="B">
+                        Yearly</b-form-radio>
+                    </b-form-group>
+                  </tr>
+                  <tr>
+                    <b-button @click="updateCart(itemProduct)" class="" style="background-color: #00AFEF; border-style:none;" variant="primary rounded-pill">Berlangganan Sekarang
+                      <router-link tag="a" to="/checkout" class="header-button d-none d-sm-inline-block pb-2"></router-link>
+                    </b-button>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- end col -->
+
     </div>
     <!-- end row -->
 
