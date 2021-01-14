@@ -93,8 +93,8 @@ export default {
 </script>
 
 <template>
-  <header id="page-topbar">
-    <div class="navbar-header">
+  <header id="page-topbar" style="background-color:transparent; border:none">
+    <div class="navbar-header" >
       <div class="d-flex">
         <!-- LOGO -->
         <div class="">
@@ -319,7 +319,7 @@ export default {
               </div>
             </div> -->
             <div>
-              <router-link tag="a" to="/" class="">
+              <router-link tag="a" to="#" class="">
                 <span class="logo-sm">
                   <img src="@/assets/images/logo_tanpa_teks_guru_kreator.png" alt height="22" />
                 </span>
@@ -554,14 +554,13 @@ export default {
           <button
             type="button"
             class="btn header-item noti-icon right-bar-toggle toggle-right"
-            @click="toggleRightSidebar"
-          ><a href="/products">
+          ><a href="#">
             <i class="fas fa-shopping-cart"></i></a>
           </button>
         </div>
 
-        <b-dropdown right variant="black" toggle-class="header-item">
-          <template v-slot:button-content>
+        <!-- <b-dropdown right variant="black" toggle-class="header-item"> -->
+          <!-- <template v-slot:button-content> -->
             <!-- <img
               class="rounded-circle header-profile-user"
               src="@/assets/images/users/avatar-1.jpg"
@@ -569,8 +568,8 @@ export default {
             /> -->
             <!-- <span class="d-none d-xl-inline-block ml-1">{{ $t('navbar.dropdown.henry.text')}}</span> -->
             <!-- <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i> -->
-            <i class="fas fa-sign-out-alt"></i> 
-          </template>
+            <!-- <i class="fas fa-sign-out-alt"></i>  -->
+          <!-- </template> -->
           <!-- item-->
           <!-- <b-dropdown-item>
             <router-link tag="span" to="/contacts/profile">
@@ -592,11 +591,11 @@ export default {
             {{ $t('navbar.dropdown.henry.list.lockscreen') }}
           </b-dropdown-item>
           <b-dropdown-divider></b-dropdown-divider> -->
-          <a href="/logout" class="dropdown-item text-danger">
+          <!-- <a href="#" class="dropdown-item text-danger">
             <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
             {{ $t('navbar.dropdown.henry.list.logout') }}
-          </a>
-        </b-dropdown>
+          </a> -->
+        <!-- </b-dropdown> -->
 
         <!-- <div class="dropdown d-inline-block">
           <button

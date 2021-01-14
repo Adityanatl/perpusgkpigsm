@@ -16,8 +16,8 @@ export default {
   components: { Layout, PageHeader, VueJwtDecode },
   data() {
     return {
-      // tableData: [],
-      title: "Donasi yang dapat Anda wujudkan...",
+      tableData: [],
+      title: "Pembelian ini ditujukan untuk :",
       token: '',
       aaa:'@/assets/images/domba.png',
       listProducts: [],
@@ -64,9 +64,9 @@ export default {
   <Layout>
     <PageHeader :title="title" />
 
-    <div>
+    <div >
       <b-tabs pills align="center">
-        <b-tab title="Personal" active><b-card-text>
+        <b-tab title="Personal" active color-tab><b-card-text>
           <div class="row mt-5">
             <div class="col-xl-4" v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='Personal'">
               <div class="card"
@@ -104,10 +104,10 @@ export default {
           <!-- end col -->
         </b-card-text></b-tab>
 
-        <b-tab title="Donasi"><b-card-text>
+        <b-tab title="Kontribusi"><b-card-text>
           <div class="row mt-5">
 
-            <div class="col-xl-4"  v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='Donasi'">
+            <div class="col-xl-4"  v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='Kontribusi'">
               <div class="card"
                    style= "
                           border-radius: 8px;

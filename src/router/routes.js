@@ -464,12 +464,12 @@ export default [
     meta: { authRequired: true },
     component: () => import('./views/ecommerce/cart')
   },
-  {
-    path: '/ecommerce/checkout',
-    name: 'Checkout',
-    meta: { authRequired: true },
-    component: () => import('./views/ecommerce/checkout')
-  },
+  // {
+  //   path: '/ecommerce/checkout',
+  //   name: 'Checkout',
+  //   meta: { authRequired: true },
+  //   component: () => import('./views/ecommerce/checkout')
+  // },
   {
     path: '/ecommerce/shops',
     name: 'Shops',

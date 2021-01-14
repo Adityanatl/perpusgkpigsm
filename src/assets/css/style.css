@@ -1,11 +1,15 @@
-/* body {
+body {
     background-image: url('../images/background.png');
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
     background-size:  cover;
-}; */
+};
 
 .banner{
     background-color: yellow;
 };
+
+.color-tab {
+    background-color: #00afef;
+}
