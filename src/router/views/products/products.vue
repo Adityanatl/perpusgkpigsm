@@ -87,10 +87,10 @@ export default {
               >
                 <div class="card-body">
                   <h5 style="margin-left:10px; color:#373334" class="ml-2 mt-1 mb-1">{{itemProduct.product_name}}
-                  <p style="color:#c6c6c6"><span class="blue-paideia ml-2"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p></h5>
+                  <p style="color:#c6c6c6"><span class="blue-paideia ml-1 mt-1"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p></h5>
                   <div class="col" v-if="itemProduct.recommended" >
-                  <p class="ml-4"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
-                  <p style="color:#373334" class="ml-4">Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
+                  <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
+                  <p style="color:#373334" class="ml-2">Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
                   </div>
 
                   <div class="table-responsive mt-4">
