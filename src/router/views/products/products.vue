@@ -77,7 +77,6 @@ export default {
                           border-radius: 8px;
                           box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.10);
                           margin: 0rem 1rem 1rem 1rem;
-                          height: 280px;
                         "
               >
                 <div class="card-body">
