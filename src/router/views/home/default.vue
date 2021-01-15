@@ -43,7 +43,7 @@ export default {
     this.interval = setInterval(() => {
       this.timerCount(this.start, this.end);
     }, 1000);
-  }
+  },
 };
 </script>
 
@@ -255,11 +255,11 @@ export default {
                 <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
             </div>
         </div>
-    </header>
-    <!--============= Header Section Ends Here =============-->
+     </header>
+     <!--============= Header Section Ends Here =============-->
 
         <!--============= Banner Section Starts Here =============-->
-    <section class="banner-1 bg_img oh">
+     <section class="banner-1 bg_img oh">
         <div class="dot-1 d-none d-lg-block">
             <img src='@/assets/images/dot-big.png' alt="banner">
         </div>
@@ -310,11 +310,11 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
-    <!--============= Banner Section Ends Here =============-->
+     </section>
+     <!--============= Banner Section Ends Here =============-->
 
         <!--============= Sponsor Section Section Starts Here =============-->
-    <div class="sponsor-section padding-bottom padding-top">
+     <div class="sponsor-section padding-bottom padding-top">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
@@ -334,11 +334,11 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
-    <!--============= Sponsor Section Section Ends Here =============-->
+     </div>
+     <!--============= Sponsor Section Section Ends Here =============-->
 
         <!--============= Amazing Feature Section Starts Here =============-->
-    <section class="amazing-feature-section pos-rel" id="feature">
+     <section class="amazing-feature-section pos-rel" id="feature">
         <div class="shape-container oh">
             <div class="bg_img feature-background" data-background='@/assets/images/amazing-feature-bg.jpg'></div>
             <div class="feature-top-shape d-none d-lg-block">
@@ -436,11 +436,11 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
-    <!--============= Amazing Feature Section Ends Here =============-->
+     </section>
+     <!--============= Amazing Feature Section Ends Here =============-->
 
         <!--============= How Section Starts Here =============-->
-    <section class="how-section padding-bottom padding-top" id="how">
+     <section class="how-section padding-bottom padding-top" id="how">
         <div class="container">
             <div class="section-header">
                 <h5 class="cate">Selalu tersedia di manapun dan kapan pun</h5>
@@ -497,11 +497,11 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
-    <!--============= How Section Ends Here =============-->
+     </section>
+     <!--============= How Section Ends Here =============-->
 
         <!--============= Newslater Section Starts Here =============-->
-    <section class="newslater-section oh bg_img pos-rel" data-background='@/assets/images/newslater2.jpg'>
+     <section class="newslater-section oh bg_img pos-rel" data-background='@/assets/images/newslater2.jpg'>
         <div class="top-shape d-none d-lg-block">
             <img src='@/assets/images/top-shape2.png' alt="css">
         </div>
@@ -534,11 +534,11 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
-    <!--============= Newslater Section Ends Here =============-->
+     </section>
+     <!--============= Newslater Section Ends Here =============-->
 
         <!--============= Feature Section Starts Here =============-->
-    <section class="feature-section padding-top padding-bottom oh pos-rel">
+     <section class="feature-section padding-top padding-bottom oh pos-rel">
         <div class="feature-shapes d-none d-lg-block">
             <img src='@/assets/images/feature-shape.png' alt="feature">
         </div>
@@ -610,11 +610,11 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
-    <!--============= Feature Section Ends Here =============-->
+     </section>
+     <!--============= Feature Section Ends Here =============-->
 
         <!--============= Pricing Section Starts Here =============-->
-    <section class="pricing-section padding-top oh padding-bottom pb-md-0 bg_img pos-rel" data-background="./assets/images/bg/pricing-bg.jpg" id="pricing">
+     <section class="pricing-section padding-top oh padding-bottom pb-md-0 bg_img pos-rel" data-background="./assets/images/bg/pricing-bg.jpg" id="pricing">
         <div class="top-shape d-none d-md-block">
             <img src='@/assets/images/top-shape.png' alt="css">
         </div>
@@ -706,11 +706,11 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
+     </section>
         <!--============= Pricing Section Ends Here =============-->
 
         <!--============= Coverage Section Starts Here =============-->
-    <section class="coverage-section padding-top padding-bottom" id="coverage">
+     <section class="coverage-section padding-top padding-bottom" id="coverage">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
@@ -790,11 +790,11 @@ export default {
                 </div>
             </div>
         </div>
-    </section>
-    <!--============= Coverage Section Ends Here =============-->
+     </section>
+     <!--============= Coverage Section Ends Here =============-->
 
         <!--============= Footer Section Starts Here =============-->
-    <footer class="footer-section bg_img" data-background='@/assets/images/footer-bg.jpg'>
+     <footer class="footer-section bg_img" data-background='@/assets/images/footer-bg.jpg'>
         <div class="container">
             <div class="footer-top padding-top padding-bottom">
                 <div class="logo">
@@ -845,8 +845,7 @@ export default {
                 </p>
             </div>
         </div>
-    </footer>
-    <!--============= Footer Section Ends Here =============-->
-    </div>
+     </footer>
+     <!--============= Footer Section Ends Here =============-->
     </div>
 </template>
