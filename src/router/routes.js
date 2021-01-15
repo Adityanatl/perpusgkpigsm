@@ -95,6 +95,13 @@ export default [
   },
 
   {
+    path: '/about-us',
+    name: 'about us',
+    meta: { authRequired: true },
+    component: () => import('./views/about_us/about-us')
+  },
+
+  {
     path: '/strategic',
     name: 'List of Strategic',
     meta: { authRequired: true },
