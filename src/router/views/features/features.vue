@@ -251,9 +251,9 @@ export default {
     <!--============= Header Section Ends Here =============-->
 
     <!--============= Header Section Ends Here =============-->
-    <section class="page-header bg_img" data-background="./assets/images/page-header.png">
+    <section class="page-header bg_img_feature" data-background="./assets/images/page-header.png">
         <div class="bottom-shape d-none d-md-block">
-            <img src='@/assets/images/page-header.png' alt="css">
+            <img src='@/assets/images/page-header3.png' alt="css">
         </div>
         <div class="container">
             <div class="page-header-content cl-white">
@@ -287,6 +287,7 @@ export default {
                     </div>
                 </div>
             </div>
+            
             <ul class="nav nav-tabs feature-tab-menu">
                 <li>
                     <a  data-toggle="tab" href="#collaboration" class="active">Kreasiku</a>
@@ -298,6 +299,7 @@ export default {
                     <a  data-toggle="tab" href="#integrations">Relungku</a>
                 </li>
             </ul>
+            
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="collaboration">
                     <div class="row">
@@ -574,7 +576,7 @@ export default {
 
     <!--============= Comunity Section Starts Here =============-->
     <section class="comunity-section padding-top padding-bottom oh pos-rel">
-        <div class="comunity-bg bg_img" data-background="./assets/images/mosto-client.png"></div>
+        <div class="comunity-bg bg_img"></div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -587,78 +589,78 @@ export default {
             </div>
             <div class="comunity-wrapper">
                 <div class="buttons"><a href="#0" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
-<!--                 <div class="comunity-area">
-                    <div class="comunity-item"><img src="./assets/images/comunity/1.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/2.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/3.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/4.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/5.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/6.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/7.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/8.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/9.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/10.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/11.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/12.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/13.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/14.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/15.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/16.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/17.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/18.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/19.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/22.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/20.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/21.png" alt="comunity"></div>
+                <div class="comunity-area">
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                 </div>
                 <div class="comunity-area two">
-                    <div class="comunity-item"><img src="./assets/images/comunity/1.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/2.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/3.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/4.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/5.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/6.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/7.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/8.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/9.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/10.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/11.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/12.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/13.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/14.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/15.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/16.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/17.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/18.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/19.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/22.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/20.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/21.png" alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                 </div>
                 <div class="comunity-area three">
-                    <div class="comunity-item"><img src="./assets/images/comunity/1.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/2.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/3.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/4.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/5.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/6.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/7.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/8.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/9.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/10.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/11.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/12.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/13.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/14.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/15.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/16.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/17.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/18.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/19.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/22.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/20.png" alt="comunity"></div>
-                    <div class="comunity-item"><img src="./assets/images/comunity/21.png" alt="comunity"></div>
-                </div> -->
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -715,17 +717,28 @@ export default {
                     <img src="./assets/images/sponsor/sponsor7.png" alt="sponsor">
                 </div>
             </div> -->
+            <div class="text-center row">
+                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <img src="@/assets/images/logo/logo_wti.png" width="200vw" height="200vw" alt="">
+                </div>
+                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <img src="@/assets/images/logo/paideia-logo.png" style="margin-top:65px;" width="200vw" height="70vw" alt="">
+                </div>
+                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <img src="@/assets/images/logo/refo.png" width="200vw" height="200vw" alt="">
+                </div>
+          </div>
         </div>
     </section>
     <!--============= Sponsor Section Ends Here =============-->
 
         <!--============= Footer Section Starts Here =============-->
-    <footer class="footer-section bg_img" data-background='@/assets/images/footer-bg.jpg'>
+    <footer class="footer-section bg_img_footer" data-background='@/assets/images/footer-bg.jpg'>
         <div class="container">
             <div class="footer-top padding-top padding-bottom">
                 <div class="logo">
                     <router-link tag="a" to="/">
-                        <img src='@/assets/images/footer-gurukreator.png' alt="logo">
+                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
                     </router-link>
                 </div>
                 <ul class="social-icons">
@@ -767,7 +780,7 @@ export default {
             </div>
             <div class="copyright">
                 <p>
-                    Copyright © 2020.All Rights Reserved By <a href="#0">PAIDEIA</a>
+                    Copyright © 2020.All Rights Reserved By <a href="https://paideia.id/" style="color:#0b507d">PAIDEIA</a>
                 </p>
             </div>
         </div>

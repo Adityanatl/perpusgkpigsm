@@ -1003,6 +1003,13 @@ input[type="submit"] {
     background-image: url('../images/pricing-bg.jpg');    
 }
 
+.bg_img_feature {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('../images/page-header-feature.png');    
+}
+
 .bg_img_footer {
     background-size: cover;
     background-position: center center;
