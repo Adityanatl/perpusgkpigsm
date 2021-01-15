@@ -95,10 +95,10 @@ export default [
   },
 
   {
-    path: '/about-us',
-    name: 'about us',
+    path: '/donatur',
+    name: 'donatur',
     meta: { authRequired: true },
-    component: () => import('./views/about_us/about-us')
+    component: () => import('./views/donatur/donatur')
   },
 
   {

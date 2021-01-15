@@ -53,13 +53,13 @@ export default {
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="index.vue">
+                    <router-link tag="a" to="/">
                         <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
-                    </a>
+                    </router-link>
                 </div>
                 <ul class="menu">
                     <li>
-                        <a href="#0">Beranda</a>
+                        <router-link tag="a" to="/">Beranda</router-link>
                         <!-- <ul class="submenu">
                             <li>
                                 <a href="#0">Home Apps</a>
@@ -156,7 +156,11 @@ export default {
                         </ul> -->
                     </li>
                     <li>
-                        <a href="pricing-plan.html">Donatur</a>
+                    <router-link tag="a" to="/donatur">
+                      Donatur
+                      <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
+                    </router-link>
+                        <!-- <a href="pricing-plan.html">Donatur</a> -->
                     </li>
                     <!-- <li>
                         <a href="#0">Pages</a>
@@ -823,13 +827,13 @@ export default {
             <div class="footer-bottom">
                 <ul class="footer-link">
                     <li>
-                        <a href="#0">Beranda</a>
+                    <router-link tag="a" to="/donatur">Beranda</router-link>
                     </li>
                     <li>
                         <a href="#0">Guru</a>
                     </li>
                     <li>
-                        <a href="#0">Donatur</a>
+                        <router-link tag="a" to="/donatur">Donatur</router-link>
                     </li>
                     <li>
                         <a href="#0">Kontak</a>
