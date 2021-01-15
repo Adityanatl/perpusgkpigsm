@@ -319,7 +319,7 @@ export default {
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="spon-cont">
-                        <p>Used by over 1,000,000 people worldwide</p>
+                        <p>By Paideia Educational Solutions</p>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -659,7 +659,7 @@ export default {
                         <div class="tags-area">
                             <h3 class="tags">Saatnya berkreasi!</h3>
                         </div>
-                        <div class="pricing-header">
+                        <!-- <div class="pricing-header">
                             <span class="cate">Pilihan berlanggan</span>
                             <div class="select-container">    
                                 <select class="select-bar">
@@ -668,7 +668,7 @@ export default {
                                     <option value="premium">Tahunan</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="amount-area">
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
