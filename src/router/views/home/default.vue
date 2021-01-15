@@ -344,7 +344,7 @@ export default {
         <!--============= Amazing Feature Section Starts Here =============-->
      <section class="amazing-feature-section pos-rel" id="feature">
         <div class="shape-container oh">
-            <div class="bg_img feature-background" data-background='@/assets/images/amazing-feature-bg.jpg'></div>
+            <div class="bg_img_feature feature-background" data-background='@/assets/images/amazing-feature-bg.jpg'></div>
             <div class="feature-top-shape d-none d-lg-block">
                 <img src='@/assets/images/feature-shape.png' alt="css">
             </div>
@@ -505,7 +505,7 @@ export default {
      <!--============= How Section Ends Here =============-->
 
         <!--============= Newslater Section Starts Here =============-->
-     <section class="newslater-section oh bg_img pos-rel" data-background='@/assets/images/newslater2.jpg'>
+     <section class="newslater-section oh bg_img_newslatter pos-rel" data-background='@/assets/images/newslater2.jpg'>
         <div class="top-shape d-none d-lg-block">
             <img src='@/assets/images/top-shape2.png' alt="css">
         </div>
@@ -618,7 +618,7 @@ export default {
      <!--============= Feature Section Ends Here =============-->
 
         <!--============= Pricing Section Starts Here =============-->
-     <section class="pricing-section padding-top oh padding-bottom pb-md-0 bg_img pos-rel" data-background="./assets/images/bg/pricing-bg.jpg" id="pricing">
+     <section class="pricing-section padding-top oh padding-bottom pb-md-0 bg_img_pricing pos-rel" data-background="./assets/images/bg/pricing-bg.jpg" id="pricing">
         <div class="top-shape d-none d-md-block">
             <img src='@/assets/images/top-shape.png' alt="css">
         </div>
@@ -761,7 +761,7 @@ export default {
                     <h4 class="title">1</h4>
                 </div>
                 <div class="border-item-4 text-center">
-                    <span class="name">Lampung</span>
+                    <p class="name">Lampung</p><br>
                     <h4 class="title">1</h4>
                 </div>
                 <div class="border-item-5 text-center">
@@ -789,7 +789,7 @@ export default {
                     <h2 class="title">8</h2>
                 </div>
                 <div class="border-item-11">
-                    <span class="name">Papua</span>
+                    <span class="name">Papua<br></span><br><br>
                     <h2 class="title">22</h2>
                 </div>
             </div>
@@ -798,7 +798,7 @@ export default {
      <!--============= Coverage Section Ends Here =============-->
 
         <!--============= Footer Section Starts Here =============-->
-     <footer class="footer-section bg_img" data-background='@/assets/images/footer-bg.jpg'>
+     <footer class="footer-section bg_img_footer" data-background='@/assets/images/footer-bg.jpg'>
         <div class="container">
             <div class="footer-top padding-top padding-bottom">
                 <div class="logo">
