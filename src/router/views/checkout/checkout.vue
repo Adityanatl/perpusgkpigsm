@@ -3,6 +3,7 @@ import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 import Vue from "vue";
+import VueJwtDecode from "vue-jwt-decode";
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -23,12 +24,14 @@ export default {
       aaa:'@/assets/images/domba.png',
       listPaymentMethodes: [],
       monthly_price: [],
-      product:{},
+      product:{ "id": 0, "product_type": "", "product_name": "", "price": 0, "account_id": 0, "reference_id": 0, "month": 0, "image_url": "", "description": "", "recommended": false },
       selectedKonter: null,
+      transactionId: null,
       payload:{
         "product_id":0,
         "qty":0,
-        "payment_methode_id":0
+        "payment_methode_id":0,
+        "transaction_id":null,
       }
     };
   },
@@ -36,8 +39,23 @@ export default {
   },
   mounted() {
     //this.product = this.$store.getters['product/cart']
-    this.product = JSON.parse(localStorage.getItem('cart'))
-    console.log('this.product ',this.product)
+    if (this.$route.query.token != null) {
+      let token = this.$route.query.token;
+      window.axios.defaults.headers.common['Authorization'] = 'jwt ' + token
+      let temp = VueJwtDecode.decode(token)
+      temp['token'] = token
+      localStorage.setItem('user', JSON.stringify(temp));
+    }
+    if (this.$route.query.transaction_id != null) {
+      this.transactionId = this.$route.query.transaction_id;
+      this.$store.dispatch('transaction/GET_TRANSACTION',this.transactionId).then(()=>{
+        let transaction = this.$store.getters['transaction/transaction']
+        this.product.id = transaction.product_id
+        this.product.price = transaction.gross_amount
+      })
+    } else {
+      this.product = JSON.parse(localStorage.getItem('cart'))
+    }
     this.getListPaymentMethodes()
 
   },
@@ -60,9 +78,14 @@ export default {
       this.$store.dispatch('product/GET_PRODUCTS',itemProduct)
     },
     postCheckout(){
+      if (this.selectedKonter == null){
+        alert("Silahkan pilih metode pembayaran")
+        return
+      }
       this.payload.product_id = this.product.id
       this.payload.qty = 1
       this.payload.payment_methode_id = this.selectedKonter.id
+      this.payload.transaction_id = this.transactionId
 
       this.$store.dispatch(
               'transaction/POST_TRANSACTION', this.payload
@@ -213,7 +236,7 @@ export default {
                     </b-collapse>
                     <hr>
                   </b-card>
-                  
+
                   <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
                     <div class="col-md-8" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
                         v-if="itemPaymentMethode.payment_type=='credit_card'">
@@ -234,7 +257,7 @@ export default {
               <h5 class="ml-4" style="color:#373334">{{product.product_name}}</h5>
             </div>
             <div class="col-sm-4" style="text-align:right">
-              <p class="mt-4" style="color:#c6c6c6">Rp {{product.price}}</p>
+              <p class="mt-4" style="color:#c6c6c6">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</p>
             </div>
           </div>
           <div class="card-body">
@@ -242,7 +265,7 @@ export default {
             <div style="text-align:right">
               <hr>
               <p style="color:#373334">Subtotal</p>
-              <h5 style="color:#00AFEF;"><b>Rp {{product.price}}</b></h5>
+              <h5 style="color:#00AFEF;"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
             </div>
             <div class="text-center">
               <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>

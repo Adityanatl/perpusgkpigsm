@@ -25,10 +25,8 @@ export const mutations = {
     state.transactions = payload.data
   },
     SET_TRANSACTION: (state, payload) => {
-      console.log('SET_TRANSACTION ',payload)
         state.loading = false
         state.transaction = payload
-        console.log('SET_TRANSACTION2 ',state.transaction)
     },
   SET_COLUMNS: (state, payload) => {
     state.loading = false
@@ -112,12 +110,12 @@ export const actions = {
       return resp
     })
   },
-    GET_TRANSACTION: async({commit},cutomerId) => {
+    GET_TRANSACTION: async({commit},transactionId) => {
         commit("LOADING")
-        return await axios({url: 'api/transaction/'+cutomerId, method: 'GET'})
+        return await axios({url: 'api/transaction/'+transactionId, method: 'GET'})
             .then(resp => {
                 if(resp.data.code == 200) {
-                    commit("SET_TRANSACTION", resp.data)
+                    commit("SET_TRANSACTION", resp.data.data)
 
                 }
                 return resp

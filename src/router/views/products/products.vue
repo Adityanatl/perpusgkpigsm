@@ -24,7 +24,6 @@ export default {
     return {
       tableData: [],
       title: "Pembelian ini ditujukan untuk :",
-      token: '',
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
@@ -33,11 +32,13 @@ export default {
   computed: {
   },
   mounted() {
-    this.token = this.$route.query.token;
-    window.axios.defaults.headers.common['Authorization'] = 'jwt ' + this.token
-    let temp = VueJwtDecode.decode(this.token)
-    temp['token'] = this.token
-    localStorage.setItem('user', JSON.stringify(temp));
+    if (this.$route.query.token != null) {
+      let token = this.$route.query.token;
+      window.axios.defaults.headers.common['Authorization'] = 'jwt ' + token
+      let temp = VueJwtDecode.decode(token)
+      temp['token'] = token
+      localStorage.setItem('user', JSON.stringify(temp));
+    }
     this.getListProduct();
 
   },
@@ -61,7 +62,7 @@ export default {
       this.$router.push('/checkout')
     }
 
-  },  
+  },
 
 };
 </script>
@@ -74,9 +75,9 @@ export default {
       <b-tabs pills align="center">
         <b-tab title="Personal" active color-tab><b-card-text>
           <div class="row mt-5">
-            
-            
-            
+
+
+
             <div class="col-xl-4" v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='Personal'">
               <div class="card"
                    style= "
@@ -97,10 +98,10 @@ export default {
                       </td>
                     </tr>
                   </tbody>
-                  <p style="color:#c6c6c6"><span class="blue-paideia ml-1 mt-1"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p>
+                  <p style="color:#c6c6c6"><span class="blue-paideia ml-1 mt-1"><b style="color:#00AFEF">{{itemProduct.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span> </p>
 
                   <div class="col">
-                  <p style="color:#373334" class="ml-2">Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
+                  <p style="color:#373334" class="ml-2">{{itemProduct.description}}.</p>
                   </div>
 
                   <div class="table-responsive mt-4">
@@ -139,7 +140,7 @@ export default {
                         "
               >
                 <div class="card-body">
-                  <tbody> 
+                  <tbody>
                     <tr>
                       <td>
                         <img class="mt-1 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left">
@@ -169,7 +170,7 @@ export default {
                           <b-button @click="updateCart(itemProduct)" style="background-color: #00AFEF; border-style:none" variant="primary rounded-pill">Kontribusi Sekarang
                             <router-link tag="a" to="/checkout" class="header-button d-none d-sm-inline-block"></router-link>
                           </b-button>
-                        </tr>  
+                        </tr>
                       </tbody>
                     </table>
                   </div>

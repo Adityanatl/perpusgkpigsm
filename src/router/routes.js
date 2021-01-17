@@ -65,7 +65,12 @@ export default [
     meta: { authRequired: true },
     component: () => import('./views/checkout/checkout')
   },
-
+  {
+    path: '/transaction/:id',
+    name: 'Transaction',
+    meta: { authRequired: true, mode: 'info' },
+    component: () => import('./views/transaction/transaction')
+  },
   {
     path: '/pembayaran-pending',
     name: 'pembayaran pending',
@@ -360,28 +365,28 @@ export default [
     name: 'sign up',
     meta: { authRequired: true },
     component: () => import('./views/sign_up/sign-up')
-  },   
+  },
 
   {
     path: '/sign_in/sign-in',
     name: 'sign in',
     meta: { authRequired: true },
     component: () => import('./views/sign_in/sign-in')
-  },   
+  },
 
   {
     path: '/reset_password/reset-password',
     name: 'reset password',
     meta: { authRequired: true },
     component: () => import('./views/reset_password/reset-password')
-  },    
-  
+  },
+
   {
     path: '/change_password/change-password',
     name: 'change password',
     meta: { authRequired: true },
     component: () => import('./views/change_password/change-password')
-  },   
+  },
 
   {
     path: '/forgot-password',
