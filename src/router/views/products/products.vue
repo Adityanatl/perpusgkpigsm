@@ -28,11 +28,8 @@ export default {
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
-<<<<<<< HEAD
       selectedPrice: 0,
-=======
       // backgroundUrl,
->>>>>>> bdae390b62f686cbfc43d819d05622b0936bad63
     };
   },
   computed: {
@@ -105,7 +102,7 @@ export default {
 
       <PageHeader :title="title" />
 
-    
+
       <b-tabs pills align="center">
         <b-tab title="Personal" active color-tab><b-card-text>
           <div class="row mt-5">
