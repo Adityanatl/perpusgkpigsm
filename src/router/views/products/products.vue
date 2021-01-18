@@ -19,7 +19,7 @@ export default {
     title: "Products",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout, PageHeader, VueJwtDecode },
+  components: { PageHeader, VueJwtDecode },
   data() {
     return {
       tableData: [],
@@ -69,6 +69,26 @@ export default {
 
 <template>
   <Layout>
+
+    <b-navbar toggleable type="dark" variant="transparent">
+      <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
+
+      <!-- <b-navbar-toggle target="navbar-toggle-collapse">
+        <template #default="{ expanded }">
+          <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+          <b-icon v-else icon="chevron-bar-down"></b-icon>
+        </template>
+      </b-navbar-toggle> -->
+
+      <!-- <b-collapse id="navbar-toggle-collapse" is-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item href="#">Link 1</b-nav-item>
+          <b-nav-item href="#">Link 2</b-nav-item>
+          <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse> -->
+    </b-navbar><br>
+
     <PageHeader :title="title" />
 
     <div>
@@ -93,7 +113,7 @@ export default {
                         <h5 style="margin-left:10px; color:#373334" class="ml-3 mt-3 mb-1">{{itemProduct.product_name}}</h5>
                       </td>
                       <td>
-                        <div class="col" style="float: right" v-if="itemProduct.recommended" >
+                        <div class="col" style="text-align: right" v-if="itemProduct.recommended" >
                         <p class="" style="font-size:15px;"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
                       </td>
                     </tr>
@@ -143,11 +163,11 @@ export default {
                   <tbody>
                     <tr>
                       <td>
-                        <img class="mt-1 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left">
+                        <img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left">
                       </td>
                       <td>
                         <h5 style="margin-left:10px; color:#373334">{{itemProduct.product_name}}</h5>
-                        <p v-if="itemProduct.recommended" class="blue-paideia mt-5" style="margin-top:0px; margin-left:90px; margin-bottom:100px;"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
+                        <p v-if="itemProduct.recommended" class="blue-paideia mt-5" style="margin-top:0px; margin-left:90px; margin-bottom:100px; float:right;"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
                         <p style="color:#707070">{{itemProduct.description}}</p>
                         <p class="mt-2" style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p>
                       </td>
