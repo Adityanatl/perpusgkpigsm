@@ -28,7 +28,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
-      backgroundUrl
+      backgroundUrl,
     };
   },
   computed: {
