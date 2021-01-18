@@ -94,7 +94,7 @@ export default {
                       </td>
                       <td>
                         <div class="col" v-if="itemProduct.recommended" >
-                        <p class="" style="font-size:10px; float: right"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
+                        <p class="" style="font-size:10px; text-align: right"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
                       </td>
                     </tr>
                   </tbody>
