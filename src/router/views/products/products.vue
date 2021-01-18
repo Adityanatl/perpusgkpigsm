@@ -27,6 +27,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
+      selectedPrice: 0,
     };
   },
   computed: {
@@ -57,6 +58,13 @@ export default {
       })
     },
     updateCart(itemProduct){
+      if (itemProduct.product_type=='Donasi'){
+        if(this.selectedPrice == 0) {
+          alert("Mohon pilih Semester / Tahunan")
+          return
+        }
+        itemProduct.price = this.selectedPrice
+      }
       localStorage.setItem('cart', JSON.stringify(itemProduct))
       this.$store.dispatch('product/UPDATE_PRODUCT_CART',itemProduct)
       this.$router.push('/checkout')
@@ -130,8 +138,7 @@ export default {
           <div class="row mt-5">
 
 
-
-            <div class="col-xl-4"  v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='donasi'">
+            <div class="col-xl-4"  v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='Donasi'">
               <div class="card"
                    style= "
                           border-radius: 8px;
@@ -149,7 +156,7 @@ export default {
                         <h5 style="margin-left:10px; color:#373334">{{itemProduct.product_name}}</h5>
                         <p v-if="itemProduct.recommended" class="blue-paideia mt-5" style="margin-top:0px; margin-left:90px; margin-bottom:100px;"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
                         <p style="color:#707070">{{itemProduct.description}}</p>
-                        <p class="mt-2" style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">{{itemProduct.price}}</b></span> / bulan</p>
+                        <p class="mt-2" style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">Rp {{itemProduct.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span> / bulan</p>
                       </td>
                     </tr>
                   </tbody>
@@ -160,10 +167,10 @@ export default {
                       <tbody>
                         <tr>
                           <b-form-group style="margin-left:70px;" v-slot="{ ariaDescribedby }">
-                            <b-form-radio class="mb-3" v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">
-                              {{itemProduct.semester_price}}</b-form-radio>
-                            <b-form-radio class="mb-3 mt-3" v-model="selected" :aria-describedby="ariaDescribedby" name="some-radios" value="B">
-                              {{itemProduct.yearly_price}}</b-form-radio>
+                            <b-form-radio class="mb-3" v-model="selectedPrice" :aria-describedby="ariaDescribedby" name="some-radios" :value="itemProduct.semester_price">
+                              Semester ({{itemProduct.semester_price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}} IDR)</b-form-radio>
+                            <b-form-radio class="mb-3 mt-3" v-model="selectedPrice" :aria-describedby="ariaDescribedby" name="some-radios" :value="itemProduct.yearly_price">
+                              Tahunan ({{itemProduct.yearly_price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}} IDR)</b-form-radio>
                           </b-form-group>
                         </tr>
                         <tr>
