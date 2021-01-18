@@ -4,7 +4,7 @@ import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 import Vue from "vue";
 import VueJwtDecode from "vue-jwt-decode";
-import backgroundUrl from '@/assets/images/background.png';
+// import backgroundUrl from '@/assets/images/background.png';
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -25,7 +25,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listPaymentMethodes: [],
       monthly_price: [],
-      backgroundUrl,
+      // backgroundUrl,
       product:{ "id": 0, "product_type": "", "product_name": "", "price": 0, "account_id": 0, "reference_id": 0, "month": 0, "image_url": "", "description": "", "recommended": false },
       selectedKonter: null,
       transactionId: null,
@@ -134,7 +134,7 @@ export default {
 <template>
   <Layout >
 
-    <div class=" bg-no-repeat bg-white bg-cover relative" :style="{ backgroundImage: `url(${backgroundUrl})` }">
+    <div>
     <b-navbar toggleable type="dark" variant="transparent">
       <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
 

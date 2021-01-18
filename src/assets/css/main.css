@@ -2696,13 +2696,13 @@ input[type="submit"] {
 }
 
 .header-section.active {
-    background: #0b507d;
+    background: #09a3f2;
     top: 0;
 }
 
 @media (max-width: 991px) {
     .header-section.active {
-        background: #0b507d;
+        background: #09a3f2;
     }
 }
 

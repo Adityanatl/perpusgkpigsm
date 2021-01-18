@@ -16,9 +16,9 @@ import { Carousel, Slide } from "vue-carousel";
 // import '@/assets/js/canvasjs.min.js';
 // import '@/assets/js/paroller.js';
 // import '@/assets/js/main.js';
-global.jQuery = require('jquery');
-var $ = global.jQuery;
-window.$ = $;
+// global.jQuery = require('jquery');
+// var $ = global.jQuery;
+// window.$ = $;
 
 /**
  * Crypto ICO-landing page
@@ -63,15 +63,15 @@ export default {
   },
 };
     
-    $(window).on('scroll', function () {
+    // $(window).on('scroll', function () {
         
-        var header = $(".header-section");
-      if ($(this).scrollTop() < 1) {
-        header.removeClass("active");
-      } else {
-        header.addClass("active");
-      }
-    });
+    //     var header = $(".header-section");
+    //   if ($(this).scrollTop() < 1) {
+    //     header.removeClass("active");
+    //   } else {
+    //     header.addClass("active");
+    //   }
+    // });
 
 </script>
 

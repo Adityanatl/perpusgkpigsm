@@ -2,7 +2,7 @@
 import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
-import backgroundUrl from '@/assets/images/background.png';
+// import backgroundUrl from '@/assets/images/background.png';
 
 import Profile from "@/components/widgets/profile";
 import Earning from "@/components/widgets/earning";
@@ -28,7 +28,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
-      backgroundUrl,
+      // backgroundUrl,
     };
   },
   computed: {
@@ -71,7 +71,7 @@ export default {
 
 <template>
   <Layout>
-    <div class=" bg-no-repeat bg-white bg-cover relative" :style="{ backgroundImage: `url(${backgroundUrl})` }">
+    <div>
 
       <b-navbar toggleable type="dark" variant="transparent">
         <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
