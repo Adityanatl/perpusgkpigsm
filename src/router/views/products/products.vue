@@ -90,15 +90,15 @@ export default {
                   <tbody>
                     <tr>
                       <td>
-                        <h5 style="margin-left:10px; color:#373334" class="ml-2 mt-3 mb-1">{{itemProduct.product_name}}</h5>
+                        <h5 style="margin-left:10px; color:#373334" class="ml-3 mt-3 mb-1">{{itemProduct.product_name}}</h5>
                       </td>
                       <td>
                         <div class="col" v-if="itemProduct.recommended" >
-                        <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
+                        <p class="" style="font-size:10px; float: right"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
                       </td>
                     </tr>
                   </tbody>
-                  <p style="color:#c6c6c6"><span class="blue-paideia ml-1 mt-1"><b style="color:#00AFEF">{{itemProduct.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span> </p>
+                  <p style="color:#c6c6c6"><span class="blue-paideia ml-3 mt-1"><b style="color:#00AFEF">{{itemProduct.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span> </p>
 
                   <div class="col">
                   <p style="color:#373334" class="ml-2">{{itemProduct.description}}.</p>
