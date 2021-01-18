@@ -4,6 +4,7 @@ import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 import Vue from "vue";
 import VueJwtDecode from "vue-jwt-decode";
+// import backgroundUrl from '@/assets/images/background.png';
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -15,7 +16,7 @@ export default {
     title: "Checkout",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout, PageHeader },
+  components: { PageHeader },
   data() {
     return {
       // tableData: [],
@@ -24,6 +25,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listPaymentMethodes: [],
       monthly_price: [],
+      // backgroundUrl,
       product:{ "id": 0, "product_type": "", "product_name": "", "price": 0, "account_id": 0, "reference_id": 0, "month": 0, "image_url": "", "description": "", "recommended": false },
       selectedKonter: null,
       transactionId: null,
@@ -131,152 +133,211 @@ export default {
 
 <template>
   <Layout >
+
+    <div>
+    <b-navbar toggleable type="dark" variant="transparent">
+      <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
+
+      <!-- <b-navbar-toggle target="navbar-toggle-collapse">
+        <template #default="{ expanded }">
+          <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+          <b-icon v-else icon="chevron-bar-down"></b-icon>
+        </template>
+      </b-navbar-toggle> -->
+
+      <!-- <b-collapse id="navbar-toggle-collapse" is-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item href="#">Link 1</b-nav-item>
+          <b-nav-item href="#">Link 2</b-nav-item>
+          <b-nav-item href="#" disabled>Disabled</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse> -->
+    </b-navbar><br>
+
     <PageHeader :title="title" />
 
-  <div class="container valign">
-   <div class="row no-gutters">
-    <!-- <div class="col-md-12"> -->
-      <div class="col-xl-8" >
-        <div class="vertical-nav">
-          <b-card-text>
-            <div class="card mr-2">
-                <div class="card-body">
+    <div class="container valign">
+      <div class="row no-gutters">
+        <!-- <div class="col-md-12"> -->
+          <div class="col-xl-8" >
+            <div class="vertical-nav">
+              <b-card-text>
+                <div class="card mr-2">
+                    <div class="card-body">
 
 
-                  <h4 class="card-title mb-4">Metode Pembayaran</h4><hr>
-                  <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
-                    <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
+                      <h5 class="card-title mb-4">Metode Pembayaran</h5><hr>
+                      <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
+                        <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
 
-                        <a
-                                href="javascript: void(0);"
-                                class="accordion-list collapsed"
-                                v-b-toggle.accordion-1
-                                style="background:white; "
-                        >
-                          <div>Pembayaran Konter</div>
-                          <i class="mdi chevron-up chevron-down"></i>
-                        </a>
-                      </b-card-header>
-
-                    <b-collapse
-                            id="accordion-1"
-                            visible
-                            accordion="my-accordion"
-                            role="tabpanel"
-                    >
-
-                        <b-card-body style="margin-left: -20px; margin-right: -20px">
-                          <div>
-                            <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                                v-if="itemPaymentMethode.payment_type=='konter'"
+                            <a
+                                    href="javascript: void(0);"
+                                    class="accordion-list collapsed"
+                                    v-b-toggle.accordion-1
+                                    style="background:white; "
                             >
-                              <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                                <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="37px"></b-form-radio>
+                              <div>Pembayaran Konter</div>
+                              <i class="mdi chevron-up chevron-down" style="background=white;"></i>
+                            </a>
+                          </b-card-header>
+
+                        <b-collapse
+                                id="accordion-1"
+                                visible
+                                accordion="my-accordion"
+                                role="tabpanel"
+                        >
+
+                          <b-card-body style="margin-left: -20px; margin-right: -20px">
+                            <div class="table-responsive">
+                              <table class="table table-centered">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                          v-if="itemPaymentMethode.payment_type=='konter'">
+                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="37px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                          v-if="itemPaymentMethode.payment_type=='konter'">
+                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="37px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
                             </div>
-                          </div>
-
-                        </b-card-body>
-                    </b-collapse><hr>
-                  </b-card>
+                          </b-card-body>
+                        </b-collapse><hr>
+                      </b-card>
 
 
-                  <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
-                    <b-card-header header-tag="header" style="background:white;" role="tab">
-                      <a
-                              href="javascript: void(0);"
-                              class="accordion-list"
-                              v-b-toggle.accordion-2
-                              style="background:white;"
-                      >
-                        <div>Direct Debit</div>
-                        <i class="mdi chevron-up mdi-chevron-down"  style="background=white;"></i>
-                      </a>
-                    </b-card-header>
-                    <b-collapse
-                            id="accordion-2"
-                            visible
-                            accordion="my-accordion"
-                            role="tabpanel"
-                    >
-                      <b-card-body>
-                        <div class="row" >
-                          <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                        v-if="itemPaymentMethode.payment_type=='debet'">
-                          <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                            <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
-                          </div>
+                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                        <b-card-header header-tag="header" style="background:white;" role="tab">
+                          <a
+                                  href="javascript: void(0);"
+                                  class="accordion-list"
+                                  v-b-toggle.accordion-2
+                                  style="background:white;"
+                          >
+                            <div>Direct Debit</div>
+                            <i class="mdi chevron-up mdi-chevron-down"  style="background=white;"></i>
+                          </a>
+                        </b-card-header>
+                        <b-collapse
+                                id="accordion-2"
+                                visible
+                                accordion="my-accordion"
+                                role="tabpanel"
+                        >
+                          <b-card-body>
+                            <div class="table-responsive">
+                              <table class="table table-centered">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                        v-if="itemPaymentMethode.payment_type=='debet'">
+                                      <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                        <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </b-card-body>
+                        </b-collapse>
+                        <hr>
+                      </b-card>
+
+                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                        <b-card-header header-tag="header" style="background:white;" role="tab">
+                          <a
+                                  href="javascript: void(0);"
+                                  class="accordion-list"
+                                  v-b-toggle.accordion-3
+                                  style="background:white;"
+                          >
+                            <div>E-Wallet</div>
+                            <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
+                          </a>
+                        </b-card-header>
+                        <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+                          <b-card-body>
+                            <div class="table-responsive">
+                              <table class="table table-centered">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                          v-if="itemPaymentMethode.payment_type=='wallet'">
+                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </b-card-body>
+                        </b-collapse>
+                        <hr>
+                      </b-card>
+
+                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                        <div class="col-md-8" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                            v-if="itemPaymentMethode.payment_type=='credit_card'">
+                          <b-form-radio class="mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                            <img :src="itemPaymentMethode.image_url" alt="" width="35px" height="25px" class="mr-2">{{ itemPaymentMethode.payment_name}}</b-form-radio>
                         </div>
-                      </b-card-body>
-                    </b-collapse>
-                    <hr>
-                  </b-card>
-
-                  <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
-                    <b-card-header header-tag="header" style="background:white;" role="tab">
-                      <a
-                              href="javascript: void(0);"
-                              class="accordion-list"
-                              v-b-toggle.accordion-3
-                              style="background:white;"
-                      >
-                        <div>E-Wallet</div>
-                        <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
-                      </a>
-                    </b-card-header>
-                    <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-                      <b-card-body>
-                        <div class="row" >
-                          <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                              v-if="itemPaymentMethode.payment_type=='wallet'">
-                            <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                              <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
-                          </div>
-                        </div>
-                      </b-card-body>
-                    </b-collapse>
-                    <hr>
-                  </b-card>
-
-                  <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
-                    <div class="col-md-8" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                        v-if="itemPaymentMethode.payment_type=='credit_card'">
-                      <b-form-radio class="mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                        <img :src="itemPaymentMethode.image_url" alt="" width="35px" height="25px" class="mr-2">{{ itemPaymentMethode.payment_name}}</b-form-radio>
+                      </b-card>
                     </div>
-                  </b-card>
+                  </div>
+              </b-card-text>
+            </div>
+          </div>
+          <!-- end col -->
+          <div class="col-xl-4">
+            <div class="card">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="table-responsive">
+                    <table class="table table-centered">
+                      <td>
+                        <tr><h5 class="mt-4 ml-1" style="color:#373334">{{product.product_name}}</h5></tr>
+                      </td>
+                      <td>
+                        <tr style="float:right;"><p class="mt-4 mr-2" style="color:#c6c6c6">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</p></tr>
+                      </td>
+                    </table>
+                  </div>
                 </div>
               </div>
-          </b-card-text>
-        </div>
-      </div>
-      <!-- end col -->
-      <div class="col-xl-4">
-        <div class="card mt-0">
-          <div class="row">
-            <div class="col-md-7">
-              <h5 class="ml-4" style="color:#373334">{{product.product_name}}</h5>
-            </div>
-            <div class="col-sm-4" style="text-align:right">
-              <p class="mt-4" style="color:#c6c6c6">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</p>
-            </div>
-          </div>
-          <div class="card-body">
+              
+              <div class="card-body">
 
-            <div style="text-align:right">
-              <hr>
-              <p style="color:#373334">Subtotal</p>
-              <h5 style="color:#00AFEF;"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
-            </div>
-            <div class="text-center">
-              <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
+                <div style="text-align:right">
+                  <hr>
+                  <p style="color:#373334">Subtotal</p>
+                  <h5 style="color:#00AFEF;"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
+                </div>
+                <div class="text-center">
+                  <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+          <!-- end col -->
       </div>
-      <!-- end col -->
-   </div>
-  </div>
-    <!-- </div> -->
+    </div>
+    </div>
     <!-- end row -->
   </Layout>
 </template>
