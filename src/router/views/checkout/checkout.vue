@@ -304,7 +304,7 @@ export default {
           <div class="col-xl-4">
             <div class="card">
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-12">
                   <div class="table-responsive">
                     <table class="table table-centered">
                       <td>
@@ -314,8 +314,8 @@ export default {
                         <tr style="float:right;"><p class="mt-4 mr-2" style="color:#c6c6c6">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</p></tr>
                       </td>
                     </table>
+                  </div>
                 </div>
-              </div>
               </div>
               
               <div class="card-body">
