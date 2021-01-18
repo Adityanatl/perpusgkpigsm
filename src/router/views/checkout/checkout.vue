@@ -4,6 +4,7 @@ import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 import Vue from "vue";
 import VueJwtDecode from "vue-jwt-decode";
+import backgroundUrl from '@/assets/images/background.png';
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -24,6 +25,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listPaymentMethodes: [],
       monthly_price: [],
+      backgroundUrl,
       product:{ "id": 0, "product_type": "", "product_name": "", "price": 0, "account_id": 0, "reference_id": 0, "month": 0, "image_url": "", "description": "", "recommended": false },
       selectedKonter: null,
       transactionId: null,
@@ -132,6 +134,7 @@ export default {
 <template>
   <Layout >
 
+    <div class=" bg-no-repeat bg-white bg-cover relative" :style="{ backgroundImage: `url(${backgroundUrl})` }">
     <b-navbar toggleable type="dark" variant="transparent">
       <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
 
@@ -163,7 +166,7 @@ export default {
                     <div class="card-body">
 
 
-                      <h4 class="card-title mb-4">Metode Pembayaran</h4><hr>
+                      <h5 class="card-title mb-4">Metode Pembayaran</h5><hr>
                       <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
 
@@ -334,7 +337,7 @@ export default {
           <!-- end col -->
       </div>
     </div>
-    <!-- </div> -->
+    </div>
     <!-- end row -->
   </Layout>
 </template>

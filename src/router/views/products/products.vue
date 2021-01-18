@@ -2,6 +2,7 @@
 import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
+import backgroundUrl from '@/assets/images/background.png';
 
 import Profile from "@/components/widgets/profile";
 import Earning from "@/components/widgets/earning";
@@ -27,6 +28,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
+      backgroundUrl
     };
   },
   computed: {
@@ -69,29 +71,30 @@ export default {
 
 <template>
   <Layout>
+    <div class=" bg-no-repeat bg-white bg-cover relative" :style="{ backgroundImage: `url(${backgroundUrl})` }">
 
-    <b-navbar toggleable type="dark" variant="transparent">
-      <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
+      <b-navbar toggleable type="dark" variant="transparent">
+        <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
 
-      <!-- <b-navbar-toggle target="navbar-toggle-collapse">
-        <template #default="{ expanded }">
-          <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-          <b-icon v-else icon="chevron-bar-down"></b-icon>
-        </template>
-      </b-navbar-toggle> -->
+        <!-- <b-navbar-toggle target="navbar-toggle-collapse">
+          <template #default="{ expanded }">
+            <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+            <b-icon v-else icon="chevron-bar-down"></b-icon>
+          </template>
+        </b-navbar-toggle> -->
 
-      <!-- <b-collapse id="navbar-toggle-collapse" is-nav>
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#">Link 1</b-nav-item>
-          <b-nav-item href="#">Link 2</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
-        </b-navbar-nav>
-      </b-collapse> -->
-    </b-navbar><br>
+        <!-- <b-collapse id="navbar-toggle-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item href="#">Link 1</b-nav-item>
+            <b-nav-item href="#">Link 2</b-nav-item>
+            <b-nav-item href="#" disabled>Disabled</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse> -->
+      </b-navbar><br>
 
-    <PageHeader :title="title" />
+      <PageHeader :title="title" />
 
-    <div>
+    
       <b-tabs pills align="center">
         <b-tab title="Personal" active color-tab><b-card-text>
           <div class="row mt-5">
@@ -146,7 +149,7 @@ export default {
           <!-- end col -->
         </b-card-text></b-tab>
 
-        <b-tab title="Kontribusi"><b-card-text>
+        <b-tab title="donasi"><b-card-text>
           <div class="row mt-5">
 
 
