@@ -93,8 +93,8 @@ export default {
                         <h5 style="margin-left:10px; color:#373334" class="ml-3 mt-3 mb-1">{{itemProduct.product_name}}</h5>
                       </td>
                       <td>
-                        <div class="col" v-if="itemProduct.recommended" >
-                        <p class="" style="font-size:10px; text-align: right"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
+                        <div class="col" style="float: right" v-if="itemProduct.recommended" >
+                        <p class="" style="font-size:15px;"><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p></div>
                       </td>
                     </tr>
                   </tbody>
