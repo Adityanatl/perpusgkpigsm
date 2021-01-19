@@ -157,7 +157,7 @@ export default {
           <!-- end col -->
         </b-card-text></b-tab>
 
-        <b-tab title="donasi"><b-card-text>
+        <b-tab title="Kontribusi"><b-card-text>
           <div class="row mt-5">
 
 
@@ -176,10 +176,10 @@ export default {
                         <img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left">
                       </td>
                       <td>
-                        <h5 style="margin-left:10px; color:#373334">{{itemProduct.product_name}}</h5>
-                        <p v-if="itemProduct.recommended" class="blue-paideia mt-5" style="margin-top:0px; margin-left:90px; margin-bottom:100px; float:right;"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
+                        <h5 class="mb-3" style="color:#373334">{{itemProduct.product_name}}</h5>
                         <p style="color:#707070">{{itemProduct.description}}</p>
-                        <p class="mt-2" style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">Rp {{itemProduct.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span> / bulan</p>
+                        <p v-if="itemProduct.recommended" class="blue-paideia"><img src="@/assets/images/star.png" width="20px" height="20px" style="margin-bottom:5px;">Recommended</p>
+                        <p style="color:#c6c6c6"><span class="blue-paideia"><b style="color:#00AFEF">Rp {{itemProduct.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span> / bulan</p>
                       </td>
                     </tr>
                   </tbody>
@@ -190,9 +190,9 @@ export default {
                       <tbody>
                         <tr>
                           <b-form-group style="margin-left:70px;" v-slot="{ ariaDescribedby }">
-                            <b-form-radio class="mb-3" v-model="selectedPrice" :aria-describedby="ariaDescribedby" name="some-radios" :value="itemProduct.semester_price">
+                            <b-form-radio class="mb-3" v-model="selectedPrice" :aria-describedby="ariaDescribedby" name="some-radios" :value="itemProduct.semester_price" style="font-size:16px">
                               Semester ({{itemProduct.semester_price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}} IDR)</b-form-radio>
-                            <b-form-radio class="mb-3 mt-3" v-model="selectedPrice" :aria-describedby="ariaDescribedby" name="some-radios" :value="itemProduct.yearly_price">
+                            <b-form-radio class="mb-3 mt-3" v-model="selectedPrice" :aria-describedby="ariaDescribedby" name="some-radios" :value="itemProduct.yearly_price" style="font-size:16px">
                               Tahunan ({{itemProduct.yearly_price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}} IDR)</b-form-radio>
                           </b-form-group>
                         </tr>
