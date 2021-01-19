@@ -4,7 +4,7 @@ import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 import Vue from "vue";
 import VueJwtDecode from "vue-jwt-decode";
-// import backgroundUrl from '@/assets/images/background.png';
+import backgroundUrl from '@/assets/images/background.png';
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -25,7 +25,7 @@ export default {
       aaa:'@/assets/images/domba.png',
       listPaymentMethodes: [],
       monthly_price: [],
-      // backgroundUrl,
+      backgroundUrl,
       product:{ "id": 0, "product_type": "", "product_name": "", "price": 0, "account_id": 0, "reference_id": 0, "month": 0, "image_url": "", "description": "", "recommended": false },
       selectedKonter: null,
       transactionId: null,
@@ -134,7 +134,7 @@ export default {
 <template>
   <Layout >
 
-    <div>
+    <div class=" bg-no-repeat bg-white bg-cover relative" :style="{ backgroundImage: `url(${backgroundUrl})` }">
     <b-navbar toggleable type="dark" variant="transparent">
       <b-navbar-brand href="#"><img src="@/assets/images/logo-light.svg" alt height="22" /></b-navbar-brand>
 
@@ -192,15 +192,6 @@ export default {
                             <div class="table-responsive">
                               <table class="table table-centered">
                                 <tbody>
-                                  <tr>
-                                    <td>
-                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                                          v-if="itemPaymentMethode.payment_type=='konter'">
-                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="37px"></b-form-radio>
-                                      </div>
-                                    </td>
-                                  </tr>
                                   <tr>
                                     <td>
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
@@ -273,13 +264,13 @@ export default {
                           <b-card-body>
                             <div class="table-responsive">
                               <table class="table table-centered">
-                                <tbody>
+                                <tbody> 
                                   <tr>
                                     <td>
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
                                           v-if="itemPaymentMethode.payment_type=='wallet'">
                                         <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="82px" height="26px"></b-form-radio>
                                       </div>
                                     </td>
                                   </tr>
