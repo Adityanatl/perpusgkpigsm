@@ -159,14 +159,14 @@ export default {
     <div class="container valign">
       <div class="row no-gutters">
         <!-- <div class="col-md-12"> -->
-          <div class="col-xl-8" >
+          <div class="col-xl-8" style="top:15px;">
             <div class="vertical-nav">
               <b-card-text>
                 <div class="card mr-2">
                     <div class="card-body">
 
 
-                      <h5 class="card-title mb-4">Metode Pembayaran</h5><hr>
+                      <h5 class="mb-4 mt-3" style="color:#373334;">Metode Pembayaran</h5><hr>
                       <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
 

@@ -34,7 +34,7 @@ export const actions = {
       console.log('args ',args)
     var params = queryString.stringify({
       ...{
-          limit: 10,
+          limit: 27,
           page: 1,
           name: null,
           sort: '-id'
