@@ -25,7 +25,7 @@ export default {
             <div class="account-title text-center mb-120">
                     <router-link tag="a" to="/" class="back-home"><i class="fas fa-angle-left"></i><span>Kembali <span class="d-none d-sm-inline-block">ke Beranda</span></span></router-link>
                 <a href="#0" class="logo">
-                    <!-- <img src='@/assets/images/new-gurukreator-logo.png' alt="logo"> -->
+                    <img src='@/assets/images/new-gurukreator-logo.png' width="185vw" height="49vh" alt="logo">
                 </a>
             </div>
             <div class="account-wrapper top-gap">

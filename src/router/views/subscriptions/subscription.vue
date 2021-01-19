@@ -14,7 +14,7 @@ import Emailsent from "@/components/widgets/emailsent";
  */
 export default {
   page: {
-    title: "Dashboard",
+    // title: "Dashboard",
     meta: [{ name: "description", content: appConfig.description }]
   },
   components: {
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      title: "Dashboard",
+      // title: "Dashboard",
       items: [
         {
           text: "Dashboards",
@@ -121,7 +121,7 @@ export default {
   <Layout>
     <PageHeader :title="title" :items="items" />
 
-    <h2 class="mb-3">Subscriptions</h2>
+    <h3 class="mb-3">Subscriptions</h3>
 
     <div class="row">
       <div class="col-lg-12">

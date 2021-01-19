@@ -14,7 +14,7 @@ import Emailsent from "@/components/widgets/emailsent";
  */
 export default {
   page: {
-    title: "Dashboard",
+    // title: "Profile",
     meta: [{ name: "description", content: appConfig.description }]
   },
   components: {
@@ -28,90 +28,8 @@ export default {
   },
   data() {
     return {
-      title: "Dashboard",
-      items: [
-        {
-          text: "Dashboards",
-          href: "/"
-        },
-        {
-          text: "Default",
-          active: true
-        }
-      ],
-      statData: [
-        {
-          icon: "bx bx-copy-alt",
-          title: "Orders",
-          value: "1,235"
-        },
-        {
-          icon: "bx bx-archive-in",
-          title: "Revenue",
-          value: "$35, 723"
-        },
-        {
-          icon: "bx bx-purchase-tag-alt",
-          title: "Average Price",
-          value: "$16.2"
-        }
-      ],
-      transactions: [
-        {
-          id: "#SK2540",
-          name: "Neal Matthews",
-          date: "07 Oct, 2019",
-          total: "$400",
-          status: "Paid",
-          payment: ["fa-cc-mastercard", "Mastercard"],
-          index: 1
-        },
-        {
-          id: "#SK2541",
-          name: "Jamal Burnett",
-          date: "07 Oct, 2019",
-          total: "$380",
-          status: "Chargeback",
-          payment: ["fa-cc-visa", "Visa"],
-          index: 2
-        },
-        {
-          id: "#SK2542",
-          name: "Juan Mitchell",
-          date: "06 Oct, 2019",
-          total: "$384",
-          status: "Paid",
-          payment: ["fab fa-cc-paypal", "Paypal"],
-          index: 3
-        },
-        {
-          id: "#SK2543",
-          name: "Barry Dick",
-          date: "05 Oct, 2019",
-          total: "$412",
-          status: "Paid",
-          payment: ["fa-cc-mastercard", "Mastercard"],
-          index: 4
-        },
-        {
-          id: "#SK2544",
-          name: "Ronald Taylor",
-          date: "04 Oct, 2019",
-          total: "$404",
-          status: "Refund",
-          payment: ["fa-cc-visa", "Visa"],
-          index: 5
-        },
-        {
-          id: "#SK2545",
-          name: "Jacob Hunter",
-          date: "04 Oct, 2019",
-          total: "$392",
-          status: "Paid",
-          payment: ["fab fa-cc-paypal", "Paypal"],
-          index: 6
-        }
-      ]
+      // title: "Account Info",
+      user: JSON.parse(localStorage.getItem('user')),
     };
   }
 };
@@ -121,7 +39,7 @@ export default {
   <Layout>
     <PageHeader :title="title" :items="items" />
 
-    <h2 class="mb-3">Account Info</h2>
+    <h3 class="mb-3">Account Info</h3>
 
     <div class="row">
       <div class="col-lg-12">
@@ -134,21 +52,27 @@ export default {
                 </div>
               </div>
               <div class="col-sm-10">
-                  <h4>Detail Account</h4>
+                  <h4 class="mt-3">Detail Account</h4>
                   <hr>
                   <div class="col-5">
-                    <p>Nama</p>
-                    <hr>
-                    <p>Email</p>
-                    <hr>
-                    <p>Tanggal Lahir</p>
-                    <hr>
-                    <p>Nomor kontak</p>
-                    <hr>
-                    <p>Kota Kabupaten</p>
-                    <hr>
-                    <p>Provinsi</p>
-                    <hr>
+                    <tr>
+                      <td>Nama :</td>
+                      <td>{{user.name}}</td>
+                    </tr><br>
+                    <tr>
+                      <td>Email :</td>
+                      <td>{{user.email}}</td>
+                    </tr><br>
+                    <tr>
+                      <td>No. Telephone : </td>
+                      <td>{{user.hp}}</td>
+                    </tr><br>
+                    <tr>
+                      <td>Tempat Lahir : </td>
+                    </tr><br>
+                    <tr>
+                      <td>Provinsi :</td>
+                    </tr><br>
                   </div>
 
               </div>

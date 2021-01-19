@@ -1,40 +1,45 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import Vue from 'vue';
+import { Tabs, Tab } from 'vue-tabs-component';
+
+
+global.jQuery = require('jquery');
+var $ = global.jQuery;
+window.$ = $;
 
 /**
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide },
+//   components: { Carousel, Slide },
+
   data() {
     return {
-      start: "",
-      end: "",
-      interval: "",
-      days: "",
-      minutes: "",
-      hours: "",
-      seconds: "",
-      starttime: "Nov 5, 2018 15:37:25",
-      endtime: "Dec 31, 2020 16:37:25"
+
     };
   },
-  created() {
-    window.addEventListener("scroll", this.windowScroll);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.windowScroll);
-  },
-  mounted() {
-    this.start = new Date(this.starttime).getTime();
-    this.end = new Date(this.endtime).getTime();
-    // Update the count down every 1 second
-    this.timerCount(this.start, this.end);
-    this.interval = setInterval(() => {
-      this.timerCount(this.start, this.end);
-    }, 1000);
-  }
+
 };
+
+    $(window).on('scroll', function () {
+        
+        var header = $(".header-section");
+      if ($(this).scrollTop() < 1) {
+        header.removeClass("active");
+      } else {
+        header.addClass("active");
+      }
+    });
+
+    
+// new Vue({
+//     el : '#app',
+//     data : {
+//         currentView : 'kreasiku'
+//     }
+// });
+
 </script>
 
 <template>
@@ -288,7 +293,7 @@ export default {
                 </div>
             </div>
             
-            <ul class="nav nav-tabs feature-tab-menu">
+            <!-- <ul class="nav nav-tabs feature-tab-menu">
                 <li>
                     <a  data-toggle="tab" href="#collaboration" class="active">Kreasiku</a>
                 </li>
@@ -298,12 +303,24 @@ export default {
                 <li>
                     <a  data-toggle="tab" href="#integrations">Relungku</a>
                 </li>
-            </ul>
+            </ul> -->
+
+            <div id="app">
+                <ul class="nav nav-tabs feature-tab-menu">
+                    <li><a href="#" @click="currentView='kreasiku'"> Kreasiku </a></li>
+                    <li><a href="#" @click="currentView='kelasku'"> Kelasku </a></li>
+                    <li><a href="#" @click="currentView='relungku'"> Relungku </a></li>
+                </ul>
+                <component :is="currentView" keep-alive></component>
+            </div>
             
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="collaboration">
+            <!-- <div class="tab-content"> -->
+            <!-- <b-tabs pills align="center"> -->
+                <!-- <b-tab title="Kreasiku"><b-card-text> -->
+                <!-- <div class="tab-pane fade show active" id="collaboration"> -->
+                <template id="kreasiku">
                     <div class="row">
-                        <div class="col-lg-6 col-md-10">
+                        <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
                                 <h3 class="title">Kreasiku</h3>
                                 <p>Berkreasi tiada henti. Memudahkan Guru merancang apapun yang dibutuhkan</p>
@@ -417,10 +434,16 @@ export default {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="productivity">
+                </template>
+                <!-- </b-card-text></b-tab> -->
+                <!-- </div> -->
+                <!-- <div class="tab-pane fade" id="productivity"> -->
+                <!-- <b-tab title="Kelasku"><b-card-text> -->
+
+
+                <template id="kelasku">
                     <div class="row">
-                        <div class="col-lg-6 col-md-10">
+                        <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
                                 <h3 class="title">Kelasku</h3>
                                 <p>Ruang interaksi Guru dan Murid dalam sebuah sistem pembelajaran yang terbuka dan terencana</p>
@@ -513,10 +536,14 @@ export default {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="integrations">
+                </template>
+                <!-- </b-card-text></b-tab> -->
+                <!-- </div> -->
+                <!-- <div class="tab-pane fade" id="integrations"> -->
+                <!-- <b-tab title="Relungku"><b-card-text> -->
+                <template id="relungu">
                     <div class="row">
-                        <div class="col-lg-6 col-md-10">
+                        <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
                                 <h3 class="title">Relungku</h3>
                                 <p>Ruang berbagi dan kolaborasi sesama guru untuk keberlanjutan kreativitas dan pengembangan potensi diri</p>
@@ -567,8 +594,11 @@ export default {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </template>
+                <!-- </b-card-text></b-tab> -->
+                <!-- </div> -->
+            <!-- </b-tabs> -->
+            <!-- </div> -->
         </div>
     </section>
     <!--============= Feature Section Ends Here =============-->

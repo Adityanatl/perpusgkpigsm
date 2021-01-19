@@ -14,7 +14,7 @@ import Emailsent from "@/components/widgets/emailsent";
  */
 export default {
   page: {
-    title: "Dashboard",
+    // title: "Dashboard",
     meta: [{ name: "description", content: appConfig.description }]
   },
   components: {
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      title: "Dashboard",
+      // title: "Dashboard",
       items: [
         {
           text: "Dashboards",
@@ -129,7 +129,7 @@ export default {
           <div class="card-body">
             <div class="row">
               <div class="col-8">
-                <h4 class="card-title mb-1">Yuk, dukung guru berkreasi!</h4>
+                <h5 class="mt-2 mb-1"><b>Yuk, dukung guru berkreasi!</b></h5>
                 <p>Mari kita dukung pendidikan didaerah - daerah Indonesia</p>
                 <div class="mt-4" >
                   <!-- <img src="@/assets/images/leaf.png" width="60px" height="50px" alt="">

@@ -59,6 +59,18 @@ if (process.env.VUE_APP_DEFAULT_AUTH === "firebase") {
   configureFakeBackend();
 }
 
+Vue.component ('kreasiku',{
+  template: '#kreasiku',
+});
+
+Vue.component ('kelasku',{
+  template: '#kelasku',
+});
+
+Vue.component ('relungku',{
+  template: '#relungku',
+});
+
 Vue.use(VueRouter)
 Vue.use(vco)
 Vue.use(Scrollspy);
@@ -126,5 +138,8 @@ new Vue({
   router,
   store,
   i18n,
+  data: {
+    currentView : 'kreasiku'
+  },
   render: h => h(App)
 }).$mount('#app')

@@ -177,7 +177,7 @@ export default {
                                     style="background:white; "
                             >
                               <div>Pembayaran Konter</div>
-                              <i class="mdi chevron-up chevron-down" style="background=white;"></i>
+                              <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
                             </a>
                           </b-card-header>
 
@@ -205,7 +205,7 @@ export default {
                               </table>
                             </div>
                           </b-card-body>
-                        </b-collapse><hr>
+                        </b-collapse><hr style="color:#dddddd">
                       </b-card>
 
 
@@ -288,11 +288,19 @@ export default {
                           <b-form-radio class="mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
                             <img :src="itemPaymentMethode.image_url" alt="" width="35px" height="25px" class="mr-2">{{ itemPaymentMethode.payment_name}}</b-form-radio>
                         </div>
-                      </b-card>
+                      </b-card><br>
+                      <div>
+                        <form class="voucher-form">
+                            <input type="text" placeholder="Kode Voucher">
+                            <button type="submit">Gunakan</button>
+                        </form>
+                      </div><br>
                     </div>
                   </div>
               </b-card-text>
             </div>
+
+
           </div>
           <!-- end col -->
           <div class="col-xl-4">
@@ -302,7 +310,7 @@ export default {
                   <div class="table-responsive">
                     <table class="table table-centered">
                       <td>
-                        <tr><h5 class="mt-4 ml-1" style="color:#373334">{{product.product_name}}</h5></tr>
+                        <tr><h6 class="mt-4 ml-1" style="color:#373334">{{product.product_name}}</h6></tr>
                       </td>
                       <td>
                         <tr style="float:right;"><p class="mt-4 mr-2" style="color:#c6c6c6">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</p></tr>
@@ -317,11 +325,19 @@ export default {
                 <div style="text-align:right">
                   <hr>
                   <p style="color:#373334">Subtotal</p>
-                  <h5 style="color:#00AFEF;"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
+                  <h5 style="color:#00AFEF; font-size:20px"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
                 </div>
-                <div class="text-center">
-                  <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
-                </div>
+                  <div class="table-responsive mt-4">
+                    <table class="table table-centered">
+                      <tbody>
+                        <tr>
+                          <div class="text-center">
+                            <b-button @click="postCheckout" class="center-text mt-3" variant="primary rounded-pill" style="background-color:#00afef; border-style:none;">Bayar</b-button>
+                          </div>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
               </div>
             </div>
           </div>
