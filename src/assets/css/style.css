@@ -20,3 +20,87 @@
     background-repeat: no-repeat;
     background-image: url('../images/bg_team.jpg');    
 } */
+
+/*Subscribe Seciton Starts Here*/
+.voucher-form {
+    position: relative;
+}
+
+.voucher-form input {
+    height: 60px;
+    border: 1px solid #d5d3d3;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 10px;
+    color: #292929;
+    padding-left: 30px;
+    background: #ffffff;
+}
+
+.voucher-form input::placeholder {
+    color: #8f8f8f;
+}
+
+.voucher-form button {
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 35px;
+    background: transparent;
+    /* background: -moz-linear-gradient(-65deg, #00afef 0%, #0b507d 100%);
+    background: -webkit-linear-gradient(-65deg, #00afef 0%, #0b507d 100%); */
+    /* box-shadow: 0px 17px 24px 0px rgba(18, 83, 252, 0.51); */
+    border: none;
+    outline: none;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #00afef;
+    width: auto;
+}
+
+@media (max-width: 575px) {
+    .voucher-form input {
+        height: 50px;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .voucher-form button {
+        line-height: 50px;
+        font-size: 14px;
+        padding: 0 20px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    .subscribe-thumb {
+        margin-top: -80px;
+    }
+
+    .subscribe-pt {
+        padding-top: 80px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .subscribe-thumb {
+        margin-top: -185px;
+    }
+
+    .subscribe-pt {
+        padding-top: 185px;
+    }
+}
+
+.bg_img_testimony {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('/images/experience-bg.png');    
+}

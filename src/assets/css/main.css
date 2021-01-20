@@ -1058,7 +1058,7 @@ input[type="submit"] {
     content: '';
 }
 
-.social-icons, .footer-link, .pricing-area-16, .app-download-16, .appreciate-item .header, .client-say-16, .header-section .header-wrapper, .banner-4 .banner-odometer, .banner-4 .banner-odometer .counter-item, .banner-nav-container .ban-nav, .banner-1-slider-wrapper .ban-click, .counter-wrapper-3, .counter-wrapper-3 .counter-item, .banner-odometer-two, .banner-odometer-two .counter-item, .banner-12 .banner-odometer, .banner-12 .banner-odometer .counter-item, .sponsor-slider-wrapper .sponsor-thumb, .widget-tags ul, .widget-categories ul li a, .widget-post .widget-slider .item .content .meta-post, .widget-post .slider-nav, .trial-wrapper, .faq-item, .trigger, .exclusive-item, .colaboration-item, .amount-area, .download-options, .range-wrapper-2 .pricing-range .pricing-range-bottom, .coverage-right-area .rating-area, .coverage-wrapper div[class*="border-item"], .feature-item, .feature-item .feature-thumb, .feature-video-area .button-area, .download-area, .counter-area, .counter--item, .how--item, .bal-list, .counter-wrapper-2, .counter-item-2 .title, .advance-feature-item, .to-access-item .to-access-thumb, .count-slider, .count-slider .count-item, .pricing-menu, .ex-item .ex-thumb, .addon-wrapper .addon-center, .addon-wrapper .item, .cost-wrapper .cost-icon, .cost-wrapper .cost-icon .icon, .recharge-item .recharge-thumb, .recharge-wrapper, .help-item, .about-feature-counter-area, .pricing-item-4 .pricing-header, .pricing-wrapper-4, .counter-area-4, .counter-area-4 .counter-item-4, .page-header-content .breadcrumb li a, .counter-area-5, .counter-area-5 .counter-item-5, .sponsor-slider-4 .sponsor-thumb, .team-wrapper, .team-con-area, .team-con-area .item, .team-con-area .team-icons, .progress-area .progress-item .progress-label, .partner-item, .user-counter-wrapper, .review-item .review-thumb, .review-item .review-thumb .review-author-content, .comunity-wrapper, .coming-soon, .countdown, .account-section, .error-section, .error-section .man1, .error-section .man2, .feature-tab-menu, .cola-item, .user-range-area, .contact-form .form-group .form-check, .contact-item, .blog-author, .comment-area li .blog-item, .post-details .post-content, .post-details .post-content .entry-meta, .post-details .post-content .entry-meta .thumb, .post-details .tags-area, .post-details .tags-area .tags, .app-button-group, .button-group, .banner-button-group, .video-button-2 {
+.social-icons, .footer-link, .pricing-area-16, .app-download-16, .appreciate-item .header, .client-say-16, .header-section .header-wrapper, .banner-4 .banner-odometer, .banner-4 .banner-odometer .counter-item, .banner-nav-container .ban-nav, .banner-1-slider-wrapper .ban-click, .counter-wrapper-3, .counter-wrapper-3 .counter-item, .banner-odometer-two, .banner-odometer-two .counter-item, .banner-12 .banner-odometer, .banner-12 .banner-odometer .counter-item, .sponsor-slider-wrapper .sponsor-thumb, .widget-tags ul, .widget-categories ul li a, .widget-post .widget-slider .item .content .meta-post, .widget-post .slider-nav, .trial-wrapper, .faq-item, .trigger, .exclusive-item, .colaboration-item, .download-options, .range-wrapper-2 .pricing-range .pricing-range-bottom, .coverage-right-area .rating-area, .coverage-wrapper div[class*="border-item"], .feature-item, .feature-item .feature-thumb, .feature-video-area .button-area, .download-area, .counter-area, .counter--item, .how--item, .bal-list, .counter-wrapper-2, .counter-item-2 .title, .advance-feature-item, .to-access-item .to-access-thumb, .count-slider, .count-slider .count-item, .pricing-menu, .ex-item .ex-thumb, .addon-wrapper .addon-center, .addon-wrapper .item, .cost-wrapper .cost-icon, .cost-wrapper .cost-icon .icon, .recharge-item .recharge-thumb, .recharge-wrapper, .help-item, .about-feature-counter-area, .pricing-item-4 .pricing-header, .pricing-wrapper-4, .counter-area-4, .counter-area-4 .counter-item-4, .page-header-content .breadcrumb li a, .counter-area-5, .counter-area-5 .counter-item-5, .sponsor-slider-4 .sponsor-thumb, .team-wrapper, .team-con-area, .team-con-area .item, .team-con-area .team-icons, .progress-area .progress-item .progress-label, .partner-item, .user-counter-wrapper, .review-item .review-thumb, .review-item .review-thumb .review-author-content, .comunity-wrapper, .coming-soon, .countdown, .account-section, .error-section, .error-section .man1, .error-section .man2, .feature-tab-menu, .cola-item, .user-range-area, .contact-form .form-group .form-check, .contact-item, .blog-author, .comment-area li .blog-item, .post-details .post-content, .post-details .post-content .entry-meta, .post-details .post-content .entry-meta .thumb, .post-details .tags-area, .post-details .tags-area .tags, .app-button-group, .button-group, .banner-button-group, .video-button-2 {
     display: flex;
     flex-wrap: wrap;
 }
@@ -6042,9 +6042,9 @@ input[type="submit"] {
 /*Testimonial Section Starts Here*/
 .testimonial-wrapper {
     border-radius: 20px;
-    background: -ms-linear-gradient(16deg, #e1a1ed 0%, #ac7df1 35%, #7658f4 100%);
-    background: -moz-linear-gradient(16deg, #e1a1ed 0%, #ac7df1 35%, #7658f4 100%);
-    background: -webkit-linear-gradient(16deg, #e1a1ed 0%, #ac7df1 35%, #7658f4 100%);
+    background: -ms-linear-gradient(16deg, #00afef 0%, #0b507d 100%);
+    background: -moz-linear-gradient(16deg, #00afef 0%, #0b507d 100%);
+    background: -webkit-linear-gradient(16deg, #00afef 0%, #0b507d 100%);
     padding: 80px 80px 110px;
     position: relative;
 }
@@ -6881,9 +6881,9 @@ input[type="submit"] {
 }
 
 .amount-area .item {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
-    width: 30%;
+    width: 100%;
 }
 
 .amount-area .item .title {

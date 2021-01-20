@@ -1,6 +1,10 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
 
+global.jQuery = require('jquery');
+var $ = global.jQuery;
+window.$ = $;
+
 /**
  * Crypto ICO-landing page
  */
@@ -35,6 +39,16 @@ export default {
     }, 1000);
   }
 };
+
+    $(window).on('scroll', function () {
+        
+        var header = $(".header-section");
+      if ($(this).scrollTop() < 1) {
+        header.removeClass("active");
+      } else {
+        header.addClass("active");
+      }
+    });
 </script>
 
 <template>
@@ -472,20 +486,20 @@ export default {
         </div>
         <div class="container">
             <div class="section-header pb-30 cl-white">
-                <h5 class="cate">Pilih paket yang kamu inginkan</h5>
-                <h2 class="title">Biaya langgan yang sangat menguntungkan</h2>
+                <h5 class="cate">Saatnya berkolaborasi</h5>
+                <h2 class="title">Wujudkan mereka menjadi Guru Kreator!</h2>
                 <p>
-                    Kami percaya, bahwa pendidikan adalah untuk semua. Untuk itu, dengan biaya yang sangat terjangkau, aplikasi ini dapat dinikmati oleh siapa saja dengan biaya berlanggann Rp. 20.000/bulannya
+                    Keterbatasan konektivitas, beban administrasi, dan biaya koneksi sangat bisa teratasi saat kita berkolaborasi. Tidak bisa tidak, inovasi di era digitalisasi ini harus dimaksimalkan, karena hambatan justru harus jadi kesempatan.
                 </p>
             </div>
             <div class="range-wrapper-2">
                 <div class="pricing-range">
                     <div class="pricing-range-top pt-0">
                         <div class="tags-area">
-                            <h3 class="tags">Saatnya berkreasi!</h3>
+                            <h3 class="tags">Saya bersama mereka</h3>
                         </div>
-                        <!-- <div class="pricing-header">
-                            <span class="cate">Pilihan berlanggan</span>
+                        <div class="pricing-header">
+                            <span class="cate">Pilihan berkontribusi:</span>
                             <div class="select-container">    
                                 <select class="select-bar">
                                     <option value="basic">Bulanan</option>
@@ -493,24 +507,136 @@ export default {
                                     <option value="premium">Tahunan</option>
                                 </select>
                             </div>
-                        </div> -->
-                        <div class="amount-area">
-                            <div class="item">
-                                <h2 class="title"><sup>Rp</sup>20.000</h2>
-                                <span class="info">Per Bulan</span>
+                        </div>
+                        <div class="amount-area" id="semester">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>300k</h2>
+                                            <span class="info">Kakaktua Putih -> 3 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>1 Mio</h2>
+                                            <span class="info"> Kucing Merah -> 10 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>10 Mio</h2>
+                                        <span class="info">Macan -> 100 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>50 Mio</h2>
+                                        <span class="info">Gajah -> 500 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>500k</h2>
+                                            <span class="info">Cendrawasih -> 5 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>5 Mio</h2>
+                                            <span class="info">Anoa -> 50 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>25 Mio</h2>
+                                            <span class="info">Badak -> 250 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>100 Mio</h2>
+                                            <span class="info">Komodo -> 1.000 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item">
-                                <h2 class="title"><sup>Rp</sup>100.000</h2>
-                                <span class="info">Per Semester</span>
-                                <span class="info"><strike>Rp 120.000</strike></span>
-                                <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
+
+                        </div>
+                        <div class="amount-area" id="yearly">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>600k</h2>
+                                            <span class="info">Kakaktua Putih -> 3 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>2 Mio</h2>
+                                            <span class="info"> Kucing Merah -> 10 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>20 Mio</h2>
+                                        <span class="info">Macan -> 100 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>100 Mio</h2>
+                                        <span class="info">Gajah -> 500 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>1 Mio</h2>
+                                            <span class="info">Cendrawasih -> 5 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>10 Mio</h2>
+                                            <span class="info">Anoa -> 50 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>50 Mio</h2>
+                                            <span class="info">Badak -> 250 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                    <div class="item">
+                                        <tr>
+                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td><h2 class="title"><sup>Rp</sup>200 Mio</h2>
+                                            <span class="info">Komodo -> 1.000 Guru Kreator</span></td>
+                                        </tr>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item">
-                                <h2 class="title"><sup>Rp</sup>200.000</h2>
-                                <span class="info">Per Tahun</span>
-                                <span class="info"><strike>Rp 240.000</strike></span>
-                                <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
-                            </div>
+
                         </div>
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
@@ -534,14 +660,46 @@ export default {
      </section>
         <!--============= Pricing Section Ends Here =============-->
 
+
+    <!--============= Creativity Section Starts Here =============-->
+    <section class="oh creativity-section padding-bottom bg-max-lg-ash bg_img_testimony top_center" >
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6 padding-top">
+                    <div class="section-header left-style mb-0">
+
+                    </div>
+                </div>
+<!--                 <div class="col-lg-6 col-xl-4 d-none d-lg-block">
+                    <img src="./assets/images/feature/experience.png" alt="feature">
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!--============= Creativity Section Ends Here =============-->
+
+
+     <!--============= History Section Starts Here =============-->
+     <section class="history-section padding-top pt-lg-0 padding-bottom-2">
+         <div class="container">
+             <div class="section-header">
+
+             </div>
+             <div class="history-slider owl-theme owl-carousel">
+
+             </div>
+         </div>
+     </section>
+     <!--============= History Section Ends Here =============-->
+
      <!--============= Testimonial Section Starts Here =============-->
-     <section class="testimonial-section padding-top-6 padding-bottom bg-max-lg-ash bg_img padding-bottom-2" data-background='@/assets/images/feature/creative-bg.png'>
+     <section class="testimonial-section padding-top-6 padding-bottom bg-max-lg-ash bg_img_testimony padding-bottom-2">
         <div class="container">
             <div class="section-header">
                 <h5 class="cate">Kesan Guru Kreator</h5>
                 <h2 class="title">Aplikasi dengan low bandwith connectivity, berkreasi tanpa berhenti...</h2>
             </div>
-            <div class="testimonial-wrapper">
+            <div class="testimonial-wrapper mb-5">
                 <a href="#0" class="testi-next trigger">
                     <img src='@/assets/images/client/left.png' alt="client">
                 </a>
