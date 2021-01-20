@@ -493,7 +493,7 @@ export default {
                 </p>
             </div>
             <div class="range-wrapper-2">
-                <div class="pricing-range">
+                <div class="pricing-range pb-1">
                     <div class="pricing-range-top pt-0">
                         <div class="tags-area">
                             <h3 class="tags">Saya bersama mereka</h3>
@@ -573,6 +573,7 @@ export default {
                             </div>
 
                         </div>
+                        
                         <div class="amount-area" id="yearly">
                             <div class="row">
                                 <div class="col-sm-6">
@@ -636,7 +637,6 @@ export default {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
@@ -644,14 +644,61 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="text-center mt-3">
-                        <div class="right mb-4">
-                            <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
-                            <ul class="download-options mb-4">
-                                <li>
-                                    <a href="#0"><i class="fab fa-android"></i></a>
-                                </li>
-                            </ul>
+                    <div class="pricing-range-top pb-3 pt-0">
+                        <div class="amount-area">
+                            <div class="text-center mt-3">
+                                <span class="cate"><b>Metode Pembayaran</b></span>
+                                <div class="text-center row mt-3">
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <img src="@/assets/images/BCAva.png" width="210vw" height="100vw" alt="">
+                                    </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <img src="@/assets/images/briva.png" width="210vw" height="75vw" alt="">
+                                    </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <img src="@/assets/images/CCAmerican.png" width="180vw" height="70vw" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center row mt-3">
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <img src="@/assets/images/CCVISA.png" width="180vw" height="80vw" alt="">
+                                    </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <img src="@/assets/images/CCMaster.png" width="180vw" height="70vw" alt="">
+                                    </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <img src="@/assets/images/CCJCB.png" width="180vw" height="75vw" alt="">
+                                    </div>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-range-top pb-3 pt-0">
+                        <div class="amount-area">
+                            <div class="text-center mt-3">
+                                <span class="cate"><b>Informasi donatur</b></span>
+                                <form class="donatur-form">
+                                    <div class="mt-3">
+                                        <input type="text" placeholder="Nama Lengkap">
+                                    </div>
+                                    <div class="mt-2">
+                                        <input type="text" placeholder="Alamat Email">
+                                    </div>
+                                    <div class="mt-2 mb-3">
+                                        <input type="text" placeholder="Nomor Telepon">
+                                    </div>
+                                    <i class="mt-2 mb-2">*Untuk donasi Anda, akan diproses setiap tanggal 1 dibulan selanjutnya</i>                       
+                                </form>
+                                <div class="right mt-5 mb-5">
+                                    
+                                    <router-link type="submit" tag="a" to="/sign_up/sign-up" class="custom-button mb-3">KONTRIBUS SEKARANG</router-link>                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>
