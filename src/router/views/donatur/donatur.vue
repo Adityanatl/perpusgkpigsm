@@ -251,14 +251,14 @@ export default {
     <!--============= Header Section Ends Here =============-->
 
     <!--============= Header Section Ends Here =============-->
-    <section class="page-header bg_img" data-background="./assets/images/page-header.png">
+    <section class="page-header bg_img_feature" data-background="./assets/images/page-header.png">
         <div class="bottom-shape d-none d-md-block">
-            <img src='@/assets/images/page-header.png' alt="css">
+            <img src='@/assets/images/page-header3.png' alt="css">
         </div>
         <div class="container">
             <div class="page-header-content cl-white">
                 <h2 class="title">Dukung Guru Kreator</h2>
-                <p class="mt-1 mb-3">Berkolaborasi mewujudnyatakan mereka untuk berkreasi</p>
+                <p class="mt-1">Berkolaborasi mewujudnyataan mereka untuk bekreasi</p>
 <!--                 <ul class="breadcrumb">
                     <li>
                         <a href="index.html">Home</a>
