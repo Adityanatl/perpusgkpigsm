@@ -20,7 +20,10 @@ export default {
       hours: "",
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
-      endtime: "Dec 31, 2020 16:37:25"
+      endtime: "Dec 31, 2020 16:37:25",
+        listProducts: [],
+        selectedPrice: 'semester_price',
+        picked: null
     };
   },
   created() {
@@ -30,6 +33,7 @@ export default {
     window.removeEventListener("scroll", this.windowScroll);
   },
   mounted() {
+      this.getListProduct();
     this.start = new Date(this.starttime).getTime();
     this.end = new Date(this.endtime).getTime();
     // Update the count down every 1 second
@@ -37,11 +41,38 @@ export default {
     this.interval = setInterval(() => {
       this.timerCount(this.start, this.end);
     }, 1000);
-  }
+  },
+    methods: {
+        getListProduct(){
+            let paramsTemp = queryString.stringify({
+                ...{
+                    name: null,
+                    limit: 17,
+                    sort: '-id',
+                }
+                , ...this.options}
+            )
+            this.$store.dispatch('product/GET_PRODUCTS',{params:paramsTemp}).then(()=>{
+                this.listProducts = this.$store.getters['product/products']
+                console.log('this.listProducts ',this.listProducts)
+            })
+        },
+        displayPrice(itemProduct){
+            let price = this.selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price / 1000
+            if (price < 1000){
+                return price + ' k'
+            } else {
+                return price/1000 + ' m'
+            }
+        }
+
+
+
+    },
 };
 
     $(window).on('scroll', function () {
-        
+
         var header = $(".header-section");
       if ($(this).scrollTop() < 1) {
         header.removeClass("active");
@@ -500,144 +531,37 @@ export default {
                         </div>
                         <div class="pricing-header">
                             <span class="cate">Pilihan berkontribusi:</span>
-                            <div class="select-container">    
-                                <select class="select-bar">
-                                    <option value="basic">Bulanan</option>
-                                    <option value="standard">Semesteran</option>
-                                    <option value="premium">Tahunan</option>
+                            <div class="select-container">
+                                <select class="select-bar" v-model="selectedPrice">
+                                    <option value="semester_price">Semesteran</option>
+                                    <option value="yearly_price">Tahunan</option>
                                 </select>
                             </div>
                         </div>
                         <div class="amount-area" id="semester">
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="item">
+                                <div class="col-sm-6" v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='Donasi'">
+                                    <div class="item" >
                                         <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>300k</h2>
-                                            <span class="info">Kakaktua Putih -> 3 Guru Kreator</span></td>
+                                            <td>
+                                                <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                            <td>
+                                                <h2 class="title"><sup>Rp</sup>
+                                                    {{ (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price) < 1000000 ?
+                                                    (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000+' k': (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000000 + ' Mio' }}
+                                                </h2>
+                                                <span class="info">{{itemProduct.product_name}} -> {{itemProduct.description}}</span></td>
                                         </tr>
                                     </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>1 Mio</h2>
-                                            <span class="info"> Kucing Merah -> 10 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>10 Mio</h2>
-                                        <span class="info">Macan -> 100 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>50 Mio</h2>
-                                        <span class="info">Gajah -> 500 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
+
+
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>500k</h2>
-                                            <span class="info">Cendrawasih -> 5 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>5 Mio</h2>
-                                            <span class="info">Anoa -> 50 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>25 Mio</h2>
-                                            <span class="info">Badak -> 250 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>100 Mio</h2>
-                                            <span class="info">Komodo -> 1.000 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                </div>
+
                             </div>
 
                         </div>
-                        
-                        <div class="amount-area" id="yearly">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>600k</h2>
-                                            <span class="info">Kakaktua Putih -> 3 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>2 Mio</h2>
-                                            <span class="info"> Kucing Merah -> 10 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>20 Mio</h2>
-                                        <span class="info">Macan -> 100 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>100 Mio</h2>
-                                        <span class="info">Gajah -> 500 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>1 Mio</h2>
-                                            <span class="info">Cendrawasih -> 5 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>10 Mio</h2>
-                                            <span class="info">Anoa -> 50 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>50 Mio</h2>
-                                            <span class="info">Badak -> 250 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                    <div class="item">
-                                        <tr>
-                                            <td><input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
-                                            <td><h2 class="title"><sup>Rp</sup>200 Mio</h2>
-                                            <span class="info">Komodo -> 1.000 Guru Kreator</span></td>
-                                        </tr>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
                                 <!-- <div id="usd-range" class="invest-range-slider"></div> -->
@@ -674,7 +598,7 @@ export default {
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
                                         <img src="@/assets/images/CCJCB.png" width="180vw" height="75vw" alt="">
-                                    </div>        
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -693,10 +617,10 @@ export default {
                                     <div class="mt-2 mb-3">
                                         <input type="text" placeholder="Nomor Telepon">
                                     </div>
-                                    <i class="mt-2 mb-2">*Untuk donasi Anda, akan diproses setiap tanggal 1 dibulan selanjutnya</i>                       
+                                    <i class="mt-2 mb-2">*Untuk donasi Anda, akan diproses setiap tanggal 1 dibulan selanjutnya</i>
                                 </form>
                                 <div class="right mt-5 mb-5">
-                                    
+
                                     <router-link type="submit" tag="a" to="/sign_up/sign-up" class="custom-button mb-3">KONTRIBUS SEKARANG</router-link>                        </div>
                             </div>
                         </div>
@@ -783,7 +707,7 @@ export default {
         </div>
     </section>
     <!--============= Testimonial Section Ends Here =============-->
-      
+
         <!--============= Footer Section Starts Here =============-->
      <footer class="footer-section bg_img" data-background='@/assets/images/footer-bg.jpg'>
         <div class="container">
