@@ -530,7 +530,7 @@ export default {
                             <h3 class="tags">Saya bersama mereka</h3>
                         </div>
                         <div class="pricing-header">
-                            <span class="cate">Pilihan berkontribusi:</span>
+                            <span class="cate">Pilihan berkontribusi:</span>    
                             <div class="select-container">
                                 <select class="select-bar" v-model="selectedPrice">
                                     <option value="semester_price">Semesteran</option>
