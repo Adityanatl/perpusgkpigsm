@@ -32,6 +32,7 @@ export default {
       payload:{
         "product_id":0,
         "qty":0,
+        "price":0,
         "payment_methode_id":0,
         "transaction_id":null,
       }
@@ -57,6 +58,7 @@ export default {
       })
     } else {
       this.product = JSON.parse(localStorage.getItem('cart'))
+      this.payload.price = this.product.price
     }
     this.getListPaymentMethodes()
 
@@ -264,7 +266,7 @@ export default {
                           <b-card-body>
                             <div class="table-responsive">
                               <table class="table table-centered">
-                                <tbody> 
+                                <tbody>
                                   <tr>
                                     <td>
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
@@ -319,7 +321,7 @@ export default {
                   </div>
                 </div>
               </div>
-              
+
               <div class="card-body">
 
                 <div style="text-align:right">

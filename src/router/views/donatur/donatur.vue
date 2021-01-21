@@ -1,5 +1,6 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import Vue from "vue";
 
 global.jQuery = require('jquery');
 var $ = global.jQuery;
@@ -23,7 +24,18 @@ export default {
       endtime: "Dec 31, 2020 16:37:25",
         listProducts: [],
         selectedPrice: 'semester_price',
-        picked: null
+        pickedProduct: null,
+
+        payload:{
+            "product_id":0,
+            "qty":0,
+            "price":0,
+            "payment_methode_id":0,
+            "transaction_id":null,
+            "name":"",
+            "email":"",
+            "hp":""
+        }
     };
   },
   created() {
@@ -54,7 +66,6 @@ export default {
             )
             this.$store.dispatch('product/GET_PRODUCTS',{params:paramsTemp}).then(()=>{
                 this.listProducts = this.$store.getters['product/products']
-                console.log('this.listProducts ',this.listProducts)
             })
         },
         displayPrice(itemProduct){
@@ -64,11 +75,70 @@ export default {
             } else {
                 return price/1000 + ' m'
             }
-        }
+        },
+        successmsg() {
+            Vue.swal({
+                position: "top-end",
+                icon: "success",
+                title: "Your transaction has been procced",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        },
+        postCheckout(){
+            if (this.pickedProduct == null){
+                alert("Silahkan pilih Berkontribusi")
+                return
+            }
+            this.payload.product_id = this.pickedProduct.id
+            this.payload.qty = 1
+
+            if (this.selectedPrice=='semester_price') {
+                this.payload.price = this.pickedProduct.semester_price
+            } else {
+                this.payload.price = this.pickedProduct.yearly_price
+            }
+
+            this.$store.dispatch(
+                'transaction/POST_TRANSACTION', this.payload
+            ).then(() => {
+                let resp = this.$store.getters['transaction/transaction']
+                this.successmsg()
+                window.location = resp.redirect_url
+            }).catch(function () {
+                Vue.swal({
+                    position: "top-end",
+                    icon: "warning",
+                    title: 'Failed to procces',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+
+
+        },
+        timerCount: function(start, end) {
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now an the count down date
+            var distance = start - now;
+            var passTime = end - now;
+
+            if (distance < 0 && passTime < 0) {
+                clearInterval(this.interval);
+                return;
+            } else if (distance < 0 && passTime > 0) {
+                this.calcTime(passTime);
+            } else if (distance > 0 && passTime > 0) {
+                this.calcTime(distance);
+            }
+        },
 
 
 
     },
+
 };
 
     $(window).on('scroll', function () {
@@ -530,7 +600,7 @@ export default {
                             <h3 class="tags">Saya bersama mereka</h3>
                         </div>
                         <div class="pricing-header">
-                            <span class="cate">Pilihan berkontribusi:</span>    
+                            <span class="cate">Pilihan berkontribusi:</span>
                             <div class="select-container">
                                 <select class="select-bar" v-model="selectedPrice">
                                     <option value="semester_price">Semesteran</option>
@@ -544,7 +614,7 @@ export default {
                                     <div class="item" >
                                         <tr>
                                             <td>
-                                                <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="picked"></td>
+                                                <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
                                             <td>
                                                 <h2 class="title"><sup>Rp</sup>
                                                     {{ (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price) < 1000000 ?
@@ -574,29 +644,29 @@ export default {
                                 <span class="cate"><b>Metode Pembayaran</b></span>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/BCAva.png" width="210vw" height="100vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/briva.png" width="210vw" height="75vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/CCAmerican.png" width="180vw" height="70vw" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/CCVISA.png" width="180vw" height="80vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/CCMaster.png" width="180vw" height="70vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
+                                        <input  type="radio" :value="15" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct">
                                         <img src="@/assets/images/CCJCB.png" width="180vw" height="75vw" alt="">
                                     </div>
                                 </div>
@@ -609,19 +679,20 @@ export default {
                                 <span class="cate"><b>Informasi donatur</b></span>
                                 <form class="donatur-form">
                                     <div class="mt-3">
-                                        <input type="text" placeholder="Nama Lengkap">
+                                        <input type="text" placeholder="Nama Lengkap" v-model="payload.name">
                                     </div>
                                     <div class="mt-2">
-                                        <input type="text" placeholder="Alamat Email">
+                                        <input type="text" placeholder="Alamat Email" v-model="payload.email">
                                     </div>
                                     <div class="mt-2 mb-3">
-                                        <input type="text" placeholder="Nomor Telepon">
+                                        <input type="text" placeholder="Nomor Telepon" v-model="payload.hp">
                                     </div>
                                     <i class="mt-2 mb-2">*Untuk donasi Anda, akan diproses setiap tanggal 1 dibulan selanjutnya</i>
                                 </form>
                                 <div class="right mt-5 mb-5">
 
-                                    <router-link type="submit" tag="a" to="/sign_up/sign-up" class="custom-button mb-3">KONTRIBUS SEKARANG</router-link>                        </div>
+                                    <b-button tag="a" @click="postCheckout" class="custom-button mb-3">KONTRIBUS SEKARANG</b-button>
+                                </div>
                             </div>
                         </div>
                     </div>
