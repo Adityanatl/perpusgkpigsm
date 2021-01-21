@@ -73,16 +73,6 @@ export default {
       }
     });
 
-    $(window).on('load', function () {
-    $("[data-paroller-factor]").paroller();
-    $('.preloader').fadeOut(1000);
-    var img = $('.bg_img_pricing');
-    img.css('background-image', function () {
-        var bg = ('url(' + $(this).data('background') + ')');
-        return bg;
-    });
-  });
-
 </script>
 
 <template>
@@ -180,7 +170,8 @@ export default {
                         </ul> -->
                     </li>
                     <li>
-                        <a href="#0">Guru</a>
+                        <router-link tag="a" to="/features/features">
+                        Guru</router-link>
                         <!-- <ul class="submenu">
                             <li>
                                 <a href="feature.html">Feature 1</a>
@@ -658,34 +649,34 @@ export default {
         <!--============= Pricing Section Starts Here =============-->
      <section class="pricing-section padding-top oh padding-bottom pb-md-0 bg_img_pricing pos-rel" data-background="./assets/images/bg/pricing-bg.jpg" id="pricing">
         <div class="top-shape d-none d-md-block">
-            <img src='@/assets/images/img/top-shape.png' alt="css">
+            <img src='@/assets/images/top-shape.png' alt="css">
         </div>
         <div class="bottom-shape d-none d-md-block">
-            <img src='@/assets/images/img/bottom-shape.png' alt="css">
+            <img src='@/assets/images/bottom-shape.png' alt="css">
         </div>
         <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/balls/1.png' alt="balls">
+            <img src='@/assets/images/1.png' alt="balls">
         </div>
         <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/balls/2.png' alt="balls">
+            <img src='@/assets/images/2.png' alt="balls">
         </div>
         <div class="ball-4" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/balls/3.png' alt="balls">
+            <img src='@/assets/images/3.png' alt="balls">
         </div>
         <div class="ball-5" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img src='@/assets/images/balls/4.png' alt="balls">
+            <img src='@/assets/images/4.png' alt="balls">
         </div>
         <div class="ball-6" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/balls/5.png' alt="balls">
+            <img src='@/assets/images/5.png' alt="balls">
         </div>
         <div class="ball-7" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img src='@/assets/images/balls/6.png' alt="balls">
+            <img src='@/assets/images/6.png' alt="balls">
         </div>
         <div class="container">
             <div class="section-header pb-30 cl-white">
@@ -696,7 +687,7 @@ export default {
                 </p>
             </div>
             <div class="range-wrapper-2">
-                <div class="pricing-range pb-1">
+                <div class="pricing-range">
                     <div class="pricing-range-top pt-0">
                         <div class="tags-area">
                             <h3 class="tags">Saatnya berkreasi!</h3>
@@ -711,25 +702,22 @@ export default {
                                 </select>
                             </div>
                         </div> -->
-                        <div class="amount-area mt-5">
+                        <div class="amount-area">
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
-                                <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-top:60px;" v-model="picked">
                             </div>
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>100.000</h2>
                                 <span class="info">Per Semester</span>
                                 <span class="info"><strike>Rp 120.000</strike></span>
                                 <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
-                                <input type="radio" id="two" value="Two" name="A" style="width:25px; height:25px; margin-top:10px;" v-model="picked">
                             </div>
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>200.000</h2>
                                 <span class="info">Per Tahun</span>
                                 <span class="info"><strike>Rp 240.000</strike></span>
                                 <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
-                                <input type="radio" id="two" value="Two" name="A" style="width:25px; height:25px; margin-top:10px;" v-model="picked">
                             </div>
                         </div>
                         <div class="invest-range-area">
@@ -738,7 +726,7 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="text-center mt-5">
+                    <div class="text-center mt-3">
                         <div class="right mb-4">
                             <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
                             <ul class="download-options mb-4">
@@ -849,7 +837,7 @@ export default {
                 </div>
                 <ul class="social-icons">
                     <li>
-                        <a href="https://www.facebook.com/gurukreator"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#0"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
@@ -861,7 +849,7 @@ export default {
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
-                        <a href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
+                        <a href="#0"><i class="fab fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -871,7 +859,7 @@ export default {
                     <router-link tag="a" to="/donatur">Beranda</router-link>
                     </li>
                     <li>
-                        <a href="#0">Guru</a>
+                        <router-link tag="a" to="/features/features">Guru</router-link>
                     </li>
                     <li>
                         <router-link tag="a" to="/donatur">Donatur</router-link>
