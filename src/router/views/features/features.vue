@@ -620,8 +620,13 @@ export default {
             <div class="comunity-wrapper">
                 <div class="buttons"><a href="#0" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
                 <div class="comunity-area">
+                    <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/d.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
@@ -629,23 +634,23 @@ export default {
                     <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/e.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/a.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/b.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/f.png' alt="comunity"></div>
                 </div>
                 <div class="comunity-area two">
+                    <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/d.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
@@ -653,23 +658,23 @@ export default {
                     <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/e.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/a.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/b.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/f.png' alt="comunity"></div>
                 </div>
                 <div class="comunity-area three">
+                    <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
+                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/d.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
@@ -677,19 +682,14 @@ export default {
                     <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/e.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
                     <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/a.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/b.png' alt="comunity"></div>
+                    <div class="community-item"><img src='@/assets/images/comunity/f.png' alt="comunity"></div>
                 </div>
             </div>
         </div>

@@ -290,23 +290,23 @@ export default {
     <!--============= Header Section Ends Here =============-->
 
     <!--============= About Section Starts Here =============-->
-    <section class="about-section padding-top padding-bottom oh">
+    <section class="about-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-xl-7">
-                   <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-about popup">
+                <div class="col-xl-6">
+                   <!-- <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-about popup"> -->
 	                <div class="about-thumb rtl pr-xl-15">
-	                    <img src='@/assets/images/feature/fature-video.png' alt="feature">
+	                    <img src='@/assets/images/fature-video.png' alt="feature">
+                        <div class="button-area-about">
+                            <h4 class="title-about-donatur">
+                                Tonton Video
+                            </h4>
+                            <div class="video-button-donatur">
+                                <i class="flaticon-play"></i>
+                            </div>
+                        </div>
 	                </div>
-	                <div class="button-area-about">
-	                    <h4 class="title-about">
-	                        Watch Videos
-	                    </h4>
-	                    <div class="video-button">
-	                        <i class="flaticon-play"></i>
-	                    </div>
-	                </div>
-	               </a>
+	               <!-- </a> -->
                 </div>
 <!--                 <div class="col-xl-6">
                     <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
@@ -323,7 +323,7 @@ export default {
                         </div>
                     </a>
                 </div> -->
-                <div class="col-xl-5 pl-xl-0">
+                <div class="col-xl-6 pl-xl-0">
                     <div class="about-content">
 
                         <div class="section-header left-style">
@@ -757,7 +757,7 @@ export default {
                     <div class="testimonial-item">
                         <div class="testimonial-thumb">
                             <div class="thumb">
-                                <img src='@/assets/images/client/client1.jpg' alt="client">
+                                <img src='@/assets/images/donatur/mintarsih_circle_img.png' alt="client">
                             </div>
                         </div>
                         <div class="testimonial-content">
