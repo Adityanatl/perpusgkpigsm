@@ -170,7 +170,8 @@ export default {
                         </ul> -->
                     </li>
                     <li>
-                        <a href="#0">Guru</a>
+                        <router-link tag="a" to="/features/features">
+                        Guru</router-link>
                         <!-- <ul class="submenu">
                             <li>
                                 <a href="feature.html">Feature 1</a>
@@ -858,7 +859,7 @@ export default {
                     <router-link tag="a" to="/donatur">Beranda</router-link>
                     </li>
                     <li>
-                        <a href="#0">Guru</a>
+                        <router-link tag="a" to="/features/features">Guru</router-link>
                     </li>
                     <li>
                         <router-link tag="a" to="/donatur">Donatur</router-link>

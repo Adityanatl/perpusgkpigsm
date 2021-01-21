@@ -94,7 +94,7 @@ export default {
                 </div>
                 <ul class="menu">
                     <li>
-                        <router-link tag="a" to="/">Beranda</router-link>
+                        <router-link tag="a" to="/">Home</router-link>
                         <!-- <ul class="submenu">
                             <li>
                                 <a href="#0">Home Apps</a>
@@ -177,7 +177,7 @@ export default {
                         </ul> -->
                     </li>
                     <li>
-                        <a href="#0">Guru</a>
+                        <router-link tag="a" to="/features/features">Teacher</router-link>
                         <!-- <ul class="submenu">
                             <li>
                                 <a href="feature.html">Feature 1</a>
@@ -192,7 +192,7 @@ export default {
                     </li>
                     <li>
                     <router-link tag="a" to="/donatur">
-                      Donatur
+                      Supporters
                       <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
                     </router-link>                    </li>
                     <!-- <li>
@@ -270,7 +270,7 @@ export default {
                         </ul>
                     </li> -->
                     <li>
-                        <a href="contact.html">Kontak</a>
+                        <a href="contact.html">Contact</a>
                     </li>
                     <li class="d-sm-none">
                         <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
@@ -302,8 +302,8 @@ export default {
         </div>
         <div class="container">
             <div class="page-header-content cl-white">
-                <h2 class="title">Dukung Guru Kreator</h2>
-                <p class="mt-1">Berkolaborasi mewujudnyataan mereka untuk bekreasi</p>
+                <h2 class="title">Supporting Guru Kreator</h2>
+                <p class="mt-1">Our contribution for their creation!</p>
 <!--                 <ul class="breadcrumb">
                     <li>
                         <a href="index.html">Home</a>
@@ -330,7 +330,7 @@ export default {
 	                    <img src='@/assets/images/fature-video.png' alt="feature">
                         <div class="button-area-about">
                             <h4 class="title-about-donatur">
-                                Tonton Video
+                                Watch Video
                             </h4>
                             <div class="video-button-donatur">
                                 <i class="flaticon-play"></i>
@@ -358,10 +358,9 @@ export default {
                     <div class="about-content">
 
                         <div class="section-header left-style">
-                            <h5 class="cate">Paideia Rumah Bersama</h5>
-                            <h2 class="title">Kesenjangan akses guru dalam berkreasi adalah sesuatu yang perlu diatasi</h2>
-                            <p>Dengan wilayah yang begitu luas dan keberagaman di lapangan, para guru di garda terdepan dan terluar yang kerap
-                            kali justru jadi yang tertinggal.</p>
+                            <h5 class="cate">Our huge homework</h5>
+                            <h2 class="title">The accessibility gap for teachers to create must be resolved</h2>
+                            <p>With Indonesia’s vast lands and wide-arrayed diversities on the grounds, those at the most forefront and remote are often the most left behind. </p>
                         </div>
                         <div class="counter-area-5">
                             <div class="counter-item-5">
@@ -370,7 +369,7 @@ export default {
                                 </div>
                                 <div class="counter-content">
                                     <h3 class="title"><span class="counter">120</span><span>k</span></h3>
-                                    <p>Guru 3T</p>
+                                    <p>3T Teacher</p>
                                 </div>
                             </div>
                             <div class="counter-item-5">
@@ -379,7 +378,7 @@ export default {
                                 </div>
                                 <div class="counter-content">
                                     <h3 class="title"><span class="counter">62</span><span>+</span></h3>
-                                    <p>Kabupaten</p>
+                                    <p>Regions</p>
                                 </div>
                             </div>
                             <div class="counter-item-5">
@@ -388,7 +387,7 @@ export default {
                                 </div>
                                 <div class="counter-content">
                                     <h3 class="title"><span class="counter">11</span><span>%</span></h3>
-                                    <p>Provinsi</p>
+                                    <p>Provinces</p>
                                 </div>
                             </div>
                         </div>
@@ -405,13 +404,13 @@ export default {
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="section-header left-style coverage-header">
-                        <h5 class="cate">Wujudkan 3T menjadi Terluar Tapi Terdepan!</h5>
-                        <h2 class="title">Karena mereka tidak sendiri   </h2>
+                        <h5 class="cate">3T should be Turning into Transformative Teachers</h5>
+                        <h2 class="title">For they are not alone</h2>
                         <p>
-                            Kami sangat peduli atas hidup setiap insan dan bagaimana mereka berproses dalam keunikan keberadaan mereka. Mari bersama, wujudkan mereka menjadi Guru Kreator! Jadilah donatur:
+                            We deeply care for people and the processes involved in each of their unique places. Together, supporting them to become Guru Kreator!
                         </p>
                         <div class="how-content">
-                            <router-link tag="a" to="/products" class="button-3 active">Dukung Guru 3T</router-link>
+                            <router-link tag="a" to="/products" class="button-3 active">COUNT ME IN</router-link>
                         </div>
                     </div>
                 </div>
@@ -427,9 +426,12 @@ export default {
                             </div>
                             <span class="average">5.0 / 5.0</span>
                         </div> -->
-                        <h2 class="amount">62 Kab</h2>
-                        <p>Daerah 3T</p>
-                        <p>(Tertinggal, Terdepan, Terluar)</p>
+                        <h2 class="amount">62 Regions</h2>
+                        <p>3T Areas</p>
+                        <p>The most outskirt<br>
+                        The most forefront<br>
+                        The most behind
+                        </p>
                     </div>
                 </div>
             </div>
@@ -517,24 +519,26 @@ export default {
         </div>
         <div class="container">
             <div class="section-header pb-30 cl-white">
-                <h5 class="cate">Saatnya berkolaborasi</h5>
-                <h2 class="title">Wujudkan mereka menjadi Guru Kreator!</h2>
+                <h5 class="cate">Ready, set.... collaborate!</h5>
+                <h2 class="title">Hand in hand for Guru Kreator</h2>
                 <p>
-                    Keterbatasan konektivitas, beban administrasi, dan biaya koneksi sangat bisa teratasi saat kita berkolaborasi. Tidak bisa tidak, inovasi di era digitalisasi ini harus dimaksimalkan, karena hambatan justru harus jadi kesempatan.
+                    Connectivity limitations, administrative burdens, and connection costs can easily be
+                    resolved when we work together. Innovations in this digitalization era must be
+                    maximized; after all, obstacles are opportunities.
                 </p>
             </div>
             <div class="range-wrapper-2">
                 <div class="pricing-range pb-1">
                     <div class="pricing-range-top pt-0">
                         <div class="tags-area">
-                            <h3 class="tags">Saya bersama mereka</h3>
+                            <h3 class="tags">We’re in this together</h3>
                         </div>
                         <div class="pricing-header">
-                            <span class="cate">Pilihan berkontribusi:</span>    
+                            <span class="cate">Available packages:</span>    
                             <div class="select-container">
                                 <select class="select-bar" v-model="selectedPrice">
-                                    <option value="semester_price">Semesteran</option>
-                                    <option value="yearly_price">Tahunan</option>
+                                    <option value="semester_price">Semester-based</option>
+                                    <option value="yearly_price">Yearly-based</option>
                                 </select>
                             </div>
                         </div>
@@ -571,7 +575,7 @@ export default {
                     <div class="pricing-range-top pb-3 pt-0">
                         <div class="amount-area">
                             <div class="text-center mt-3">
-                                <span class="cate"><b>Metode Pembayaran</b></span>
+                                <span class="cate"><b>Payment Method</b></span>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" id="one" value="One" name="A" style="width:25px; height:25px; margin-right:10px;" v-model="picked">
@@ -606,7 +610,7 @@ export default {
                     <div class="pricing-range-top pb-3 pt-0">
                         <div class="amount-area">
                             <div class="text-center mt-3">
-                                <span class="cate"><b>Informasi donatur</b></span>
+                                <span class="cate"><b>Personal Information</b></span>
                                 <form class="donatur-form">
                                     <div class="mt-3">
                                         <input type="text" placeholder="Nama Lengkap">
@@ -617,11 +621,11 @@ export default {
                                     <div class="mt-2 mb-3">
                                         <input type="text" placeholder="Nomor Telepon">
                                     </div>
-                                    <i class="mt-2 mb-2">*Untuk donasi Anda, akan diproses setiap tanggal 1 dibulan selanjutnya</i>
+                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be chanelled to the teachers on the first day of the following month.</i>
                                 </form>
                                 <div class="right mt-5 mb-5">
 
-                                    <router-link type="submit" tag="a" to="/sign_up/sign-up" class="custom-button mb-3">KONTRIBUS SEKARANG</router-link>                        </div>
+                                    <router-link type="submit" tag="a" to="/sign_up/sign-up" class="custom-button mb-3">CONTRIBUTE NOW</router-link>                        </div>
                             </div>
                         </div>
                     </div>
@@ -667,8 +671,9 @@ export default {
      <section class="testimonial-section padding-top-6 padding-bottom bg-max-lg-ash bg_img_testimony padding-bottom-2">
         <div class="container">
             <div class="section-header">
-                <h5 class="cate">Kesan Guru Kreator</h5>
-                <h2 class="title">Aplikasi dengan low bandwith connectivity, berkreasi tanpa berhenti...</h2>
+                <h5 class="cate">Testimonies from the field</h5>
+                <h2 class="title">Continuously creating with 
+                    innovative technology</h2>
             </div>
             <div class="testimonial-wrapper mb-5">
                 <a href="#0" class="testi-next trigger">
@@ -693,10 +698,11 @@ export default {
                                 <span><i class="fas fa-star"></i></span>
                             </div>
                             <p>
-                                Guru Kreator merupakan inovasi yang dapat membantu guru di era digital. Kontennya menarik dan memudahkan
-                                bagi para guru dalam membuat perangkat pembelajaran.
+                                Guru Kreator is an innovation that helps teachers in this digital era.
+                                Its engaging content makes it easier for teachers
+                                to create lesson dan unit plans.
                             </p>
-                            <h5 class="title"><a href="#0">Mintarsih - Semarang</a></h5>
+                            <h5 class="title" style="line-height:35px"><a href="#0">Mintarsih<br><p style="font-size:15px">Semarang, Central Java</p></a></h5>
                         </div>
                     </div>
                 </div>
@@ -738,21 +744,22 @@ export default {
             <div class="footer-bottom">
                 <ul class="footer-link">
                     <li>
-                        <router-link tag="a" to="/">Beranda
+                        <router-link tag="a" to="/">Home
                         </router-link>
                     </li>
                     <li>
-                        <a href="#0">Guru</a>
-                    </li>
-                    <li>
-                        <router-link tag="a" to="/">Donatur
+                        <router-link tag="a" to="/features/features">Teacher
                         </router-link>
                     </li>
                     <li>
-                        <a href="#0">Kontak</a>
+                        <router-link tag="a" to="/">Supporters
+                        </router-link>
                     </li>
                     <li>
-                        <a href="#0">Kebijakan Privasi</a>
+                        <a href="#0">Contacts</a>
+                    </li>
+                    <li>
+                        <a href="#0">Privacy Policy</a>
                     </li>
                 </ul>
             </div>
