@@ -249,7 +249,7 @@ export default {
                         <option value="Fr">Fr</option>
                     </select>
                 </div>
-                <router-link tag="a" to="/login" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
             </div>
         </div>
     </header>
@@ -773,7 +773,7 @@ export default {
                 </div>
                 <ul class="social-icons">
                     <li>
-                        <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/gurukreator"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
@@ -785,7 +785,7 @@ export default {
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
-                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>

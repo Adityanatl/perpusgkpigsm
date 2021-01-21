@@ -849,7 +849,7 @@ export default {
                 </div>
                 <ul class="social-icons">
                     <li>
-                        <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/gurukreator"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
@@ -861,7 +861,7 @@ export default {
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
-                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
