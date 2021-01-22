@@ -600,7 +600,7 @@ export default {
                                 </select>
                             </div>
                         </div> -->
-                        <div class="amount-area">
+                        <div class="amount-area-price">
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
