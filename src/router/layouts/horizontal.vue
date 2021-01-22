@@ -2,7 +2,7 @@
 import HorizontalTopbar from "@/components/horizontal-topbar";
 import HorizontalNav from "@/components/horizontal-nav";
 import RightBar from "@/components/right-bar";
-import Footer from "@/components/footer";
+// import Footer from "@/components/footer";
 
 import { layoutComputed } from "@/state/helpers";
 
@@ -13,7 +13,7 @@ export default {
   components: {
     HorizontalTopbar,
     HorizontalNav,
-    Footer,
+    // Footer,
     RightBar,
   },
   data() {

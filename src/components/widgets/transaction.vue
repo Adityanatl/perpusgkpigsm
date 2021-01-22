@@ -30,13 +30,13 @@ export default {
               <label class="custom-control-label" for="customCheck">&nbsp;</label>
             </div>
           </th>
-          <th>Order ID</th>
-          <th>Billing Name</th>
+          <th>ID</th>
+          <th></th>
           <th>Date</th>
-          <th>Total</th>
+          <th></th>
           <th>Payment Status</th>
           <th>Payment Method</th>
-          <th>View Details</th>
+          <th>Invoice</th>
         </tr>
       </thead>
       <tbody>
@@ -50,9 +50,9 @@ export default {
           <td>
             <a href="javascript: void(0);" class="text-body font-weight-bold">{{data.id}}</a>
           </td>
-          <td>{{data.name}}</td>
+          <td></td>
           <td>{{data.date}}</td>
-          <td>{{data.total}}</td>
+          <td></td>
           <td>
             <span
               class="badge badge-pill badge-soft-success font-size-12"
@@ -70,7 +70,7 @@ export default {
               type="button"
               class="btn btn-primary btn-sm btn-rounded"
               @click="showModal = true"
-            >View Details</button>
+            >download </button>
           </td>
         </tr>
       </tbody>
@@ -88,27 +88,29 @@ export default {
         <table class="table table-centered table-nowrap">
           <thead>
             <tr>
-              <th scope="col">Product</th>
+              <!-- <th scope="col">Product</th> -->
               <th scope="col">Product Name</th>
+              <th></th>
               <th scope="col">Price</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">
+              <!-- <th scope="row">
                 <div>
                   <img src="@/assets/images/product/img-7.png" alt class="avatar-sm" />
                 </div>
-              </th>
+              </th> -->
               <td>
                 <div>
-                  <h5 class="text-truncate font-size-14">Wireless Headphone (Black)</h5>
-                  <p class="text-muted mb-0">$ 225 x 1</p>
+                  <h5 class="text-truncate font-size-14">Paket Personal Bulanan</h5>
+                  <!-- <p class="text-muted mb-0">$ 225 x 1</p> -->
                 </div>
               </td>
-              <td>$ 255</td>
+              <td></td>
+              <td>Rp 20,000</td>
             </tr>
-            <tr>
+            <!-- <tr>
               <th scope="row">
                 <div>
                   <img src="@/assets/images/product/img-4.png" alt class="avatar-sm" />
@@ -121,30 +123,30 @@ export default {
                 </div>
               </td>
               <td>$ 145</td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
               <td colspan="2">
                 <h6 class="m-0 text-right">Sub Total:</h6>
               </td>
-              <td>$ 400</td>
+              <td>Rp 20,000</td>
             </tr>
             <tr>
               <td colspan="2">
                 <h6 class="m-0 text-right">Shipping:</h6>
               </td>
               <td>Free</td>
-            </tr>
+            </tr> -->
             <tr>
               <td colspan="2">
                 <h6 class="m-0 text-right">Total:</h6>
               </td>
-              <td>$ 400</td>
+              <td>Rp 20,000</td>
             </tr>
           </tbody>
         </table>
       </div>
       <template v-slot:modal-footer>
-        <b-button variant="secondary" @click="showModal = false">Close</b-button>
+        <b-button variant="secondary" @click="showModal = false">Download</b-button>
       </template>
     </b-modal>
   </div>

@@ -162,3 +162,6 @@
     background-repeat: no-repeat;
     background-image: url('/images/experience-bg.png');    
 }
+.bg_footer{
+    background-image:rgba(10, 27, 84, 0.892);
+}

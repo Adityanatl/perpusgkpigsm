@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       tableData: [],
-      title: "Pembelian ini ditujukan untuk :",
+      title: " ",
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
@@ -212,6 +212,8 @@ export default {
 
         </b-card-text></b-tab>
       </b-tabs>
+
+      
     </div>
   </Layout>
 </template>
