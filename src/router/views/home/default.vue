@@ -604,18 +604,21 @@ export default {
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
+                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:10px;" >
                             </div>
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>100.000</h2>
                                 <span class="info">Per Semester</span>
                                 <span class="info"><strike>Rp 120.000</strike></span>
                                 <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
+                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>200.000</h2>
                                 <span class="info">Per Tahun</span>
                                 <span class="info"><strike>Rp 240.000</strike></span>
                                 <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
+                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
                         </div>
                         <div class="invest-range-area">

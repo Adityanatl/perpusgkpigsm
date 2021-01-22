@@ -480,7 +480,7 @@ export default {
                             We deeply care for people and the processes involved in each of their unique places. Together, supporting them to become Guru Kreator!
                         </p>
                         <div class="how-content">
-                            <router-link tag="a" to="/products" class="button-3 active">COUNT ME IN</router-link>
+                            <a href="https://gurukreator.id/products" class="button-3 active">COUNT ME IN</a>
                         </div>
                     </div>
                 </div>
