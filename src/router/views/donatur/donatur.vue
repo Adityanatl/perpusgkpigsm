@@ -480,7 +480,7 @@ export default {
                             We deeply care for people and the processes involved in each of their unique places. Together, supporting them to become Guru Kreator!
                         </p>
                         <div class="how-content">
-                            <router-link tag="a" to="/products" class="button-3 active">COUNT ME IN</router-link>
+                            <a href="#weare" class="button-3 active">COUNT ME IN</a>
                         </div>
                     </div>
                 </div>
@@ -597,7 +597,7 @@ export default {
                     maximized; after all, obstacles are opportunities.
                 </p>
             </div>
-            <div class="range-wrapper-2">
+            <div class="range-wrapper-2" id="weare">
                 <div class="pricing-range pb-1">
                     <div class="pricing-range-top pt-0">
                         <div class="tags-area">

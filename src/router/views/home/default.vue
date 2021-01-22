@@ -73,6 +73,66 @@ export default {
       }
     });
 
+    //Menu Dropdown Icon Adding
+    $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
+    // drop down menu width overflow problem fix
+    $('.submenu').parent('li').hover(function () {
+      var menu = $(this).find("ul");
+      var menupos = $(menu).offset();
+      if (menupos.left + menu.width() > $(window).width()) {
+        var newpos = -$(menu).width();
+        menu.css({
+          left: newpos
+        });
+      }
+    });
+
+    $('.menu li a').on('click', function (e) {
+      var element = $(this).parent('li');
+      if (element.hasClass('open')) {
+        element.removeClass('open');
+        element.find('li').removeClass('open');
+        element.find('ul').slideUp(300, "swing");
+      } else {
+        element.addClass('open');
+        element.children('ul').slideDown(300, "swing");
+        element.siblings('li').children('ul').slideUp(300, "swing");
+        element.siblings('li').removeClass('open');
+        element.siblings('li').find('li').removeClass('open');
+        element.siblings('li').find('ul').slideUp(300, "swing");
+      }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToTop').on('click', function () {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 500);
+      return false;
+    });
+
+        // PoPuP 
+    // $('.popup').magnificPopup({
+    //   disableOn: 700,
+    //   type: 'iframe',
+    //   mainClass: 'mfp-fade',
+    //   removalDelay: 160,
+    //   preloader: false,
+    //   fixedContentPos: false,
+    //   disableOn: 300
+    // });
+    // $("body").each(function () {
+    //   $(this).find(".img-pop").magnificPopup({
+    //     type: "image",
+    //     gallery: {
+    //       enabled: true
+    //     }
+    //   });
+    // });
+
+    // aos js active
+    // new WOW().init();
+
 </script>
 
 <template>
@@ -85,193 +145,17 @@ export default {
                         <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
                     </router-link>
                 </div>
+
                 <ul class="menu">
-                    <li>
-                        <router-link tag="a" to="/">Beranda</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="#0">Home Apps</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Mobile App 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">Mobile App 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-3.html">Mobile App 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-4.html">Mobile App 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Messenger</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-5.html">Messenger 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-6.html">Messenger 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Web</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-7.html">Web 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-8.html">Web 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Dextop</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-9.html">Dextop 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-10.html">Dextop 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-11.html">Dextop 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Watchapp</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-12.html">Watchapp 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-13.html">Watchapp 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Hero Video</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-14.html">Hero Video 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-15.html">Hero Video 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="./index-16.html">Home 16 <span class="badge badge-primary align-self-center">New</span></a>
-                            </li>
-                        </ul> -->
-                    </li>
-                    <li>
-                        <router-link tag="a" to="/features/features">
-                        Guru</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="feature.html">Feature 1</a>
-                            </li>
-                            <li>
-                                <a href="feature-2.html">Feature 2</a>
-                            </li>
-                            <li>
-                                <a href="feature-3.html">Feature 3</a>
-                            </li>
-                        </ul> -->
-                    </li>
-                    <li>
-                    <router-link tag="a" to="/donatur">
-                      Donatur
-                      <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
-                    </router-link>
-                        <!-- <a href="pricing-plan.html">Donatur</a> -->
-                    </li>
-                    <!-- <li>
-                        <a href="#0">Pages</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="about.html">about</a>
-                            </li>
-                            <li>
-                                <a href="app-download.html">app download</a>
-                            </li>
-                            <li>
-                                <a href="#0">Team</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="team.html">Team</a>
-                                    </li>
-                                    <li>
-                                        <a href="team-single.html">Team Single</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Account</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="sign-up.html">Sign Up</a>
-                                    </li>
-                                    <li>
-                                        <a href="sign-in.html">Sign In</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="faqs.html">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="partners.html">Partners</a>
-                            </li>
-                            <li>
-                                <a href="privacy-policy.html">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="coming-soon.html">Coming Soon</a>
-                            </li>
-                            <li>
-                                <a href="change-password.html">Change Password</a>
-                            </li>
-                            <li>
-                                <a href="reset-password.html">Password Reset</a>
-                            </li>
-                            <li>
-                                <a href="reviews.html">review</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#0">Blog</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="blog.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-type-two.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-1.html">blog Single 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-2.html">blog Single 2</a>
-                            </li>
-                        </ul>
-                    </li> -->
-                    <li>
-                        <a href="contact.html">Kontak</a>
-                    </li>
+                    <li><router-link tag="a" to="/">Beranda</router-link></li>
+                    <li><router-link tag="a" to="/features/features">Guru</router-link></li>
+                    <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
+                    <li><a href="contact.html">Kontak</a></li>
                     <li class="d-sm-none">
                         <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
                     </li>
                 </ul>
+                
                 <div class="header-bar d-lg-none">
                     <span></span>
                     <span></span>
@@ -317,7 +201,7 @@ export default {
                            Aplikasi Guru Kreator adalah aplikasi edukasi pertama yang dapat menjangkau hampir seluruh daerah terluar di Indonesia
                         </p>
                         <div class="banner-button-group">
-                            <a href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-4">UNDUH GRATIS</a>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-4">UNDUH GRATIS</a>
                             <router-link tag="a" to="/features/features" class="button-4 active">JELAJAHI FITUR</router-link>
                         </div>
                     </div>
@@ -328,7 +212,21 @@ export default {
                             <div class="banner-thumb">
                                 <img src='@/assets/images/banner1-1.png' alt="banner">
                             </div>
-
+                            <!-- <div class="banner-thumb">
+                                <img src='@/assets/images/banner/banner1-2.png' alt="banner">
+                            </div>
+                            <div class="banner-thumb">
+                                <img src='@/assets/images/banner/banner1-3.png' alt="banner">
+                            </div>
+                            <div class="banner-thumb">
+                                <img src='@/assets/images/banner/banner1-1.png' alt="banner">
+                            </div>
+                            <div class="banner-thumb">
+                                <img src='@/assets/images/banner/banner1-2.png' alt="banner">
+                            </div>
+                            <div class="banner-thumb">
+                                <img src='@/assets/images/banner/banner1-3.png' alt="banner">
+                            </div> -->
                         </div>
                         <div class="ban-click">
                             <div class="thumb">
@@ -488,7 +386,7 @@ export default {
                         </div>
                         <div class="how-content">
 
-                            <a href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Download Aplikasi</a>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Download Aplikasi</a>
                             <ul class="download-options">
                                 <!-- <li>
                                     <a href="#0"><i class="fab fa-windows"></i></a>
@@ -497,7 +395,7 @@ export default {
                                     <a href="#0" class="active"><i class="fab fa-apple"></i></a>
                                 </li> -->
                                 <li>
-                                    <a href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
                             </ul>
                             <p>Bagi pengguna Android, cukup unduh aplikasi di Playstore</p>
@@ -702,22 +600,25 @@ export default {
                                 </select>
                             </div>
                         </div> -->
-                        <div class="amount-area">
+                        <div class="amount-area-price">
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
+                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:10px;" >
                             </div>
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>100.000</h2>
                                 <span class="info">Per Semester</span>
                                 <span class="info"><strike>Rp 120.000</strike></span>
                                 <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
+                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>200.000</h2>
                                 <span class="info">Per Tahun</span>
                                 <span class="info"><strike>Rp 240.000</strike></span>
                                 <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
+                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
                         </div>
                         <div class="invest-range-area">
@@ -731,7 +632,7 @@ export default {
                             <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
                             <ul class="download-options mb-4">
                                 <li>
-                                    <a href="#0"><i class="fab fa-android"></i></a>
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -754,7 +655,7 @@ export default {
                             Kami sangat peduli atas hidup setiap insan dan bagaimana mereka berproses dalam keunikan keberadaan mereka. Mari bersama, wujudkan mereka menjadi Guru Kreator! Jadilah donatur:
                         </p>
                         <div class="how-content">
-                            <router-link tag="a" to="/products" class="button-3 active">Dukung Guru 3T</router-link>
+                            <router-link tag="a" to="/donatur#pricing" class="button-3 active">Dukung Guru 3T</router-link>
                         </div>
                     </div>
                 </div>

@@ -47,7 +47,7 @@ export default {
           <div class="card-body">
             <div class="row">
               <div class="col-sm-2 mt-5">
-                <div class="avatar-md profile-user-wid mb-4 text-center">
+                <div class="avatar-md profile-user-wid ml-2 mb-4 text-center">
                     <img src="@/assets/images/users/avatar-1.jpg" alt class="img-thumbnail rounded-circle" />
                 </div>
               </div>
@@ -55,26 +55,19 @@ export default {
                   <h4 class="mt-3">Detail Account</h4>
                   <hr>
                   <div class="col-5">
-                    <tr>
-                      <td>Nama :</td>
-                      <td>{{user.name}}</td>
-                    </tr><br>
-                    <tr>
-                      <td>Email :</td>
-                      <td>{{user.email}}</td>
-                    </tr><br>
-                    <tr>
-                      <td>No. Telephone : </td>
-                      <td>{{user.hp}}</td>
-                    </tr><br>
-                    <tr>
-                      <td>Tempat Lahir : </td>
-                    </tr><br>
-                    <tr>
-                      <td>Provinsi :</td>
-                    </tr><br>
+                    <td>
+                      <tr><b>Nama</b></tr>
+                      <tr>{{user.name}}</tr>
+                    </td><br>
+                    <td>
+                      <tr><b>Email</b></tr>
+                      <tr>{{user.email}}</tr>                
+                    </td><br>
+                    <td>
+                      <tr><b>No. Telephone</b></tr>
+                      <tr>{{user.hp}}</tr>                      
+                    </td>
                   </div>
-
               </div>
             </div>
           </div>

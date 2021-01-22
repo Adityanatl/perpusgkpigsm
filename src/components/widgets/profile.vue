@@ -28,19 +28,19 @@ export default {
     </div>
     <div class="card-body pt-5">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-2">
           <div class="avatar-md profile-user-wid mb-4">
             <img src="@/assets/images/users/avatar-1.jpg" alt class="img-thumbnail rounded-circle" />
           </div>
           <!-- <p class="text-muted mb-0 text-truncate">UI/UX Designer</p> -->
         </div>
 
-        <div class="col-sm-8">
+        <div class="col-sm-8 ml-2">
           <div class="pt-0">
             <div class="row">
               <div class="col-6">
                 <h5 class="font-size-18 text-truncate">{{user.name}}</h5>
-                <p style="font-size:15px">Member Premium</p>
+                <p style="font-size:15px"><i>Premium Member</i></p>
                 <!-- <h5 class="font-size-15">125</h5>
                 <p class="text-muted mb-0">Projects</p> -->
               </div>

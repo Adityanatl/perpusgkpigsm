@@ -305,20 +305,20 @@ export default {
                 </li>
             </ul> -->
 
-            <div id="app">
+            <!-- <div id="app">
                 <ul class="nav nav-tabs feature-tab-menu">
                     <li><a href="#" @click="currentView='kreasiku'"> Kreasiku </a></li>
                     <li><a href="#" @click="currentView='kelasku'"> Kelasku </a></li>
                     <li><a href="#" @click="currentView='relungku'"> Relungku </a></li>
                 </ul>
                 <component :is="currentView" keep-alive></component>
-            </div>
+            </div> -->
             
             <!-- <div class="tab-content"> -->
-            <!-- <b-tabs pills align="center"> -->
-                <!-- <b-tab title="Kreasiku"><b-card-text> -->
+            <b-tabs pills align="center">
+                <b-tab title="Kreasiku"><b-card-text>
                 <!-- <div class="tab-pane fade show active" id="collaboration"> -->
-                <template id="kreasiku">
+                <!-- <template id="kreasiku"> -->
                     <div class="row">
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
@@ -434,14 +434,14 @@ export default {
                             </div>
                         </div>
                     </div>
-                </template>
-                <!-- </b-card-text></b-tab> -->
+                <!-- </template> -->
+                </b-card-text></b-tab>
                 <!-- </div> -->
                 <!-- <div class="tab-pane fade" id="productivity"> -->
-                <!-- <b-tab title="Kelasku"><b-card-text> -->
+                <b-tab title="Kelasku"><b-card-text>
 
 
-                <template id="kelasku">
+                <!-- <template id="kelasku"> -->
                     <div class="row">
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
@@ -536,12 +536,12 @@ export default {
                             </div>
                         </div>
                     </div>
-                </template>
-                <!-- </b-card-text></b-tab> -->
+                <!-- </template> -->
+                </b-card-text></b-tab>
                 <!-- </div> -->
                 <!-- <div class="tab-pane fade" id="integrations"> -->
-                <!-- <b-tab title="Relungku"><b-card-text> -->
-                <template id="relungu">
+                <b-tab title="Relungku"><b-card-text>
+                <!-- <template id="relungu"> -->
                     <div class="row">
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
@@ -594,10 +594,10 @@ export default {
                             </div>
                         </div>
                     </div>
-                </template>
-                <!-- </b-card-text></b-tab> -->
+                <!-- </template> -->
+                </b-card-text></b-tab>
                 <!-- </div> -->
-            <!-- </b-tabs> -->
+            </b-tabs>
             <!-- </div> -->
         </div>
     </section>
