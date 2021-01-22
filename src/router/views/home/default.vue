@@ -201,7 +201,7 @@ export default {
                            Aplikasi Guru Kreator adalah aplikasi edukasi pertama yang dapat menjangkau hampir seluruh daerah terluar di Indonesia
                         </p>
                         <div class="banner-button-group">
-                            <a href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-4">UNDUH GRATIS</a>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-4">UNDUH GRATIS</a>
                             <router-link tag="a" to="/features/features" class="button-4 active">JELAJAHI FITUR</router-link>
                         </div>
                     </div>
@@ -386,7 +386,7 @@ export default {
                         </div>
                         <div class="how-content">
 
-                            <a href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Download Aplikasi</a>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Download Aplikasi</a>
                             <ul class="download-options">
                                 <!-- <li>
                                     <a href="#0"><i class="fab fa-windows"></i></a>
@@ -395,7 +395,7 @@ export default {
                                     <a href="#0" class="active"><i class="fab fa-apple"></i></a>
                                 </li> -->
                                 <li>
-                                    <a href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
                             </ul>
                             <p>Bagi pengguna Android, cukup unduh aplikasi di Playstore</p>
@@ -632,7 +632,7 @@ export default {
                             <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
                             <ul class="download-options mb-4">
                                 <li>
-                                    <a href="#0"><i class="fab fa-android"></i></a>
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
                             </ul>
                         </div>

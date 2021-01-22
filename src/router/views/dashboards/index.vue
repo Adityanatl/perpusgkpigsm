@@ -376,10 +376,10 @@ export default {
                     </td> -->
                   </tr><br>
                   <div class="mt-5" style="float:right">
-                    <router-link tag="a" to="/products" class="btn btn-primary btn-sm">
+                    <a href="http://gurukreator.id/products" class="btn btn-primary btn-sm">
                       Upgrade
                       <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
-                    </router-link>
+                    </a>
                   </div>
                   <!-- <tr>
                     <td>
