@@ -652,7 +652,7 @@ export default {
                             Kami sangat peduli atas hidup setiap insan dan bagaimana mereka berproses dalam keunikan keberadaan mereka. Mari bersama, wujudkan mereka menjadi Guru Kreator! Jadilah donatur:
                         </p>
                         <div class="how-content">
-                            <router-link tag="a" to="/products" class="button-3 active">Dukung Guru 3T</router-link>
+                            <router-link tag="a" to="/donatur#pricing" class="button-3 active">Dukung Guru 3T</router-link>
                         </div>
                     </div>
                 </div>
