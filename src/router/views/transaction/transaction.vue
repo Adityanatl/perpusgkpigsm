@@ -41,7 +41,10 @@ export default {
           this.transaction = this.$store.getters['transaction/transaction']
           if (this.transaction.transaction_status=='paid'){
             this.payment_status = 'Pembayaran Berhasil!'
-          } else {
+          }
+          else if (this.transaction.transaction_status=='') {
+                this.payment_status = 'Menunggu!'
+            }  else {
             this.payment_status = this.transaction.transaction_status
           }
         } else {
@@ -114,21 +117,29 @@ export default {
                     >
                       <div class="text-center">
                         <h4 class="mb-5">{{this.payment_status}}</h4>
-                        <img src="@/assets/images/checklist.png" alt="" width="100px" height="100px">
+                        <img v-if="payment_status == 'Pembayaran Berhasil!'" src="@/assets/images/checklist.png" alt="" width="100px" height="100px">
                         <p style="font-size:1em;" class="mt-5">Pesanan #{{this.transaction.invoice_number}}</p><br><br>
                         <hr>
                       </div>
                       <div>
                         <p style="font-size:1em;">Receipt</p>
-                        <p style="font-size:1em;">Akun</p>
-                        <p style="font-size:1em;">Pembayaran</p>
+                        <p style="font-size:1em;">
+                            Akun : {{transaction.account_email}}
+                        </p>
+                        <p style="font-size:1em;">
+                            Pembayaran : {{transaction.payment_methode_name}}
+                        </p>
                         <hr>
                       </div>
                       <div>
-                        <p style="font-size:1.1em"><b>Monthly</b></p><br>
+                        <p style="font-size:1.1em"><b>
+                            {{transaction.product_name}} : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}
+                        </b></p><br>
                       </div>
                       <div>
-                        <p style="font-size:1em;">Subtotal</p>
+                        <p style="font-size:1em;">
+                            Subtotal : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}
+                        </p>
                       </div><br><br>
                       <div class="text-center">
                         <p style="font-size:1em;">
