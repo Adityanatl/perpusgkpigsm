@@ -621,7 +621,7 @@ export default {
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
                                             <td>
-                                                <h2 class="title"><sup>Rp</sup>
+                                                <h2 class="title"><sup>IDR</sup>
                                                     {{ (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price) < 1000000 ?
                                                     (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000+' k': (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000000 + ' Mio' }}
                                                 </h2>
