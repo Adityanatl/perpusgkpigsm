@@ -602,9 +602,9 @@ export default {
         <div class="container">
             <div class="section-header pb-30 cl-white">
                 <h5 class="cate">Pilih paket yang kamu inginkan</h5>
-                <h2 class="title">Biaya langgan yang sangat menguntungkan</h2>
+                <h2 class="title">Biaya langganan yang sangat menguntungkan</h2>
                 <p>
-                    Kami percaya, bahwa pendidikan adalah untuk semua. Untuk itu, dengan biaya yang sangat terjangkau, aplikasi ini dapat dinikmati oleh siapa saja dengan biaya berlanggann Rp. 20.000/bulannya
+                    Kami percaya, bahwa pendidikan adalah untuk semua. Untuk itu, dengan biaya yang sangat terjangkau, aplikasi ini dapat dinikmati oleh siapa saja dengan biaya berlanggann Rp20.000,- /bulannya
                 </p>
             </div>
             <div class="range-wrapper-2">
