@@ -351,14 +351,14 @@ export default {
                     <span></span>
                     <span></span>
                 </div>
-                <div class="header-right">
+                <!-- <div class="header-right">
                     <select class="select-bar">
                         <option value="en">En</option>
                         <option value="Bn">Bn</option>
                         <option value="pk">Pk</option>
                         <option value="Fr">Fr</option>
                     </select>
-                </div>
+                </div> -->
                 <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
             </div>
         </div>
