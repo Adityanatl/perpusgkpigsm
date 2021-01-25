@@ -397,9 +397,9 @@ export default {
      <section class="how-section padding-bottom padding-top" id="how">
         <div class="container">
             <div class="section-header">
-                <h5 class="cate">Selalu tersedia di manapun dan kapan pun</h5>
+                <h5 class="cate">Selalu tersedia di mana pun dan kapan pun</h5>
                 <h2 class="title">Mengajar C.A.R.A GU.E</h2>
-                <p>Mengajar dengan Cerdas, berAzas, Ringkas dan Antusias. <br>Karena kamu adalah Guru Efisien yang efektif</p>
+                <p>Mengajar dengan <b>C</b>.erdas, ber<b>A</b>.zas, <b>R</b>.ingkas dan <b>A</b>.ntusias. <br>Karena kamu adalah Guru Efisien yang efektif</p>
             </div>
             <div class="row justify-content-xl-between justify-content-center mb-40-none">
                 <div class="col-lg-4 col-sm-6 col-xl-3">
@@ -433,7 +433,7 @@ export default {
                         <div class="how-content">
                             <router-link tag="a" to="/sign_up/sign-up" class="button-3">BUAT AKUN</router-link>
                             <h5 class="title">FREEMIUM</h5>
-                            <p>Buat akun secara gratis tanpa membayar apapun</p>
+                            <p>Buat akun secara gratis<br> dan jelajahi setiap fiturnya</p>
                         </div>
                     </div>
                 </div>
@@ -445,7 +445,7 @@ export default {
                         <div class="how-content">
                             <router-link tag="a" to="/features/features" class="button-3">SAATNYA BERKREASI</router-link>
                             <h5 class="title">JADILAH KREATIF</h5>
-                            <p>Nikmati beragam fitur yang memudahkan Guru dalam mengajar</p>
+                            <p>Nikmati beragam fitur yang memudahkan guru dalam mengajar</p>
                         </div>
                     </div>
                 </div>
@@ -469,7 +469,7 @@ export default {
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
                             <h2 class="title">Komunitas Kawan Kreator</h2>
-                            <p>Kita para Paideians adalah problem solvers dan team players yang
+                            <p>Kita para Paideians adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
                             berkumpul dan berelasi sebagai manusia Pancasila. Dengan 
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
                             kita berkomitmen atas pertumbuhan setiap anggota dalam 
