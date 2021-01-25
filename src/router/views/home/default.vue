@@ -498,7 +498,7 @@ export default {
         </div>
         <div class="container">
             <div class="section-header mw-725">
-                <h5 class="cate">Menjadi jawaban untuk setiap pertanyaan</h5>
+                <h5 class="cate">Menjadi jawaban untuk banyak pertanyaan</h5>
                 <h2 class="title">Fitur yang memahami kebutuhanmu</h2>
                 <p>
                     Setiap fitur dirancang melalui sudut pandang guru secara komprehensif.
@@ -524,7 +524,7 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">KREASIKU</h4>
-                                <p>Rancang dan modifikasilah pembelajaran dengan beragam pendekatan dan strategi yang tersedia. Administrasi bukan lagi menjadi hambatan.</p>
+                                <p>Rancang dan modifikasilah pembelajaran dengan beragam pendekatan dan strategi yang tersedia. Sudah saatnya administrasi menjadi teman.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -535,7 +535,7 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">KELASKU</h4>
-                                <p>Maksimalkan kegiatan rutin bermakna dalam administrasi digital dalam uang kolaboratif antara guru dan siswa. Peroleh evaluasi lebih dini untuk menggali potensi diri.</p>
+                                <p>Maksimalkan kegiatan rutin bermakna dalam administrasi digital dalam ruang kolaboratif antara guru dan siswa. Peroleh evaluasi lebih dini untuk menggali potensi diri.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -546,7 +546,7 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">RELUNGKU</h4>
-                                <p>Ruang kolaboratif bagi sesama pendidik yang dapat menunjang setiap pribadi berpartisipasi dalam berbagi dan memberli setiap hasil kreasi.</p>
+                                <p>Ruang kolaboratif bagi sesama pendidik yang dapat menunjang setiap pribadi berpartisipasi dalam berbagi dan mengapresiasi setiap hasil kreasi.</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -557,7 +557,7 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">GAMIFIKASI</h4>
-                                <p>Setiap tahpan merupakan pencapaian. Lihat seberapa cepat langkahmu  menjadi sumber inspiasi dalam berkesai, menjadi Guru Kreator! </p>
+                                <p>Setiap tahapan merupakan pencapaian. Lihat seberapa gigih upayamu menjadi sumber inspirasi dalam berkreasi, menjadi Guru Kreator! </p>
                             </div>
                         </div>
                     </div>
@@ -704,7 +704,7 @@ export default {
                         <h5 class="cate">Wujudkan 3T menjadi Terluar Tapi Terdepan!</h5>
                         <h2 class="title">Karena mereka tidak sendiri   </h2>
                         <p>
-                            Kami sangat peduli atas hidup setiap insan dan bagaimana mereka berproses dalam keunikan keberadaan mereka. Mari bersama, wujudkan mereka menjadi Guru Kreator! Jadilah donatur:
+                            Kami sangat peduli atas hidup setiap insan dan bagaimana mereka berproses dalam keunikan keberadaan mereka. Mari bersama, wujudkan mereka menjadi Guru Kreator!
                         </p>
                         <div class="how-content">
                             <router-link tag="a" to="/donatur#pricing" class="button-3 active">Dukung Guru 3T</router-link>

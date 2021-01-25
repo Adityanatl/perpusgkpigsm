@@ -323,7 +323,7 @@ export default {
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
                                 <h3 class="title">Kreasiku</h3>
-                                <p>Berkreasi tiada henti. Memudahkan Guru merancang apapun yang dibutuhkan</p>
+                                <p>Berkreasi tiada henti. Memudahkan guru merancang apapun yang dibutuhkan</p>
                             </div>
                         </div>
                     </div>
@@ -423,7 +423,7 @@ export default {
                                     <ul>
                                         <li>Beragam pendekatan dan sumber mengajar</li>
                                         <li>Mewadahi individual maupun komunal</li>
-                                        <li>Terstruktur, sistematis dan terencana</li>
+                                        <li>Terstruktur, sistematis, dan terencana</li>
                                     </ul>
                                 </div>
                             </div>
@@ -613,7 +613,7 @@ export default {
                     <div class="section-header cl-white">
                         <h5 class="cate">Dapatkan sekarang juga</h5>
                         <h2 class="title">Jadilah Guru Kreator!</h2>
-                        <p>Saatnya berkreasi bersama ribuan guru lainnya.</p>
+                        <p>Saatnya berkreasi bersama ribuan guru lainnya</p>
                     </div>
                 </div>
             </div>
@@ -752,7 +752,7 @@ export default {
                     <img src="@/assets/images/logo/logo_wti.png" width="200vw" height="200vw" alt="">
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src="@/assets/images/logo/paideia-logo.png" style="margin-top:65px;" width="200vw" height="70vw" alt="">
+                    <img src="@/assets/images/logo/paideia-logo.png" style="margin-top:65px;" width="200vw" height="55vw" alt="">
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src="@/assets/images/logo/refo.png" width="200vw" height="200vw" alt="">
