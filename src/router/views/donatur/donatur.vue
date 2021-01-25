@@ -262,7 +262,7 @@ export default {
                     </li>
                     <li>
                     <router-link tag="a" to="/donatur">
-                      Supporters
+                      Supporter
                       <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
                     </router-link>                    </li>
                     <!-- <li>
@@ -480,7 +480,7 @@ export default {
                             We deeply care for people and the processes involved in each of their unique places. Together, supporting them to become Guru Kreator!
                         </p>
                         <div class="how-content">
-                            <a href="#weare" class="button-3 active">COUNT ME IN</a>
+                            <a href="#weare" class="button-3 active">COUNT ME IN!</a>
                         </div>
                     </div>
                 </div>
@@ -650,29 +650,29 @@ export default {
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/BCAva.png" width="210vw" height="100vw" alt="">
+                                        <img src="@/assets/images/BCAva.png" width="200vw" height="200vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/briva.png" width="210vw" height="75vw" alt="">
+                                        <img src="@/assets/images/briva.png" width="200vw" height="200vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/CCAmerican.png" width="180vw" height="70vw" alt="">
+                                        <img src="@/assets/images/CCAmerican.png" width="200vw" height="200vw" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/CCVISA.png" width="180vw" height="80vw" alt="">
+                                        <img src="@/assets/images/CCVISA.png" width="200vw" height="200vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/CCMaster.png" width="180vw" height="70vw" alt="">
+                                        <img src="@/assets/images/CCMaster.png" width="200vw" height="200vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct">
-                                        <img src="@/assets/images/CCJCB.png" width="180vw" height="75vw" alt="">
+                                        <img src="@/assets/images/CCJCB.png" wwidth="200vw" height="200vw" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -692,7 +692,7 @@ export default {
                                     <div class="mt-2 mb-3">
                                         <input type="text" placeholder="Nomor Telepon" v-model="payload.hp">
                                     </div>
-                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be chanelled to the teachers on the first day of the following month.</i>
+                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled to the teachers on the first day of the following month only to 3T Teahers.</i>
                                 </form>
                                 <div class="right mt-5 mb-5">
 
@@ -824,7 +824,7 @@ export default {
                         </router-link>
                     </li>
                     <li>
-                        <router-link tag="a" to="/">Supporters
+                        <router-link tag="a" to="/">Supporter
                         </router-link>
                     </li>
                     <li>
