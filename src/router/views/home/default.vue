@@ -16,6 +16,8 @@ import { Carousel, Slide } from "vue-carousel";
 // import '@/assets/js/canvasjs.min.js';
 // import '@/assets/js/paroller.js';
 // import '@/assets/js/main.js';
+// import jquery from 'jQuery';
+
 global.jQuery = require('jquery');
 var $ = global.jQuery;
 window.$ = $;
@@ -63,9 +65,9 @@ export default {
   },
 };
     
-  $(document).ready(function () {
+//   $(document).ready(function () {
     // Nice Select
-    $('.select-bar').niceSelect();
+    // $('.select-bar').niceSelect();
     // PoPuP 
     // $('.popup').magnificPopup({
     //   disableOn: 700,
@@ -76,7 +78,7 @@ export default {
     //   fixedContentPos: false,
     //   disableOn: 300
     // });
-  });
+//   });
 
     $(window).on('scroll', function () {
         
@@ -354,7 +356,7 @@ export default {
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-3">
-                                <div class="am-item active">
+                                <div class="am-item">
                                     <div class="am-thumb">
                                         <img src='@/assets/images/am-fea2.png' alt="feature">
                                     </div>
