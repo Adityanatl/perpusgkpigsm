@@ -351,7 +351,7 @@ export default {
                                         <img src='@/assets/images/am-fea1.png' alt="feature">
                                     </div>
                                     <div class="am-content">
-                                        <h5 class="title">Low Bandwith (2G di 3T)</h5>
+                                        <h5 class="title">Low Bandwith<br>g (2G di 3T)</h5>
                                     </div>
                                 </div>
                             </div>
@@ -790,7 +790,7 @@ export default {
                 </div>
                 <ul class="social-icons">
                     <li>
-                        <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/gurukreator"><i class="fab fa-facebook-f"></i></a>
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
@@ -802,7 +802,7 @@ export default {
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
-                        <a href="#0"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -826,8 +826,8 @@ export default {
                 </ul>
             </div>
             <div class="copyright">
-                <p>
-                    Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#0b507d">PAIDEIA Educational Solutions</a>
+                <p style="font-size:12px;">
+                    Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>
             </div>
         </div>
