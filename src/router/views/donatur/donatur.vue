@@ -474,7 +474,7 @@ export default {
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="section-header left-style coverage-header">
-                        <h5 class="cate">3T should be Turning into Transformative Teachers</h5>
+                        <h5 class="cate">When 3T . . . Turns into Transformative Teachers</h5>
                         <h2 class="title">For they are not alone</h2>
                         <p>
                             We deeply care for people and the processes involved in each of their unique places. Together, supporting them to become Guru Kreator!
@@ -590,7 +590,8 @@ export default {
         <div class="container">
             <div class="section-header pb-30 cl-white">
                 <h5 class="cate">Ready, set.... collaborate!</h5>
-                <h2 class="title">Hand in hand for Guru Kreator</h2>
+                <h2 class="title">Hand in hand for</h2>
+                <h2>Guru Kreator</h2><br>
                 <p>
                     Connectivity limitations, administrative burdens, and connection costs can easily be
                     resolved when we work together. Innovations in this digitalization era must be
@@ -607,8 +608,8 @@ export default {
                             <span class="cate">Available Packages:</span>
                             <div class="select-container">
                                 <select class="select-bar" v-model="selectedPrice">
-                                    <option value="semester_price">Semester-based</option>
-                                    <option value="yearly_price">Yearly-based</option>
+                                    <option value="semester_price"> Semester-based</option>
+                                    <option value="yearly_price"> Yearly-based</option>
                                 </select>
                             </div>
                         </div>
@@ -835,8 +836,8 @@ export default {
                 </ul>
             </div>
             <div class="copyright">
-                <p>
-                    Copyright © 2020.All Rights Reserved By <a href="https://paideia.id/" style="color:#0b507d">PAIDEIA</a>
+                <p style="font-size:12px;">
+                    Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>
             </div>
         </div>

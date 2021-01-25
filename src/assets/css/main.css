@@ -2473,7 +2473,7 @@ input[type="submit"] {
         flex-wrap: wrap;
         justify-content: flex-end;
         margin-left: auto;
-        margin-right: 45px;
+        margin-right: 250px;
     }
 
     .header-section .header-wrapper .menu li {
@@ -8551,7 +8551,8 @@ input[type="submit"] {
     }
 }
 
-.am-item:hover, .am-item.active {
+/* .am-item:hover, */
+.am-item.active {
     box-shadow: 1.95px 15.881px 30px 0px rgba(47, 105, 252, 0.31);
 }
 
@@ -8641,7 +8642,7 @@ input[type="submit"] {
 }
 
 .sponsor-thumb img {
-    max-width: 100%;
+    max-width: 75%;
 }
 
 /*Download Section Starts Here*/

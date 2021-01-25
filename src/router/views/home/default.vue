@@ -10,7 +10,7 @@ import { Carousel, Slide } from "vue-carousel";
 // import '@/assets/js/jquery-ui.min.js';
 // import '@/assets/js/wow.min.js';
 // import '@/assets/js/waypoints.js';
-// import '@/assets/js/nice-select.js';
+// import '@/assets/js/nice-select.js'
 // import '@/assets/js/owl.min.js';
 // import '@/assets/js/counterup.min.js';
 // import '@/assets/js/canvasjs.min.js';
@@ -63,6 +63,21 @@ export default {
   },
 };
     
+  $(document).ready(function () {
+    // Nice Select
+    $('.select-bar').niceSelect();
+    // PoPuP 
+    // $('.popup').magnificPopup({
+    //   disableOn: 700,
+    //   type: 'iframe',
+    //   mainClass: 'mfp-fade',
+    //   removalDelay: 160,
+    //   preloader: false,
+    //   fixedContentPos: false,
+    //   disableOn: 300
+    // });
+  });
+
     $(window).on('scroll', function () {
         
         var header = $(".header-section");
@@ -161,14 +176,14 @@ export default {
                     <span></span>
                     <span></span>
                 </div>
-                <div class="header-right">
+                <!-- <div class="header-right">
                     <select class="select-bar">
                         <option value="en">En</option>
                         <option value="Bn">Bn</option>
                         <option value="pk">Pk</option>
                         <option value="Fr">Fr</option>
                     </select>
-                </div>
+                </div> -->
                 <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
             </div>
         </div>
@@ -196,7 +211,7 @@ export default {
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="banner-content-1 cl-white">
-                        <h1 class="title">Sudah saatnya jadi guru kreator!</h1>
+                        <h1 class="title">Sudah saatnya jadi Guru Kreator!</h1>
                         <p>
                            Aplikasi Guru Kreator adalah aplikasi edukasi pertama yang dapat menjangkau hampir seluruh daerah terluar di Indonesia
                         </p>
@@ -248,18 +263,24 @@ export default {
      <div class="sponsor-section padding-bottom padding-top">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5">
+                <div class="col-lg-3">
                     <div class="spon-cont">
                         <p>By Paideia Educational Solutions</p>
                     </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-9">
                     <div class="row sponsor-slider owl-theme owl-carousel">
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/sponsor1.png' alt="sponsor">
                         </div>
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/sponsor2.png' alt="sponsor">
+                        </div>
+                        <div class="sponsor-thumb">
+                            <img src='@/assets/images/logo-mika.png' alt="sponsor">
+                        </div>
+                        <div class="sponsor-thumb">
+                            <img src='@/assets/images/logo-techinspire.png' alt="sponsor">
                         </div>
                     </div>
                 </div>
@@ -315,7 +336,7 @@ export default {
                     <div class="col-lg-8 col-xl-7">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Keunggulan yang Unik</h5>
-                            <h2 class="title">Karena kreatifitas tidak terbatas</h2>
+                            <h2 class="title">Karena kreatifitas tidak berbatas</h2>
                             <p>dengan fleksibilitas memberikan keleluasaan dalam berkreasi 
                             dan mengasah potensi</p>
                         </div>
@@ -445,7 +466,7 @@ export default {
                     <div class="newslater-area padding-bottom padding-top">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
-                            <h2 class="title">Komunitas Paideians</h2>
+                            <h2 class="title">Komunitas Kawan Kreator</h2>
                             <p>Kita para Paideians adalah problem solvers dan team players yang
                             berkumpul dan berelasi sebagai manusia Pancasila. Dengan 
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
@@ -601,6 +622,35 @@ export default {
                             </div>
                         </div> -->
                         <div class="amount-area-price">
+                            <!-- <div class="table-responsive">
+                                <table class="item table table-centered mt-5">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <h2 class="title"><sup>Rp</sup>20.000</h2>
+                                                <span class="info">Per Bulan</span>
+                                            </td>
+                                            <td>
+                                                <h2 class="title"><sup>Rp</sup>100.000</h2>
+                                                <span class="info">Per Semester</span>
+                                                <span class="info"><strike>Rp 120.000</strike></span>
+                                                <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
+                                            </td>
+                                            <td>
+                                                <h2 class="title"><sup>Rp</sup>200.000</h2>
+                                                <span class="info">Per Tahun</span>
+                                                <span class="info"><strike>Rp 240.000</strike></span>
+                                                <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:130px; margin-left:100px;" ></td>
+                                            <td><input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:130px; margin-left:140px;" ></td>
+                                            <td><input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:130px; margin-left:200px;" ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> -->
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
@@ -775,7 +825,7 @@ export default {
             </div>
             <div class="copyright">
                 <p>
-                    Copyright © 2020.All Rights Reserved By <a href="https://paideia.id/" style="color:#0b507d">PAIDEIA</a>
+                    Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#0b507d">PAIDEIA Educational Solutions</a>
                 </p>
             </div>
         </div>
