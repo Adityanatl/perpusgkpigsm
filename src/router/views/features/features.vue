@@ -757,7 +757,18 @@ export default {
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src="@/assets/images/logo/refo.png" width="200vw" height="200vw" alt="">
                 </div>
-          </div>
+            </div>
+            <div class="text-center row">
+                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <img src='@/assets/images/sponsor2.png' width="200vw" height="200vw" alt="sponsor">
+                </div>
+                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <img src='@/assets/images/logo-mika.png' width="200vw" height="200vw" alt="sponsor">
+                </div>
+                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <img src='@/assets/images/logo-techinspire.png' width="200vw" height="200vw" alt="sponsor">
+                </div>
+            </div>
         </div>
     </section>
     <!--============= Sponsor Section Ends Here =============-->

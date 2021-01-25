@@ -351,7 +351,7 @@ export default {
                                         <img src='@/assets/images/am-fea1.png' alt="feature">
                                     </div>
                                     <div class="am-content">
-                                        <h5 class="title">Low Bandwith<br> (2G di 3T)</h5>
+                                        <h5 class="title">Low Bandwith<br> 2G di 3T</h5>
                                     </div>
                                 </div>
                             </div>
@@ -399,7 +399,7 @@ export default {
             <div class="section-header">
                 <h5 class="cate">Selalu tersedia di mana pun dan kapan pun</h5>
                 <h2 class="title">Mengajar C.A.R.A GU.E</h2>
-                <p>Mengajar dengan <b>C</b>.erdas, ber<b>A</b>.zas, <b>R</b>.ingkas dan <b>A</b>.ntusias. <br>Karena kamu adalah Guru Efisien yang efektif</p>
+                <p>Mengajar dengan <b>C</b>erdas, ber<b>A</b>zas, <b>R</b>ingkas dan <b>A</b>ntusias. <br>Karena kamu adalah Guru Efisien yang efektif.</p>
             </div>
             <div class="row justify-content-xl-between justify-content-center mb-40-none">
                 <div class="col-lg-4 col-sm-6 col-xl-3">
@@ -432,8 +432,8 @@ export default {
                         </div>
                         <div class="how-content">
                             <router-link tag="a" to="/sign_up/sign-up" class="button-3">BUAT AKUN</router-link>
-                            <h5 class="title">FREEMIUM</h5>
-                            <p>Buat akun secara gratis<br> dan jelajahi setiap fiturnya</p>
+                            <h5 class="title m">FREEMIUM</h5>
+                            <p style="margin-top:45px;">Buat akun secara gratis<br> dan jelajahi setiap fiturnya</p>
                         </div>
                     </div>
                 </div>
@@ -445,7 +445,7 @@ export default {
                         <div class="how-content">
                             <router-link tag="a" to="/features/features" class="button-3">SAATNYA BERKREASI</router-link>
                             <h5 class="title">JADILAH KREATIF</h5>
-                            <p>Nikmati beragam fitur yang memudahkan guru dalam mengajar</p>
+                            <p style="margin-top:45px;">Nikmati beragam fitur yang memudahkan guru dalam mengajar</p>
                         </div>
                     </div>
                 </div>
