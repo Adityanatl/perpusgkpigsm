@@ -351,7 +351,7 @@ export default {
                                         <img src='@/assets/images/am-fea1.png' alt="feature">
                                     </div>
                                     <div class="am-content">
-                                        <h5 class="title">Low Bandwith<br>g (2G di 3T)</h5>
+                                        <h5 class="title">Low Bandwith<br> (2G di 3T)</h5>
                                     </div>
                                 </div>
                             </div>
