@@ -620,11 +620,7 @@ export default {
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
-<<<<<<< HEAD
                                             <td><img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left"></td>
-=======
-                                             <td><img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left"></td>
->>>>>>> 4dbf3c9fe6acd7e5212ef467abbd8f1a9403758c
 
                                             <td>
                                                 <h2 class="title"><sup>IDR</sup>
@@ -656,13 +652,8 @@ export default {
                                 <span class="cate"><b>Payment Methods</b></span>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-<<<<<<< HEAD
                                         <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/BCAva.png" width="200vw" height="180vw" alt="">
-=======
-                                        <input  type="radio"  :value="17" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/BCAva.png" width="200vw" height="200vw" alt="">
->>>>>>> 4dbf3c9fe6acd7e5212ef467abbd8f1a9403758c
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >

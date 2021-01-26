@@ -38,11 +38,7 @@ export default {
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
       endtime: "Dec 31, 2020 16:37:25",
-<<<<<<< HEAD
       gamification: 1
-=======
-        gamification: 1
->>>>>>> 4dbf3c9fe6acd7e5212ef467abbd8f1a9403758c
     };
   },
   created() {
@@ -204,7 +200,6 @@ export default {
                     </li>
                 </ul>
 
-<<<<<<< HEAD
                 <div class="collapse navbar-collapse" id="topnav-menu-content">
                     <ul
                         class="navbar-nav ml-auto"
@@ -234,9 +229,6 @@ export default {
 
 
                 <!-- <div class="header-bar d-lg-none">
-=======
-                <div class="header-bar d-lg-none">
->>>>>>> 4dbf3c9fe6acd7e5212ef467abbd8f1a9403758c
                     <span></span>
                     <span></span>
                     <span></span>
@@ -532,13 +524,8 @@ export default {
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
                             <h2 class="title">Komunitas Kawan Kreator</h2>
-<<<<<<< HEAD
                             <p>#KawanKreator adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
                             berkumpul dan berelasi sebagai manusia Pancasila. Dengan 
-=======
-                            <p>Kita para Paideians adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
-                            berkumpul dan berelasi sebagai manusia Pancasila. Dengan
->>>>>>> 4dbf3c9fe6acd7e5212ef467abbd8f1a9403758c
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
                             kita berkomitmen atas pertumbuhan setiap anggota dalam
                             komunitas pendidik ini.</p>
@@ -586,11 +573,7 @@ export default {
                     </div>
                 </div>
                 <div class="col-lg-7">
-<<<<<<< HEAD
                     <div class="feature-wrapper mb-30-none owl-thumbs" data-slider-id="1">
-=======
-                    <div class="feature-wrapper mb-30-none owl-thumbs" data-slider-id="1" >
->>>>>>> 4dbf3c9fe6acd7e5212ef467abbd8f1a9403758c
                         <div class="feature-item" @click="gamification=1">
                             <div class="feature-thumb">
                                 <div class="thumb">
