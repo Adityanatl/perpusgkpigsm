@@ -620,7 +620,7 @@ export default {
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
-                                            <td><img class="mt-3 mr-4" :src="listProducts.image_url" alt="" width="60px" height="60px" style="float:left"></td>
+                                            <!-- <td><img class="mt-3 mr-4" :src="listProducts.image_url" alt="" width="60px" height="60px" style="float:left"></td> -->
 
                                             <td>
                                                 <h2 class="title"><sup>IDR</sup>
