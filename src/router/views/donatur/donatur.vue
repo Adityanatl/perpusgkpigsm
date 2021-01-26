@@ -22,7 +22,7 @@ export default {
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
       endtime: "Dec 31, 2020 16:37:25",
-        listProducts: [],
+        listProducts: [{"id": 1, "product_type": "Personal", "product_name": "Monthly", "price": 20000, "semester_price": 100000, "yearly_price": 200000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 2, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)", "recommended": false}, {"id": 2, "product_type": "Donasi", "product_name": "Kakaktua Putih (Cockatoo)", "price": 50000, "semester_price": 300000, "yearly_price": 600000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 1, "image_url": "https://api.paideia.id/api/files/public/b64dd6f87d6d422b8eb7ba54d8faadbekakaktuaputih.png", "description": "3 Guru Kreator", "recommended": false}, {"id": 3, "product_type": "Donasi", "product_name": "Cendrawasih (Paradise)", "price": 84000, "semester_price": 500000, "yearly_price": 1000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/16d79165247f4e1bb3c50594de3f6250cendrawasih.png", "description": "5 Guru Kreator", "recommended": false}, {"id": 10, "product_type": "Personal", "product_name": "Semester", "price": 100000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)", "recommended": false}, {"id": 4, "product_type": "Donasi", "product_name": "Kucing Merah (Red Cat)", "price": 167000, "semester_price": 1000000, "yearly_price": 2000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/b4ea042550764ea3915d2b94b5dd8cc3kucingmerah.png", "description": "10 Guru Kreator", "recommended": false}, {"id": 11, "product_type": "Personal", "product_name": "Yearly", "price": 200000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)", "recommended": true}, {"id": 5, "product_type": "Donasi", "product_name": "Anoa (Plead)", "price": 833000, "semester_price": 5000000, "yearly_price": 10000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/8eb6e964fa634991bbe14fd4d6dabb18Anoa2.png", "description": "50 Guru Kreator", "recommended": false}, {"id": 6, "product_type": "Donasi", "product_name": "Macan (Tiger)", "price": 1670000, "semester_price": 10000000, "yearly_price": 20000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/94e8095fc7be4dd295c71b6d3330e361macan.png", "description": "100 Guru Kreator", "recommended": false}, {"id": 7, "product_type": "Donasi", "product_name": "Badak (Rhino)", "price": 4170000, "semester_price": 25000000, "yearly_price": 50000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/ef8c5fdb16ea4e1da8abc115df0cda40Badak.png", "description": "250 Guru Kreator", "recommended": false}, {"id": 8, "product_type": "Donasi", "product_name": "Gajah (Elephant)", "price": 8300000, "semester_price": 50000000, "yearly_price": 100000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/fb76f3a017c3437e80c38bccdaf2932bGajah.png", "description": "500 Guru Kreator", "recommended": false}, {"id": 9, "product_type": "Donasi", "product_name": "Komodo (Dragons)", "price": 16700000, "semester_price": 100000000, "yearly_price": 200000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/fb76f3a017c3437e80c38bccdaf2932bGajah.png", "description": "1000 Guru Kreator", "recommended": true} ],
         selectedPrice: 'semester_price',
         pickedProduct: null,
 
@@ -45,7 +45,7 @@ export default {
     window.removeEventListener("scroll", this.windowScroll);
   },
   mounted() {
-      this.getListProduct();
+    //   this.getListProduct();
     this.start = new Date(this.starttime).getTime();
     this.end = new Date(this.endtime).getTime();
     // Update the count down every 1 second
@@ -620,13 +620,16 @@ export default {
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
+                                            <td><img class="mt-3 mr-4" :src="listProducts.image_url" alt="" width="60px" height="60px" style="float:left"></td>
+
                                             <td>
                                                 <h2 class="title"><sup>IDR</sup>
                                                     {{ (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price) < 1000000 ?
                                                     (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000+' k': (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000000 + ' Mio' }}
                                                 </h2>
-                                                <span class="info">{{itemProduct.product_name}} -> {{itemProduct.description}}</span></td>
+                                            </td>
                                         </tr>
+                                        <span class="info ml-4">{{itemProduct.product_name}} -> {{itemProduct.description}}</span>
                                     </div>
 
 
@@ -692,7 +695,7 @@ export default {
                                     <div class="mt-2 mb-3">
                                         <input type="text" placeholder="Nomor Telepon" v-model="payload.hp">
                                     </div>
-                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled to the teachers on the first day of the following month only to 3T Teahers.</i>
+                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled only to teachers in 3T regions on the first day of the following month.</i>
                                 </form>
                                 <div class="right mt-5 mb-5">
 
