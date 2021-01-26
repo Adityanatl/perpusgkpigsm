@@ -439,7 +439,7 @@ export default {
                                 </div>
                                 <div class="counter-content">
                                     <h3 class="title"><span class="counter">120</span><span>k</span></h3>
-                                    <p>3T Teacher</p>
+                                    <p>3T Teachers</p>
                                 </div>
                             </div>
                             <div class="counter-item-5">
@@ -456,7 +456,7 @@ export default {
                                     <img src='@/assets/images/counter/counter3.png' alt="counter">
                                 </div>
                                 <div class="counter-content">
-                                    <h3 class="title"><span class="counter">11</span><span>%</span></h3>
+                                    <h3 class="title"><span class="counter">11</span></h3>
                                     <p>Provinces</p>
                                 </div>
                             </div>
@@ -620,7 +620,7 @@ export default {
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
-                                            <!-- <td><img class="mt-3 mr-4" :src="listProducts.image_url" alt="" width="60px" height="60px" style="float:left"></td> -->
+                                            <td><img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left"></td>
 
                                             <td>
                                                 <h2 class="title"><sup>IDR</sup>
@@ -649,11 +649,11 @@ export default {
                     <div class="pricing-range-top pb-3 pt-0">
                         <div class="amount-area">
                             <div class="text-center mt-3">
-                                <span class="cate"><b>Payment Method</b></span>
+                                <span class="cate"><b>Payment Methods</b></span>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/BCAva.png" width="200vw" height="200vw" alt="">
+                                        <img src="@/assets/images/BCAva.png" width="200vw" height="180vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
@@ -687,15 +687,15 @@ export default {
                                 <span class="cate"><b>Personal Information</b></span>
                                 <form class="donatur-form">
                                     <div class="mt-3">
-                                        <input type="text" placeholder="Nama Lengkap" v-model="payload.name">
+                                        <input type="text" placeholder="Full Name" v-model="payload.name">
                                     </div>
                                     <div class="mt-2">
-                                        <input type="text" placeholder="Alamat Email" v-model="payload.email">
+                                        <input type="text" placeholder="Email" v-model="payload.email">
                                     </div>
                                     <div class="mt-2 mb-3">
-                                        <input type="text" placeholder="Nomor Telepon" v-model="payload.hp">
+                                        <input type="text" placeholder="Mobile Phone" v-model="payload.hp">
                                     </div>
-                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled only to teachers in 3T regions on the first day of the following month.</i>
+                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled <b>only to teachers in 3T regions</b> on the first day of the following month.</i>
                                 </form>
                                 <div class="right mt-5 mb-5">
 
@@ -775,7 +775,7 @@ export default {
                             <p>
                                 Guru Kreator is an innovation that helps teachers in this digital era.
                                 Its engaging content makes it easier for teachers
-                                to create lesson dan unit plans.
+                                to create lesson and unit plans.
                             </p>
                             <h5 class="title" style="line-height:35px"><a href="#0">Mintarsih<br><p style="font-size:15px">Semarang, Central Java</p></a></h5>
                         </div>

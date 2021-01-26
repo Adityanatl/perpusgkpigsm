@@ -20,6 +20,7 @@
     "@fullcalendar/list": "^5.0.1",
     "@fullcalendar/timegrid": "^5.0.1",
     "@fullcalendar/vue": "^5.0.1",
+    "@nuxtjs/bulma": "^1.3.0",
     "@voerro/vue-tagsinput": "^2.2.0",
     "apexcharts": "^3.19.3",
     "axios": "^0.20.0",

@@ -37,7 +37,8 @@ export default {
       hours: "",
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
-      endtime: "Dec 31, 2020 16:37:25"
+      endtime: "Dec 31, 2020 16:37:25",
+      gamification: 1
     };
   },
   created() {
@@ -63,6 +64,20 @@ export default {
     //   this.timerCount(this.start, this.end);
     // }, 1000);
   },
+  methods: {
+    /**
+     * Toggle menu
+     */
+    toggleMenu() {
+      document.getElementById("topnav-menu-content").classList.toggle("show");
+    },
+    nextSlide() {
+      this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
+    },
+    prevSlide() {
+      this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
+    }
+  }
 };
     
 //   $(document).ready(function () {
@@ -163,8 +178,20 @@ export default {
                     </router-link>
                 </div>
 
+                <button
+                type="button"
+                class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+                data-toggle="collapse"
+                data-target="#topnav-menu-content"
+                @click="toggleMenu()"
+                >
+                <i class="fa fa-fw fa-bars"></i>
+                </button>
+
                 <ul class="menu">
-                    <li><router-link tag="a" to="/">Beranda</router-link></li>
+                    <li>
+                        <router-link tag="a" to="/">Beranda</router-link>
+                    </li>
                     <li><router-link tag="a" to="/features/features">Guru</router-link></li>
                     <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
                     <li><a href="contact.html">Kontak</a></li>
@@ -172,12 +199,40 @@ export default {
                         <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
                     </li>
                 </ul>
-                
-                <div class="header-bar d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+
+                <div class="collapse navbar-collapse" id="topnav-menu-content">
+                    <ul
+                        class="navbar-nav ml-auto"
+                        id="topnav-menu"
+                        v-scroll-spy-active="{ selector: 'a.nav-link' }"
+                    >
+                        <li class="nav-item">
+                            <router-link tag="a" to="/">Beranda</router-link>
+                        </li>
+                        <li class="nav-item">
+                        <router-link tag="a" to="/features/features">Guru</router-link>
+                        </li>
+                        <li class="nav-item">
+                        <router-link tag="a" to="/donatur">Donatur</router-link>
+                        </li>
+                        <li class="nav-item">
+                        <router-link tag="a" to="#kontak">Kontak</router-link>
+                        </li>
+                        <li class="d-sm-none">
+                            <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
+                        </li>
+                    </ul>
                 </div>
+                    <!-- <div class="ml-lg-2">
+                        <a href="javascript: void(0);" class="btn btn-outline-success w-xs">Sign in</a>
+                    </div> -->
+
+
+                <!-- <div class="header-bar d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div> -->
                 <!-- <div class="header-right">
                     <select class="select-bar">
                         <option value="en">En</option>
@@ -247,12 +302,12 @@ export default {
                         </div>
                         <div class="ban-click">
                             <div class="thumb">
-                                <img src='@/assets/images/click.png' alt="banner">
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/click.png' alt="banner"></a>
                             </div>
                             <span class="cl-white">Click Me</span>
                         </div>
                         <div class="arrow">
-                            <img src='@/assets/images/arrow.png' alt="banner">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/arrow.png' alt="banner"></a>
                         </div>
                     </div>
                 </div>
@@ -267,7 +322,7 @@ export default {
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="spon-cont">
-                        <p>By Paideia Educational Solutions</p>
+                        <p>By <a href="https://paideia.id/" style="color=#00afef">Paideia Educational Solutions</a></p>
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -276,7 +331,7 @@ export default {
                             <img src='@/assets/images/sponsor1.png' alt="sponsor">
                         </div>
                         <div class="sponsor-thumb">
-                            <img src='@/assets/images/sponsor2.png' alt="sponsor">
+                            <img src='@/assets/images/logo/logo_wti.png' alt="sponsor">
                         </div>
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-mika.png' alt="sponsor">
@@ -398,8 +453,8 @@ export default {
         <div class="container">
             <div class="section-header">
                 <h5 class="cate">Selalu tersedia di mana pun dan kapan pun</h5>
-                <h2 class="title">Mengajar C.A.R.A GU.E</h2>
-                <p>Mengajar dengan <b>C</b>erdas, ber<b>A</b>zas, <b>R</b>ingkas dan <b>A</b>ntusias. <br>Karena kamu adalah Guru Efisien yang efektif.</p>
+                <h2 class="title">Mengajar C.A.R.A. GU.E</h2>
+                <p>Mengajar dengan <b>C</b>erdas, ber<b>A</b>sas, <b>R</b>ingkas dan <b>A</b>ntusias <br>karena kamu adalah <b>GU</b>ru <b>E</b>fisien yang <b>E</b>fektif.</p>
             </div>
             <div class="row justify-content-xl-between justify-content-center mb-40-none">
                 <div class="col-lg-4 col-sm-6 col-xl-3">
@@ -445,7 +500,7 @@ export default {
                         <div class="how-content">
                             <router-link tag="a" to="/features/features" class="button-3">SAATNYA BERKREASI</router-link>
                             <h5 class="title">JADILAH KREATIF</h5>
-                            <p style="margin-top:45px;">Nikmati beragam fitur yang memudahkan guru dalam mengajar</p>
+                            <p style="margin-top:45px;">Nikmati beragam fitur yang memudahkan guru mengajar</p>
                         </div>
                     </div>
                 </div>
@@ -469,7 +524,7 @@ export default {
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
                             <h2 class="title">Komunitas Kawan Kreator</h2>
-                            <p>Kita para Paideians adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
+                            <p>#KawanKreator adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
                             berkumpul dan berelasi sebagai manusia Pancasila. Dengan 
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
                             kita berkomitmen atas pertumbuhan setiap anggota dalam 
@@ -477,7 +532,7 @@ export default {
                         </div>
                         <form class="subscribe-form">
                             <input type="text" placeholder="Masukkan Email">
-                            <button type="submit">BERGABUNG</button>
+                            <button type="submit"><a target="_blank" href="https://t.me/gurukreatorgroup" style="color:#ffffff">BERGABUNG</a></button>
                         </form>
                     </div>
                 </div>
@@ -501,7 +556,7 @@ export default {
                 <h5 class="cate">Menjadi jawaban untuk banyak pertanyaan</h5>
                 <h2 class="title">Fitur yang memahami kebutuhanmu</h2>
                 <p>
-                    Setiap fitur dirancang melalui sudut pandang guru secara komprehensif.
+                    Setiap fitur dirancang melalui sudut pandang guru secara komprehensif
                 </p>
             </div>
             <div class="row">
@@ -509,14 +564,17 @@ export default {
                     <div class="feature--thumb pr-xl-4 ltr">
                         <div class="feat-slider owl-carousel owl-theme" data-slider-id="1">
                             <div class="main-thumb">
-                                <img src='@/assets/images/pro-main.png' alt="feature">
+                                <img v-if="gamification==1" src='@/assets/images/pro-main.png' alt="feature">
+                                <img v-else-if="gamification==2" src='@/assets/images/pro-main2.png' alt="feature">
+                                <img v-else-if="gamification==3" src='@/assets/images/pro-main3.png' alt="feature">
+                                <img v-else="" src='@/assets/images/pro-main4.png' alt="feature">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="feature-wrapper mb-30-none owl-thumbs" data-slider-id="1">
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=1">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro1.png' alt="feature">
@@ -527,7 +585,7 @@ export default {
                                 <p>Rancang dan modifikasilah pembelajaran dengan beragam pendekatan dan strategi yang tersedia. Sudah saatnya administrasi menjadi teman.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=2">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro2.png' alt="feature">
@@ -535,10 +593,10 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">KELASKU</h4>
-                                <p>Maksimalkan kegiatan rutin bermakna dalam administrasi digital dalam ruang kolaboratif antara guru dan siswa. Peroleh evaluasi lebih dini untuk menggali potensi diri.</p>
+                                <p>Maksimalkan kegiatan rutin bermakna dalam ruang kolaboratif antara guru dan siswa dengan administrasi digital. Peroleh evaluasi lebih dini untuk menggali potensi diri.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=3">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro3.png' alt="feature">
@@ -546,10 +604,10 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">RELUNGKU</h4>
-                                <p>Ruang kolaboratif bagi sesama pendidik yang dapat menunjang setiap pribadi berpartisipasi dalam berbagi dan mengapresiasi setiap hasil kreasi.</p>
+                                <p>Ruang kolaboratif bagi sesama pendidik. Bersama saling menunjang setiap pribadi lewat berbagi dan mengapresiasi setiap hasil kreasi.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=4">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro4.png' alt="feature">
@@ -604,7 +662,7 @@ export default {
                 <h5 class="cate">Pilih paket yang kamu inginkan</h5>
                 <h2 class="title">Biaya langganan yang sangat menguntungkan</h2>
                 <p>
-                    Kami percaya, bahwa pendidikan adalah untuk semua. Untuk itu, dengan biaya yang sangat terjangkau, aplikasi ini dapat dinikmati oleh siapa saja dengan biaya berlanggann Rp20.000,- /bulannya
+                    Kami percaya, bahwa pendidikan adalah untuk semua. Untuk itu, dengan biaya yang sangat terjangkau, aplikasi ini dapat dinikmati oleh siapa saja dengan biaya berlangganan Rp20.000,- /bulan.
                 </p>
             </div>
             <div class="range-wrapper-2">
@@ -771,7 +829,7 @@ export default {
                     <h2 class="title">8</h2>
                 </div>
                 <div class="border-item-11">
-                    <span class="name">Papua<br></span><br><br>
+                    <span class="name">Papua</span><br>
                     <h2 class="title">22</h2>
                 </div>
             </div>
@@ -826,6 +884,7 @@ export default {
                 </ul>
             </div>
             <div class="copyright">
+                <p style="font-size:12px;">Illustration by storyset.com</p>
                 <p style="font-size:12px;">
                     Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>
