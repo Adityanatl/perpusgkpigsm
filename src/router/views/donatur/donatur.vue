@@ -652,7 +652,7 @@ export default {
                                 <span class="cate"><b>Payment Method</b></span>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio"  :value="17" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/BCAva.png" width="200vw" height="200vw" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
