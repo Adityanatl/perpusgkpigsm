@@ -37,7 +37,8 @@ export default {
       hours: "",
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
-      endtime: "Dec 31, 2020 16:37:25"
+      endtime: "Dec 31, 2020 16:37:25",
+        gamification: 1
     };
   },
   created() {
@@ -64,11 +65,11 @@ export default {
     // }, 1000);
   },
 };
-    
+
 //   $(document).ready(function () {
     // Nice Select
     // $('.select-bar').niceSelect();
-    // PoPuP 
+    // PoPuP
     // $('.popup').magnificPopup({
     //   disableOn: 700,
     //   type: 'iframe',
@@ -81,7 +82,7 @@ export default {
 //   });
 
     $(window).on('scroll', function () {
-        
+
         var header = $(".header-section");
       if ($(this).scrollTop() < 1) {
         header.removeClass("active");
@@ -128,7 +129,7 @@ export default {
       return false;
     });
 
-        // PoPuP 
+        // PoPuP
     // $('.popup').magnificPopup({
     //   disableOn: 700,
     //   type: 'iframe',
@@ -172,7 +173,7 @@ export default {
                         <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
                     </li>
                 </ul>
-                
+
                 <div class="header-bar d-lg-none">
                     <span></span>
                     <span></span>
@@ -306,7 +307,7 @@ export default {
                         <div class="section-header left-style mb-lg-0 white-lg-black pos-rel">
                             <h5 class="cate">Jelajah Keunikan Fiturnya</h5>
                             <h2 class="title">Teman guru dalam berkreasi</h2>
-                            <p>Kreasiku, Kelasku, Relungku: 3 fitur utama Guru Kreator hadir 
+                            <p>Kreasiku, Kelasku, Relungku: 3 fitur utama Guru Kreator hadir
                             mendampingi guru dalam menciptakan rancangan pembelajaran,
                             menata dan mengelola kelas serta menjadi wadah berbagi karya</p>
                             <div class="downarrow d-none d-lg-block">
@@ -339,7 +340,7 @@ export default {
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Keunggulan yang Unik</h5>
                             <h2 class="title">Karena kreatifitas tidak berbatas</h2>
-                            <p>dengan fleksibilitas memberikan keleluasaan dalam berkreasi 
+                            <p>dengan fleksibilitas memberikan keleluasaan dalam berkreasi
                             dan mengasah potensi</p>
                         </div>
                     </div>
@@ -470,9 +471,9 @@ export default {
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
                             <h2 class="title">Komunitas Kawan Kreator</h2>
                             <p>Kita para Paideians adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
-                            berkumpul dan berelasi sebagai manusia Pancasila. Dengan 
+                            berkumpul dan berelasi sebagai manusia Pancasila. Dengan
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
-                            kita berkomitmen atas pertumbuhan setiap anggota dalam 
+                            kita berkomitmen atas pertumbuhan setiap anggota dalam
                             komunitas pendidik ini.</p>
                         </div>
                         <form class="subscribe-form">
@@ -509,14 +510,17 @@ export default {
                     <div class="feature--thumb pr-xl-4 ltr">
                         <div class="feat-slider owl-carousel owl-theme" data-slider-id="1">
                             <div class="main-thumb">
-                                <img src='@/assets/images/pro-main.png' alt="feature">
+                                <img v-if="gamification==1" src='@/assets/images/pro-main.png' alt="feature">
+                                <img v-else-if="gamification==2" src='@/assets/images/pro-main2.png' alt="feature">
+                                <img v-else-if="gamification==3" src='@/assets/images/pro-main3.png' alt="feature">
+                                <img v-else="" src='@/assets/images/pro-main4.png' alt="feature">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="feature-wrapper mb-30-none owl-thumbs" data-slider-id="1">
-                        <div class="feature-item">
+                    <div class="feature-wrapper mb-30-none owl-thumbs" data-slider-id="1" >
+                        <div class="feature-item" @click="gamification=1">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro1.png' alt="feature">
@@ -527,7 +531,7 @@ export default {
                                 <p>Rancang dan modifikasilah pembelajaran dengan beragam pendekatan dan strategi yang tersedia. Sudah saatnya administrasi menjadi teman.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=2">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro2.png' alt="feature">
@@ -538,7 +542,7 @@ export default {
                                 <p>Maksimalkan kegiatan rutin bermakna dalam administrasi digital dalam ruang kolaboratif antara guru dan siswa. Peroleh evaluasi lebih dini untuk menggali potensi diri.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=3">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro3.png' alt="feature">
@@ -549,7 +553,7 @@ export default {
                                 <p>Ruang kolaboratif bagi sesama pendidik yang dapat menunjang setiap pribadi berpartisipasi dalam berbagi dan mengapresiasi setiap hasil kreasi.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=4">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro4.png' alt="feature">
@@ -615,7 +619,7 @@ export default {
                         </div>
                         <!-- <div class="pricing-header">
                             <span class="cate">Pilihan berlanggan</span>
-                            <div class="select-container">    
+                            <div class="select-container">
                                 <select class="select-bar">
                                     <option value="basic">Bulanan</option>
                                     <option value="standard">Semesteran</option>
