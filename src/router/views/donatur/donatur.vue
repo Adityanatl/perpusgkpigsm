@@ -45,7 +45,7 @@ export default {
     window.removeEventListener("scroll", this.windowScroll);
   },
   mounted() {
-    //   this.getListProduct();
+      // this.getListProduct();
     this.start = new Date(this.starttime).getTime();
     this.end = new Date(this.endtime).getTime();
     // Update the count down every 1 second
