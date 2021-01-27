@@ -140,7 +140,7 @@ export default {
         <div class="container">
             <div class="page-header-content cl-white">
                 <h2 class="title">Guru Kreator</h2>
-                <p class="mt-1">Sahabat Guru dalam berkreasi</p>
+                <p class="mt-1">Sahabat guru dalam berkreasi</p>
 <!--                 <ul class="breadcrumb">
                     <li>
                         <a href="index.html">Home</a>

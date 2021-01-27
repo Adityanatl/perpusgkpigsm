@@ -388,7 +388,7 @@ export default {
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Keunggulan yang Unik</h5>
                             <h2 class="title">Karena kreatifitas tidak berbatas</h2>
-                            <p>dengan fleksibilitas memberikan keleluasaan dalam berkreasi
+                            <p>Dengan fleksibilitas memberikan keleluasaan dalam berkreasi
                             dan mengasah potensi</p>
                         </div>
                     </div>
@@ -400,7 +400,7 @@ export default {
                                         <img src='@/assets/images/am-fea1.png' alt="feature">
                                     </div>
                                     <div class="am-content">
-                                        <h5 class="title">Low Bandwith<br> 2G di 3T</h5>
+                                        <h5 class="title">Low Bandwidth<br> 2G di 3T</h5>
                                     </div>
                                 </div>
                             </div>
@@ -410,7 +410,7 @@ export default {
                                         <img src='@/assets/images/am-fea2.png' alt="feature">
                                     </div>
                                     <div class="am-content">
-                                        <h5 class="title">Solusi Administrasi</h5><br>
+                                        <h5 class="title">Solusi <br>Administrasi</h5>  
                                     </div>
                                 </div>
                             </div>
@@ -447,8 +447,8 @@ export default {
         <div class="container">
             <div class="section-header">
                 <h5 class="cate">Selalu tersedia di mana pun dan kapan pun</h5>
-                <h2 class="title">Mengajar C.A.R.A. GU.E</h2>
-                <p>Mengajar dengan <b>C</b>erdas, ber<b>A</b>sas, <b>R</b>ingkas dan <b>A</b>ntusias <br>karena kamu adalah <b>GU</b>ru <b>E</b>fisien yang <b>E</b>fektif.</p>
+                <h2 class="title">Mengajar C.A.R.A. GU.E.</h2>
+                <p>Mengajar dengan <b>C</b>erdas, ber<b>A</b>sas, <b>R</b>ingkas dan <b>A</b>ntusias <br>karena kamu adalah <b>GU</b>ru <b>E</b>fisien yang <b>E</b>fektif</p>
             </div>
             <div class="row justify-content-xl-between justify-content-center mb-40-none">
                 <div class="col-lg-4 col-sm-6 col-xl-3">
@@ -517,7 +517,7 @@ export default {
                     <div class="newslater-area padding-bottom padding-top">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
-                            <h2 class="title">Komunitas Kawan Kreator</h2>
+                            <h2 class="title">Komunitas <br>#KawanKreator</h2>
                             <p>#KawanKreator adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
                             berkumpul dan berelasi sebagai manusia Pancasila. Dengan
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
@@ -609,7 +609,7 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">GAMIFIKASI</h4>
-                                <p>Setiap tahapan merupakan pencapaian. Lihat seberapa gigih upayamu menjadi sumber inspirasi dalam berkreasi, menjadi Guru Kreator! </p>
+                                <p>Setiap tahapan merupakan pencapaian. Lihat seberapa gigih upayamu menjadi sumber inspirasi dalam berkreasi. Jadilah Guru Kreator! </p>
                             </div>
                         </div>
                     </div>
@@ -710,14 +710,14 @@ export default {
                                 <span class="info">Per Bulan</span>
                                 <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:10px;" >
                             </div>
-                            <div class="item">
+                            <div class="item" style="margin-left:20px">
                                 <h2 class="title"><sup>Rp</sup>100.000</h2>
                                 <span class="info">Per Semester</span>
                                 <span class="info"><strike>Rp 120.000</strike></span>
                                 <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
                                 <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
-                            <div class="item">
+                            <div class="item ml-3" style="margin">
                                 <h2 class="title"><sup>Rp</sup>200.000</h2>
                                 <span class="info">Per Tahun</span>
                                 <span class="info"><strike>Rp 240.000</strike></span>
@@ -775,9 +775,10 @@ export default {
                             </div>
                             <span class="average">5.0 / 5.0</span>
                         </div> -->
-                        <h2 class="amount">62 Kab</h2>
+                        <h2 class="amount">62 Kab*</h2>
                         <p>Daerah 3T</p>
                         <p>(Tertinggal, Terdepan, Terluar)</p>
+                        <p style="color:#f0c900">*Perpres No. 63 Tahun 2020</p>
                     </div>
                 </div>
             </div>
@@ -795,8 +796,9 @@ export default {
                     <h4 class="title">1</h4>
                 </div>
                 <div class="border-item-4 text-center">
-                    <p class="name">Lampung</p><br>
-                    <h4 class="title">1</h4>
+                    <!-- <p class="name">Lampung</p><br>
+                    <h4 class="title">1</h4> -->
+                    <span class="name mt-3">Lampung <br><h2 style="font-size:20px;">1</h2></span><br>
                 </div>
                 <div class="border-item-5 text-center">
                     <span class="name">Sulawesi Tengah</span>
@@ -823,8 +825,7 @@ export default {
                     <h2 class="title">8</h2>
                 </div>
                 <div class="border-item-11">
-                    <span class="name">Papua</span><br>
-                    <h2 class="title">22</h2>
+                    <span class="name">Papua <br><h2 style="margin-top:1px;">22</h2></span><br>
                 </div>
             </div>
         </div>
