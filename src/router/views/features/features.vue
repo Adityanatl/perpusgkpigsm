@@ -20,17 +20,17 @@ export default {
     };
   },
     methods: {
-        windowScroll() {
-        const navbar = document.getElementById("navbar");
-        if (
-            document.body.scrollTop >= 50 ||
-            document.documentElement.scrollTop >= 50
-        ) {
-            navbar.classList.add("nav-sticky");
-        } else {
-            navbar.classList.remove("nav-sticky");
-        }
-        },
+        // windowScroll() {
+        // const navbar = document.getElementById("navbar");
+        // if (
+        //     document.body.scrollTop >= 50 ||
+        //     document.documentElement.scrollTop >= 50
+        // ) {
+        //     navbar.classList.add("nav-sticky");
+        // } else {
+        //     navbar.classList.remove("nav-sticky");
+        // }
+        // },
         /**
          * Toggle menu
          */
@@ -46,20 +46,20 @@ export default {
     }
 };
 
-    $(document).ready(function () {
+    // $(document).ready(function () {
         // Nice Select
         // $('.select-bar').niceSelect();
         // PoPuP
-        $('.popup').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-        disableOn: 300 
-        });
-    });
+    //     $('.popup').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false,
+    //     disableOn: 300 
+    //     });
+    // });
 
     $(window).on('scroll', function () {
         
@@ -639,9 +639,9 @@ export default {
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/sponsor2.png' width="200vw" height="200vw" alt="sponsor">
                 </div>
-                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-mika.png' width="200vw" height="200vw" alt="sponsor">
-                </div>
+                </div> -->
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-techinspire.png' width="200vw" height="200vw" alt="sponsor">
                 </div>

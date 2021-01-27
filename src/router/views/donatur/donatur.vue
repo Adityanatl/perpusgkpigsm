@@ -22,7 +22,7 @@ export default {
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
       endtime: "Dec 31, 2020 16:37:25",
-        listProducts: [{"id": 1, "product_type": "Personal", "product_name": "Monthly", "price": 20000, "semester_price": 100000, "yearly_price": 200000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 2, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)", "recommended": false}, {"id": 2, "product_type": "Donasi", "product_name": "Kakaktua Putih (Cockatoo)", "price": 50000, "semester_price": 300000, "yearly_price": 600000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 1, "image_url": "https://api.paideia.id/api/files/public/b64dd6f87d6d422b8eb7ba54d8faadbekakaktuaputih.png", "description": "3 Guru Kreator", "recommended": false}, {"id": 3, "product_type": "Donasi", "product_name": "Cendrawasih (Paradise)", "price": 84000, "semester_price": 500000, "yearly_price": 1000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/16d79165247f4e1bb3c50594de3f6250cendrawasih.png", "description": "5 Guru Kreator", "recommended": false}, {"id": 10, "product_type": "Personal", "product_name": "Semester", "price": 100000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)", "recommended": false}, {"id": 4, "product_type": "Donasi", "product_name": "Kucing Merah (Red Cat)", "price": 167000, "semester_price": 1000000, "yearly_price": 2000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/b4ea042550764ea3915d2b94b5dd8cc3kucingmerah.png", "description": "10 Guru Kreator", "recommended": false}, {"id": 11, "product_type": "Personal", "product_name": "Yearly", "price": 200000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)", "recommended": true}, {"id": 5, "product_type": "Donasi", "product_name": "Anoa (Plead)", "price": 833000, "semester_price": 5000000, "yearly_price": 10000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/8eb6e964fa634991bbe14fd4d6dabb18Anoa2.png", "description": "50 Guru Kreator", "recommended": false}, {"id": 6, "product_type": "Donasi", "product_name": "Macan (Tiger)", "price": 1670000, "semester_price": 10000000, "yearly_price": 20000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/94e8095fc7be4dd295c71b6d3330e361macan.png", "description": "100 Guru Kreator", "recommended": false}, {"id": 7, "product_type": "Donasi", "product_name": "Badak (Rhino)", "price": 4170000, "semester_price": 25000000, "yearly_price": 50000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/ef8c5fdb16ea4e1da8abc115df0cda40Badak.png", "description": "250 Guru Kreator", "recommended": false}, {"id": 8, "product_type": "Donasi", "product_name": "Gajah (Elephant)", "price": 8300000, "semester_price": 50000000, "yearly_price": 100000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/fb76f3a017c3437e80c38bccdaf2932bGajah.png", "description": "500 Guru Kreator", "recommended": false}, {"id": 9, "product_type": "Donasi", "product_name": "Komodo (Dragons)", "price": 16700000, "semester_price": 100000000, "yearly_price": 200000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/fb76f3a017c3437e80c38bccdaf2932bGajah.png", "description": "1000 Guru Kreator", "recommended": true} ],
+        listProducts: [{"id": 1, "product_type": "Personal", "product_name": "Monthly", "price": 20000, "semester_price": 100000, "yearly_price": 200000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 2, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)", "narasi": "", "recommended": false}, {"id": 2, "product_type": "Donasi", "product_name": "Kakaktua Putih (Cockatoo)", "price": 50000, "semester_price": 300000, "yearly_price": 600000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 1, "image_url": "https://api.paideia.id/api/files/public/b64dd6f87d6d422b8eb7ba54d8faadbekakaktuaputih.png", "description": "3 Guru Kreator", "narasi": "indigenous of Maluku", "recommended": false}, {"id": 3, "product_type": "Donasi", "product_name": "Cendrawasih (Paradise)", "price": 84000, "semester_price": 500000, "yearly_price": 1000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/16d79165247f4e1bb3c50594de3f6250cendrawasih.png", "description": "5 Guru Kreator", "narasi": "indigenous of Papua", "recommended": false}, {"id": 10, "product_type": "Personal", "product_name": "Semester", "price": 100000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)", "narasi": "", "recommended": false}, {"id": 4, "product_type": "Donasi", "product_name": "Kucing Merah (Red Cat)", "price": 167000, "semester_price": 1000000, "yearly_price": 2000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/b4ea042550764ea3915d2b94b5dd8cc3kucingmerah.png", "description": "10 Guru Kreator", "narasi": "indigenous of Kalimantan", "recommended": false}, {"id": 11, "product_type": "Personal", "product_name": "Yearly", "price": 200000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)", "narasi": "", "recommended": true}, {"id": 5, "product_type": "Donasi", "product_name": "Anoa (Plead)", "price": 833000, "semester_price": 5000000, "yearly_price": 10000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/8eb6e964fa634991bbe14fd4d6dabb18Anoa2.png", "description": "50 Guru Kreator", "narasi": "indigenous of Sulawesi", "recommended": false}, {"id": 6, "product_type": "Donasi", "product_name": "Macan (Tiger)", "price": 1670000, "semester_price": 10000000, "yearly_price": 20000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/94e8095fc7be4dd295c71b6d3330e361macan.png", "description": "100 Guru Kreator", "narasi": " indigenous of Sumatera", "recommended": false}, {"id": 7, "product_type": "Donasi", "product_name": "Badak (Rhino)", "price": 4170000, "semester_price": 25000000, "yearly_price": 50000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/ef8c5fdb16ea4e1da8abc115df0cda40Badak.png", "description": "250 Guru Kreator", "narasi": " indigenous of Jawa", "recommended": false}, {"id": 8, "product_type": "Donasi", "product_name": "Gajah (Elephant)", "price": 8300000, "semester_price": 50000000, "yearly_price": 100000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/fb76f3a017c3437e80c38bccdaf2932bGajah.png", "description": "500 Guru Kreator", "narasi": " indigenous of Sumatera", "recommended": false}, {"id": 9, "product_type": "Donasi", "product_name": "Komodo (Dragons)", "price": 16700000, "semester_price": 100000000, "yearly_price": 200000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/e55e7f1e2adf4c488f6ae6cf345da9a1Komodo.png", "description": "1000 Guru Kreator", "narasi": " indigenous of NTT", "recommended": true} ], 
         selectedPrice: 'semester_price',
         pickedProduct: null,
 
@@ -135,17 +135,17 @@ export default {
             }
         },
 
-        windowScroll() {
-        const navbar = document.getElementById("navbar");
-        if (
-            document.body.scrollTop >= 50 ||
-            document.documentElement.scrollTop >= 50
-        ) {
-            navbar.classList.add("nav-sticky");
-        } else {
-            navbar.classList.remove("nav-sticky");
-        }
-        },
+        // windowScroll() {
+        // const navbar = document.getElementById("navbar");
+        // if (
+        //     document.body.scrollTop >= 50 ||
+        //     document.documentElement.scrollTop >= 50
+        // ) {
+        //     navbar.classList.add("nav-sticky");
+        // } else {
+        //     navbar.classList.remove("nav-sticky");
+        // }
+        // },
         /**
          * Toggle menu
          */
@@ -162,20 +162,20 @@ export default {
 
 };
 
-    $(document).ready(function () {
+    // $(document).ready(function () {
         // Nice Select
         // $('.select-bar').niceSelect();
         // PoPuP
-        $('.popup').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-        disableOn: 300 
-        });
-    });
+    //     $('.popup').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false,
+    //     disableOn: 300 
+    //     });
+    // });
 
     $(window).on('scroll', function () {
 
@@ -217,16 +217,16 @@ export default {
                     v-scroll-spy-active="{ selector: 'a.nav-link' }"
                 >
                     <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="/">Beranda</router-link>
+                    <router-link class="nav-link" tag="a" to="/">Home</router-link>
                     </li>
                     <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="/features/features">Guru</router-link>
+                    <router-link class="nav-link" tag="a" to="/features/features">Teacher</router-link>
                     </li>
                     <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
+                    <router-link class="nav-link" tag="a" to="/donatur">Supporter</router-link>
                     </li>
                     <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
+                    <router-link class="nav-link" tag="a" to="# ">Contact</router-link>
                     </li>
                 </ul>
 
@@ -302,7 +302,7 @@ export default {
                     <div class="about-content">
 
                         <div class="section-header left-style">
-                            <h5 class="cate">Our huge homework</h5>
+                            <h5 class="cate">Our Huge Homework</h5>
                             <h2 class="title">The accessibility gap for teachers to create must be resolved</h2>
                             <p>With Indonesia’s vast lands and wide-arrayed diversities on the grounds, those at the most forefront and remote are often the most left behind. </p>
                         </div>
@@ -321,7 +321,7 @@ export default {
                                     <img src='@/assets/images/counter/counter2.png' alt="counter">
                                 </div>
                                 <div class="counter-content">
-                                    <h3 class="title"><span class="counter">62</span><span>+</span></h3>
+                                    <h3 class="title"><span class="counter">62</span><span></span></h3>
                                     <p>Regions</p>
                                 </div>
                             </div>
@@ -370,12 +370,13 @@ export default {
                             </div>
                             <span class="average">5.0 / 5.0</span>
                         </div> -->
-                        <h2 class="amount">62 Regions</h2>
+                        <h2 class="amount">62 Regions*</h2>
                         <p>3T Areas</p>
-                        <p>The most outskirt<br>
-                        The most forefront<br>
+                        <p>The most forefront<br>
+                        The most outskirt<br>
                         The most behind
                         </p>
+                        <p style="color:#f0c900">*Perpres No. 63 Tahun 2020</p>
                     </div>
                 </div>
             </div>
@@ -494,7 +495,7 @@ export default {
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
-                                            <td><img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left"></td>
+                                            <td><img class="mt-3 mr-1" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left"></td>
 
                                             <td>
                                                 <h2 class="title"><sup>IDR</sup>
@@ -504,6 +505,7 @@ export default {
                                             </td>
                                         </tr>
                                         <span class="info ml-4">{{itemProduct.product_name}} -> {{itemProduct.description}}</span>
+                                        <span class="info ml-4">{{itemProduct.narasi}}</span>
                                     </div>
 
 
@@ -713,6 +715,7 @@ export default {
                 </ul>
             </div>
             <div class="copyright">
+                <p style="font-size:12px;">Illustration by storyset.com</p>
                 <p style="font-size:12px;">
                     Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>

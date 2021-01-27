@@ -67,17 +67,17 @@ export default {
     // }, 1000);
   },
   methods: {
-    windowScroll() {
-      const navbar = document.getElementById("navbar");
-      if (
-        document.body.scrollTop >= 50 ||
-        document.documentElement.scrollTop >= 50
-      ) {
-        navbar.classList.add("nav-sticky");
-      } else {
-        navbar.classList.remove("nav-sticky");
-      }
-    },
+    // windowScroll() {
+    //   const navbar = document.getElementById("navbar");
+    //   if (
+    //     document.body.scrollTop >= 50 ||
+    //     document.documentElement.scrollTop >= 50
+    //   ) {
+    //     navbar.classList.add("nav-sticky");
+    //   } else {
+    //     navbar.classList.remove("nav-sticky");
+    //   }
+    // },
     /**
      * Toggle menu
      */
@@ -327,9 +327,9 @@ export default {
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/logo/logo_wti.png' alt="sponsor">
                         </div>
-                        <div class="sponsor-thumb">
+                        <!-- <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-mika.png' alt="sponsor">
-                        </div>
+                        </div> -->
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-techinspire.png' alt="sponsor">
                         </div>
@@ -777,7 +777,7 @@ export default {
                         </div> -->
                         <h2 class="amount">62 Kab*</h2>
                         <p>Daerah 3T</p>
-                        <p>(Tertinggal, Terdepan, Terluar)</p>
+                        <p>(Terdepan, Terluar, Tertinggal)</p>
                         <p style="color:#f0c900">*Perpres No. 63 Tahun 2020</p>
                     </div>
                 </div>
