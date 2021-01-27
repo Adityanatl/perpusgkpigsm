@@ -90,6 +90,7 @@ export default {
     prevSlide() {
       this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
     },
+    
       joinTelegram() {
         if (this.join_telegram_email == ""){
             alert("Mohon masukan email terlebih dahulu")

@@ -135,11 +135,47 @@ export default {
             }
         },
 
-
-
+        windowScroll() {
+        const navbar = document.getElementById("navbar");
+        if (
+            document.body.scrollTop >= 50 ||
+            document.documentElement.scrollTop >= 50
+        ) {
+            navbar.classList.add("nav-sticky");
+        } else {
+            navbar.classList.remove("nav-sticky");
+        }
+        },
+        /**
+         * Toggle menu
+         */
+        toggleMenu() {
+        document.getElementById("topnav-menu-content").classList.toggle("show");
+        },
+        nextSlide() {
+        this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
+        },
+        prevSlide() {
+        this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
+        }
     },
 
 };
+
+    $(document).ready(function () {
+        // Nice Select
+        // $('.select-bar').niceSelect();
+        // PoPuP
+        $('.popup').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        disableOn: 300 
+        });
+    });
 
     $(window).on('scroll', function () {
 

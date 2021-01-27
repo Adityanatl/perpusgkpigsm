@@ -186,9 +186,9 @@ export const menuItems = [
 
     {
         id: 2,
-        label: "Subscription",
+        label: "Paket Berlangganan",
         icon: "bx-calendar",
-        link: "/subscription"
+        link: "/products"
     },
 
     // {
