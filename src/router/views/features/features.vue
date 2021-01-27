@@ -199,8 +199,8 @@ export default {
                     <div class="row">
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
-                                <h3 class="title">Kreasiku</h3>
-                                <p>Berkreasi tiada henti. Memudahkan guru merancang apapun yang dibutuhkan</p>
+                                <h3 class="title" style="color:#f0c900">Kreasiku</h3>
+                                <p>Berkreasi tiada henti. Memudahkan guru merancang apapun yang dibutuhkan.</p>
                             </div>
                         </div>
                     </div>
@@ -495,7 +495,7 @@ export default {
                 </div>
             </div>
             <div class="comunity-wrapper">
-                <div class="buttons"><a href="#0" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
+                <div class="buttons"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
                 <div class="comunity-area">
                     <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
                     <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
@@ -697,6 +697,7 @@ export default {
                 </ul>
             </div>
             <div class="copyright">
+                <p style="font-size:12px;">Illustration by storyset.com</p>
                 <p style="font-size:12px;">
                     Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>
