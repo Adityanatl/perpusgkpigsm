@@ -2,7 +2,7 @@
 import { Carousel, Slide } from "vue-carousel";
 
 // import magnific from "magnific-popup";
-// import '@/assets/js/magnific-popup.min.js';
+import '@/assets/js/magnific-popup.min.js';
 // import '@/assets/js/jquery-3.3.1.min.js';
 // import '@/assets/js/modernizr-3.6.0.min.js';
 // import '@/assets/js/plugins.js';
@@ -10,7 +10,7 @@ import { Carousel, Slide } from "vue-carousel";
 // import '@/assets/js/jquery-ui.min.js';
 // import '@/assets/js/wow.min.js';
 // import '@/assets/js/waypoints.js';
-// import '@/assets/js/nice-select.js'
+// import '@/assets/js/nice-select.js';
 // import '@/assets/js/owl.min.js';
 // import '@/assets/js/counterup.min.js';
 // import '@/assets/js/canvasjs.min.js';
@@ -65,6 +65,17 @@ export default {
     // }, 1000);
   },
   methods: {
+    windowScroll() {
+      const navbar = document.getElementById("navbar");
+      if (
+        document.body.scrollTop >= 50 ||
+        document.documentElement.scrollTop >= 50
+      ) {
+        navbar.classList.add("nav-sticky");
+      } else {
+        navbar.classList.remove("nav-sticky");
+      }
+    },
     /**
      * Toggle menu
      */
@@ -77,23 +88,25 @@ export default {
     prevSlide() {
       this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
     }
+
+    
   }
 };
 
-//   $(document).ready(function () {
-    // Nice Select
-    // $('.select-bar').niceSelect();
-    // PoPuP
-    // $('.popup').magnificPopup({
-    //   disableOn: 700,
-    //   type: 'iframe',
-    //   mainClass: 'mfp-fade',
-    //   removalDelay: 160,
-    //   preloader: false,
-    //   fixedContentPos: false,
-    //   disableOn: 300
-    // });
-//   });
+    $(document).ready(function () {
+        // Nice Select
+        // $('.select-bar').niceSelect();
+        // PoPuP
+        $('.popup').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        disableOn: 300 
+        });
+    });
 
     $(window).on('scroll', function () {
 
@@ -106,34 +119,34 @@ export default {
     });
 
     //Menu Dropdown Icon Adding
-    $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
+    // $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
     // drop down menu width overflow problem fix
-    $('.submenu').parent('li').hover(function () {
-      var menu = $(this).find("ul");
-      var menupos = $(menu).offset();
-      if (menupos.left + menu.width() > $(window).width()) {
-        var newpos = -$(menu).width();
-        menu.css({
-          left: newpos
-        });
-      }
-    });
+    // $('.submenu').parent('li').hover(function () {
+    //   var menu = $(this).find("ul");
+    //   var menupos = $(menu).offset();
+    //   if (menupos.left + menu.width() > $(window).width()) {
+    //     var newpos = -$(menu).width();
+    //     menu.css({
+    //       left: newpos
+    //     });
+    //   }
+    // });
 
-    $('.menu li a').on('click', function (e) {
-      var element = $(this).parent('li');
-      if (element.hasClass('open')) {
-        element.removeClass('open');
-        element.find('li').removeClass('open');
-        element.find('ul').slideUp(300, "swing");
-      } else {
-        element.addClass('open');
-        element.children('ul').slideDown(300, "swing");
-        element.siblings('li').children('ul').slideUp(300, "swing");
-        element.siblings('li').removeClass('open');
-        element.siblings('li').find('li').removeClass('open');
-        element.siblings('li').find('ul').slideUp(300, "swing");
-      }
-    });
+    // $('.menu li a').on('click', function (e) {
+    //   var element = $(this).parent('li');
+    //   if (element.hasClass('open')) {
+    //     element.removeClass('open');
+    //     element.find('li').removeClass('open');
+    //     element.find('ul').slideUp(300, "swing");
+    //   } else {
+    //     element.addClass('open');
+    //     element.children('ul').slideDown(300, "swing");
+    //     element.siblings('li').children('ul').slideUp(300, "swing");
+    //     element.siblings('li').removeClass('open');
+    //     element.siblings('li').find('li').removeClass('open');
+    //     element.siblings('li').find('ul').slideUp(300, "swing");
+    //   }
+    // });
 
     //Click event to scroll to top
     $('.scrollToTop').on('click', function () {
@@ -169,15 +182,15 @@ export default {
 
 <template>
     <div>
-     <header class="header-section">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <router-link tag="a" to="/">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
-                    </router-link>
-                </div>
-
+    <nav class="navbar-expand-lg navigation header-section">
+      <div class="container">
+          <div class="header-wrapper">
+            <div class="logo">
+                <router-link tag="a" to="/">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                </router-link>
+            </div>
+            <div>
                 <button
                 type="button"
                 class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
@@ -185,66 +198,37 @@ export default {
                 data-target="#topnav-menu-content"
                 @click="toggleMenu()"
                 >
-                <i class="fa fa-fw fa-bars"></i>
+                <i class="fa fa-fw fa-bars"></i>    
                 </button>
+            </div>
 
-                <ul class="menu">
-                    <li>
-                        <router-link tag="a" to="/">Beranda</router-link>
+            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                <ul
+                    class="navbar-nav ml-auto"
+                    id="topnav-menu"
+                    v-scroll-spy-active="{ selector: 'a.nav-link' }"
+                >
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/">Beranda</router-link>
                     </li>
-                    <li><router-link tag="a" to="/features/features">Guru</router-link></li>
-                    <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
-                    <li><a href="contact.html">Kontak</a></li>
-                    <li class="d-sm-none">
-                        <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/features/features">Guru</router-link>
+                    </li>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
+                    </li>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
                     </li>
                 </ul>
 
-                <div class="collapse navbar-collapse" id="topnav-menu-content">
-                    <ul
-                        class="navbar-nav ml-auto"
-                        id="topnav-menu"
-                        v-scroll-spy-active="{ selector: 'a.nav-link' }"
-                    >
-                        <li class="nav-item">
-                            <router-link tag="a" to="/">Beranda</router-link>
-                        </li>
-                        <li class="nav-item">
-                        <router-link tag="a" to="/features/features">Guru</router-link>
-                        </li>
-                        <li class="nav-item">
-                        <router-link tag="a" to="/donatur">Donatur</router-link>
-                        </li>
-                        <li class="nav-item">
-                        <router-link tag="a" to="#kontak">Kontak</router-link>
-                        </li>
-                        <li class="d-sm-none">
-                            <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
-                        </li>
-                    </ul>
-                </div>
-                    <!-- <div class="ml-lg-2">
-                        <a href="javascript: void(0);" class="btn btn-outline-success w-xs">Sign in</a>
-                    </div> -->
-
-
-                <!-- <div class="header-bar d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div> -->
-                <!-- <div class="header-right">
-                    <select class="select-bar">
-                        <option value="en">En</option>
-                        <option value="Bn">Bn</option>
-                        <option value="pk">Pk</option>
-                        <option value="Fr">Fr</option>
-                    </select>
-                </div> -->
-                <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                <!-- <div class="ml-lg-2"> -->
+                    <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                <!-- </div> -->
             </div>
         </div>
-     </header>
+      </div>
+    </nav>
      <!--============= Header Section Ends Here =============-->
 
         <!--============= Banner Section Starts Here =============-->

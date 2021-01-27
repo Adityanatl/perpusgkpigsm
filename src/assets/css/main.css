@@ -840,7 +840,7 @@ p:last-child {
 }
 
 p a {
-    color: #00afef;
+    color: #;
 }
 
 p a:hover {
@@ -2675,7 +2675,7 @@ input[type="submit"] {
 }
 
 .header-section .header-wrapper .header-button:hover {
-    background: #ffffff;
+    background: #0aa3f3;
     color: #00afef; /*headerbanner*/
 }
 

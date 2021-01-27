@@ -154,215 +154,53 @@ export default {
 
 <template>
     <div>
-     <header class="header-section">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <router-link tag="a" to="/">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
-                    </router-link>
-                </div>
-                <ul class="menu">
-                    <li>
-                        <router-link tag="a" to="/">Home</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="#0">Home Apps</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Mobile App 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">Mobile App 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-3.html">Mobile App 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-4.html">Mobile App 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Messenger</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-5.html">Messenger 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-6.html">Messenger 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Web</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-7.html">Web 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-8.html">Web 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Dextop</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-9.html">Dextop 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-10.html">Dextop 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-11.html">Dextop 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Watchapp</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-12.html">Watchapp 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-13.html">Watchapp 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Hero Video</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-14.html">Hero Video 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-15.html">Hero Video 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="./index-16.html">Home 16 <span class="badge badge-primary align-self-center">New</span></a>
-                            </li>
-                        </ul> -->
+    <nav class="navbar-expand-lg navigation header-section">
+      <div class="container">
+          <div class="header-wrapper">
+            <div class="logo">
+                <router-link tag="a" to="/">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                </router-link>
+            </div>
+            <div>
+                <button
+                type="button"
+                class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+                data-toggle="collapse"
+                data-target="#topnav-menu-content"
+                @click="toggleMenu()"
+                >
+                <i class="fa fa-fw fa-bars"></i>    
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                <ul
+                    class="navbar-nav ml-auto"
+                    id="topnav-menu"
+                    v-scroll-spy-active="{ selector: 'a.nav-link' }"
+                >
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/">Beranda</router-link>
                     </li>
-                    <li>
-                        <router-link tag="a" to="/features/features">Teacher</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="feature.html">Feature 1</a>
-                            </li>
-                            <li>
-                                <a href="feature-2.html">Feature 2</a>
-                            </li>
-                            <li>
-                                <a href="feature-3.html">Feature 3</a>
-                            </li>
-                        </ul> -->
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/features/features">Guru</router-link>
                     </li>
-                    <li>
-                    <router-link tag="a" to="/donatur">
-                      Supporter
-                      <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
-                    </router-link>                    </li>
-                    <!-- <li>
-                        <a href="#0">Pages</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="about.html">about</a>
-                            </li>
-                            <li>
-                                <a href="app-download.html">app download</a>
-                            </li>
-                            <li>
-                                <a href="#0">Team</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="team.html">Team</a>
-                                    </li>
-                                    <li>
-                                        <a href="team-single.html">Team Single</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Account</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="sign-up.html">Sign Up</a>
-                                    </li>
-                                    <li>
-                                        <a href="sign-in.html">Sign In</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="faqs.html">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="partners.html">Partners</a>
-                            </li>
-                            <li>
-                                <a href="privacy-policy.html">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="coming-soon.html">Coming Soon</a>
-                            </li>
-                            <li>
-                                <a href="change-password.html">Change Password</a>
-                            </li>
-                            <li>
-                                <a href="reset-password.html">Password Reset</a>
-                            </li>
-                            <li>
-                                <a href="reviews.html">review</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li>
-                        <a href="#0">Blog</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="blog.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-type-two.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-1.html">blog Single 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-2.html">blog Single 2</a>
-                            </li>
-                        </ul>
-                    </li> -->
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li class="d-sm-none">
-                        <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
                     </li>
                 </ul>
-                <div class="header-bar d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!-- <div class="header-right">
-                    <select class="select-bar">
-                        <option value="en">En</option>
-                        <option value="Bn">Bn</option>
-                        <option value="pk">Pk</option>
-                        <option value="Fr">Fr</option>
-                    </select>
-                </div> -->
-                <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+
+                <!-- <div class="ml-lg-2"> -->
+                    <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                <!-- </div> -->
             </div>
         </div>
-    </header>
+      </div>
+    </nav>
     <!--============= Header Section Ends Here =============-->
 
     <!--============= Header Section Ends Here =============-->
