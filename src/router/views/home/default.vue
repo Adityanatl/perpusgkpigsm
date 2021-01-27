@@ -1,5 +1,6 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import Vue from "vue";
 
 // import magnific from "magnific-popup";
 import '@/assets/js/magnific-popup.min.js';
@@ -38,7 +39,8 @@ export default {
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
       endtime: "Dec 31, 2020 16:37:25",
-      gamification: 1
+      gamification: 1,
+        join_telegram_email : ""
     };
   },
   created() {
@@ -87,9 +89,16 @@ export default {
     },
     prevSlide() {
       this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
-    }
-
-    
+    },
+      joinTelegram() {
+        if (this.join_telegram_email == ""){
+            alert("Mohon masukan email terlebih dahulu")
+            return
+        }
+          let payload = {"email" : this.join_telegram_email}
+          this.$store.dispatch('jointelegram/POST_JOIN_TELEGRAM', payload)
+          window.open('https://t.me/gurukreatorgroup', '_blank');
+      }
   }
 };
 
@@ -509,15 +518,15 @@ export default {
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
                             <h2 class="title">Komunitas Kawan Kreator</h2>
                             <p>#KawanKreator adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
-                            berkumpul dan berelasi sebagai manusia Pancasila. Dengan 
+                            berkumpul dan berelasi sebagai manusia Pancasila. Dengan
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
                             kita berkomitmen atas pertumbuhan setiap anggota dalam
                             komunitas pendidik ini.</p>
                         </div>
-                        <form class="subscribe-form">
-                            <input type="text" placeholder="Masukkan Email">
-                            <button type="submit"><a target="_blank" href="https://t.me/gurukreatorgroup" style="color:#ffffff">BERGABUNG</a></button>
-                        </form>
+                        <div class="subscribe-form">
+                            <input type="text" placeholder="Masukkan Email" v-model="join_telegram_email">
+                            <button  @click="joinTelegram()">BERGABUNG</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
