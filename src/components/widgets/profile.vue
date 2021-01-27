@@ -31,7 +31,7 @@ export default {
         <div class="col-sm-12">
           <div class="row">
             <div class="col-5 colavatar-md profile-user-wid mb-4">
-              <img src="@/assets/images/users/Avatar-1.jpg" alt class="img-thumbnail rounded-circle" />
+              <img src="@/assets/images/users/avatar-1.jpg" alt class="img-thumbnail rounded-circle" />
             </div>
             <!-- <h5 class="font-size-15 text-truncate">{{user.name}}</h5> -->
             <!-- <p class="text-muted mb-0 text-truncate">UI/UX Designer</p> -->
