@@ -203,9 +203,9 @@ export default {
         <div class="container">
             <div class="account-title text-center">
                     <router-link tag="a" to="/" class="back-home"><i class="fas fa-angle-left"></i><span>Kembali <span class="d-none d-sm-inline-block">ke Beranda</span></span></router-link>
-                <a href="#0" class="logo">
+                <router-link class="nav-link" tag="a" to="/">
                     <img src='@/assets/images/new-gurukreator-logo.png' width="185vw" height="49vh" alt="logo">
-                </a>
+                </router-link>
             </div>
             <div class="account-wrapper">
                 <div class="account-body">

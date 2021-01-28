@@ -20,17 +20,17 @@ export default {
     };
   },
     methods: {
-        windowScroll() {
-        const navbar = document.getElementById("navbar");
-        if (
-            document.body.scrollTop >= 50 ||
-            document.documentElement.scrollTop >= 50
-        ) {
-            navbar.classList.add("nav-sticky");
-        } else {
-            navbar.classList.remove("nav-sticky");
-        }
-        },
+        // windowScroll() {
+        // const navbar = document.getElementById("navbar");
+        // if (
+        //     document.body.scrollTop >= 50 ||
+        //     document.documentElement.scrollTop >= 50
+        // ) {
+        //     navbar.classList.add("nav-sticky");
+        // } else {
+        //     navbar.classList.remove("nav-sticky");
+        // }
+        // },
         /**
          * Toggle menu
          */
@@ -46,20 +46,20 @@ export default {
     }
 };
 
-    $(document).ready(function () {
+    // $(document).ready(function () {
         // Nice Select
         // $('.select-bar').niceSelect();
         // PoPuP
-        $('.popup').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-        disableOn: 300 
-        });
-    });
+    //     $('.popup').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false,
+    //     disableOn: 300 
+    //     });
+    // });
 
     $(window).on('scroll', function () {
         
@@ -118,9 +118,9 @@ export default {
                     <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <!-- <div class="ml-lg-2"> -->
@@ -199,7 +199,7 @@ export default {
                     <div class="row">
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
-                                <h3 class="title" style="color:#f0c900">Kreasiku</h3>
+                                <h3 class="title">Kreasiku</h3>
                                 <p>Berkreasi tiada henti. Memudahkan guru merancang apapun yang dibutuhkan.</p>
                             </div>
                         </div>
@@ -639,9 +639,9 @@ export default {
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/sponsor2.png' width="200vw" height="200vw" alt="sponsor">
                 </div>
-                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-mika.png' width="200vw" height="200vw" alt="sponsor">
-                </div>
+                </div> -->
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-techinspire.png' width="200vw" height="200vw" alt="sponsor">
                 </div>
@@ -665,15 +665,16 @@ export default {
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
-                    </li>
-                    <li>
+                    </li> -->
+
+                    <!-- <li>
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
                         <a target="_blank" href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://t.me/gurukreatorgroup"><i class="fab fa-telegram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -688,11 +689,11 @@ export default {
                     <li>
                         <router-link tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#0">Kontak</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#0">Kebijakan Privasi</a>
+                        <router-link tag="a" to="/privacy_policy">Kebijakan Privasi</router-link>
                     </li>
                 </ul>
             </div>

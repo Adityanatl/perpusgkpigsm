@@ -67,17 +67,17 @@ export default {
     // }, 1000);
   },
   methods: {
-    windowScroll() {
-      const navbar = document.getElementById("navbar");
-      if (
-        document.body.scrollTop >= 50 ||
-        document.documentElement.scrollTop >= 50
-      ) {
-        navbar.classList.add("nav-sticky");
-      } else {
-        navbar.classList.remove("nav-sticky");
-      }
-    },
+    // windowScroll() {
+    //   const navbar = document.getElementById("navbar");
+    //   if (
+    //     document.body.scrollTop >= 50 ||
+    //     document.documentElement.scrollTop >= 50
+    //   ) {
+    //     navbar.classList.add("nav-sticky");
+    //   } else {
+    //     navbar.classList.remove("nav-sticky");
+    //   }
+    // },
     /**
      * Toggle menu
      */
@@ -227,9 +227,9 @@ export default {
                     <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <!-- <div class="ml-lg-2"> -->
@@ -298,7 +298,7 @@ export default {
                             <div class="thumb">
                                 <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/click.png' alt="banner"></a>
                             </div>
-                            <span class="cl-white">Click Me</span>
+                            <span class="cl-white"><a a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id">Klik Disini</a></span>
                         </div>
                         <div class="arrow">
                             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/arrow.png' alt="banner"></a>
@@ -327,9 +327,9 @@ export default {
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/logo/logo_wti.png' alt="sponsor">
                         </div>
-                        <div class="sponsor-thumb">
+                        <!-- <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-mika.png' alt="sponsor">
-                        </div>
+                        </div> -->
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-techinspire.png' alt="sponsor">
                         </div>
@@ -363,8 +363,8 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
+                    <div class="videohome col-lg-6">
+                        <a href="https://youtu.be/89Yk0E_J81Q" class="feature-video-area popup">
                             <div class="thumb">
                                 <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
@@ -387,7 +387,7 @@ export default {
                     <div class="col-lg-8 col-xl-7">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Keunggulan yang Unik</h5>
-                            <h2 class="title">Karena kreatifitas tidak berbatas</h2>
+                            <h2 class="title">Karena kreatifitas <br>tidak berbatas</h2>
                             <p>Dengan fleksibilitas memberikan keleluasaan dalam berkreasi
                             dan mengasah potensi</p>
                         </div>
@@ -660,8 +660,8 @@ export default {
                 </p>
             </div>
             <div class="range-wrapper-2">
-                <div class="pricing-range">
-                    <div class="pricing-range-top pt-0">
+                <div class="pricing-range pb-1">
+                    <div class="col-sm-12 pricing-range-top pt-0">
                         <div class="tags-area">
                             <h3 class="tags">Saatnya berkreasi!</h3>
                         </div>
@@ -708,22 +708,26 @@ export default {
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:10px;" >
+                                
                             </div>
-                            <div class="item" style="margin-left:20px">
+                            <div class="item" >
                                 <h2 class="title"><sup>Rp</sup>100.000</h2>
                                 <span class="info">Per Semester</span>
                                 <span class="info"><strike>Rp 120.000</strike></span>
                                 <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                
                             </div>
-                            <div class="item ml-3" style="margin">
+                            <div class="item">
                                 <h2 class="title"><sup>Rp</sup>200.000</h2>
                                 <span class="info">Per Tahun</span>
                                 <span class="info"><strike>Rp 240.000</strike></span>
                                 <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
+                        </div>
+                         <div class="radio-flex">
+                                <input class="item" type="radio" name="methodePayment">
+                                <input class="item" type="radio" name="methodePayment">
+                                <input class="item" type="radio" name="methodePayment">
                         </div>
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
@@ -731,10 +735,10 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="text-center mt-3">
+                    <div class="text-center mb-3 mt-5">
                         <div class="right mb-4">
                             <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
-                            <ul class="download-options mb-4">
+                            <ul class="download-options mt-4 mb-4">
                                 <li>
                                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
@@ -777,12 +781,12 @@ export default {
                         </div> -->
                         <h2 class="amount">62 Kab*</h2>
                         <p>Daerah 3T</p>
-                        <p>(Tertinggal, Terdepan, Terluar)</p>
+                        <p>(Terdepan, Terluar, Tertinggal)</p>
                         <p style="color:#f0c900">*Perpres No. 63 Tahun 2020</p>
                     </div>
                 </div>
             </div>
-            <div class="coverage-wrapper coverage_img">
+            <!-- <div class="coverage-wrapper coverage_img">
                 <div class="border-item-1 text-center">
                     <span class="name">Sumatera Utara</span><br>
                     <h4 class="title">4</h4>
@@ -792,42 +796,53 @@ export default {
                     <h4 class="title">1</h4>
                 </div>
                 <div class="border-item-3 text-center">
-                    <span class="name">Sumatera Selatan</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-4 text-center">
+                    <span class="name">Sumatera Selatan</span><br>
+                    <h4 class="title">1</h4> -->
+                    <!-- <span class="name">Sumatera Selatan<br><h2 style="font-size:20px; line-height:35px">1</h2></span><br> -->
+                <!-- </div>
+                <div class="border-item-4 text-center"> -->
                     <!-- <p class="name">Lampung</p><br>
                     <h4 class="title">1</h4> -->
-                    <span class="name mt-3">Lampung <br><h2 style="font-size:20px;">1</h2></span><br>
+                    <!-- <span class="name mt-3">Lampung <br><h2 style="font-size:20px; line-height:35px">1</h2></span><br>
                 </div>
                 <div class="border-item-5 text-center">
                     <span class="name">Sulawesi Tengah</span>
                     <h4 class="title">1</h4>
                 </div>
-                <div class="border-item-6 text-center">
-                    <span class="name">Maluku Utara</span>
-                    <h4 class="title">2</h4>
+                <div class="border-item-6 text-center"> -->
+                    <!-- <span class="name">Maluku Utara</span>
+                    <h4 class="title">2</h4> -->
+                    <!-- <span class="name">Maluku Utara <br><h2 style="font-size:15px; line-height:25px">1</h2></span><br>
                 </div>
-                <div class="border-item-7">
-                    <span class="name">Nusa Tenggara Barat</span>
-                    <h2 class="title">1</h2>
+                <div class="border-item-7 text-center"> -->
+                    <!-- <span class="name">Nusa Tenggara Barat</span>
+                    <h2 class="title">1</h2> -->
+                    <!-- <span class="name">Nusa Tenggara Barat<br><h2 style="font-size:15px; line-height:15px">1</h2></span><br>
                 </div>
-                <div class="border-item-8">
-                    <span class="name">Nusa Tenggara Timur</span>
-                    <h2 class="title">13</h2>
+                <div class="border-item-8 text-center"> -->
+                    <!-- <span class="name">Nusa Tenggara Timur</span><br>
+                    <h2 class="title">13</h2> -->
+                    <!-- <span class="name mt-2">Nusa Tenggara Timur<br><h2 style="font-size:20px; line-height:35px">13</h2></span><br>
                 </div>
-                <div class="border-item-9">
-                    <span class="name">Maluku</span>
-                    <h2 class="title">6</h2>
+                <div class="border-item-9 text-center"> -->
+                    <!-- <span class="name">Maluku</span>
+                    <h2 class="title">6</h2> -->
+                    <!-- <span class="name mt-2">Maluku <br><h2 style="font-size:20px; line-height:20px">1</h2></span><br>
                 </div>
-                <div class="border-item-10">
-                    <span class="name">Papua Barat</span>
-                    <h2 class="title">8</h2>
+                <div class="border-item-10 text-center"> -->
+                    <!-- <span class="name">Papua Barat</span>
+                    <h2 class="title">8</h2> -->
+                    <!-- <span class="name mt-2">Papua Barat<br><h2 style="font-size:20px; line-height:35px">8</h2></span><br>
                 </div>
-                <div class="border-item-11">
-                    <span class="name">Papua <br><h2 style="margin-top:1px;">22</h2></span><br>
+                <div class="border-item-11 text-center">
+                    <span class="name">Papua <br><h2 style="line-height:35px; font-size:30px">22</h2></span><br>
                 </div>
-            </div>
+            </div> -->
+            <div class="row mt-5">
+                <div class="col-md">
+                    <img src="@/assets/images/map.png" height="auto" width="100%"/> 
+                </div>
+            </div>  
         </div>
      </section>
      <!--============= Coverage Section Ends Here =============-->
@@ -847,15 +862,16 @@ export default {
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
-                    </li>
-                    <li>
+                    </li> -->
+
+                    <!-- <li>
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
                         <a target="_blank" href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://t.me/gurukreatorgroup"><i class="fab fa-telegram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -870,11 +886,11 @@ export default {
                     <li>
                         <router-link tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#0">Kontak</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#0">Kebijakan Privasi</a>
+                        <router-link tag="a" to="/privacy_policy">Kebijakan Privasi</router-link>
                     </li>
                 </ul>
             </div>

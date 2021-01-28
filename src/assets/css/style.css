@@ -81,6 +81,8 @@
 /*Donatur Section Starts Here*/
 .donatur-form {
     position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
 .donatur-form input {
@@ -126,6 +128,7 @@
         height: 50px;
         padding-left: 20px;
         font-size: 14px;
+        width: 100%;
     }
 
     .donatur-form button {
@@ -136,7 +139,21 @@
     }
 }
 
+@media (max-width: 766px){
+    .donatur-form input {
+        height: 50px;
+        padding-left: 20px;
+        font-size: 14px;
+        width: 80%;
+    }
+}
+
 @media (min-width: 992px) {
+        .donatur-form input {
+        height: 50px;
+        padding-left: 20px;
+        font-size: 14px;
+    }
     .subscribe-thumb {
         margin-top: -80px;
     }
@@ -171,13 +188,14 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 30px;
-    margin-left: 30px;
-    text-align: center;
+    margin-left: 0px;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .amount-area-price .item {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     width: 30%;
 }
 
@@ -219,7 +237,7 @@
 @media (max-width: 1199px) and (min-width: 992px) {
     .amount-area-price {
         margin-bottom: 0;
-        margin-left: 10px;
+        margin-left: 0px;
     }
 
     .amount-area-price .item .title {
@@ -229,7 +247,7 @@
 
 @media (max-width: 575px) {
     .amount-area-price .item .title {
-        font-size: 25px;
+        font-size: 15px;
     }
 
     .amount-area-price .item .info {
@@ -240,8 +258,23 @@
 @media (max-width: 575px) {
     .amount-area-price {
         margin-bottom: 0;
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
+}
+
+.radio-flex {
+    display: flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+.radio-flex .item {
+    width: 35px;
+    height: 35px;
+    background: #00afef;
+    border: 2px solid #ddd;
+    margin-bottom: 30px;
 }
 
 /* coverage-wrapper-donatur */
@@ -897,3 +930,190 @@
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
 	opacity: 0;
 }
+
+/* About-section */
+
+.button-area-about{
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(130%, -150%);
+    position: absolute;
+    content: "";
+}
+
+.video-donatur {
+    /* display: inline-block; */
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.features-video-area {
+    /* top: %; */
+    /* right: 50%; */
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+   content: "";
+}
+
+.features-video-area {
+    position: relative;
+    z-index: 9;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+    .features-video-area .thumb img {
+        max-width: 600px;
+    }
+}
+
+.features-video-area .button-area-about {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-video-area .button-area-about .title-about-donatur {
+    color: #ffffff;
+    margin-bottom: 150px;
+    width: 100%;
+}
+
+@media (max-width: 575px) {
+    
+    .button-area-about{
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(130%, -50%);
+        position: absolute;
+        content: "";
+    }
+    
+    .features-video-area .button-area-about .title-about-donatur {
+        margin-bottom: 350px;
+        /* transform: translate(-50%, -90%); */
+    }
+    
+}
+
+@media (max-width: 575px) {
+    .features-video-area .button-area-about {
+        height: 100%;
+        /* width: 100%; */
+    }
+}
+
+@media (max-width: 991px) {
+    .features-video-area {
+        max-width: 450px;
+    }
+
+    .features-video-area .thumb img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .about-thumb {
+        max-width: 600px;
+        /* margin-bottom: 60px; */
+    }
+
+    .about-thumb img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-thumb {
+        /* margin-bottom: 50px; */
+    }
+}
+
+@media (max-width: 575px) {
+    .about-thumb {
+        /* margin-bottom: 40px; */
+    }
+}
+
+/* .button-area-about{
+    top: 90%;
+    left: 50%;
+    -webkit-transform: translate(-750%, -890%);
+    -ms-transform: translate(-750%, -890%);
+    transform: translate(-730%, -740%);
+    position: absolute;
+    content: "";
+    } */
+    
+    .video-button-donatur {
+        width: 51px;
+        height: 51px;
+        line-height: 51px;
+        text-align: center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: #efc900;
+        position: relative;
+        color: #ffffff;
+        margin: 0 auto;
+        top: -120px;
+    }
+    
+    .video-button-donatur i {
+        margin-left: 5px;
+    }
+    
+    .video-button-donatur::after, .video-button-donatur::before {
+        animation: video 25s linear infinite;
+        -webkit-animation: video 25s linear infinite;
+        -moz-animation: video 25s linear infinite;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+    
+    .video-button-donatur::before {
+        background: rgba(243, 196, 5, 0.161);
+        width: 100px;
+        height: 100px;
+        animation-delay: .5s;
+        -webkit-animation-delay: .5s;
+        -moz-animation-delay: .5s;
+        -webkit-border-radius: 33.33% 50%;
+        -moz-border-radius: 33.33% 50%;
+        border-radius: 33.33% 50%;
+    }
+    
+    .video-button-donatur::after {
+        background: rgba(247, 212, 13, 0.412);
+        height: 73px;
+        width: 73px;
+    }
+
+    /* .title-about-donatur {
+        transform: translate(-20%, -1100%);
+        color: #ffffff;
+    } */
+
+    span.product {
+        float: right;
+        color: #a0a0a0;
+      }
+
+    span.total {
+        float: right;
+        color: #00afef;
+    }

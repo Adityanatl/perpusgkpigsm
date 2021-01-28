@@ -143,20 +143,20 @@ export default {
                                 "
                       >
                         <div>
-                          <p style="font-size:1em">Pesanan #GK0056</p>
-                          <p style="font-size:1.7em">Rp<span class="blue-paideia"> 300.000</span></p><br>
+                          <p style="font-size:1em; color:#a0a0a0;">Pesanan #GK0056</p>
+                          <p style="font-size:1.7em; color:#a0a0a0;">Rp<span style="color:#00afef; margin-left:10px;"><b>300.000</b></span></p><br>
                           <hr>
                         </div>
                         <div>
-                          <p style="font-size:1em;">Virtual Account BCA</p>
-                          <p style="color:#231f20; font-size:1.3em">Paideia</p>
-                          <p style="font-size:1em">No. Virtual Account</p>
-                          <p style="font-size:1.5em"><span>837 22 88 5555</span></p><br>
+                          <p style="font-size:1em; color:#a0a0a0;">Virtual Account BCA</p>
+                          <p style="color:#231f20; font-size:1.3em"><b>Paideia</b></p>
+                          <p style="font-size:1em; color:#a0a0a0;">No. Virtual Account</p>
+                          <p style="font-size:1.5em; color:#00afef;"><span><b>837 22 88 5555</b></span></p><br>
                           <hr>
                         </div>
                         <div>
-                          <p style="font-size:1em;">Petunjuk Pembayaran</p>
-                          <p style="color:#373334">Mohon melakukan pembayaran sebelum <b>3 November 2020, 14:15</b> (1x24 jam) melalui Virtual Account. Bila tidak, pesanan ini akan dibatalkan secara otomatis.</p>
+                          <p style="font-size:1em; color:#a0a0a0">Petunjuk Pembayaran</p>
+                          <p style="color:#a0a0a0">Mohon melakukan pembayaran sebelum <span style="color:#0a0a0a"><b>3 November 2020, 14:15</b></span> (1x24 jam) melalui Virtual Account. Bila tidak, pesanan ini akan dibatalkan secara otomatis.</p>
                         </div><br><br>
                           <div class="text-center">
                             <p style="font-size:1em;"><snap class="blue-paideia"><a>Klik Disini</a></snap> untuk kembali ke aplikasi</p>
