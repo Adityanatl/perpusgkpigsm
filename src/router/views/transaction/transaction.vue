@@ -146,7 +146,7 @@ export default {
                       <div class="row">
                         <div class="col-sm-12 mt-3">
                           <p><b>{{transaction.product_name}}</b><span class="total"><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</span></p><br>
-                          <p style="font-size:1em;">Subtotal<span class="total"><b><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+.)/g, '$&,')}}</b></span></p>
+                          <p style="font-size:1em;">Subtotal<span class="total"><b><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span></p>
                         </div>
                       </div><br><br><br>
 
