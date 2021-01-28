@@ -81,6 +81,8 @@
 /*Donatur Section Starts Here*/
 .donatur-form {
     position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
 .donatur-form input {
@@ -126,6 +128,7 @@
         height: 50px;
         padding-left: 20px;
         font-size: 14px;
+        width: 100%;
     }
 
     .donatur-form button {
@@ -136,7 +139,21 @@
     }
 }
 
+@media (max-width: 766px){
+    .donatur-form input {
+        height: 50px;
+        padding-left: 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
 @media (min-width: 992px) {
+        .donatur-form input {
+        height: 50px;
+        padding-left: 20px;
+        font-size: 14px;
+    }
     .subscribe-thumb {
         margin-top: -80px;
     }

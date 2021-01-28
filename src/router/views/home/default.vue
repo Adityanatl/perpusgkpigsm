@@ -792,40 +792,46 @@ export default {
                     <h4 class="title">1</h4>
                 </div>
                 <div class="border-item-3 text-center">
-                    <span class="name">Sumatera Selatan</span>
+                    <span class="name">Sumatera Selatan</span><br>
                     <h4 class="title">1</h4>
+                    <!-- <span class="name">Sumatera Selatan<br><h2 style="font-size:20px; line-height:35px">1</h2></span><br> -->
                 </div>
                 <div class="border-item-4 text-center">
                     <!-- <p class="name">Lampung</p><br>
                     <h4 class="title">1</h4> -->
-                    <span class="name mt-3">Lampung <br><h2 style="font-size:20px;">1</h2></span><br>
+                    <span class="name mt-3">Lampung <br><h2 style="font-size:20px; line-height:35px">1</h2></span><br>
                 </div>
                 <div class="border-item-5 text-center">
                     <span class="name">Sulawesi Tengah</span>
                     <h4 class="title">1</h4>
                 </div>
                 <div class="border-item-6 text-center">
-                    <span class="name">Maluku Utara</span>
-                    <h4 class="title">2</h4>
+                    <!-- <span class="name">Maluku Utara</span>
+                    <h4 class="title">2</h4> -->
+                    <span class="name">Maluku Utara <br><h2 style="font-size:15px; line-height:25px">1</h2></span><br>
                 </div>
-                <div class="border-item-7">
-                    <span class="name">Nusa Tenggara Barat</span>
-                    <h2 class="title">1</h2>
+                <div class="border-item-7 text-center">
+                    <!-- <span class="name">Nusa Tenggara Barat</span>
+                    <h2 class="title">1</h2> -->
+                    <span class="name">Nusa Tenggara Barat<br><h2 style="font-size:15px; line-height:15px">1</h2></span><br>
                 </div>
-                <div class="border-item-8">
-                    <span class="name">Nusa Tenggara Timur</span>
-                    <h2 class="title">13</h2>
+                <div class="border-item-8 text-center">
+                    <!-- <span class="name">Nusa Tenggara Timur</span><br>
+                    <h2 class="title">13</h2> -->
+                    <span class="name mt-2">Nusa Tenggara Timur<br><h2 style="font-size:20px; line-height:35px">13</h2></span><br>
                 </div>
-                <div class="border-item-9">
-                    <span class="name">Maluku</span>
-                    <h2 class="title">6</h2>
+                <div class="border-item-9 text-center">
+                    <!-- <span class="name">Maluku</span>
+                    <h2 class="title">6</h2> -->
+                    <span class="name mt-2">Maluku <br><h2 style="font-size:20px; line-height:20px">1</h2></span><br>
                 </div>
-                <div class="border-item-10">
-                    <span class="name">Papua Barat</span>
-                    <h2 class="title">8</h2>
+                <div class="border-item-10 text-center">
+                    <!-- <span class="name">Papua Barat</span>
+                    <h2 class="title">8</h2> -->
+                    <span class="name mt-2">Papua Barat<br><h2 style="font-size:20px; line-height:35px">8</h2></span><br>
                 </div>
-                <div class="border-item-11">
-                    <span class="name">Papua <br><h2 style="margin-top:1px;">22</h2></span><br>
+                <div class="border-item-11 text-center">
+                    <span class="name">Papua <br><h2 style="line-height:35px; font-size:30px">22</h2></span><br>
                 </div>
             </div>
         </div>
