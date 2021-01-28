@@ -364,7 +364,7 @@ export default {
                         </div>
                     </div>
                     <div class="videohome col-lg-6">
-                        <a href="https://www.youtube.com/watch?v=sgoQ0h_TkNI" class="feature-video-area popup">
+                        <a href="https://youtu.be/89Yk0E_J81Q" class="feature-video-area popup">
                             <div class="thumb">
                                 <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>

@@ -148,20 +148,40 @@ export default {
                           <p style="font-size:1em;" class="mt-5">Pesanan #GK0056</p><br><br>
                           <hr>
                         </div>
-                        <div>
-                          <p style="font-size:1em;">Receipt</p>
-                          <p style="font-size:1em;">Akun</p>
-                          <p style="font-size:1em;">Pembayaran</p>
-                          <hr>
+                        <div class="row">
+                          <div class="col-sm-4 mt-4">
+                            <p style="font-size:1em;">Receipt</p>
+                          </div>
+                          <div class="col-sm-8 mt-4">
+                            <p style="color:#373334;"><b>Test</b></p>
+                          </div>
                         </div>
-                        <div>
-                          <p style="font-size:1.1em"><b>Monthly</b></p><br>
+                        <div class="row">
+                          <div class="col-sm-4 mt-4">
+                            <p style="font-size:1em;">Akun</p>
+                          </div>
+                          <div class="col-sm-8 mt-4">
+                            <p style="color:#373334;"><b>Test</b></p>
+                          </div>
                         </div>
-                        <div>
-                          <p style="font-size:1em;">Subtotal</p>
-                        </div><br><br>
+                        <div class="row">
+                          <div class="col-sm-4 mt-4">
+                            <p style="font-size:1em;">Pembayaran</p>
+                          </div>
+                          <div class="col-sm-8 mt-4">
+                            <p style="color:#373334;"><b>Test</b></p>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                          <div class="col-sm-12 mt-3">
+                            <p><b>Monthly</b><span class="total">IDR 20,000,00</span></p><br>
+                            <p style="font-size:1em;">Subtotal<span class="total"><b>IDR 20,000,00</b></span></p>
+                          </div>
+                        </div><br><br><br>
+
                         <div class="text-center">
-                          <p style="font-size:1em;"><snap class="blue-paideia"><a>Klik Disini</a></snap> untuk kembali ke aplikasi</p>
+                          <!-- <p style="font-size:1em;"><snap class="blue-paideia"><a>Klik Disini</a></snap> untuk kembali ke aplikasi</p> -->
                         </div>
                       </b-card-body>
                       </div>

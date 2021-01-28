@@ -1107,3 +1107,13 @@
         transform: translate(-20%, -1100%);
         color: #ffffff;
     } */
+
+    span.product {
+        float: right;
+        color: #a0a0a0;
+      }
+
+    span.total {
+        float: right;
+        color: #00afef;
+    }
