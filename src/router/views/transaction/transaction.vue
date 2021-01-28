@@ -111,9 +111,9 @@ export default {
                                   "
                   >
                     <b-card-body
-                            style= "
-                                    padding: 55px 44px;
-                                  "
+                        style= "
+                                padding: 55px 44px;
+                               "
                     >
                       <div class="text-center">
                         <h4 class="mb-5">{{this.payment_status}}</h4>
@@ -137,8 +137,8 @@ export default {
                         </b></p><br>
                       </div>
                       <div>
-                        <p style="font-size:1em;">
-                            Subtotal : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}
+                        <p style="font-size:1em; color:#373334">
+                            Subtotal : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+.)/g, '$&,')}}
                         </p>
                       </div><br><br>
                       <div class="text-center">

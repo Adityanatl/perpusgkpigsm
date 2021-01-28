@@ -840,7 +840,7 @@ p:last-child {
 }
 
 p a {
-    color: #;
+    color: #00afef;
 }
 
 p a:hover {
@@ -889,7 +889,7 @@ p a:hover {
     }
 }
 
-a {
+.videohome {
     display: inline-block;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -8448,7 +8448,7 @@ input[type="submit"] {
 }
 
 /*Amazing Feature Section Starts Here*/
-.feature-video-area {
+.videohome.feature-video-area {
     position: relative;
     z-index: 9;
     -webkit-border-radius: 50%;
@@ -11877,29 +11877,6 @@ div[class*="col"]:nth-of-type(3n + 2) .pricing-item-4 .pricing-header::before {
     }
 }
 
-@media (max-width: 1199px) {
-    .about-thumb {
-        max-width: 600px;
-        margin-bottom: 60px;
-    }
-
-    .about-thumb img {
-        width: 100%;
-    }
-}
-
-@media (max-width: 767px) {
-    .about-thumb {
-        margin-bottom: 50px;
-    }
-}
-
-@media (max-width: 575px) {
-    .about-thumb {
-        margin-bottom: 40px;
-    }
-}
-
 /*Team Section Starts Here*/
 .team-item {
     margin-bottom: 40px;
@@ -13886,6 +13863,7 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 .cola-item .cola-content ul li {
     padding: 0;
     margin-bottom: 10px;
+    width: 500px;
 }
 
 .cola-item .cola-content ul li:last-child {
@@ -16066,66 +16044,6 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     width: 73px;
 }
 
-.video-button-donatur{
-    top: 90%;
-    left: 50%;
-    -webkit-transform: translate(-750%, -890%);
-    -ms-transform: translate(-750%, -890%);
-    transform: translate(-730%, -740%);
-    position: absolute;
-    content: "";
-    }
-    
-    .video-button-donatur {
-        width: 51px;
-        height: 51px;
-        line-height: 51px;
-        text-align: center;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-        background: #efc900;
-        position: relative;
-        color: #ffffff;
-        margin: 0 auto;
-        bottom: 20px;
-    }
-    
-    .video-button-donatur i {
-        margin-left: 5px;
-    }
-    
-    .video-button-donatur::after, .video-button-donatur::before {
-        animation: video 25s linear infinite;
-        -webkit-animation: video 25s linear infinite;
-        -moz-animation: video 25s linear infinite;
-        -webkit-transition: all ease 0.3s;
-        -moz-transition: all ease 0.3s;
-        transition: all ease 0.3s;
-    }
-    
-    .video-button-donatur::before {
-        background: rgba(243, 196, 5, 0.161);
-        width: 100px;
-        height: 100px;
-        animation-delay: .5s;
-        -webkit-animation-delay: .5s;
-        -moz-animation-delay: .5s;
-        -webkit-border-radius: 33.33% 50%;
-        -moz-border-radius: 33.33% 50%;
-        border-radius: 33.33% 50%;
-    }
-    
-    .video-button-donatur::after {
-        background: rgba(247, 212, 13, 0.412);
-        height: 73px;
-        width: 73px;
-    }
-
-    .title-about-donatur {
-        transform: translate(10%, -1100%);
-        color: #ffffff;
-    }
 
 @keyframes video {
     0% {

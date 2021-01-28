@@ -298,7 +298,7 @@ export default {
                             <div class="thumb">
                                 <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/click.png' alt="banner"></a>
                             </div>
-                            <span class="cl-white">Click Me</span>
+                            <span class="cl-white"><a a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id">Klik Disini</a></span>
                         </div>
                         <div class="arrow">
                             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/arrow.png' alt="banner"></a>
@@ -363,7 +363,7 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="videohome col-lg-6">
                         <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
                             <div class="thumb">
                                 <img src='@/assets/images/fature-video.png' alt="feature">

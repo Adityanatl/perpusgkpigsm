@@ -1,6 +1,7 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
+import '@/assets/js/magnific-popup.min.js';
 
 global.jQuery = require('jquery');
 var $ = global.jQuery;
@@ -162,20 +163,20 @@ export default {
 
 };
 
-    // $(document).ready(function () {
+    $(document).ready(function () {
         // Nice Select
         // $('.select-bar').niceSelect();
         // PoPuP
-    //     $('.popup').magnificPopup({
-    //     disableOn: 700,
-    //     type: 'iframe',
-    //     mainClass: 'mfp-fade',
-    //     removalDelay: 160,
-    //     preloader: false,
-    //     fixedContentPos: false,
-    //     disableOn: 300 
-    //     });
-    // });
+        $('.popup').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        disableOn: 300 
+        });
+    });
 
     $(window).on('scroll', function () {
 
@@ -265,78 +266,80 @@ export default {
     <!--============= Header Section Ends Here =============-->
 
     <!--============= About Section Starts Here =============-->
-    <section class="about-section">
+    <section class="about-section mt-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6">
-                   <!-- <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-about popup"> -->
-	                <div class="about-thumb rtl pr-xl-15">
-	                    <img src='@/assets/images/fature-video.png' alt="feature">
-                        <div class="button-area-about">
-                            <h4 class="title-about-donatur">
-                                Watch Video
-                            </h4>
-                            <div class="video-button-donatur">
-                                <i class="flaticon-play"></i>
+            <div class="row ">
+                <!-- <div class="col-xl-12"> -->
+                    <div class="video-donatur col-xl-6">
+                        <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="features-video-area popup">
+                            <div class="about-thumb rtl pr-xl-15">
+                                <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
-                        </div>
-	                </div>
-	               <!-- </a> -->
-                </div>
-<!--                 <div class="col-xl-6">
-                    <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
-                        <div class="about-thumb rtl pr-xl-15">
-                            <img src="./assets/images/feature/fature-video.png" alt="feature">
-                        </div>
-                        <div class="button-area">
-                            <h4 class="title">
-                                Watch Videos
-                            </h4>
-                            <div class="video-button">
-                                <i class="flaticon-play"></i>
+                            <div class="button-area-about">
+                                <h4 class="title-about-donatur">
+                                    Watch Video
+                                </h4>
+                                <div class="video-button-donatur">
+                                    <i class="flaticon-play"></i>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div> -->
-                <div class="col-xl-6 pl-xl-0">
-                    <div class="about-content">
+                        </a>
+                    </div>
+                    <!-- <div class="col-xl-6">
+                        <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
+                            <div class="about-thumb rtl pr-xl-15">
+                                <img src="./assets/images/feature/fature-video.png" alt="feature">
+                            </div>
+                            <div class="button-area">
+                                <h4 class="title">
+                                    Watch Videos
+                                </h4>
+                                <div class="video-button">
+                                    <i class="flaticon-play"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                    <div class="col-xl-6">
+                        <div class="about-content">
 
-                        <div class="section-header left-style">
-                            <h5 class="cate">Our Huge Homework</h5>
-                            <h2 class="title">The accessibility gap for teachers to create must be resolved</h2>
-                            <p>With Indonesia’s vast lands and wide-arrayed diversities on the grounds, those at the most forefront and remote are often the most left behind. </p>
-                        </div>
-                        <div class="counter-area-5">
-                            <div class="counter-item-5">
-                                <div class="counter-thumb">
-                                    <img src='@/assets/images/counter/counter1.png' alt="counter">
-                                </div>
-                                <div class="counter-content">
-                                    <h3 class="title"><span class="counter">120</span><span>k</span></h3>
-                                    <p>3T Teachers</p>
-                                </div>
+                            <div class="section-header left-style">
+                                <h5 class="cate">Our Huge Homework</h5>
+                                <h2 class="title">The accessibility gap for teachers to create must be resolved</h2>
+                                <p>With Indonesia’s vast lands and wide-arrayed diversities on the grounds, those at the most forefront and remote are often the most left behind. </p>
                             </div>
-                            <div class="counter-item-5">
-                                <div class="counter-thumb">
-                                    <img src='@/assets/images/counter/counter2.png' alt="counter">
+                            <div class="counter-area-5">
+                                <div class="counter-item-5">
+                                    <div class="counter-thumb">
+                                        <img src='@/assets/images/counter/counter1.png' alt="counter">
+                                    </div>
+                                    <div class="counter-content">
+                                        <h3 class="title"><span class="counter">120</span><span>k</span></h3>
+                                        <p>3T Teachers</p>
+                                    </div>
                                 </div>
-                                <div class="counter-content">
-                                    <h3 class="title"><span class="counter">62</span><span></span></h3>
-                                    <p>Regions</p>
+                                <div class="counter-item-5">
+                                    <div class="counter-thumb">
+                                        <img src='@/assets/images/counter/counter2.png' alt="counter">
+                                    </div>
+                                    <div class="counter-content">
+                                        <h3 class="title"><span class="counter">62</span><span></span></h3>
+                                        <p>Regions</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="counter-item-5">
-                                <div class="counter-thumb">
-                                    <img src='@/assets/images/counter/counter3.png' alt="counter">
-                                </div>
-                                <div class="counter-content">
-                                    <h3 class="title"><span class="counter">11</span></h3>
-                                    <p>Provinces</p>
+                                <div class="counter-item-5">
+                                    <div class="counter-thumb">
+                                        <img src='@/assets/images/counter/counter3.png' alt="counter">
+                                    </div>
+                                    <div class="counter-content">
+                                        <h3 class="title"><span class="counter">11</span></h3>
+                                        <p>Provinces</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </section>
