@@ -7101,6 +7101,11 @@ input[type="submit"] {
     -moz-border-radius: 50%;
     border-radius: 50%;
     font-size: 24px;
+    display: inline-block;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    /* margin-top: */
 }
 
 .download-options li a:hover, .download-options li a.active {
@@ -7166,12 +7171,12 @@ input[type="submit"] {
     padding-right: 0px;
 }
 
-.range-wrapper-2 .pricing-range .pricing-range-top .download-options a {
+/* .range-wrapper-2 .pricing-range .pricing-range-top .right .download-options a{
     display: inline-block;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
-} 
+}  */
 /* tandai */
 
 .range-wrapper-2 .pricing-range .pricing-range-top .tags-area {

@@ -660,7 +660,7 @@ export default {
                 </p>
             </div>
             <div class="range-wrapper-2">
-                <div class="pricing-range">
+                <div class="pricing-range pb-1">
                     <div class="col-sm-12 pricing-range-top pt-0">
                         <div class="tags-area">
                             <h3 class="tags">Saatnya berkreasi!</h3>
@@ -735,10 +735,10 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="text-center mt-3">
+                    <div class="text-center mb-3 mt-5">
                         <div class="right mb-4">
                             <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
-                            <ul class="download-options mb-4">
+                            <ul class="download-options mt-4 mb-4">
                                 <li>
                                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
