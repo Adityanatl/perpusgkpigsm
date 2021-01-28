@@ -938,7 +938,7 @@
     flex-wrap: wrap;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    transform: translate(130%, -350%);
+    transform: translate(130%, -150%);
     position: absolute;
     content: "";
 }
@@ -984,14 +984,24 @@
 
 .features-video-area .button-area-about .title-about-donatur {
     color: #ffffff;
-    margin-bottom: 10px;
+    margin-bottom: 150px;
     width: 100%;
 }
 
 @media (max-width: 575px) {
     
+    .button-area-about{
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(130%, -50%);
+        position: absolute;
+        content: "";
+    }
+    
     .features-video-area .button-area-about .title-about-donatur {
-        margin-bottom: 10px;
+        margin-bottom: 350px;
         /* transform: translate(-50%, -90%); */
     }
     
@@ -1059,7 +1069,7 @@
         position: relative;
         color: #ffffff;
         margin: 0 auto;
-        top: 30px;
+        top: -120px;
     }
     
     .video-button-donatur i {
