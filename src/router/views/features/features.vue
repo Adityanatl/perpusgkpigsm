@@ -19,8 +19,47 @@ export default {
 
     };
   },
-
+    methods: {
+        // windowScroll() {
+        // const navbar = document.getElementById("navbar");
+        // if (
+        //     document.body.scrollTop >= 50 ||
+        //     document.documentElement.scrollTop >= 50
+        // ) {
+        //     navbar.classList.add("nav-sticky");
+        // } else {
+        //     navbar.classList.remove("nav-sticky");
+        // }
+        // },
+        /**
+         * Toggle menu
+         */
+        toggleMenu() {
+        document.getElementById("topnav-menu-content").classList.toggle("show");
+        },
+        nextSlide() {
+        this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
+        },
+        prevSlide() {
+        this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
+        }
+    }
 };
+
+    // $(document).ready(function () {
+        // Nice Select
+        // $('.select-bar').niceSelect();
+        // PoPuP
+    //     $('.popup').magnificPopup({
+    //     disableOn: 700,
+    //     type: 'iframe',
+    //     mainClass: 'mfp-fade',
+    //     removalDelay: 160,
+    //     preloader: false,
+    //     fixedContentPos: false,
+    //     disableOn: 300 
+    //     });
+    // });
 
     $(window).on('scroll', function () {
         
@@ -44,215 +83,53 @@ export default {
 
 <template>
     <div>
-     <header class="header-section">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <router-link tag="a" to="/">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
-                    </router-link>
-                </div>
-                <ul class="menu">
-                    <li>
-                        <router-link tag="a" to="/">Beranda</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="#0">Home Apps</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Mobile App 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">Mobile App 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-3.html">Mobile App 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-4.html">Mobile App 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Messenger</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-5.html">Messenger 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-6.html">Messenger 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Web</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-7.html">Web 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-8.html">Web 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Dextop</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-9.html">Dextop 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-10.html">Dextop 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-11.html">Dextop 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Watchapp</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-12.html">Watchapp 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-13.html">Watchapp 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Hero Video</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-14.html">Hero Video 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-15.html">Hero Video 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="./index-16.html">Home 16 <span class="badge badge-primary align-self-center">New</span></a>
-                            </li>
-                        </ul> -->
+    <nav class="navbar-expand-lg navigation header-section">
+      <div class="container">
+          <div class="header-wrapper">
+            <div class="logo">
+                <router-link tag="a" to="/">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                </router-link>
+            </div>
+            <div>
+                <button
+                type="button"
+                class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+                data-toggle="collapse"
+                data-target="#topnav-menu-content"
+                @click="toggleMenu()"
+                >
+                <i class="fa fa-fw fa-bars"></i>    
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                <ul
+                    class="navbar-nav ml-auto"
+                    id="topnav-menu"
+                    v-scroll-spy-active="{ selector: 'a.nav-link' }"
+                >
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/">Beranda</router-link>
                     </li>
-                    <li>
-                        <router-link tag="a" to="/features/features">Guru</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="feature.html">Feature 1</a>
-                            </li>
-                            <li>
-                                <a href="feature-2.html">Feature 2</a>
-                            </li>
-                            <li>
-                                <a href="feature-3.html">Feature 3</a>
-                            </li>
-                        </ul> -->
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/features/features">Guru</router-link>
                     </li>
-                    <li>
-                    <router-link tag="a" to="/donatur">
-                      Donatur
-                      <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
-                    </router-link>                    </li>
-                    <!-- <li>
-                        <a href="#0">Pages</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="about.html">about</a>
-                            </li>
-                            <li>
-                                <a href="app-download.html">app download</a>
-                            </li>
-                            <li>
-                                <a href="#0">Team</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="team.html">Team</a>
-                                    </li>
-                                    <li>
-                                        <a href="team-single.html">Team Single</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Account</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="sign-up.html">Sign Up</a>
-                                    </li>
-                                    <li>
-                                        <a href="sign-in.html">Sign In</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="faqs.html">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="partners.html">Partners</a>
-                            </li>
-                            <li>
-                                <a href="privacy-policy.html">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="coming-soon.html">Coming Soon</a>
-                            </li>
-                            <li>
-                                <a href="change-password.html">Change Password</a>
-                            </li>
-                            <li>
-                                <a href="reset-password.html">Password Reset</a>
-                            </li>
-                            <li>
-                                <a href="reviews.html">review</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li>
-                        <a href="#0">Blog</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="blog.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-type-two.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-1.html">blog Single 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-2.html">blog Single 2</a>
-                            </li>
-                        </ul>
+                    <!-- <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
                     </li> -->
-                    <li>
-                        <a href="contact.html">Kontak</a>
-                    </li>
-                    <li class="d-sm-none">
-                        <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
-                    </li>
                 </ul>
-                <div class="header-bar d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!-- <div class="header-right">
-                    <select class="select-bar">
-                        <option value="en">En</option>
-                        <option value="Bn">Bn</option>
-                        <option value="pk">Pk</option>
-                        <option value="Fr">Fr</option>
-                    </select>
-                </div> -->
-                <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+
+                <!-- <div class="ml-lg-2"> -->
+                    <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                <!-- </div> -->
             </div>
         </div>
-    </header>
+      </div>
+    </nav>
     <!--============= Header Section Ends Here =============-->
 
     <!--============= Header Section Ends Here =============-->
@@ -263,7 +140,7 @@ export default {
         <div class="container">
             <div class="page-header-content cl-white">
                 <h2 class="title">Guru Kreator</h2>
-                <p class="mt-1">Sahabat Guru dalam berkreasi</p>
+                <p class="mt-1">Sahabat guru dalam berkreasi</p>
 <!--                 <ul class="breadcrumb">
                     <li>
                         <a href="index.html">Home</a>
@@ -323,7 +200,7 @@ export default {
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
                                 <h3 class="title">Kreasiku</h3>
-                                <p>Berkreasi tiada henti. Memudahkan guru merancang apapun yang dibutuhkan</p>
+                                <p>Berkreasi tiada henti. Memudahkan guru merancang apapun yang dibutuhkan.</p>
                             </div>
                         </div>
                     </div>
@@ -618,7 +495,7 @@ export default {
                 </div>
             </div>
             <div class="comunity-wrapper">
-                <div class="buttons"><a href="#0" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
+                <div class="buttons"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
                 <div class="comunity-area">
                     <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
                     <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
@@ -762,9 +639,9 @@ export default {
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/sponsor2.png' width="200vw" height="200vw" alt="sponsor">
                 </div>
-                <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
+                <!-- <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-mika.png' width="200vw" height="200vw" alt="sponsor">
-                </div>
+                </div> -->
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-techinspire.png' width="200vw" height="200vw" alt="sponsor">
                 </div>
@@ -788,15 +665,16 @@ export default {
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
-                    </li>
-                    <li>
+                    </li> -->
+
+                    <!-- <li>
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
                         <a target="_blank" href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://t.me/gurukreatorgroup"><i class="fab fa-telegram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -811,15 +689,16 @@ export default {
                     <li>
                         <router-link tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#0">Kontak</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#0">Kebijakan Privasi</a>
+                        <router-link tag="a" to="/privacy_policy">Kebijakan Privasi</router-link>
                     </li>
                 </ul>
             </div>
             <div class="copyright">
+                <p style="font-size:12px;">Illustration by storyset.com</p>
                 <p style="font-size:12px;">
                     Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>

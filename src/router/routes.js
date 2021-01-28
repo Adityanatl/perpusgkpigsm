@@ -107,6 +107,13 @@ export default [
   },
 
   {
+    path: '/privasi-persyaratan',
+    name: 'privacy',
+    meta: { authRequired: true },
+    component: () => import('./views/privacy-policy/privasi-persyaratan')
+  },
+
+  {
     path: '/strategic',
     name: 'List of Strategic',
     meta: { authRequired: true },

@@ -51,7 +51,7 @@ export default {
         ...{
           name: null,
           limit: 17,
-          sort: '-id',
+          sort: 1,
         }
         , ...this.options}
       )

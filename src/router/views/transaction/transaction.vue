@@ -15,7 +15,7 @@ export default {
     title: "Transaction",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout, PageHeader },
+  components: {  },
   data() {
     return {
       // tableData: [],
@@ -111,9 +111,9 @@ export default {
                                   "
                   >
                     <b-card-body
-                            style= "
-                                    padding: 55px 44px;
-                                  "
+                        style= "
+                                padding: 55px 44px;
+                               "
                     >
                       <div class="text-center">
                         <h4 class="mb-5">{{this.payment_status}}</h4>
@@ -121,30 +121,37 @@ export default {
                         <p style="font-size:1em;" class="mt-5">Pesanan #{{this.transaction.invoice_number}}</p><br><br>
                         <hr>
                       </div>
-                      <div>
-                        <p style="font-size:1em;">Receipt</p>
-                        <p style="font-size:1em;">
-                            Akun : {{transaction.account_email}}
-                        </p>
-                        <p style="font-size:1em;">
-                            Pembayaran : {{transaction.payment_methode_name}}
-                        </p>
-                        <hr>
+                      <div class="row">
+                        <div class="col-sm-4 mt-4">
+                          <p style="font-size:1em;">Receipt</p>
+                        </div>
                       </div>
-                      <div>
-                        <p style="font-size:1.1em"><b>
-                            {{transaction.product_name}} : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}
-                        </b></p><br>
+                      <div class="row">
+                        <div class="col-sm-4 mt-4">
+                          <p style="font-size:1em;">Akun</p>
+                        </div>
+                        <div class="col-sm-8 mt-4">
+                          <p style="color:#373334;"><b>{{transaction.account_email}}</b></p>
+                        </div>
                       </div>
-                      <div>
-                        <p style="font-size:1em;">
-                            Subtotal : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}
-                        </p>
-                      </div><br><br>
+                      <div class="row">
+                        <div class="col-sm-4 mt-4">
+                          <p style="font-size:1em;">Pembayaran</p>
+                        </div>
+                        <div class="col-sm-8 mt-4">
+                          <p style="color:#373334;"><b>{{transaction.payment_methode_name}}</b></p>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-sm-12 mt-3">
+                          <p><b>{{transaction.product_name}}</b><span class="total"><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</span></p><br>
+                          <p style="font-size:1em;">Subtotal<span class="total"><b><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span></p>
+                        </div>
+                      </div><br><br><br>
+
                       <div class="text-center">
-                        <p style="font-size:1em;">
-<!--                          <snap class="blue-paideia"><a>Klik Disini</a></snap> -->
-                          untuk kembali ke aplikasi</p>
+                        <!-- <p style="font-size:1em;"> untuk kembali ke aplikasi</p> -->
                       </div>
                     </b-card-body>
                   </div>

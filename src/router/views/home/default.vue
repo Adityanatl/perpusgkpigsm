@@ -1,8 +1,9 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import Vue from "vue";
 
 // import magnific from "magnific-popup";
-// import '@/assets/js/magnific-popup.min.js';
+import '@/assets/js/magnific-popup.min.js';
 // import '@/assets/js/jquery-3.3.1.min.js';
 // import '@/assets/js/modernizr-3.6.0.min.js';
 // import '@/assets/js/plugins.js';
@@ -10,7 +11,7 @@ import { Carousel, Slide } from "vue-carousel";
 // import '@/assets/js/jquery-ui.min.js';
 // import '@/assets/js/wow.min.js';
 // import '@/assets/js/waypoints.js';
-// import '@/assets/js/nice-select.js'
+// import '@/assets/js/nice-select.js';
 // import '@/assets/js/owl.min.js';
 // import '@/assets/js/counterup.min.js';
 // import '@/assets/js/canvasjs.min.js';
@@ -37,7 +38,9 @@ export default {
       hours: "",
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
-      endtime: "Dec 31, 2020 16:37:25"
+      endtime: "Dec 31, 2020 16:37:25",
+      gamification: 1,
+        join_telegram_email : ""
     };
   },
   created() {
@@ -63,25 +66,60 @@ export default {
     //   this.timerCount(this.start, this.end);
     // }, 1000);
   },
-};
+  methods: {
+    // windowScroll() {
+    //   const navbar = document.getElementById("navbar");
+    //   if (
+    //     document.body.scrollTop >= 50 ||
+    //     document.documentElement.scrollTop >= 50
+    //   ) {
+    //     navbar.classList.add("nav-sticky");
+    //   } else {
+    //     navbar.classList.remove("nav-sticky");
+    //   }
+    // },
+    /**
+     * Toggle menu
+     */
+    toggleMenu() {
+      document.getElementById("topnav-menu-content").classList.toggle("show");
+    },
+    nextSlide() {
+      this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
+    },
+    prevSlide() {
+      this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
+    },
     
-//   $(document).ready(function () {
-    // Nice Select
-    // $('.select-bar').niceSelect();
-    // PoPuP 
-    // $('.popup').magnificPopup({
-    //   disableOn: 700,
-    //   type: 'iframe',
-    //   mainClass: 'mfp-fade',
-    //   removalDelay: 160,
-    //   preloader: false,
-    //   fixedContentPos: false,
-    //   disableOn: 300
-    // });
-//   });
+      joinTelegram() {
+        if (this.join_telegram_email == ""){
+            alert("Mohon masukan email terlebih dahulu")
+            return
+        }
+          let payload = {"email" : this.join_telegram_email}
+          this.$store.dispatch('jointelegram/POST_JOIN_TELEGRAM', payload)
+          window.open('https://t.me/gurukreatorgroup', '_blank');
+      }
+  }
+};
+
+    $(document).ready(function () {
+        // Nice Select
+        // $('.select-bar').niceSelect();
+        // PoPuP
+        $('.popup').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        disableOn: 300 
+        });
+    });
 
     $(window).on('scroll', function () {
-        
+
         var header = $(".header-section");
       if ($(this).scrollTop() < 1) {
         header.removeClass("active");
@@ -91,34 +129,34 @@ export default {
     });
 
     //Menu Dropdown Icon Adding
-    $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
+    // $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
     // drop down menu width overflow problem fix
-    $('.submenu').parent('li').hover(function () {
-      var menu = $(this).find("ul");
-      var menupos = $(menu).offset();
-      if (menupos.left + menu.width() > $(window).width()) {
-        var newpos = -$(menu).width();
-        menu.css({
-          left: newpos
-        });
-      }
-    });
+    // $('.submenu').parent('li').hover(function () {
+    //   var menu = $(this).find("ul");
+    //   var menupos = $(menu).offset();
+    //   if (menupos.left + menu.width() > $(window).width()) {
+    //     var newpos = -$(menu).width();
+    //     menu.css({
+    //       left: newpos
+    //     });
+    //   }
+    // });
 
-    $('.menu li a').on('click', function (e) {
-      var element = $(this).parent('li');
-      if (element.hasClass('open')) {
-        element.removeClass('open');
-        element.find('li').removeClass('open');
-        element.find('ul').slideUp(300, "swing");
-      } else {
-        element.addClass('open');
-        element.children('ul').slideDown(300, "swing");
-        element.siblings('li').children('ul').slideUp(300, "swing");
-        element.siblings('li').removeClass('open');
-        element.siblings('li').find('li').removeClass('open');
-        element.siblings('li').find('ul').slideUp(300, "swing");
-      }
-    });
+    // $('.menu li a').on('click', function (e) {
+    //   var element = $(this).parent('li');
+    //   if (element.hasClass('open')) {
+    //     element.removeClass('open');
+    //     element.find('li').removeClass('open');
+    //     element.find('ul').slideUp(300, "swing");
+    //   } else {
+    //     element.addClass('open');
+    //     element.children('ul').slideDown(300, "swing");
+    //     element.siblings('li').children('ul').slideUp(300, "swing");
+    //     element.siblings('li').removeClass('open');
+    //     element.siblings('li').find('li').removeClass('open');
+    //     element.siblings('li').find('ul').slideUp(300, "swing");
+    //   }
+    // });
 
     //Click event to scroll to top
     $('.scrollToTop').on('click', function () {
@@ -128,7 +166,7 @@ export default {
       return false;
     });
 
-        // PoPuP 
+        // PoPuP
     // $('.popup').magnificPopup({
     //   disableOn: 700,
     //   type: 'iframe',
@@ -154,42 +192,53 @@ export default {
 
 <template>
     <div>
-     <header class="header-section">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <router-link tag="a" to="/">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
-                    </router-link>
-                </div>
+    <nav class="navbar-expand-lg navigation header-section">
+      <div class="container">
+          <div class="header-wrapper">
+            <div class="logo">
+                <router-link tag="a" to="/">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                </router-link>
+            </div>
+            <div>
+                <button
+                type="button"
+                class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+                data-toggle="collapse"
+                data-target="#topnav-menu-content"
+                @click="toggleMenu()"
+                >
+                <i class="fa fa-fw fa-bars"></i>    
+                </button>
+            </div>
 
-                <ul class="menu">
-                    <li><router-link tag="a" to="/">Beranda</router-link></li>
-                    <li><router-link tag="a" to="/features/features">Guru</router-link></li>
-                    <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
-                    <li><a href="contact.html">Kontak</a></li>
-                    <li class="d-sm-none">
-                        <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
+            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                <ul
+                    class="navbar-nav ml-auto"
+                    id="topnav-menu"
+                    v-scroll-spy-active="{ selector: 'a.nav-link' }"
+                >
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/">Beranda</router-link>
                     </li>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/features/features">Guru</router-link>
+                    </li>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
+                    </li>
+                    <!-- <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
+                    </li> -->
                 </ul>
-                
-                <div class="header-bar d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!-- <div class="header-right">
-                    <select class="select-bar">
-                        <option value="en">En</option>
-                        <option value="Bn">Bn</option>
-                        <option value="pk">Pk</option>
-                        <option value="Fr">Fr</option>
-                    </select>
-                </div> -->
-                <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+
+                <!-- <div class="ml-lg-2"> -->
+                    <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                <!-- </div> -->
             </div>
         </div>
-     </header>
+      </div>
+    </nav>
      <!--============= Header Section Ends Here =============-->
 
         <!--============= Banner Section Starts Here =============-->
@@ -247,12 +296,12 @@ export default {
                         </div>
                         <div class="ban-click">
                             <div class="thumb">
-                                <img src='@/assets/images/click.png' alt="banner">
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/click.png' alt="banner"></a>
                             </div>
-                            <span class="cl-white">Click Me</span>
+                            <span class="cl-white"><a a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id">Klik Disini</a></span>
                         </div>
                         <div class="arrow">
-                            <img src='@/assets/images/arrow.png' alt="banner">
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/arrow.png' alt="banner"></a>
                         </div>
                     </div>
                 </div>
@@ -267,7 +316,7 @@ export default {
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="spon-cont">
-                        <p>By Paideia Educational Solutions</p>
+                        <p>By <a href="https://paideia.id/" style="color=#00afef">Paideia Educational Solutions</a></p>
                     </div>
                 </div>
                 <div class="col-lg-9">
@@ -276,11 +325,11 @@ export default {
                             <img src='@/assets/images/sponsor1.png' alt="sponsor">
                         </div>
                         <div class="sponsor-thumb">
-                            <img src='@/assets/images/sponsor2.png' alt="sponsor">
+                            <img src='@/assets/images/logo/logo_wti.png' alt="sponsor">
                         </div>
-                        <div class="sponsor-thumb">
+                        <!-- <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-mika.png' alt="sponsor">
-                        </div>
+                        </div> -->
                         <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-techinspire.png' alt="sponsor">
                         </div>
@@ -306,7 +355,7 @@ export default {
                         <div class="section-header left-style mb-lg-0 white-lg-black pos-rel">
                             <h5 class="cate">Jelajah Keunikan Fiturnya</h5>
                             <h2 class="title">Teman guru dalam berkreasi</h2>
-                            <p>Kreasiku, Kelasku, Relungku: 3 fitur utama Guru Kreator hadir 
+                            <p>Kreasiku, Kelasku, Relungku: 3 fitur utama Guru Kreator hadir
                             mendampingi guru dalam menciptakan rancangan pembelajaran,
                             menata dan mengelola kelas serta menjadi wadah berbagi karya</p>
                             <div class="downarrow d-none d-lg-block">
@@ -314,8 +363,8 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
+                    <div class="videohome col-lg-6">
+                        <a href="https://youtu.be/89Yk0E_J81Q" class="feature-video-area popup">
                             <div class="thumb">
                                 <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
@@ -338,8 +387,8 @@ export default {
                     <div class="col-lg-8 col-xl-7">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Keunggulan yang Unik</h5>
-                            <h2 class="title">Karena kreatifitas tidak berbatas</h2>
-                            <p>dengan fleksibilitas memberikan keleluasaan dalam berkreasi 
+                            <h2 class="title">Karena kreatifitas <br>tidak berbatas</h2>
+                            <p>Dengan fleksibilitas memberikan keleluasaan dalam berkreasi
                             dan mengasah potensi</p>
                         </div>
                     </div>
@@ -351,7 +400,7 @@ export default {
                                         <img src='@/assets/images/am-fea1.png' alt="feature">
                                     </div>
                                     <div class="am-content">
-                                        <h5 class="title">Low Bandwith<br> 2G di 3T</h5>
+                                        <h5 class="title">Low Bandwidth<br> 2G di 3T</h5>
                                     </div>
                                 </div>
                             </div>
@@ -361,7 +410,7 @@ export default {
                                         <img src='@/assets/images/am-fea2.png' alt="feature">
                                     </div>
                                     <div class="am-content">
-                                        <h5 class="title">Solusi Administrasi</h5><br>
+                                        <h5 class="title">Solusi <br>Administrasi</h5>  
                                     </div>
                                 </div>
                             </div>
@@ -398,8 +447,8 @@ export default {
         <div class="container">
             <div class="section-header">
                 <h5 class="cate">Selalu tersedia di mana pun dan kapan pun</h5>
-                <h2 class="title">Mengajar C.A.R.A GU.E</h2>
-                <p>Mengajar dengan <b>C</b>erdas, ber<b>A</b>zas, <b>R</b>ingkas dan <b>A</b>ntusias. <br>Karena kamu adalah Guru Efisien yang efektif.</p>
+                <h2 class="title">Mengajar C.A.R.A. GU.E.</h2>
+                <p>Mengajar dengan <b>C</b>erdas, ber<b>A</b>sas, <b>R</b>ingkas dan <b>A</b>ntusias <br>karena kamu adalah <b>GU</b>ru <b>E</b>fisien yang <b>E</b>fektif</p>
             </div>
             <div class="row justify-content-xl-between justify-content-center mb-40-none">
                 <div class="col-lg-4 col-sm-6 col-xl-3">
@@ -445,7 +494,7 @@ export default {
                         <div class="how-content">
                             <router-link tag="a" to="/features/features" class="button-3">SAATNYA BERKREASI</router-link>
                             <h5 class="title">JADILAH KREATIF</h5>
-                            <p style="margin-top:45px;">Nikmati beragam fitur yang memudahkan guru dalam mengajar</p>
+                            <p style="margin-top:45px;">Nikmati beragam fitur yang memudahkan guru mengajar</p>
                         </div>
                     </div>
                 </div>
@@ -468,17 +517,17 @@ export default {
                     <div class="newslater-area padding-bottom padding-top">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Jadilah bagian dari Guru Kreator</h5>
-                            <h2 class="title">Komunitas Kawan Kreator</h2>
-                            <p>Kita para Paideians adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
-                            berkumpul dan berelasi sebagai manusia Pancasila. Dengan 
+                            <h2 class="title">Komunitas <br>#KawanKreator</h2>
+                            <p>#KawanKreator adalah <i style="color:#ffffff">problem solvers</i> dan <i style="color:#ffffff">team players</i> yang
+                            berkumpul dan berelasi sebagai manusia Pancasila. Dengan
                             bertakwa kepada Tuhan dan berakhlak mulia terhadap sesama,
-                            kita berkomitmen atas pertumbuhan setiap anggota dalam 
+                            kita berkomitmen atas pertumbuhan setiap anggota dalam
                             komunitas pendidik ini.</p>
                         </div>
-                        <form class="subscribe-form">
-                            <input type="text" placeholder="Masukkan Email">
-                            <button type="submit">BERGABUNG</button>
-                        </form>
+                        <div class="subscribe-form">
+                            <input type="text" placeholder="Masukkan Email" v-model="join_telegram_email">
+                            <button  @click="joinTelegram()">BERGABUNG</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
@@ -501,7 +550,7 @@ export default {
                 <h5 class="cate">Menjadi jawaban untuk banyak pertanyaan</h5>
                 <h2 class="title">Fitur yang memahami kebutuhanmu</h2>
                 <p>
-                    Setiap fitur dirancang melalui sudut pandang guru secara komprehensif.
+                    Setiap fitur dirancang melalui sudut pandang guru secara komprehensif
                 </p>
             </div>
             <div class="row">
@@ -509,14 +558,17 @@ export default {
                     <div class="feature--thumb pr-xl-4 ltr">
                         <div class="feat-slider owl-carousel owl-theme" data-slider-id="1">
                             <div class="main-thumb">
-                                <img src='@/assets/images/pro-main.png' alt="feature">
+                                <img v-if="gamification==1" src='@/assets/images/pro-main.png' alt="feature">
+                                <img v-else-if="gamification==2" src='@/assets/images/pro-main2.png' alt="feature">
+                                <img v-else-if="gamification==3" src='@/assets/images/pro-main3.png' alt="feature">
+                                <img v-else="" src='@/assets/images/pro-main4.png' alt="feature">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="feature-wrapper mb-30-none owl-thumbs" data-slider-id="1">
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=1">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro1.png' alt="feature">
@@ -527,7 +579,7 @@ export default {
                                 <p>Rancang dan modifikasilah pembelajaran dengan beragam pendekatan dan strategi yang tersedia. Sudah saatnya administrasi menjadi teman.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=2">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro2.png' alt="feature">
@@ -535,10 +587,10 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">KELASKU</h4>
-                                <p>Maksimalkan kegiatan rutin bermakna dalam administrasi digital dalam ruang kolaboratif antara guru dan siswa. Peroleh evaluasi lebih dini untuk menggali potensi diri.</p>
+                                <p>Maksimalkan kegiatan rutin bermakna dalam ruang kolaboratif antara guru dan siswa dengan administrasi digital. Peroleh evaluasi lebih dini untuk menggali potensi diri.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=3">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro3.png' alt="feature">
@@ -546,10 +598,10 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">RELUNGKU</h4>
-                                <p>Ruang kolaboratif bagi sesama pendidik yang dapat menunjang setiap pribadi berpartisipasi dalam berbagi dan mengapresiasi setiap hasil kreasi.</p>
+                                <p>Ruang kolaboratif bagi sesama pendidik. Bersama saling menunjang setiap pribadi lewat berbagi dan mengapresiasi setiap hasil kreasi.</p>
                             </div>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item" @click="gamification=4">
                             <div class="feature-thumb">
                                 <div class="thumb">
                                     <img src='@/assets/images/pro4.png' alt="feature">
@@ -557,7 +609,7 @@ export default {
                             </div>
                             <div class="feature-content">
                                 <h4 class="title">GAMIFIKASI</h4>
-                                <p>Setiap tahapan merupakan pencapaian. Lihat seberapa gigih upayamu menjadi sumber inspirasi dalam berkreasi, menjadi Guru Kreator! </p>
+                                <p>Setiap tahapan merupakan pencapaian. Lihat seberapa gigih upayamu menjadi sumber inspirasi dalam berkreasi. Jadilah Guru Kreator! </p>
                             </div>
                         </div>
                     </div>
@@ -604,18 +656,18 @@ export default {
                 <h5 class="cate">Pilih paket yang kamu inginkan</h5>
                 <h2 class="title">Biaya langganan yang sangat menguntungkan</h2>
                 <p>
-                    Kami percaya, bahwa pendidikan adalah untuk semua. Untuk itu, dengan biaya yang sangat terjangkau, aplikasi ini dapat dinikmati oleh siapa saja dengan biaya berlanggann Rp20.000,- /bulannya
+                    Kami percaya, bahwa pendidikan adalah untuk semua. Untuk itu, dengan biaya yang sangat terjangkau, aplikasi ini dapat dinikmati oleh siapa saja dengan biaya berlangganan Rp20.000,- /bulan.
                 </p>
             </div>
             <div class="range-wrapper-2">
-                <div class="pricing-range">
-                    <div class="pricing-range-top pt-0">
+                <div class="pricing-range pb-1">
+                    <div class="col-sm-12 pricing-range-top pt-0">
                         <div class="tags-area">
                             <h3 class="tags">Saatnya berkreasi!</h3>
                         </div>
                         <!-- <div class="pricing-header">
                             <span class="cate">Pilihan berlanggan</span>
-                            <div class="select-container">    
+                            <div class="select-container">
                                 <select class="select-bar">
                                     <option value="basic">Bulanan</option>
                                     <option value="standard">Semesteran</option>
@@ -656,22 +708,26 @@ export default {
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:10px;" >
+                                
                             </div>
-                            <div class="item">
+                            <div class="item" >
                                 <h2 class="title"><sup>Rp</sup>100.000</h2>
                                 <span class="info">Per Semester</span>
                                 <span class="info"><strike>Rp 120.000</strike></span>
                                 <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                
                             </div>
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>200.000</h2>
                                 <span class="info">Per Tahun</span>
                                 <span class="info"><strike>Rp 240.000</strike></span>
                                 <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
+                        </div>
+                         <div class="radio-flex">
+                                <input class="item" type="radio" name="methodePayment">
+                                <input class="item" type="radio" name="methodePayment">
+                                <input class="item" type="radio" name="methodePayment">
                         </div>
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
@@ -679,10 +735,10 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="text-center mt-3">
+                    <div class="text-center mb-3 mt-5">
                         <div class="right mb-4">
                             <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
-                            <ul class="download-options mb-4">
+                            <ul class="download-options mt-4 mb-4">
                                 <li>
                                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
@@ -723,13 +779,14 @@ export default {
                             </div>
                             <span class="average">5.0 / 5.0</span>
                         </div> -->
-                        <h2 class="amount">62 Kab</h2>
+                        <h2 class="amount">62 Kab*</h2>
                         <p>Daerah 3T</p>
-                        <p>(Tertinggal, Terdepan, Terluar)</p>
+                        <p>(Terdepan, Terluar, Tertinggal)</p>
+                        <p style="color:#f0c900">*Perpres No. 63 Tahun 2020</p>
                     </div>
                 </div>
             </div>
-            <div class="coverage-wrapper coverage_img">
+            <!-- <div class="coverage-wrapper coverage_img">
                 <div class="border-item-1 text-center">
                     <span class="name">Sumatera Utara</span><br>
                     <h4 class="title">4</h4>
@@ -739,42 +796,53 @@ export default {
                     <h4 class="title">1</h4>
                 </div>
                 <div class="border-item-3 text-center">
-                    <span class="name">Sumatera Selatan</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-4 text-center">
-                    <p class="name">Lampung</p><br>
-                    <h4 class="title">1</h4>
+                    <span class="name">Sumatera Selatan</span><br>
+                    <h4 class="title">1</h4> -->
+                    <!-- <span class="name">Sumatera Selatan<br><h2 style="font-size:20px; line-height:35px">1</h2></span><br> -->
+                <!-- </div>
+                <div class="border-item-4 text-center"> -->
+                    <!-- <p class="name">Lampung</p><br>
+                    <h4 class="title">1</h4> -->
+                    <!-- <span class="name mt-3">Lampung <br><h2 style="font-size:20px; line-height:35px">1</h2></span><br>
                 </div>
                 <div class="border-item-5 text-center">
                     <span class="name">Sulawesi Tengah</span>
                     <h4 class="title">1</h4>
                 </div>
-                <div class="border-item-6 text-center">
-                    <span class="name">Maluku Utara</span>
-                    <h4 class="title">2</h4>
+                <div class="border-item-6 text-center"> -->
+                    <!-- <span class="name">Maluku Utara</span>
+                    <h4 class="title">2</h4> -->
+                    <!-- <span class="name">Maluku Utara <br><h2 style="font-size:15px; line-height:25px">1</h2></span><br>
                 </div>
-                <div class="border-item-7">
-                    <span class="name">Nusa Tenggara Barat</span>
-                    <h2 class="title">1</h2>
+                <div class="border-item-7 text-center"> -->
+                    <!-- <span class="name">Nusa Tenggara Barat</span>
+                    <h2 class="title">1</h2> -->
+                    <!-- <span class="name">Nusa Tenggara Barat<br><h2 style="font-size:15px; line-height:15px">1</h2></span><br>
                 </div>
-                <div class="border-item-8">
-                    <span class="name">Nusa Tenggara Timur</span>
-                    <h2 class="title">13</h2>
+                <div class="border-item-8 text-center"> -->
+                    <!-- <span class="name">Nusa Tenggara Timur</span><br>
+                    <h2 class="title">13</h2> -->
+                    <!-- <span class="name mt-2">Nusa Tenggara Timur<br><h2 style="font-size:20px; line-height:35px">13</h2></span><br>
                 </div>
-                <div class="border-item-9">
-                    <span class="name">Maluku</span>
-                    <h2 class="title">6</h2>
+                <div class="border-item-9 text-center"> -->
+                    <!-- <span class="name">Maluku</span>
+                    <h2 class="title">6</h2> -->
+                    <!-- <span class="name mt-2">Maluku <br><h2 style="font-size:20px; line-height:20px">1</h2></span><br>
                 </div>
-                <div class="border-item-10">
-                    <span class="name">Papua Barat</span>
-                    <h2 class="title">8</h2>
+                <div class="border-item-10 text-center"> -->
+                    <!-- <span class="name">Papua Barat</span>
+                    <h2 class="title">8</h2> -->
+                    <!-- <span class="name mt-2">Papua Barat<br><h2 style="font-size:20px; line-height:35px">8</h2></span><br>
                 </div>
-                <div class="border-item-11">
-                    <span class="name">Papua<br></span><br><br>
-                    <h2 class="title">22</h2>
+                <div class="border-item-11 text-center">
+                    <span class="name">Papua <br><h2 style="line-height:35px; font-size:30px">22</h2></span><br>
                 </div>
-            </div>
+            </div> -->
+            <div class="row mt-5">
+                <div class="col-md">
+                    <img src="@/assets/images/map.png" height="auto" width="100%"/> 
+                </div>
+            </div>  
         </div>
      </section>
      <!--============= Coverage Section Ends Here =============-->
@@ -794,15 +862,16 @@ export default {
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
-                    </li>
-                    <li>
+                    </li> -->
+
+                    <!-- <li>
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
                         <a target="_blank" href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://t.me/gurukreatorgroup"><i class="fab fa-telegram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -817,15 +886,16 @@ export default {
                     <li>
                         <router-link tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#0">Kontak</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#0">Kebijakan Privasi</a>
+                        <router-link tag="a" to="/privacy_policy">Kebijakan Privasi</router-link>
                     </li>
                 </ul>
             </div>
             <div class="copyright">
+                <p style="font-size:12px;">Illustration by storyset.com</p>
                 <p style="font-size:12px;">
                     Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>

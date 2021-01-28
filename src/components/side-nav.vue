@@ -83,7 +83,7 @@ export default {
   <!-- ========== Left Sidebar Start ========== -->
 
   <!--- Sidemenu -->
-  <div id="sidebar-menu" style="background:#ffffff">
+  <div id="sidebar-menu" style="background:#00afef">
     <!-- Left Menu Start -->
     <ul id="side-menu" class="metismenu list-unstyled">
       <template v-for="item in menuItems">

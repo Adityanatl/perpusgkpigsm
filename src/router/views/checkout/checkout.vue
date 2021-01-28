@@ -90,6 +90,12 @@ export default {
       this.payload.qty = 1
       this.payload.payment_methode_id = this.selectedKonter.id
       this.payload.transaction_id = this.transactionId
+      let user = JSON.parse(localStorage.getItem('user'))
+      if (user != null) {
+        this.payload.account_id = user.id
+      }
+      console.log('users ',user)
+      console.log('this.payload ',this.payload)
 
       this.$store.dispatch(
               'transaction/POST_TRANSACTION', this.payload

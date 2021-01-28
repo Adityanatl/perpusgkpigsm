@@ -35,13 +35,11 @@ export const actions = {
     logIn: async({ commit, dispatch, getters }, { email, password } = {}) => {
         if (getters.loggedIn) return dispatch('validate')
         commit("LOADING")
-        return await axios({url: '/api/user/login', data: { email : email, password : password}, method: 'POST'})
+        return await axios({url: '/api/account/login', data: { email : email, password : password}, method: 'POST'})
             .then(resp => {
-                if(resp.data.code == 200) {
+                if(resp.data.code === 200) {
                     commit("SET_CURRENT_USER", resp.data.data)
                     axios.defaults.headers.common['Authorization'] = 'jwt ' + resp.data.data.token
-                    console.log('--> ',axios.defaults.headers.common['Authorization'])
-                    console.log('state.currentUser ',state.currentUser)
                     return resp.data.data
                 }
                 return resp

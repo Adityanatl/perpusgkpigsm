@@ -1,6 +1,7 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
+import '@/assets/js/magnific-popup.min.js';
 
 global.jQuery = require('jquery');
 var $ = global.jQuery;
@@ -22,7 +23,7 @@ export default {
       seconds: "",
       starttime: "Nov 5, 2018 15:37:25",
       endtime: "Dec 31, 2020 16:37:25",
-        listProducts: [{"id": 1, "product_type": "Personal", "product_name": "Monthly", "price": 20000, "semester_price": 100000, "yearly_price": 200000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 2, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)", "recommended": false}, {"id": 2, "product_type": "Donasi", "product_name": "Kakaktua Putih (Cockatoo)", "price": 50000, "semester_price": 300000, "yearly_price": 600000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 1, "image_url": "https://api.paideia.id/api/files/public/b64dd6f87d6d422b8eb7ba54d8faadbekakaktuaputih.png", "description": "3 Guru Kreator", "recommended": false}, {"id": 3, "product_type": "Donasi", "product_name": "Cendrawasih (Paradise)", "price": 84000, "semester_price": 500000, "yearly_price": 1000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/16d79165247f4e1bb3c50594de3f6250cendrawasih.png", "description": "5 Guru Kreator", "recommended": false}, {"id": 10, "product_type": "Personal", "product_name": "Semester", "price": 100000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)", "recommended": false}, {"id": 4, "product_type": "Donasi", "product_name": "Kucing Merah (Red Cat)", "price": 167000, "semester_price": 1000000, "yearly_price": 2000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/b4ea042550764ea3915d2b94b5dd8cc3kucingmerah.png", "description": "10 Guru Kreator", "recommended": false}, {"id": 11, "product_type": "Personal", "product_name": "Yearly", "price": 200000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)", "recommended": true}, {"id": 5, "product_type": "Donasi", "product_name": "Anoa (Plead)", "price": 833000, "semester_price": 5000000, "yearly_price": 10000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/8eb6e964fa634991bbe14fd4d6dabb18Anoa2.png", "description": "50 Guru Kreator", "recommended": false}, {"id": 6, "product_type": "Donasi", "product_name": "Macan (Tiger)", "price": 1670000, "semester_price": 10000000, "yearly_price": 20000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/94e8095fc7be4dd295c71b6d3330e361macan.png", "description": "100 Guru Kreator", "recommended": false}, {"id": 7, "product_type": "Donasi", "product_name": "Badak (Rhino)", "price": 4170000, "semester_price": 25000000, "yearly_price": 50000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/ef8c5fdb16ea4e1da8abc115df0cda40Badak.png", "description": "250 Guru Kreator", "recommended": false}, {"id": 8, "product_type": "Donasi", "product_name": "Gajah (Elephant)", "price": 8300000, "semester_price": 50000000, "yearly_price": 100000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/fb76f3a017c3437e80c38bccdaf2932bGajah.png", "description": "500 Guru Kreator", "recommended": false}, {"id": 9, "product_type": "Donasi", "product_name": "Komodo (Dragons)", "price": 16700000, "semester_price": 100000000, "yearly_price": 200000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/fb76f3a017c3437e80c38bccdaf2932bGajah.png", "description": "1000 Guru Kreator", "recommended": true} ],
+        listProducts: [{"id": 1, "product_type": "Personal", "product_name": "Monthly", "price": 20000, "semester_price": 100000, "yearly_price": 200000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 2, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)", "narasi": "", "recommended": false}, {"id": 2, "product_type": "Donasi", "product_name": "Kakaktua Putih", "price": 50000, "semester_price": 300000, "yearly_price": 600000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 1, "image_url": "https://api.paideia.id/api/files/public/7fe51049c6be40ffadc00ac914db9372Kakatua.png", "description": "3 Guru Kreator", "narasi": "indigenous of Maluku", "recommended": false}, {"id": 3, "product_type": "Donasi", "product_name": "Cendrawasih", "price": 84000, "semester_price": 500000, "yearly_price": 1000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/9932dd7df8ed4e808100bd2ae6c2fcc8cendrawasih.png", "description": "5 Guru Kreator", "narasi": "indigenous of Papua", "recommended": false}, {"id": 10, "product_type": "Personal", "product_name": "Semester", "price": 100000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)", "narasi": "", "recommended": false}, {"id": 4, "product_type": "Donasi", "product_name": "Kucing Merah", "price": 167000, "semester_price": 1000000, "yearly_price": 2000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/85fef261d9d44c28aeb54180e7ff0605kucingmerah.png", "description": "10 Guru Kreator", "narasi": "indigenous of Kalimantan", "recommended": false}, {"id": 11, "product_type": "Personal", "product_name": "Yearly", "price": 200000, "semester_price": null, "yearly_price": null, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "", "description": "Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)", "narasi": "", "recommended": true}, {"id": 5, "product_type": "Donasi", "product_name": "Anoa", "price": 833000, "semester_price": 5000000, "yearly_price": 10000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/f5bf7c071be147609a942e34b256b588anoa.png", "description": "50 Guru Kreator", "narasi": "indigenous of Sulawesi", "recommended": false}, {"id": 6, "product_type": "Donasi", "product_name": "Macan", "price": 1670000, "semester_price": 10000000, "yearly_price": 20000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/03046e0d5e944541800832f51984a58bmacan.png", "description": "100 Guru Kreator", "narasi": " indigenous of Sumatera", "recommended": false}, {"id": 7, "product_type": "Donasi", "product_name": "Badak", "price": 4170000, "semester_price": 25000000, "yearly_price": 50000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/4f616ec1bcd64a7ba756b6b8e11080bdbadak.png", "description": "250 Guru Kreator", "narasi": " indigenous of Jawa", "recommended": false}, {"id": 8, "product_type": "Donasi", "product_name": "Gajah", "price": 8300000, "semester_price": 50000000, "yearly_price": 100000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/d2e15973a771410d95017adad4526aa1gajah.png", "description": "500 Guru Kreator", "narasi": " indigenous of Sumatera", "recommended": false}, {"id": 9, "product_type": "Donasi", "product_name": "Komodo", "price": 16700000, "semester_price": 100000000, "yearly_price": 200000000, "account_id": 0, "reference_id": 0, "month": 0, "status": 0, "viewed": 0, "sold": 0, "image_url": "https://api.paideia.id/api/files/public/a29cafbf74704c1eb2c65c9144bb44fekomodo.png", "description": "1000 Guru Kreator", "narasi": " indigenous of NTT", "recommended": true} ], 
         selectedPrice: 'semester_price',
         pickedProduct: null,
 
@@ -135,11 +136,47 @@ export default {
             }
         },
 
-
-
+        // windowScroll() {
+        // const navbar = document.getElementById("navbar");
+        // if (
+        //     document.body.scrollTop >= 50 ||
+        //     document.documentElement.scrollTop >= 50
+        // ) {
+        //     navbar.classList.add("nav-sticky");
+        // } else {
+        //     navbar.classList.remove("nav-sticky");
+        // }
+        // },
+        /**
+         * Toggle menu
+         */
+        toggleMenu() {
+        document.getElementById("topnav-menu-content").classList.toggle("show");
+        },
+        nextSlide() {
+        this.$refs.carousel.goToPage(this.$refs.carousel.getNextPage());
+        },
+        prevSlide() {
+        this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
+        }
     },
 
 };
+
+    $(document).ready(function () {
+        // Nice Select
+        // $('.select-bar').niceSelect();
+        // PoPuP
+        $('.popup').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false,
+        disableOn: 300 
+        });
+    });
 
     $(window).on('scroll', function () {
 
@@ -154,215 +191,53 @@ export default {
 
 <template>
     <div>
-     <header class="header-section">
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="logo">
-                    <router-link tag="a" to="/">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
-                    </router-link>
-                </div>
-                <ul class="menu">
-                    <li>
-                        <router-link tag="a" to="/">Home</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="#0">Home Apps</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index.html">Mobile App 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">Mobile App 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-3.html">Mobile App 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-4.html">Mobile App 4</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Messenger</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-5.html">Messenger 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-6.html">Messenger 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Web</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-7.html">Web 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-8.html">Web 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Dextop</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-9.html">Dextop 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-10.html">Dextop 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-11.html">Dextop 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Watchapp</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-12.html">Watchapp 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-13.html">Watchapp 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Home Hero Video</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="index-14.html">Hero Video 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-15.html">Hero Video 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="./index-16.html">Home 16 <span class="badge badge-primary align-self-center">New</span></a>
-                            </li>
-                        </ul> -->
+    <nav class="navbar-expand-lg navigation header-section">
+      <div class="container">
+          <div class="header-wrapper">
+            <div class="logo">
+                <router-link tag="a" to="/">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                </router-link>
+            </div>
+            <div>
+                <button
+                type="button"
+                class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+                data-toggle="collapse"
+                data-target="#topnav-menu-content"
+                @click="toggleMenu()"
+                >
+                <i class="fa fa-fw fa-bars"></i>    
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                <ul
+                    class="navbar-nav ml-auto"
+                    id="topnav-menu"
+                    v-scroll-spy-active="{ selector: 'a.nav-link' }"
+                >
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/">Home</router-link>
                     </li>
-                    <li>
-                        <router-link tag="a" to="/features/features">Teacher</router-link>
-                        <!-- <ul class="submenu">
-                            <li>
-                                <a href="feature.html">Feature 1</a>
-                            </li>
-                            <li>
-                                <a href="feature-2.html">Feature 2</a>
-                            </li>
-                            <li>
-                                <a href="feature-3.html">Feature 3</a>
-                            </li>
-                        </ul> -->
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/features/features">Teacher</router-link>
                     </li>
-                    <li>
-                    <router-link tag="a" to="/donatur">
-                      Supporter
-                      <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
-                    </router-link>                    </li>
-                    <!-- <li>
-                        <a href="#0">Pages</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="about.html">about</a>
-                            </li>
-                            <li>
-                                <a href="app-download.html">app download</a>
-                            </li>
-                            <li>
-                                <a href="#0">Team</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="team.html">Team</a>
-                                    </li>
-                                    <li>
-                                        <a href="team-single.html">Team Single</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#0">Account</a>
-                                <ul class="submenu">
-                                    <li>
-                                        <a href="sign-up.html">Sign Up</a>
-                                    </li>
-                                    <li>
-                                        <a href="sign-in.html">Sign In</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="faqs.html">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="partners.html">Partners</a>
-                            </li>
-                            <li>
-                                <a href="privacy-policy.html">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="coming-soon.html">Coming Soon</a>
-                            </li>
-                            <li>
-                                <a href="change-password.html">Change Password</a>
-                            </li>
-                            <li>
-                                <a href="reset-password.html">Password Reset</a>
-                            </li>
-                            <li>
-                                <a href="reviews.html">review</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="/donatur">Supporter</router-link>
                     </li>
-                    <li>
-                        <a href="#0">Blog</a>
-                        <ul class="submenu">
-                            <li>
-                                <a href="blog.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-type-two.html">blog style 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-1.html">blog Single 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-single-2.html">blog Single 2</a>
-                            </li>
-                        </ul>
+                    <!-- <li class="nav-item">
+                    <router-link class="nav-link" tag="a" to="# ">Contact</router-link>
                     </li> -->
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li class="d-sm-none">
-                        <a href="#0" class="m-0 header-button">SIGN UP/LOGIN</a>
-                    </li>
                 </ul>
-                <div class="header-bar d-lg-none">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!-- <div class="header-right">
-                    <select class="select-bar">
-                        <option value="en">En</option>
-                        <option value="Bn">Bn</option>
-                        <option value="pk">Pk</option>
-                        <option value="Fr">Fr</option>
-                    </select>
-                </div> -->
-                <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+
+                <!-- <div class="ml-lg-2"> -->
+                    <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                <!-- </div> -->
             </div>
         </div>
-    </header>
+      </div>
+    </nav>
     <!--============= Header Section Ends Here =============-->
 
     <!--============= Header Section Ends Here =============-->
@@ -391,78 +266,80 @@ export default {
     <!--============= Header Section Ends Here =============-->
 
     <!--============= About Section Starts Here =============-->
-    <section class="about-section">
+    <section class="about-section mt-5">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6">
-                   <!-- <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-about popup"> -->
-	                <div class="about-thumb rtl pr-xl-15">
-	                    <img src='@/assets/images/fature-video.png' alt="feature">
-                        <div class="button-area-about">
-                            <h4 class="title-about-donatur">
-                                Watch Video
-                            </h4>
-                            <div class="video-button-donatur">
-                                <i class="flaticon-play"></i>
+            <div class="row ">
+                <!-- <div class="col-xl-12"> -->
+                    <div class="video-donatur col-xl-6">
+                        <a href="#0" class="features-video-area popup">
+                            <div class="about-thumb rtl pr-xl-15">
+                                <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
-                        </div>
-	                </div>
-	               <!-- </a> -->
-                </div>
-<!--                 <div class="col-xl-6">
-                    <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
-                        <div class="about-thumb rtl pr-xl-15">
-                            <img src="./assets/images/feature/fature-video.png" alt="feature">
-                        </div>
-                        <div class="button-area">
-                            <h4 class="title">
-                                Watch Videos
-                            </h4>
-                            <div class="video-button">
-                                <i class="flaticon-play"></i>
+                            <div class="button-area-about">
+                                <h4 class="title-about-donatur">
+                                    Watch Video
+                                </h4>
+                                <div class="video-button-donatur">
+                                    <i class="flaticon-play"></i>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div> -->
-                <div class="col-xl-6 pl-xl-0">
-                    <div class="about-content">
+                        </a>
+                    </div>
+                    <!-- <div class="col-xl-6">
+                        <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="feature-video-area popup">
+                            <div class="about-thumb rtl pr-xl-15">
+                                <img src="./assets/images/feature/fature-video.png" alt="feature">
+                            </div>
+                            <div class="button-area">
+                                <h4 class="title">
+                                    Watch Videos
+                                </h4>
+                                <div class="video-button">
+                                    <i class="flaticon-play"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                    <div class="col-xl-6">
+                        <div class="about-content">
 
-                        <div class="section-header left-style">
-                            <h5 class="cate">Our huge homework</h5>
-                            <h2 class="title">The accessibility gap for teachers to create must be resolved</h2>
-                            <p>With Indonesia’s vast lands and wide-arrayed diversities on the grounds, those at the most forefront and remote are often the most left behind. </p>
-                        </div>
-                        <div class="counter-area-5">
-                            <div class="counter-item-5">
-                                <div class="counter-thumb">
-                                    <img src='@/assets/images/counter/counter1.png' alt="counter">
-                                </div>
-                                <div class="counter-content">
-                                    <h3 class="title"><span class="counter">120</span><span>k</span></h3>
-                                    <p>3T Teacher</p>
-                                </div>
+                            <div class="section-header left-style">
+                                <h5 class="cate">Our Huge Homework</h5>
+                                <h2 class="title">The accessibility gap for teachers to create must be resolved</h2>
+                                <p>With Indonesia’s vast lands and wide-arrayed diversities on the grounds, those at the most forefront and remote are often the most left behind. </p>
                             </div>
-                            <div class="counter-item-5">
-                                <div class="counter-thumb">
-                                    <img src='@/assets/images/counter/counter2.png' alt="counter">
+                            <div class="counter-area-5">
+                                <div class="counter-item-5">
+                                    <div class="counter-thumb">
+                                        <img src='@/assets/images/counter/counter1.png' alt="counter">
+                                    </div>
+                                    <div class="counter-content">
+                                        <h3 class="title"><span class="counter">120</span><span>k</span></h3>
+                                        <p>3T Teachers</p>
+                                    </div>
                                 </div>
-                                <div class="counter-content">
-                                    <h3 class="title"><span class="counter">62</span><span>+</span></h3>
-                                    <p>Regions</p>
+                                <div class="counter-item-5">
+                                    <div class="counter-thumb">
+                                        <img src='@/assets/images/counter/counter2.png' alt="counter">
+                                    </div>
+                                    <div class="counter-content">
+                                        <h3 class="title"><span class="counter">62</span><span></span></h3>
+                                        <p>Regions</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="counter-item-5">
-                                <div class="counter-thumb">
-                                    <img src='@/assets/images/counter/counter3.png' alt="counter">
-                                </div>
-                                <div class="counter-content">
-                                    <h3 class="title"><span class="counter">11</span><span>%</span></h3>
-                                    <p>Provinces</p>
+                                <div class="counter-item-5">
+                                    <div class="counter-thumb">
+                                        <img src='@/assets/images/counter/counter3.png' alt="counter">
+                                    </div>
+                                    <div class="counter-content">
+                                        <h3 class="title"><span class="counter">11</span></h3>
+                                        <p>Provinces</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </section>
@@ -496,16 +373,22 @@ export default {
                             </div>
                             <span class="average">5.0 / 5.0</span>
                         </div> -->
-                        <h2 class="amount">62 Regions</h2>
+                        <h2 class="amount">62 Regions*</h2>
                         <p>3T Areas</p>
-                        <p>The most outskirt<br>
-                        The most forefront<br>
+                        <p>The most forefront<br>
+                        The most outskirt<br>
                         The most behind
                         </p>
+                        <p style="color:#f0c900">*Perpres No. 63 Tahun 2020</p>
                     </div>
                 </div>
             </div>
-            <div class="coverage-wrapper coverage_img">
+            <div class="row mt-5">
+                <div class="col-md">
+                    <img src="@/assets/images/map.png" height="auto" width="100%"/> 
+                </div>
+            </div>  
+            <!-- <div class="coverage-wrapper coverage_img">
                 <div class="border-item-1 text-center">
                     <span class="name">Sumatera Utara</span><br>
                     <h4 class="title">4</h4>
@@ -550,7 +433,7 @@ export default {
                     <span class="name">Papua</span>
                     <h2 class="title">22</h2>
                 </div>
-            </div>
+            </div> -->
         </div>
      </section>
      <!--============= Coverage Section Ends Here =============-->
@@ -608,8 +491,8 @@ export default {
                             <span class="cate">Available Packages:</span>
                             <div class="select-container">
                                 <select class="select-bar" v-model="selectedPrice">
-                                    <option value="semester_price"> Semester-based</option>
-                                    <option value="yearly_price"> Yearly-based</option>
+                                    <option value="semester_price">Semester-based</option>
+                                    <option value="yearly_price">Yearly-based</option>
                                 </select>
                             </div>
                         </div>
@@ -617,19 +500,22 @@ export default {
                             <div class="row">
                                 <div class="col-sm-6" v-for="(itemProduct,index) in listProducts" :key="index" v-if="itemProduct.product_type=='Donasi'">
                                     <div class="item" >
+                                        <tbody>
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
-                                             <td><img class="mt-3 mr-4" :src="itemProduct.image_url" alt="" width="60px" height="60px" style="float:left"></td>
+                                            <td><img class="mt-3 mr-1" :src="itemProduct.image_url" alt="" width="65px" height="65px" style="float:left"></td>
 
                                             <td>
                                                 <h2 class="title"><sup>IDR</sup>
                                                     {{ (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price) < 1000000 ?
-                                                    (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000+' k': (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000000 + ' Mio' }}
+                                                    (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000+' k': (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000000 + ' mio' }}
                                                 </h2>
                                             </td>
                                         </tr>
-                                        <span class="info ml-4">{{itemProduct.product_name}} -> {{itemProduct.description}}</span>
+                                        </tbody>
+                                        <span class="info"><p style="font-size:23px; margin-top:2px; margin-left:40px;">{{itemProduct.product_name}} &xrarr; {{itemProduct.description}}</p></span>
+                                        <span class="info"><p style="font-size:18px; margin-top:10px; margin-left:40px;">{{itemProduct.narasi}}</p></span>
                                     </div>
 
 
@@ -649,33 +535,33 @@ export default {
                     <div class="pricing-range-top pb-3 pt-0">
                         <div class="amount-area">
                             <div class="text-center mt-3">
-                                <span class="cate"><b>Payment Method</b></span>
+                                <span class="cate"><b>Payment Methods</b></span>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio"  :value="17" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/BCAva.png" width="200vw" height="200vw" alt="">
+                                        <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <img src="@/assets/images/payment/BCA.png" style="margin-top:30px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/briva.png" width="200vw" height="200vw" alt="">
+                                        <img src="@/assets/images/payment/Briva.png" style="margin-top:30px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/CCAmerican.png" width="200vw" height="200vw" alt="">
+                                        <img src="@/assets/images/payment/AmericanExpress.png" style="margin-top:30px;" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/CCVISA.png" width="200vw" height="200vw" alt="">
+                                        <img src="@/assets/images/payment/Visa.png" style="margin-top:30px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/CCMaster.png" width="200vw" height="200vw" alt="">
+                                        <img src="@/assets/images/payment/MasterCard.png" style="margin-top:30px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct">
-                                        <img src="@/assets/images/CCJCB.png" wwidth="200vw" height="200vw" alt="">
+                                        <img src="@/assets/images/payment/JCB.png" style="margin-top:30px;" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -683,23 +569,24 @@ export default {
                     </div>
                     <div class="pricing-range-top pb-3 pt-0">
                         <div class="amount-area">
-                            <div class="text-center mt-3">
-                                <span class="cate"><b>Personal Information</b></span>
-                                <form class="donatur-form">
-                                    <div class="mt-3">
-                                        <input type="text" placeholder="Nama Lengkap" v-model="payload.name">
+                            <div class="row text-center mt-3">
+                                <div class="col-sm-12">
+                                    <span class="cate"><b>Personal Information</b></span>
+                                    <form class="donatur-form">
+                                        <div class="mt-3">
+                                            <input type="text" placeholder="Full Name" v-model="payload.name">
+                                        </div>
+                                        <div class="mt-2">
+                                            <input type="text" placeholder="Email" v-model="payload.email">
+                                        </div>
+                                        <div class="mt-2 mb-3">
+                                            <input type="text" placeholder="Mobile Phone" v-model="payload.hp">
+                                        </div>
+                                        <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled <b>only to teachers in 3T regions</b> on the first day of the following month.</i>
+                                    </form>
+                                    <div class="right mt-5 mb-5">
+                                        <b-button tag="a" @click="postCheckout" class="custom-button mb-3">CONTRIBUTE NOW</b-button>
                                     </div>
-                                    <div class="mt-2">
-                                        <input type="text" placeholder="Alamat Email" v-model="payload.email">
-                                    </div>
-                                    <div class="mt-2 mb-3">
-                                        <input type="text" placeholder="Nomor Telepon" v-model="payload.hp">
-                                    </div>
-                                    <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled only to teachers in 3T regions on the first day of the following month.</i>
-                                </form>
-                                <div class="right mt-5 mb-5">
-
-                                    <b-button tag="a" @click="postCheckout" class="custom-button mb-3">CONTRIBUTE NOW</b-button>
                                 </div>
                             </div>
                         </div>
@@ -775,7 +662,7 @@ export default {
                             <p>
                                 Guru Kreator is an innovation that helps teachers in this digital era.
                                 Its engaging content makes it easier for teachers
-                                to create lesson dan unit plans.
+                                to create lesson and unit plans.
                             </p>
                             <h5 class="title" style="line-height:35px"><a href="#0">Mintarsih<br><p style="font-size:15px">Semarang, Central Java</p></a></h5>
                         </div>
@@ -804,15 +691,16 @@ export default {
                     </li>
                     <!-- <li>
                         <a href="#0" class="active"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#0"><i class="fab fa-pinterest-p"></i></a>
-                    </li>
-                    <li>
+                    </li> -->
+
+                    <!-- <li>
                         <a href="#0"><i class="fab fa-google-plus-g"></i></a>
                     </li> -->
                     <li>
                         <a target="_blank" href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://t.me/gurukreatorgroup"><i class="fab fa-telegram"></i></a>
                     </li>
                 </ul>
             </div>
@@ -830,15 +718,16 @@ export default {
                         <router-link tag="a" to="/">Supporter
                         </router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#0">Contacts</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#0">Privacy Policy</a>
+                        <router-link tag="a" to="/privacy_policy">Privacy and Policy</router-link>
                     </li>
                 </ul>
             </div>
             <div class="copyright">
+                <p style="font-size:12px;">Illustration by storyset.com</p>
                 <p style="font-size:12px;">
                     Copyright © 2020. All Rights Reserved By <a href="https://paideia.id/" style="color:#ffffff">PAIDEIA Educational Solutions</a>
                 </p>

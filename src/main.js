@@ -91,6 +91,14 @@ Vue.use(VueGoogleMaps, {
   },
   installComponents: true
 })
+import GoogleAuth from '@/config/google_oAuth.js'
+const gauthOption = {
+  clientId: '687912748441-i3aumede13quq5g2tveh63v59tc21kt8.apps.googleusercontent.com',
+  scope: 'profile email',
+  prompt: 'select_account'
+}
+Vue.use(GoogleAuth, gauthOption)
+
 Vue.prototype.moment = moment
 Vue.component('apexchart', VueApexCharts)
 
