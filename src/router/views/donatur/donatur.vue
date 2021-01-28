@@ -700,7 +700,7 @@ export default {
                         <a target="_blank" href="https://www.instagram.com/gurukreator/"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://t.me/gurukreator"><i class="fab fa-telegram"></i></a>
+                        <a target="_blank" href="https://t.me/gurukreatorgroup"><i class="fab fa-telegram"></i></a>
                     </li>
                 </ul>
             </div>
