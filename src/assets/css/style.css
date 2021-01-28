@@ -188,13 +188,14 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 30px;
-    margin-left: 30px;
-    text-align: center;
+    margin-left: 0px;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 .amount-area-price .item {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     width: 30%;
 }
 
@@ -236,7 +237,7 @@
 @media (max-width: 1199px) and (min-width: 992px) {
     .amount-area-price {
         margin-bottom: 0;
-        margin-left: 10px;
+        margin-left: 0px;
     }
 
     .amount-area-price .item .title {
@@ -246,7 +247,7 @@
 
 @media (max-width: 575px) {
     .amount-area-price .item .title {
-        font-size: 25px;
+        font-size: 15px;
     }
 
     .amount-area-price .item .info {
@@ -257,8 +258,23 @@
 @media (max-width: 575px) {
     .amount-area-price {
         margin-bottom: 0;
-        margin-left: 10px;
+        /* margin-left: 10px; */
     }
+}
+
+.radio-flex {
+    display: flex;
+    align-items:center;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+.radio-flex .item {
+    width: 35px;
+    height: 35px;
+    background: #00afef;
+    border: 2px solid #ddd;
+    margin-bottom: 30px;
 }
 
 /* coverage-wrapper-donatur */

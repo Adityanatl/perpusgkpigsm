@@ -661,7 +661,7 @@ export default {
             </div>
             <div class="range-wrapper-2">
                 <div class="pricing-range">
-                    <div class="pricing-range-top pt-0">
+                    <div class="col-sm-12 pricing-range-top pt-0">
                         <div class="tags-area">
                             <h3 class="tags">Saatnya berkreasi!</h3>
                         </div>
@@ -708,22 +708,26 @@ export default {
                             <div class="item">
                                 <h2 class="title"><sup>Rp</sup>20.000</h2>
                                 <span class="info">Per Bulan</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-top:50px; margin-right:10px;" >
+                                
                             </div>
-                            <div class="item" style="margin-left:20px">
+                            <div class="item" >
                                 <h2 class="title"><sup>Rp</sup>100.000</h2>
                                 <span class="info">Per Semester</span>
                                 <span class="info"><strike>Rp 120.000</strike></span>
                                 <span class="info"> Diskon 1 Bulan (Rp. 16.700/Bulan)</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                
                             </div>
-                            <div class="item ml-3" style="margin">
+                            <div class="item">
                                 <h2 class="title"><sup>Rp</sup>200.000</h2>
                                 <span class="info">Per Tahun</span>
                                 <span class="info"><strike>Rp 240.000</strike></span>
                                 <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
-                                <input  type="radio"   name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                             </div>
+                        </div>
+                         <div class="radio-flex">
+                                <input class="item" type="radio" name="methodePayment">
+                                <input class="item" type="radio" name="methodePayment">
+                                <input class="item" type="radio" name="methodePayment">
                         </div>
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
