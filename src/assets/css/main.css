@@ -1374,8 +1374,16 @@ input[type="submit"] {
     margin: -7.5px 0;
 }
 
+.social-icons a {
+    display: inline-block;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
 .social-icons li {
     padding: 7.5px;
+    border-radius: 100;
 }
 
 .social-icons li a {
@@ -7153,6 +7161,14 @@ input[type="submit"] {
     padding-right: 0px;
 }
 
+.range-wrapper-2 .pricing-range .pricing-range-top .download-options a {
+    display: inline-block;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+} 
+/* tandai */
+
 .range-wrapper-2 .pricing-range .pricing-range-top .tags-area {
     text-align: center;
 }
@@ -8387,6 +8403,13 @@ input[type="submit"] {
     background: -moz-linear-gradient(-127deg, #00afef 0%, #0b507d 100%);
     background: -webkit-linear-gradient(-127deg, #00afef 0%, #0b507d 100%);
     box-shadow: 0.975px 7.94px 12px 0px rgba(77, 128, 255, 0.33);
+}
+
+.how-item .how-content .download-options a {
+    display: inline-block;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
 }
 
 .how-item .how-content .button-3 {
