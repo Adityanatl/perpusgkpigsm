@@ -6947,6 +6947,8 @@ input[type="submit"] {
     .amount-area {
         margin-bottom: 0;
         margin-left: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .amount-area .item h2 {
@@ -6973,7 +6975,9 @@ input[type="submit"] {
 @media (max-width: 575px) {
     .amount-area {
         margin-bottom: 0;
-        margin-left: 10px;
+        margin-left: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
