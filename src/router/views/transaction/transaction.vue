@@ -132,12 +132,12 @@ export default {
                         <hr>
                       </div>
                       <div>
-                        <p style="font-size:1.1em"><b>
+                        <p style="font-size:1.1em"><b><span>IDR</span>
                             {{transaction.product_name}} : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}
                         </b></p><br>
                       </div>
                       <div>
-                        <p style="font-size:1em; color:#373334">
+                        <p style="font-size:1em; color:#373334"><span>IDR</span>
                             Subtotal : {{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+.)/g, '$&,')}}
                         </p>
                       </div><br><br>

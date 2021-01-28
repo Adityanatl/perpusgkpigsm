@@ -387,7 +387,7 @@ export default {
                     <div class="col-lg-8 col-xl-7">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Keunggulan yang Unik</h5>
-                            <h2 class="title">Karena kreatifitas tidak berbatas</h2>
+                            <h2 class="title">Karena kreatifitas <br>tidak berbatas</h2>
                             <p>Dengan fleksibilitas memberikan keleluasaan dalam berkreasi
                             dan mengasah potensi</p>
                         </div>

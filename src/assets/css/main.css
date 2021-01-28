@@ -6892,6 +6892,10 @@ input[type="submit"] {
     justify-content: center;
 }
 
+.amount-area .item tbody td {
+    padding: 0px !important;   
+}
+
 .amount-area .item {
     text-align: left;
     margin-bottom: 30px;
@@ -6901,6 +6905,7 @@ input[type="submit"] {
 .amount-area .item h2 {
     letter-spacing: 0 !important;
     font-size: 3.3em;
+    margin-bottom: 0px;
 }
 
 .amount-area .item .title {
