@@ -199,7 +199,7 @@ export default {
                     <div class="row">
                         <div class="col-lg-6 col-md-10" style="margin-top:100px;">
                             <div class="feature-tab-header">
-                                <h3 class="title" style="color:#f0c900">Kreasiku</h3>
+                                <h3 class="title">Kreasiku</h3>
                                 <p>Berkreasi tiada henti. Memudahkan guru merancang apapun yang dibutuhkan.</p>
                             </div>
                         </div>
