@@ -225,9 +225,9 @@ export default {
                     <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="/donatur">Supporter</router-link>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="# ">Contact</router-link>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <!-- <div class="ml-lg-2"> -->
@@ -710,9 +710,9 @@ export default {
                         <router-link tag="a" to="/">Supporter
                         </router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#0">Contacts</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#0">Privacy Policy</a>
                     </li>

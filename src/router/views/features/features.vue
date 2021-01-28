@@ -118,9 +118,9 @@ export default {
                     <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
-                    </li>
+                    </li> -->
                 </ul>
 
                 <!-- <div class="ml-lg-2"> -->
@@ -689,9 +689,9 @@ export default {
                     <li>
                         <router-link tag="a" to="/donatur">Donatur</router-link>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#0">Kontak</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#0">Kebijakan Privasi</a>
                     </li>
