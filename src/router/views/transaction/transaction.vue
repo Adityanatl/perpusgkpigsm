@@ -15,7 +15,7 @@ export default {
     title: "Transaction",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout, PageHeader },
+  components: {  },
   data() {
     return {
       // tableData: [],
