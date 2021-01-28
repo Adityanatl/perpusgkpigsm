@@ -271,7 +271,7 @@ export default {
             <div class="row ">
                 <!-- <div class="col-xl-12"> -->
                     <div class="video-donatur col-xl-6">
-                        <a href="https://www.youtube.com/watch?v=ObZwFExwzOo" class="features-video-area popup">
+                        <a href="https://www.youtube.com/watch?v=sgoQ0h_TkNI" class="features-video-area popup">
                             <div class="about-thumb rtl pr-xl-15">
                                 <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
@@ -717,7 +717,7 @@ export default {
                         <a href="#0">Contacts</a>
                     </li> -->
                     <li>
-                        <a href="#0">Privacy Policy</a>
+                        <router-link tag="a" to="/privacy_policy">Privacy and Policy</router-link>
                     </li>
                 </ul>
             </div>
