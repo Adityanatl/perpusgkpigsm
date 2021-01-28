@@ -107,10 +107,10 @@ export default [
   },
 
   {
-    path: '/privacy_policy',
+    path: '/privasi-persyaratan',
     name: 'privacy',
     meta: { authRequired: true },
-    component: () => import('./views/privacy-policy/privacy_policy')
+    component: () => import('./views/privacy-policy/privasi-persyaratan')
   },
 
   {
