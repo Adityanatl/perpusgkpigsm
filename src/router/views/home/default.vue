@@ -192,53 +192,87 @@ export default {
 
 <template>
     <div>
-    <nav class="navbar-expand-lg navigation header-section">
-      <div class="container">
-          <div class="header-wrapper">
+     <header class="navigation header-section">
+        <div class="container">
+            <div class="header-wrapper">
             <div class="logo">
                 <router-link tag="a" to="/">
                     <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
                 </router-link>
             </div>
-            <div>
-                <button
+                <div 
                 type="button"
-                class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+                class="header-bar d-lg-none"
                 data-toggle="collapse"
                 data-target="#topnav-menu-content"
                 @click="toggleMenu()"
                 >
-                <i class="fa fa-fw fa-bars"></i>    
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="topnav-menu-content">
-                <ul
-                    class="navbar-nav ml-auto"
-                    id="topnav-menu"
-                    v-scroll-spy-active="{ selector: 'a.nav-link' }"
-                >
-                    <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="/">Beranda</router-link>
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <router-link tag="a" to="/">Beranda</router-link>
                     </li>
-                    <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="/features/features">Guru</router-link>
+                    <li><router-link tag="a" to="/features/features">Guru</router-link></li>
+                    <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
+                    <!-- <li><a href="contact.html">Kontak</a></li> -->
+                    <li class="d-sm-none">
+                        <router-link tag="a" to="/sign_in/sign-in" class="header-button d-sm-inline-block">SIGN UP/LOGIN</router-link>
                     </li>
-                    <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="/donatur">Donatur</router-link>
-                    </li>
-                    <!-- <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="# ">Kontak</router-link>
-                    </li> -->
                 </ul>
 
-                <!-- <div class="ml-lg-2"> -->
-                    <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
-                <!-- </div> -->
+                <div class="collapse navbar-collapse" id="topnav-menu-content">
+                    <ul
+                        class="navbar-nav ml-auto"
+                        id="topnav-menu"
+                        v-scroll-spy-active="{ selector: 'a.nav-link' }"
+                    >
+                        <li class="nav-item">
+                        <router-link tag="a" to="/" style="color:#ffffff">Beranda</router-link>
+                        </li><hr>
+                        <li class="nav-item">
+                        <router-link tag="a" to="/features/features" style="color:#ffffff">Guru</router-link>
+                        </li><hr>
+                        <li class="nav-item">
+                        <router-link tag="a" to="/donatur" style="color:#ffffff">Donatur</router-link>
+                        </li><hr>
+                        <!-- <li class="nav-item">
+                        <router-link tag="a" to="#kontak">Kontak</router-link>
+                        </li> -->
+                        <li class="d-sm-none">
+                            <router-link tag="a" to="/sign_in/sign-in" class="header-button d-sm-inline-block">SIGN UP/LOGIN</router-link>
+                        </li>
+                    </ul>
+                </div>
+                    <!-- <div class="ml-lg-2">
+                        <a href="javascript: void(0);" class="btn btn-outline-success w-xs">Sign in</a>
+                    </div> -->
+
+
+
+                <!-- <div class="header-right header-bar d-lg-none">
+                    <select class="select-bar">
+                        <option value="en">En</option>
+                        <option value="Bn">Bn</option>
+                        <option value="pk">Pk</option>
+                        <option value="Fr">Fr</option>
+                    </select>
+                </div> -->
+                <!-- <button
+                    type="button"
+                    class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
+                    data-toggle="collapse"
+                    data-target="#topnav-menu-content"
+                    @click="toggleMenu()"
+                    >
+                    <i class="fa fa-fw fa-bars"></i>    
+                </button> -->
+                <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
             </div>
         </div>
-      </div>
-    </nav>
+     </header>
      <!--============= Header Section Ends Here =============-->
 
         <!--============= Banner Section Starts Here =============-->
