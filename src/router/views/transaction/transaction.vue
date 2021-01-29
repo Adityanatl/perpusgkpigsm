@@ -185,7 +185,6 @@ export default {
           </div>
           <!-- end row -->
         </div>
-
         <div class="col-md-1 mt-2 pr-3 pt-4"></div>
       </div>
     </div>
