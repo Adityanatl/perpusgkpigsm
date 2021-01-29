@@ -722,7 +722,7 @@ export default {
                         <a href="#0">Contacts</a>
                     </li> -->
                     <li>
-                        <router-link tag="a" to="/privacy_policy">Privacy and Policy</router-link>
+                        <router-link tag="a" to="/privasi-persyaratan">Privacy and Policy</router-link>
                     </li>
                 </ul>
             </div>

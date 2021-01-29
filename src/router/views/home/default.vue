@@ -890,7 +890,7 @@ export default {
                         <a href="#0">Kontak</a>
                     </li> -->
                     <li>
-                        <router-link tag="a" to="/privacy_policy">Kebijakan Privasi</router-link>
+                        <router-link tag="a" to="/privasi-persyaratan">Kebijakan Privasi</router-link>
                     </li>
                 </ul>
             </div>

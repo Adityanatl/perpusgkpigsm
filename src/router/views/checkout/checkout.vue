@@ -58,6 +58,7 @@ export default {
       })
     } else {
       this.product = JSON.parse(localStorage.getItem('cart'))
+      if (this.product!=null)
       this.payload.price = this.product.price
     }
     this.getListPaymentMethodes()
