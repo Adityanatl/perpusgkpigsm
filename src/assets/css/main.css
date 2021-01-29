@@ -11836,7 +11836,7 @@ div[class*="col"]:nth-of-type(3n + 2) .pricing-item-4 .pricing-header::before {
 .counter-area-5 {
     align-items: center;
     justify-content: space-between;
-    margin: 0 -15px;
+    margin: 0 -35px;
     position: relative;
 }
 

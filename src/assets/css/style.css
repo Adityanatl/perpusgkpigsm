@@ -1148,3 +1148,11 @@
             width: 100%;
         }
     }
+
+    .tengah {
+        /* margin: auto; */
+        vertical-align: center;
+        top: 0; left: 0; bottom: 0; right: 0;
+        /* height: 300px; */
+        /* border: 1px solid #999; jika ingin melihat posisi div anda lebih jelas */
+   }
