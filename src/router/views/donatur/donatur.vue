@@ -356,7 +356,7 @@ export default {
                         <p>
                             We deeply care for people and the processes involved in each of their unique places. Together, supporting them to become Guru Kreator!
                         </p>
-                        <div class="how-content">
+                        <div class="how-content" style="margin-top:40px;">
                             <a href="#weare" class="button-3 active">COUNT ME IN!</a>
                         </div>
                     </div>
