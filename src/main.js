@@ -92,8 +92,9 @@ Vue.use(VueGoogleMaps, {
   installComponents: true
 })
 import GoogleAuth from '@/config/google_oAuth.js'
+//GjpLQgjuwVLCYjP-bYTb51sp
 const gauthOption = {
-  clientId: '749746820493-u3v5ce04b50lshtkgaqp7ksnr0n90k4a.apps.googleusercontent.com',
+  clientId: '749746820493-o5fklqpe90t0uoq48u2e6bo6aomq3ct2.apps.googleusercontent.com',
   scope: 'profile email',
   prompt: 'select_account'
 }
