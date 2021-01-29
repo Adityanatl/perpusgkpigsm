@@ -48,6 +48,12 @@ export default {
           active: true
         }
       ],
+      kreasiku: {
+        "rubrik": 0,
+        "strategi": 0,
+        "silabus": 0,
+        "lesson_plan": 0},
+
       statData: [
         {
           icon: "bx bx-copy-alt",
@@ -127,7 +133,25 @@ export default {
         }
       ]
     };
-  }
+  },
+  mounted() {
+    this.getAccountKreasiku()
+    },
+  methods: {
+
+    getAccountKreasiku() {
+      this.$store.dispatch('account/GET_KREASIKU', '').then(() => {
+        this.kreasiku = this.$store.getters['account/kreasiku']
+        this.statData[0].value = this.kreasiku.rubrik
+        this.statData[1].value = this.kreasiku.silabus
+        this.statData[2].value = this.kreasiku.lesson_plan
+        this.statData[3].value = this.kreasiku.strategi
+
+      })
+    },
+  },
+
+
 };
 </script>
 
@@ -419,7 +443,7 @@ export default {
         </div>
       </div> -->
       <!-- end col -->
-      
+
       <!-- <div class="col-xl-6">
         <div class="card">
           <div class="card-body">
@@ -496,7 +520,7 @@ export default {
             <p style="color:#c6c6c6"><span class="blue-paideia ml-2"><b style="color:#00AFEF">Rp 20,000</b></span> / bulan</p>
             <div class="col">
               <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
-              <p style="color:#373334" class=""> semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
+              <p style="color:#373334" class=""> semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p>
             </div>
 
             <div class="table-responsive mt-4">

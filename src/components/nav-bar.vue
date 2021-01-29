@@ -330,7 +330,7 @@ export default {
       </div>
 
       <div class="d-flex">
-        
+
         <!-- <b-dropdown
           class="d-inline-block d-lg-none ml-2"
           variant="black"
@@ -550,28 +550,28 @@ export default {
           </div>
         </b-dropdown> -->
 
-        <div class="dropdown d-inline-block">
-          <button
-            type="button"
-            class="btn header-item noti-icon right-bar-toggle toggle-right"
-          ><a href="#">
-            <i class="fas fa-shopping-cart"></i></a>
-          </button>
-        </div>
+<!--        <div class="dropdown d-inline-block">-->
+<!--          <button-->
+<!--            type="button"-->
+<!--            class="btn header-item noti-icon right-bar-toggle toggle-right"-->
+<!--          ><a href="#">-->
+<!--            <i class="fas fa-shopping-cart"></i></a>-->
+<!--          </button>-->
+<!--        </div>-->
 
-        <!-- <b-dropdown right variant="black" toggle-class="header-item"> -->
-          <!-- <template v-slot:button-content> -->
-            <!-- <img
+         <b-dropdown right variant="black" toggle-class="header-item">
+           <template v-slot:button-content>
+             <img
               class="rounded-circle header-profile-user"
               src="@/assets/images/users/avatar-1.jpg"
               alt="Header Avatar"
-            /> -->
-            <!-- <span class="d-none d-xl-inline-block ml-1">{{ $t('navbar.dropdown.henry.text')}}</span> -->
-            <!-- <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i> -->
-            <!-- <i class="fas fa-sign-out-alt"></i>  -->
-          <!-- </template> -->
-          <!-- item-->
-          <!-- <b-dropdown-item>
+            />
+             <span class="d-none d-xl-inline-block ml-1">{{ $t('navbar.dropdown.henry.text')}}</span>
+             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+             <i class="fas fa-sign-out-alt"></i>
+           </template>
+           item
+          <b-dropdown-item>
             <router-link tag="span" to="/contacts/profile">
               <i class="bx bx-user font-size-16 align-middle mr-1"></i>
               {{ $t('navbar.dropdown.henry.list.profile') }}
@@ -591,13 +591,13 @@ export default {
             {{ $t('navbar.dropdown.henry.list.lockscreen') }}
           </b-dropdown-item>
           <b-dropdown-divider></b-dropdown-divider> -->
-          <!-- <a href="#" class="dropdown-item text-danger">
+          <a href="#" class="dropdown-item text-danger">
             <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
             {{ $t('navbar.dropdown.henry.list.logout') }}
-          </a> -->
-        <!-- </b-dropdown> -->
+          </a>
+         </b-dropdown>
 
-        <!-- <div class="dropdown d-inline-block">
+        <div class="dropdown d-inline-block">
           <button
             type="button"
             class="btn header-item noti-icon right-bar-toggle toggle-right"
@@ -605,7 +605,7 @@ export default {
           >
             <i class="fas fa-shopping-cart"></i>
           </button>
-        </div> -->
+        </div>
       </div>
     </div>
   </header>
