@@ -156,18 +156,18 @@ export default {
                       <div v-else>
                         <div>
                           <p style="font-size:1em; color:#a0a0a0;">Pesanan #{{this.transaction.invoice_number}}</p>
-                          <p style="font-size:1.7em; color:#a0a0a0;"><span class="total"><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</span></p><br>
+                          <p style="font-size:1.7em; color:#a0a0a0;"><b><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></p><br>
                           <hr>
                         </div>
                         <div>
                           <p style="font-size:1em; color:#a0a0a0;">Virtual Account BCA</p>
                           <p style="color:#231f20; font-size:1.3em"><b>Paideia</b></p>
                           <p style="font-size:1em; color:#a0a0a0;">No. Virtual Account</p>
-                          <p style="font-size:1.5em; color:#00afef;"><span class="total">{{transaction.va_number}}</span></p><br>
+                          <p style="font-size:1.5em; color:#00afef;"><b><span class="total">{{transaction.va_number}}</span></b>/p><br>
                           <hr>
                         </div>
                         <div>
-                          <p style="font-size:1em; color:#a0a0a0">Petunjuk Pembayaran</p>
+                          <p style="font-size:1em; color:#a0a0a0">Petunjuk Pembayaran</p><br>
                           <p style="color:#a0a0a0">Mohon melakukan pembayaran sebelum <span style="color:#0a0a0a"><b>{{transaction.transaction_time}}</b></span> (1x24 jam) melalui Virtual Account. Bila tidak, pesanan ini akan dibatalkan secara otomatis.</p>
                         </div><br><br>
                       </div>
