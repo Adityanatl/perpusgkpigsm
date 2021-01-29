@@ -272,10 +272,10 @@ export default {
                 <!-- <div class="col-xl-12"> -->
                     <div class="video-donatur col-xl-6">
                         <a href="#0" class="features-video-area popup">
-                            <div class="about-thumb rtl pr-xl-15">
+                            <div class="thumb rtl pr-xl-15">
                                 <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
-                            <div class="button-area-about">
+                            <div class="button-area">
                                 <h4 class="title-about-donatur">
                                     Watch Video
                                 </h4>
