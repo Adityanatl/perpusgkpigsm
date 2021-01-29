@@ -272,10 +272,10 @@ export default {
                 <!-- <div class="col-xl-12"> -->
                     <div class="video-donatur col-xl-6">
                         <a href="#0" class="features-video-area popup">
-                            <div class="about-thumb rtl pr-xl-15">
+                            <div class="thumb rtl pr-xl-15">
                                 <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
-                            <div class="button-area-about">
+                            <div class="button-area">
                                 <h4 class="title-about-donatur">
                                     Watch Video
                                 </h4>
@@ -356,7 +356,7 @@ export default {
                         <p>
                             We deeply care for people and the processes involved in each of their unique places. Together, supporting them to become Guru Kreator!
                         </p>
-                        <div class="how-content">
+                        <div class="how-content" style="margin-top:40px;">
                             <a href="#weare" class="button-3 active">COUNT ME IN!</a>
                         </div>
                     </div>
@@ -536,8 +536,18 @@ export default {
                         <div class="amount-area">
                             <div class="text-center mt-3">
                                 <span class="cate"><b>Payment Methods</b></span>
+                                <!-- <div class="counter-area-5">
+                                    <div class="counter-item-5">
+                                        <div class="counter-thumb">
+                                        <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        </div>
+                                        <div class="counter-content">
+                                        <img src="@/assets/images/payment/BCA.png" style="margin-top:30px;" alt="">
+                                        </div>
+                                    </div>
+                                </div> -->
                                 <div class="text-center row mt-3">
-                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                    <div class="tengah col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/BCA.png" style="margin-top:30px;" alt="">
                                     </div>
@@ -582,7 +592,8 @@ export default {
                                         <div class="mt-2 mb-3">
                                             <input type="text" placeholder="Mobile Phone" v-model="payload.hp">
                                         </div>
-                                        <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled <b>only to teachers in 3T regions</b> on the first day of the following month.</i>
+                                        <i class="mt-2 mb-2">NOTE: For this pioneer effort, any contribution received by <b>Friday, February 5, 2021</b> will be channeled to the pioneer recipients <b>immediately after our Grand Launching event on Saturday, February 6, 2021</b></i>
+                                        <!-- <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled <b>only to teachers in 3T regions</b> on the first day of the following month.</i> -->
                                     </form>
                                     <div class="right mt-5 mb-5">
                                         <b-button tag="a" @click="postCheckout" class="custom-button mb-3">CONTRIBUTE NOW</b-button>
@@ -722,7 +733,7 @@ export default {
                         <a href="#0">Contacts</a>
                     </li> -->
                     <li>
-                        <router-link tag="a" to="/privacy_policy">Privacy and Policy</router-link>
+                        <router-link tag="a" to="/privasi-persyaratan">Privacy and Policy</router-link>
                     </li>
                 </ul>
             </div>

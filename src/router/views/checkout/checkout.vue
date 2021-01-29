@@ -58,6 +58,7 @@ export default {
       })
     } else {
       this.product = JSON.parse(localStorage.getItem('cart'))
+      if (this.product!=null)
       this.payload.price = this.product.price
     }
     this.getListPaymentMethodes()
@@ -175,7 +176,7 @@ export default {
 
 
                       <h5 class="mb-4 mt-3" style="color:#373334;">Metode Pembayaran</h5><hr>
-                      <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
+                      <!-- <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
 
                             <a
@@ -214,7 +215,7 @@ export default {
                             </div>
                           </b-card-body>
                         </b-collapse><hr style="color:#dddddd">
-                      </b-card>
+                      </b-card> -->
 
 
                       <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
@@ -225,7 +226,7 @@ export default {
                                   v-b-toggle.accordion-2
                                   style="background:white;"
                           >
-                            <div>Direct Debit</div>
+                            <div>Bank Transfer</div>
                             <i class="mdi chevron-up mdi-chevron-down"  style="background=white;"></i>
                           </a>
                         </b-card-header>

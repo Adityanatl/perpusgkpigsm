@@ -1066,7 +1066,7 @@ input[type="submit"] {
     flex-wrap: wrap;
 }
 
-.banner-5 .banner-bg-5, .banner-9-video .video-button, .video-button-donatur,.extra-bg, .banner-video-14 .video-button, .feature-item::before, .feature-item::after, .feature-video-area .button-area, .custom-wrapper .circle::after, .custom-wrapper .calculate-bg, .how--item .how-content .serial, .how--item .anime-item, .member-counter-area .member-bg, .to-access-item .to-access-thumb span, .count-slider .count-item::after, .count-slider .count-item .serial, .ex-item::before, .addon-wrapper::before, .addon-wrapper .addon-center, .addon-wrapper .addon-center::after, .addon-wrapper .addon-center::before, .recharge-item .recharge-thumb .anime, .pricing-item-4 .pricing-header::before, .page-header.single-header::before, .anime-item-2, .anime-item-2::after, .anime-item-2::before, .user-counter-wrapper .user-counter-bg, .post-details .post-content .entry-meta .thumb::before, .video-button::after, .video-button::before, .video-button-donatur::after, .video-button-donatur::before, .video-button-2, .video-button-2 span, .video-button-2 span::after, .video-button-2 span::before {
+.banner-5 .banner-bg-5, .banner-9-video .video-button, .extra-bg, .banner-video-14 .video-button, .feature-item::before, .feature-item::after, .feature-video-area .button-area, .custom-wrapper .circle::after, .custom-wrapper .calculate-bg, .how--item .how-content .serial, .how--item .anime-item, .member-counter-area .member-bg, .to-access-item .to-access-thumb span, .count-slider .count-item::after, .count-slider .count-item .serial, .ex-item::before, .addon-wrapper::before, .addon-wrapper .addon-center, .addon-wrapper .addon-center::after, .addon-wrapper .addon-center::before, .recharge-item .recharge-thumb .anime, .pricing-item-4 .pricing-header::before, .page-header.single-header::before, .anime-item-2, .anime-item-2::after, .anime-item-2::before, .user-counter-wrapper .user-counter-bg, .post-details .post-content .entry-meta .thumb::before, .video-button::after, .video-button::before, .video-button-2, .video-button-2 span, .video-button-2 span::after, .video-button-2 span::before {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -11836,7 +11836,7 @@ div[class*="col"]:nth-of-type(3n + 2) .pricing-item-4 .pricing-header::before {
 .counter-area-5 {
     align-items: center;
     justify-content: space-between;
-    margin: 0 -15px;
+    margin: 0 -35px;
     position: relative;
 }
 
@@ -11858,6 +11858,7 @@ div[class*="col"]:nth-of-type(3n + 2) .pricing-item-4 .pricing-header::before {
 @media screen and (max-width: 767px) {
     .counter-area-5 {
         justify-content: flex-start;
+        margin-left: 10px;
     }
 
     .counter-area-5::before, .counter-area-5::after {
