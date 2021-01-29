@@ -536,6 +536,16 @@ export default {
                         <div class="amount-area">
                             <div class="text-center mt-3">
                                 <span class="cate"><b>Payment Methods</b></span>
+                                <!-- <div class="counter-area-5">
+                                    <div class="counter-item-5">
+                                        <div class="counter-thumb">
+                                        <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        </div>
+                                        <div class="counter-content">
+                                        <img src="@/assets/images/payment/BCA.png" style="margin-top:30px;" alt="">
+                                        </div>
+                                    </div>
+                                </div> -->
                                 <div class="text-center row mt-3">
                                     <div class="tengah col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >

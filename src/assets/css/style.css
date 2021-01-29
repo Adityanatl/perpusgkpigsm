@@ -1151,8 +1151,20 @@
 
     .tengah {
         /* margin: auto; */
-        vertical-align: center;
-        top: 0; left: 0; bottom: 0; right: 0;
+        float: left;
+        margin: 10px;
         /* height: 300px; */
         /* border: 1px solid #999; jika ingin melihat posisi div anda lebih jelas */
    }
+
+   .radio {
+    width: 20px;
+    position: relative;
+    }
+    .right{
+        float: left;
+        margin: 10px;
+        color: blue;
+        font-size: 20px;
+        font-weight:bold;
+    }
