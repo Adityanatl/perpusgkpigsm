@@ -163,7 +163,7 @@ export default {
                           <p style="font-size:1em; color:#a0a0a0;">Virtual Account BCA</p>
                           <p style="color:#231f20; font-size:1.3em"><b>Paideia</b></p>
                           <p style="font-size:1em; color:#a0a0a0;">No. Virtual Account</p>
-                          <p style="font-size:1.5em; color:#00afef;"><b><span class="total">{{transaction.va_number}}</span></b>/p><br>
+                          <p style="font-size:1.5em; color:#00afef;"><b><span class="total">{{transaction.va_number}}</span></b></p><br>
                           <hr>
                         </div>
                         <div>
