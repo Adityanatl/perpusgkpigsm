@@ -11858,6 +11858,7 @@ div[class*="col"]:nth-of-type(3n + 2) .pricing-item-4 .pricing-header::before {
 @media screen and (max-width: 767px) {
     .counter-area-5 {
         justify-content: flex-start;
+        margin-left: 10px;
     }
 
     .counter-area-5::before, .counter-area-5::after {
