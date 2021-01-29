@@ -17,7 +17,8 @@ const state = {
     }
   },
   more: {},
-  membership: {}
+  membership: {},
+  kreasiku: {}
 }
 export const  mutations = {
   LOADING: (state) => {
@@ -47,6 +48,10 @@ export const  mutations = {
   SET_MEMBERSHIP: (state, payload) => {
     state.loading = false
     state.membership = payload
+  },
+  SET_KREASIKU: (state, payload) => {
+    state.loading = false
+    state.kreasiku = payload
   },
 
 }
@@ -123,6 +128,16 @@ export const actions = {
           return resp
         })
   },
+  GET_KREASIKU: async({commit}, args) => {
+    commit("LOADING")
+    return await axios({url: 'api/account/kreasiku' + args, method: 'GET'})
+        .then(resp => {
+          if(resp.data.code === 200) {
+            commit("SET_KREASIKU", resp.data.data)
+          }
+          return resp
+        })
+  },
 
 }
 
@@ -136,7 +151,8 @@ export const  getters = {
   resp: state => state.resp,
   columns: state => state.columns,
   more: state => state.more,
-  membership: state => state.membership
+  membership: state => state.membership,
+  kreasiku: state => state.kreasiku
 }
 
 export default {
