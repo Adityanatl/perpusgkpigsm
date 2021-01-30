@@ -71,10 +71,10 @@ export default {
   <div class="card overflow-hidden">
     <div class="bg-soft-primary" style="background-color: #00AFEF">
       <div class="row" style="background-color: #00AFEF">
-        <div class="col-8" style="background-color: #00AFEF">
-          <div class="text-primary p-4">
-            <h5 class="text-primary" style="background-color: #00AFEF">Selamat Datang!</h5><br>
-            <p>{{user.name}}</p>
+        <div class="col-10" style="background-color: #00AFEF">
+          <div class="text-primary pl-4 pt-4 pb-3 mb-3">
+            <h5 class="white" style="color:#fff">Selamat Datang!</h5><br>
+            <p style="color:#fff">{{user.name}}</p>
           </div>
         </div>
         <div class="col-5 align-self-end">

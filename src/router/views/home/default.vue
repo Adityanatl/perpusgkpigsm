@@ -350,7 +350,7 @@ export default {
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="spon-cont">
-                        <p>By <a href="https://paideia.id/" style="color=#00afef">Paideia Educational Solutions</a></p>
+                        <p>By<a href="https://paideia.id/" style="color=#00afef">Paideia Educational Solutions</a></p>
                     </div>
                 </div>
                 <div class="col-lg-9">
