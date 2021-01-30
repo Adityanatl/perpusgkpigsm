@@ -89,6 +89,11 @@ export default {
       this.flag = flag;
       i18n.locale = locale;
     },
+    logout() {
+      console.log('logout')
+      localStorage.removeItem('user');
+      this.$router.push('/sign_in/sign-in')
+    }
   },
 };
 </script>
@@ -564,12 +569,20 @@ export default {
            <template v-slot:button-content>
              <img
               class="rounded-circle header-profile-user"
-              src="@/assets/images/users/avatar-1.jpg"
+              v-if="user.picture !== ''"
+              :src="user.picture"
               alt="Header Avatar"
             />
+             <img
+                     class="rounded-circle header-profile-user"
+                     v-else
+                     src="@/assets/images/users/avatar-1.jpg"
+                     alt="Header Avatar"
+             />
+
              <span class="d-none d-xl-inline-block ml-1">{{ user.name}}</span>
              <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-             <i class="fas fa-sign-out-alt"></i>
+<!--             <i class="fas fa-sign-out-alt"></i>-->
            </template>
 
 <!--          <b-dropdown-item>-->
@@ -592,21 +605,21 @@ export default {
 <!--            {{ $t('navbar.dropdown.henry.list.lockscreen') }}-->
 <!--          </b-dropdown-item>-->
           <b-dropdown-divider></b-dropdown-divider>
-          <a href="#" class="dropdown-item text-danger">
-            <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
-            {{ $t('navbar.dropdown.henry.list.logout') }}
+          <a @click="logout" class="dropdown-item text-danger">
+            <i @click="logout"  class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+            Logout
           </a>
          </b-dropdown>
 
-        <div class="dropdown d-inline-block">
-          <button
-            type="button"
-            class="btn header-item noti-icon right-bar-toggle toggle-right"
-            @click="toggleRightSidebar"
-          >
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
+<!--        <div class="dropdown d-inline-block">-->
+<!--          <button-->
+<!--            type="button"-->
+<!--            class="btn header-item noti-icon right-bar-toggle toggle-right"-->
+<!--            @click="toggleRightSidebar"-->
+<!--          >-->
+<!--            <i class="fas fa-shopping-cart"></i>-->
+<!--          </button>-->
+<!--        </div>-->
       </div>
     </div>
   </header>
