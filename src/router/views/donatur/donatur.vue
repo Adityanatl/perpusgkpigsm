@@ -680,25 +680,25 @@ export default {
 
 
     <!--============= Creativity Section Starts Here =============-->
-    <section class="oh creativity-section padding-bottom bg-max-lg-ash bg_img_testimony top_center" >
+    <!-- <section class="oh creativity-section padding-bottom bg-max-lg-ash bg_img_testimony top_center" >
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6 padding-top">
                     <div class="section-header left-style mb-0">
 
                     </div>
-                </div>
+                </div> -->
 <!--                 <div class="col-lg-6 col-xl-4 d-none d-lg-block">
                     <img src="./assets/images/feature/experience.png" alt="feature">
                 </div> -->
-            </div>
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
     <!--============= Creativity Section Ends Here =============-->
 
 
      <!--============= History Section Starts Here =============-->
-     <section class="history-section padding-top pt-lg-0 padding-bottom-2">
+     <!-- <section class="history-section padding-top pt-lg-0 padding-bottom-2">
          <div class="container">
              <div class="section-header">
 
@@ -707,14 +707,14 @@ export default {
 
              </div>
          </div>
-     </section>
+     </section> -->
      <!--============= History Section Ends Here =============-->
 
      <!--============= Testimonial Section Starts Here =============-->
      <section class="testimonial-section padding-top-6 padding-bottom bg-max-lg-ash bg_img_testimony padding-bottom-2">
         <div class="container">
-            <div class="section-header">
-                <h5 class="cate">Testimonies from the field</h5>
+            <div class="section-header p-3">
+                <h5 class="cate mt-3">Testimonies from the field</h5>
                 <h2 class="title">Continuously creating with
                     innovative technology</h2>
             </div>
