@@ -585,25 +585,25 @@ export default {
                                 </div> -->
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio"  :value="13" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio"  :value="13" v-model="payload.payment_methode_id" name="bni" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/BankBni.png" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="briva" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/Briva.png" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" :value="12" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio" :value="12" v-model="payload.payment_methode_id" name="permatabank" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/permatabank.png" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/mandiri.png" style="margin-top:0px;" alt="">
                                     </div>                          
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" :value="4" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio" :value="4" v-model="payload.payment_methode_id" name="gopay" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/gopay.png" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
