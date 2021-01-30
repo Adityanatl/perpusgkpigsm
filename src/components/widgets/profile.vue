@@ -69,11 +69,11 @@ export default {
 </script>
 <template>
   <div class="card overflow-hidden">
-    <div class="bg-soft-primary">
-      <div class="row">
-        <div class="col-8">
+    <div class="bg-soft-primary" style="background-color: #00AFEF">
+      <div class="row" style="background-color: #00AFEF">
+        <div class="col-8" style="background-color: #00AFEF">
           <div class="text-primary p-4">
-            <h5 class="text-primary">Selamat Datang!</h5><br>
+            <h5 class="text-primary" style="background-color: #00AFEF">Selamat Datang!</h5><br>
             <p>{{user.name}}</p>
           </div>
         </div>
@@ -129,8 +129,8 @@ export default {
 <!--                  <i class="mdi mdi-arrow-right ml-1"></i>-->
 <!--                </a>-->
 <!--              </div>-->
-              <div class="mt-4">
-                <router-link tag="a" to="/products" class="btn btn-primary btn-sm">
+              <div class="mt-4" style="background-color: #00AFEF">
+                <router-link tag="a" to="/products" class="btn btn-primary btn-sm" style="background-color: #00AFEF">
                   Perpanjangan/ Tingkatkan
                   <i class="mdi mdi-arrow-right ml-1"></i>
                 </router-link>
