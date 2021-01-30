@@ -305,7 +305,7 @@ export default {
             <div class="row ">
                 <!-- <div class="col-xl-12"> -->
                     <div class="video-donatur col-xl-6">
-                        <a href="#0" class="features-video-area popup">
+                        <a href="https://www.youtube.com/watch?v=kkpuq3m0Em4" class="features-video-area popup">
                             <div class="thumb rtl pr-xl-15">
                                 <img src='@/assets/images/fature-video.png' alt="feature">
                             </div>
