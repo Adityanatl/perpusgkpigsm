@@ -584,8 +584,10 @@ export default {
                                     </div>
                                 </div> -->
                                 <div class="text-center row mt-3">
-                                    <div class="tengah col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <!-- <div class="radio"> -->
                                         <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
+                                        <!-- </div> -->
                                         <img src="@/assets/images/payment/BCA.png" style="margin-top:30px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
