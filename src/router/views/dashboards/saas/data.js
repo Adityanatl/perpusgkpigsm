@@ -29,13 +29,13 @@ const earningLineChart = {
 };
 
 const salesAnalyticsDonutChart = {
-    series: [56, 38, 26],
+    series: [33.3, 33.3, 33.4],
     chartOptions: {
         chart: {
             type: 'donut',
             height: 240,
         },
-        labels: ['Series A', 'Series B', 'Series C'],
+        labels: ['Sikap', 'Pengetahuan', 'Keterampilan'],
         colors: ['#556ee6', '#34c38f', '#f46a6a'],
         legend: {
             show: false,
