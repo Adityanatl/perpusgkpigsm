@@ -10,6 +10,8 @@ export const mutations = {
         state.currentUser = newValue
         saveState('auth.currentUser', newValue)
         localStorage.setItem('user', JSON.stringify(newValue))
+        localStorage.removeItem('user');
+        localStorage.setItem('user', JSON.stringify(newValue))
     },
     LOADING: (state) => {
         state.loading = true

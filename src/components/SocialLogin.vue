@@ -30,13 +30,30 @@ export default {
           // on success do something
           // console.log('GoogleUser', GoogleUser)
           // console.log('getId', GoogleUser.getId())
-          // console.log('getBasicProfile', GoogleUser.getBasicProfile())
+          console.log('getBasicProfile', GoogleUser.getBasicProfile())
+            let i=0
+            let profileName = ''
+            let profileEmail = ''
+            let profilePicture = ''
+            for (const key in GoogleUser.getBasicProfile()) {
+                let value = GoogleUser.getBasicProfile()[key].toString()
+                if (value.includes("http")){
+                    profilePicture = GoogleUser.getBasicProfile()[key]
+                } else if (value.includes("@")){
+                    profileEmail = GoogleUser.getBasicProfile()[key]
+                } else if (value.includes("0") || value.includes("1") || value.includes("2") || value.includes("3")){
+                    console.log('-')
+                } else {
+                    profileName = GoogleUser.getBasicProfile()[key]
+                }
+
+            }
           // console.log('getAuthResponse', GoogleUser.getAuthResponse())
             let payload = {
-                "email": GoogleUser.Mt.tu,
+                "email": profileEmail,
                 "id": GoogleUser.getId(),
-                "name": GoogleUser.Mt.Ed,
-                "picture":  GoogleUser.Mt.PK,
+                "name": profileName,
+                "picture":  profilePicture,
                 "provider": "google"
             }
 

@@ -27,6 +27,9 @@ export const  mutations = {
   ACCOUNT: (state, payload) => {
     state.account = payload
     state.loading = false
+    localStorage.setItem('user', JSON.stringify(payload))
+    localStorage.removeItem('user');
+    localStorage.setItem('user', JSON.stringify(payload))
   },
   LOGIN: (state, payload) => {
     state.account_session = payload
