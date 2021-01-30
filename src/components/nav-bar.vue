@@ -92,7 +92,7 @@ export default {
     logout() {
       console.log('logout')
       localStorage.removeItem('user');
-      router.push('/sign_in/sign-in')
+      this.$router.push('/sign_in/sign-in')
     }
   },
 };
@@ -569,12 +569,20 @@ export default {
            <template v-slot:button-content>
              <img
               class="rounded-circle header-profile-user"
-              src="@/assets/images/users/avatar-1.jpg"
+              v-if="user.picture !== ''"
+              :src="user.picture"
               alt="Header Avatar"
             />
+             <img
+                     class="rounded-circle header-profile-user"
+                     v-else
+                     src="@/assets/images/users/avatar-1.jpg"
+                     alt="Header Avatar"
+             />
+
              <span class="d-none d-xl-inline-block ml-1">{{ user.name}}</span>
              <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-             <i class="fas fa-sign-out-alt"></i>
+<!--             <i class="fas fa-sign-out-alt"></i>-->
            </template>
 
 <!--          <b-dropdown-item>-->

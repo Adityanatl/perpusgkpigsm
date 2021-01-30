@@ -98,7 +98,6 @@ export default {
         //         this.$route.query.redirectFrom || {name: "default"}
         //     );
         // })
-          console.log('11');
           this.$store.dispatch(
               'account/LOGIN_SSO_GOOGLE'
           )
@@ -132,13 +131,9 @@ export default {
 
       },
       tryToLogInSsoGoogle2() {
-        console.log(1)
           this.submitted = true;
           // stop here if form is invalid
           this.$v.$touch();
-          console.log(2)
-
-              console.log(4)
 
               this.tryingToLogIn = true;
               // Reset the authError if it existed.
