@@ -529,6 +529,9 @@ export default {
                                     <option value="yearly_price">Yearly-based</option>
                                 </select>
                             </div>
+                            <div class="text-center mt-2">
+                                <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p>                                
+                            </div>
                         </div>
                         <div class="amount-area" id="semester">
                             <div class="row">
