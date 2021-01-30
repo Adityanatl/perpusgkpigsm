@@ -611,15 +611,15 @@ export default {
           </a>
          </b-dropdown>
 
-        <div class="dropdown d-inline-block">
-          <button
-            type="button"
-            class="btn header-item noti-icon right-bar-toggle toggle-right"
-            @click="toggleRightSidebar"
-          >
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-        </div>
+<!--        <div class="dropdown d-inline-block">-->
+<!--          <button-->
+<!--            type="button"-->
+<!--            class="btn header-item noti-icon right-bar-toggle toggle-right"-->
+<!--            @click="toggleRightSidebar"-->
+<!--          >-->
+<!--            <i class="fas fa-shopping-cart"></i>-->
+<!--          </button>-->
+<!--        </div>-->
       </div>
     </div>
   </header>
