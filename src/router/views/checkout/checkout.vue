@@ -279,7 +279,7 @@ export default {
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
                                           v-if="itemPaymentMethode.payment_type=='wallet'">
                                         <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                                          <img :src="itemPaymentMethode.image_url" alt="" width="82px" height="26px"></b-form-radio>
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
                                       </div>
                                     </td>
                                   </tr>

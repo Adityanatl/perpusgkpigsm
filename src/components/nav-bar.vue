@@ -89,6 +89,11 @@ export default {
       this.flag = flag;
       i18n.locale = locale;
     },
+    logout() {
+      console.log('logout')
+      localStorage.removeItem('user');
+      router.push('/sign_in/sign-in')
+    }
   },
 };
 </script>
@@ -592,9 +597,9 @@ export default {
 <!--            {{ $t('navbar.dropdown.henry.list.lockscreen') }}-->
 <!--          </b-dropdown-item>-->
           <b-dropdown-divider></b-dropdown-divider>
-          <a href="#" class="dropdown-item text-danger">
-            <i class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
-            {{ $t('navbar.dropdown.henry.list.logout') }}
+          <a @click="logout" class="dropdown-item text-danger">
+            <i @click="logout"  class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i>
+            Logout
           </a>
          </b-dropdown>
 
