@@ -1158,11 +1158,12 @@
    }
 
    .radio {
-    width: 20px;
-    position: relative;
+    width: 100px;
+    position: absolute;
+    margin-top: 50px;
     }
     /* .right{
-        float: left;
+        float: center;
         margin: 10px;
         color: blue;
         font-size: 20px;
