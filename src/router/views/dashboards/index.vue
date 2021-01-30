@@ -195,7 +195,7 @@ export default {
                         <i class="mdi mdi-circle text-primary mr-1"></i>
                         Sikap
                       </p>
-                      <h5>$ 0</h5>
+                      <h5>0</h5>
                     </div>
                   </div>
                   <div class="col-4">
@@ -204,7 +204,7 @@ export default {
                         <i class="mdi mdi-circle text-success mr-1"></i>
                         Pengetahuan
                       </p>
-                      <h5>$ 0</h5>
+                      <h5>0</h5>
                     </div>
                   </div>
                   <div class="col-4">
@@ -213,7 +213,7 @@ export default {
                         <i class="mdi mdi-circle text-danger mr-1"></i>
                         Keterampilan
                       </p>
-                      <h5>$ 0</h5>
+                      <h5>0</h5>
                     </div>
                   </div>
                 </div>
