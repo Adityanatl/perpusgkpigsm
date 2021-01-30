@@ -251,7 +251,7 @@ export default {
                 </div>
 
                 <div class="account-header pb-0">
-                    <span class="d-block mb-30 mt-2">Daftar dengan email yang kamu miliki</span>
+                    <span class="d-block mb-30 mt-2"></span>
                     <SocialLogin />
                     <span class="d-block mt-15">Tidak memiliki akun? <router-link tag="a" to="/sign_up/sign-up" style="color:#0b507d">DAFTAR disini</router-link></span>
                 </div>
