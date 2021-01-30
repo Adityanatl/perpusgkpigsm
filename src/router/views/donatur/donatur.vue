@@ -529,6 +529,9 @@ export default {
                                     <option value="yearly_price">Yearly-based</option>
                                 </select>
                             </div>
+                            <div class="text-center mt-2">
+                                <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p>                                
+                            </div>
                         </div>
                         <div class="amount-area" id="semester">
                             <div class="row">
@@ -628,6 +631,21 @@ export default {
                                         </div>
                                         <i class="mt-2 mb-2">NOTE: For this pioneer effort, any contribution received by <b>Friday, February 5, 2021</b> will be channeled to the pioneer recipients <b>immediately after our Grand Launching event on Saturday, February 6, 2021</b></i>
                                         <!-- <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled <b>only to teachers in 3T regions</b> on the first day of the following month.</i> -->
+                                            <!-- <a class="btn btn-primary btn-select">
+                                                <span class="btn-select-arrow glyphicon glyphicon-chevron-down"></span> 
+                                                <input class="btn-select-input" id="select_league" name="league" type="hidden"> <span class="btn-select-value">All leagues</span> 
+                                                <ul style="display: none;">
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li> 
+                                                </ul> 
+                                            </a> -->
                                     </form>
                                     <div class="right mt-5 mb-5">
                                         <b-button tag="a" @click="postCheckout" class="custom-button mb-3">CONTRIBUTE NOW</b-button>
