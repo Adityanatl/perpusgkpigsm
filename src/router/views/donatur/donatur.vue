@@ -2,6 +2,8 @@
 import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
+import '@/assets/js/intlTelInput-jquery.min.js'
+
 
 global.jQuery = require('jquery');
 var $ = global.jQuery;
@@ -12,6 +14,10 @@ window.$ = $;
  */
 export default {
   components: { Carousel, Slide },
+  script: [{
+        src: "https://code.jquery.com/jquery-latest.min.js"
+    }  
+  ],
   data() {
     return {
       start: "",
@@ -158,7 +164,7 @@ export default {
         },
         prevSlide() {
         this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
-        }
+        },
     },
 
 };
@@ -187,6 +193,25 @@ export default {
         header.addClass("active");
       }
     });
+    // jQuery
+    $("#telephone").intlTelInput({
+    allowDropdown:true,
+    initialCountry:"",
+    utilsScript:""
+    });
+    
+    input.addEventListener("countrychange",function() {
+  // do something with iti.getSelectedCountryData()
+    });
+    
+    input.addEventListener("open:countrydropdown",function() {
+    // triggered when the user opens the dropdown
+    });
+    
+    input.addEventListener("close:countrydropdown",function() {
+    // triggered when the user closes the dropdown
+    });
+
 </script>
 
 <template>
@@ -645,7 +670,7 @@ export default {
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
                                         <form class="pcode-form mt-2">
-                                            <select class="submit custom-select custom-select-lg mb-3">
+                                            <select class="submit custom-select custom-select-lg mb-3" id="telephone">
                                                 <option selected>ID</option>
                                                 <option value="1">ENG</option>
                                                 <option value="2">ID</option>

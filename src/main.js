@@ -20,6 +20,7 @@ import "@/assets/css/main.css"
 import "@/assets/css/nice-select.css"
 // import "@/assets/css/owl.min.css"
 import "@/assets/css/style.css"
+import "@/assets/css/intlTelInput.css"
 
 import store from '@/state/store'
 // import store2 from './store'
