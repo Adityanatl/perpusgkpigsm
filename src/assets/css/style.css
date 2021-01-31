@@ -1231,9 +1231,8 @@
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 10px;
-    color: #292929;
-    padding-left: 30px;
-    background: #d0d9dd;
+    color: #000000;
+    padding-left: 80px;
 }
 
 .pcode-form input::placeholder {
@@ -1258,9 +1257,9 @@
     position: absolute;
     /* right: 0; */
     top: 0;
-    color: #353535;
-    background: d0d9dd;
-    width: 30px;
+    color: #7c7c7c;
+    background: #fffefe;
+    width: 65px;
 }
 
 @media (max-width: 575px) {
