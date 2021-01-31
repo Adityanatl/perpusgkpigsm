@@ -1219,3 +1219,61 @@
       .collapse .navbar-collapse{
           background: #ffffff;
       }
+
+      /*pcode Section Starts Here*/
+.pcode-form {
+    position: relative;
+}
+
+.pcode-form input {
+    height: 60px;
+    border: 1px solid #d5d3d3;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 10px;
+    color: #292929;
+    padding-left: 30px;
+    background: #d0d9dd;
+}
+
+.pcode-form input::placeholder {
+    color: #8f8f8f;
+}
+
+.pcode-form select {
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 35px;
+    /* background: transparent; */
+    /* background: -moz-linear-gradient(-65deg, #00afef 0%, #0b507d 100%);
+    background: -webkit-linear-gradient(-65deg, #00afef 0%, #0b507d 100%); */
+    /* box-shadow: 0px 17px 24px 0px rgba(18, 83, 252, 0.51); */
+    /* border: none;
+    outline: none; */
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 10px;
+    position: absolute;
+    /* right: 0; */
+    top: 0;
+    color: #353535;
+    background: d0d9dd;
+    width: 30px;
+}
+
+@media (max-width: 575px) {
+    .pcode input {
+        height: 50px;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .pcode select {
+        line-height: 50px;
+        font-size: 14px;
+        padding: 0 20px;
+        height: 50px;
+    }
+}
