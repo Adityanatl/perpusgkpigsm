@@ -1220,59 +1220,100 @@
           background: #ffffff;
       }
 
-      /*pcode Section Starts Here*/
-.pcode-form {
-    position: relative;
-}
-
-.pcode-form input {
-    height: 60px;
-    border: 1px solid #d5d3d3;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 10px;
-    color: #000000;
-    padding-left: 80px;
-}
-
-.pcode-form input::placeholder {
-    color: #8f8f8f;
-}
-
-.pcode-form select {
-    font-weight: 600;
-    text-transform: uppercase;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 35px;
-    /* background: transparent; */
-    /* background: -moz-linear-gradient(-65deg, #00afef 0%, #0b507d 100%);
-    background: -webkit-linear-gradient(-65deg, #00afef 0%, #0b507d 100%); */
-    /* box-shadow: 0px 17px 24px 0px rgba(18, 83, 252, 0.51); */
-    /* border: none;
-    outline: none; */
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 10px;
-    position: absolute;
-    /* right: 0; */
-    top: 0;
-    color: #7c7c7c;
-    background: #fffefe;
-    width: 65px;
-}
-
-@media (max-width: 575px) {
-    .pcode input {
-        height: 50px;
-        padding-left: 20px;
-        font-size: 14px;
+    /*pcode Section Starts Here*/
+    .pcode-form {
+        position: relative;
     }
 
-    .pcode select {
+    .pcode{
+        height: 60px;
+        border: 1px solid #d5d3d3;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 10px;
+        color: #292929;
+        padding-left: 25px;
+        width: 50%;
+        margin-left: 13px;
+        width: 470px !important;
+        background: #f8f8fb;
+    }
+
+    .pcode-form input::placeholder {
+        color: #8f8f8f;
+    }
+
+    .donatur-form select {
+        font-weight: 600;
+        text-transform: uppercase;
+        height: 49px;
         line-height: 50px;
-        font-size: 14px;
-        padding: 0 20px;
-        height: 50px;
+        padding: 0 10px 10px 10px;   
+        /* background: transparent; */
+        /* background: -moz-linear-gradient(-65deg, #00afef 0%, #0b507d 100%);
+        background: -webkit-linear-gradient(-65deg, #00afef 0%, #0b507d 100%); */
+        /* box-shadow: 0px 17px 24px 0px rgba(18, 83, 252, 0.51); */
+        /* border: none;
+        outline: none; */
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 10px;
+        /* position: absolute; */
+        /* right: 0; */
+        font-size: 15px;
+        top: 0;
+        color: #8a8989;
+        background: #f8f8fb;
+        width: 65px;
     }
-}
+
+    @media (max-width: 575px) {
+        .pcode{
+            width: 150px;
+        }
+
+        .pcode input {
+            height: 50px;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+
+        .pcode select {
+            line-height: 50px;
+            font-size: 14px;
+            padding: 0 20px;
+            height: 50px;
+        }
+    }
+
+    .vue-recycle-scroller__item-view{
+        height: 30px;
+        padding: 30px;
+    }
+
+    /* .input-tel__input {
+        
+    } */
+
+    .vue-phone-number-input {
+        position: relative;
+        display: inline-block;
+        width: 60%;
+        margin: 10px;
+    }
+    
+    .vue-phone-number-input input {
+        height: 60px;
+        border: 1px solid #d5d3d3;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 10px;
+        color: #292929;
+        padding-left: 30px;
+        width: 50px;
+        background: #f8f8fb;
+    }
+    
+    .vue-phone-number-input input::placeholder {
+        color: #bac6d3;
+    }
