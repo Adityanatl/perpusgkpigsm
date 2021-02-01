@@ -1287,8 +1287,8 @@
     }
 
     .vue-recycle-scroller__item-view{
-        height: 30px;
-        padding: 30px;
+        height: 15px;
+        padding: 15px;
     }
 
     /* .input-tel__input {
@@ -1298,7 +1298,7 @@
     .vue-phone-number-input {
         position: relative;
         display: inline-block;
-        width: 60%;
+        width: 59%;
         margin: 10px;
     }
     
