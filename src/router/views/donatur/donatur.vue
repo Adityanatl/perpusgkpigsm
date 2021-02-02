@@ -561,7 +561,7 @@ export default {
                             <div class="text-center mt-2">
                                 <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p><br><br>
                                 <p class="mt-2 mb-2" style="font-size:18px;">Mohon maaf atas ketidaknyaman ini. <b>Mitra provider pembayaran</b> kami sedang mengalami kendala teknis.</p>
-                                <p class="mt-2 mb-2" style="font-size:18px;"><b>Untuk sementara waktu</b>, mohon dapat menyalurkan dana secara langsung ke akun BCA a/n PT Cahaya Mitra Harapan <b>7613838777</b> dengan <b>isi berita "Guru 3T"</b>.</p><br>
+                                <p class="mt-2 mb-2" style="font-size:18px;">Untuk sementara waktu, mohon dapat menyalurkan dana secara langsung ke akun BCA a/n <b>PT Cahaya Mitra Harapan 7613838777</b> dengan isi berita <b>"Guru 3T"</b>.</p><br>
                                 <p><i>To our overseas supporters, our apology for this inconvenience. Once our payment partner resolves the technical issues on their end, our Credit Card payment methods will be available. Your kind understanding and continuous support are much appreciated!</i></p>
                             </div>
                         </div>
