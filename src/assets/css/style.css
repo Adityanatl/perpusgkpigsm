@@ -1296,23 +1296,37 @@
     } */
 
     .vue-phone-number-input {
+        height: 40px;
+        /* border: 1px solid #d5d3d3; */
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 10px;
+        color: #292929;
+        /* padding-left: 30px; */
+        width: 550px;
+        background: #f8f8fb;
         position: relative;
         display: inline-block;
-        width: 550px;
-        margin: 10px;
+        width: 100%;
+        margin-left: 195px;
     }
-    
-    .vue-phone-number-input input {
-        height: 80px;
+
+    .vue-phone-number-input {
+        margin-top: 9px;
+        width: 59%
+    }
+
+    /* .vue-phone-number-input {
+        height: 40px;
         border: 1px solid #d5d3d3;
         -webkit-border-radius: 30px;
         -moz-border-radius: 30px;
         border-radius: 10px;
         color: #292929;
         padding-left: 30px;
-        width: 50px;
-        background: #6b6b6d;
-    }
+        width: 550px;
+        background: #f8f8fb;
+    } */
     
     .vue-phone-number-input input::placeholder {
         color: #bac6d3;

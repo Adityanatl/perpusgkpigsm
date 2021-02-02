@@ -3,8 +3,8 @@ import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
 // import '@/assets/js/intlTelInput-jquery.min.js'
-// import VuePhoneNumberInput from 'vue-phone-number-input';
-// import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+import VuePhoneNumberInput from 'vue-phone-number-input';
+import 'vue-phone-number-input/dist/vue-phone-number-input.css';
 
 
 global.jQuery = require('jquery');
@@ -15,7 +15,7 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide, },
+  components: { Carousel, Slide, VuePhoneNumberInput },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }  
@@ -673,10 +673,7 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
-                                        <div>
-                                            <input class="mt-2 mb-2" type="text" placeholder="Mobile Phone" v-model="payload.hp">
-                                            <!-- <VuePhoneNumberInput v-model="yourValue" /> -->
-                                        </div>  
+                                            <VuePhoneNumberInput v-model="yourValue" />
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
                                             <select class="custom-select custom-select-lg" id="telephone">
