@@ -3,8 +3,8 @@ import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
 // import '@/assets/js/intlTelInput-jquery.min.js'
-import VuePhoneNumberInput from 'vue-phone-number-input';
-import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+// import VuePhoneNumberInput from 'vue-phone-number-input';
+// import 'vue-phone-number-input/dist/vue-phone-number-input.css';
 
 
 global.jQuery = require('jquery');
@@ -15,7 +15,7 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide, VuePhoneNumberInput },
+  components: { Carousel, Slide },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }  
