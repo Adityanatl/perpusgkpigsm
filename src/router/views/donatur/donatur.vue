@@ -2,6 +2,10 @@
 import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
+// import '@/assets/js/intlTelInput-jquery.min.js'
+import VuePhoneNumberInput from 'vue-phone-number-input';
+import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+
 
 global.jQuery = require('jquery');
 var $ = global.jQuery;
@@ -11,7 +15,11 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide },
+  components: { Carousel, Slide, VuePhoneNumberInput },
+//   script: [{
+//         src: "https://code.jquery.com/jquery-latest.min.js"
+//     }  
+//   ],
   data() {
     return {
       start: "",
@@ -110,7 +118,7 @@ export default {
                 Vue.swal({
                     position: "top-end",
                     icon: "warning",
-                    title: 'Failed to procces',
+                    title: 'Failed to process',
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -158,7 +166,7 @@ export default {
         },
         prevSlide() {
         this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
-        }
+        },
     },
 
 };
@@ -187,7 +195,28 @@ export default {
         header.addClass("active");
       }
     });
+    // jQuery
+//     $("#telephone").intlTelInput({
+//     allowDropdown:true,
+//     initialCountry:"",
+//     utilsScript:""
+//     });
+    
+//     input.addEventListener("countrychange",function() {
+//   // do something with iti.getSelectedCountryData()
+//     });
+    
+//     input.addEventListener("open:countrydropdown",function() {
+//     // triggered when the user opens the dropdown
+//     });
+    
+//     input.addEventListener("close:countrydropdown",function() {
+//     // triggered when the user closes the dropdown
+//     });
+
 </script>
+
+
 
 <template>
     <div>
@@ -541,14 +570,14 @@ export default {
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
-                                            <td><img class="mt-3 mr-1" :src="itemProduct.image_url" alt="" width="65px" height="65px" style="float:left"></td>
+                                            <td><img class="" :src="itemProduct.image_url" alt="" width="65px" height="65px" style="float:left"></td>
 
-                                            <td>
-                                                <h2 class="title"><sup>IDR</sup>
+                                            <!-- <td> -->
+                                                <h2 class="title mt-3"><sup>IDR</sup>
                                                     {{ (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price) < 1000000 ?
                                                     (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000+' k': (selectedPrice=='semester_price'? itemProduct.semester_price: itemProduct.yearly_price)/1000000 + ' mio' }}
                                                 </h2>
-                                            </td>
+                                            <!-- </td> -->
                                         </tr>
                                         </tbody>
                                         <span class="info"><p style="font-size:23px; margin-top:2px; margin-left:40px;">{{itemProduct.product_name}} &xrarr; {{itemProduct.description}}</p></span>
@@ -644,9 +673,22 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
-                                        <div class="mt-2 mb-3">
-                                            <input type="text" placeholder="Mobile Phone" v-model="payload.hp">
-                                        </div>
+                                        <div>
+                                            <input class="mt-2 mb-2" type="text" placeholder="Mobile Phone" v-model="payload.hp">
+                                            <!-- <VuePhoneNumberInput v-model="yourValue" /> -->
+                                        </div>  
+                                        <!-- <div class="mt-2">
+                                            <VuePhoneNumberInput v-model="yourValue" />
+                                            <select class="custom-select custom-select-lg" id="telephone">
+                                                <option selected>ID</option>
+                                                <option value="1">ENG</option>
+                                                <option value="2">ID</option>
+                                                <option value="3">ENG</option>
+                                            </select>
+                                            <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
+                                        </div> -->
+                                            
+                                        <!-- </form> -->
                                         <i class="mt-2 mb-2">NOTE: For this pioneer effort, any contribution received by <b>Friday, February 5, 2021</b> will be channeled to the pioneer recipients <b>immediately after our Grand Launching event on Saturday, February 6, 2021</b></i>
                                         <!-- <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled <b>only to teachers in 3T regions</b> on the first day of the following month.</i> -->
                                             <!-- <a class="btn btn-primary btn-select">

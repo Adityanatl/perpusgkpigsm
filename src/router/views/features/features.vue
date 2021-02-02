@@ -216,14 +216,14 @@ export default {
                 </li>
             </ul> -->
 
-            <!-- <div id="app">
-                <ul class="nav nav-tabs feature-tab-menu">
-                    <li><a href="#" @click="currentView='kreasiku'"> Kreasiku </a></li>
-                    <li><a href="#" @click="currentView='kelasku'"> Kelasku </a></li>
-                    <li><a href="#" @click="currentView='relungku'"> Relungku </a></li>
-                </ul>
-                <component :is="currentView" keep-alive></component>
-            </div> -->
+                <!-- <div id="app">
+                    <ul class="nav nav-tabs feature-tab-menu">
+                        <li><a href="#" @click="currentView='kreasiku'"> Kreasiku </a></li>
+                        <li><a href="#" @click="currentView='kelasku'"> Kelasku </a></li>
+                        <li><a href="#" @click="currentView='relungku'"> Relungku </a></li>
+                    </ul>
+                    <component :is="currentView" keep-alive></component>
+                </div> -->
             
             <!-- <div class="tab-content"> -->
             <b-tabs pills align="center">
