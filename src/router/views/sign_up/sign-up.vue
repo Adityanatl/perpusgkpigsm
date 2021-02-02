@@ -1,5 +1,7 @@
 <script>
 import appConfig from "@/app.config";
+import SocialSignup from '@/components/SocialSignup'
+import Layout from "../../layouts/auth";
 
 /**
  * Dashboard Component
@@ -9,6 +11,7 @@ export default {
     title: "Dashboard",
     meta: [{ name: "description", content: appConfig.description }]
   },
+    components: { SocialSignup},
   data() {
     return {
       title: "Dashboard",
@@ -29,9 +32,11 @@ export default {
                 </router-link>
             </div>
             <div class="account-wrapper">
+
                 <div class="account-header">
                     <h4 class="title">Yuk, jadi Guru Kreator!</h4>
-                    <a href="#0" class="sign-in-with"><img src='@/assets/images/google.png' alt="icon"><span>Daftar dengan Google</span></a>
+                    <SocialSignup />
+<!--                    <a href="#0" class="sign-in-with"><img src='@/assets/images/google.png' alt="icon"><span>Daftar dengan Google</span></a>-->
                 </div>
                 <div class="or">
                     <span style="color:#0b507d">Atau</span>
