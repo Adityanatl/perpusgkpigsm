@@ -6870,7 +6870,7 @@ input[type="submit"] {
     -webkit-border-radius: 22px;
     -moz-border-radius: 22px;
     border-radius: 22px;
-    align-items: center;    
+    padding-left: 15px;
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
@@ -11847,7 +11847,6 @@ div[class*="col"]:nth-of-type(3n + 2) .pricing-item-4 .pricing-header::before {
     height: 100%;
     top: 0;
     background: #d8daf3;
-    margin-left: 20px;
 }
 
 .counter-area-5::after {

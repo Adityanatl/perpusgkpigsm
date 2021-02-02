@@ -676,6 +676,9 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
+                                        <div class="mt-2">
+                                            <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
+                                        </div>
                                             <!-- <VuePhoneNumberInput v-model="yourValue" /> -->
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
