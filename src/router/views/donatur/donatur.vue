@@ -3,8 +3,8 @@ import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
 // import '@/assets/js/intlTelInput-jquery.min.js'
-// import VuePhoneNumberInput from 'vue-phone-number-input';
-// import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+import VuePhoneNumberInput from 'vue-phone-number-input';
+import 'vue-phone-number-input/dist/vue-phone-number-input.css';
 
 
 global.jQuery = require('jquery');
@@ -15,7 +15,7 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide, },
+  components: { Carousel, Slide, VuePhoneNumberInput },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }  
@@ -559,7 +559,10 @@ export default {
                                 </select>
                             </div>
                             <div class="text-center mt-2">
-                                <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p>
+                                <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p><br><br>
+                                <p class="mt-2 mb-2" style="font-size:18px;">Mohon maaf atas ketidaknyaman ini. <b>Mitra provider pembayaran</b> kami sedang mengalami kendala teknis.</p>
+                                <p class="mt-2 mb-2" style="font-size:18px;"><b>Untuk sementara waktu</b>, mohon dapat menyalurkan dana secara langsung ke akun BCA a/n PT Cahaya Mitra Harapan 7613838777 dengan isi berita "Guru 3T".</p><br>
+                                <p><i>To our overseas supporters, our apology for this inconvenience. Once our payment partner resolves the technical issues on their end, our Credit Card payment methods will be available. Your kind understanding and continuous support are much appreciated!</i></p>
                             </div>
                         </div>
                         <div class="amount-area" id="semester">
@@ -614,25 +617,25 @@ export default {
                                 </div> -->
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio"  :value="13" v-model="payload.payment_methode_id" name="bni" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio"  :value="13" v-model="payload.payment_methode_id" name="bni" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/BankBni.png" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="briva" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="briva" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/Briva.png" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" :value="12" v-model="payload.payment_methode_id" name="permatabank" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio" :value="12" v-model="payload.payment_methode_id" name="permatabank" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/permatabank.png" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/mandiri.png" style="margin-top:0px;" alt="">
                                     </div>                          
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                        <input  type="radio" :value="4" v-model="payload.payment_methode_id" name="gopay" style="width:25px; height:25px; margin-right:10px;" >
+                                        <input  type="radio" :value="4" v-model="payload.payment_methode_id" name="gopay" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/gopay.png" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
@@ -673,10 +676,7 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
-                                        <div>
-                                            <input class="mt-2 mb-2" type="text" placeholder="Mobile Phone" v-model="payload.hp">
                                             <!-- <VuePhoneNumberInput v-model="yourValue" /> -->
-                                        </div>  
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
                                             <select class="custom-select custom-select-lg" id="telephone">
