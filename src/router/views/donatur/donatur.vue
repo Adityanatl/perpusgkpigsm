@@ -118,7 +118,7 @@ export default {
                 Vue.swal({
                     position: "top-end",
                     icon: "warning",
-                    title: 'Failed to procces',
+                    title: 'Failed to process',
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -674,7 +674,8 @@ export default {
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
                                         <div>
-                                            <VuePhoneNumberInput v-model="yourValue" />
+                                            <input class="mt-2 mb-2" type="text" placeholder="Mobile Phone" v-model="payload.hp">
+                                            <!-- <VuePhoneNumberInput v-model="yourValue" /> -->
                                         </div>  
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />

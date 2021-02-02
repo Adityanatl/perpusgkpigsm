@@ -109,7 +109,7 @@ export default {
         Vue.swal({
           position: "top-end",
           icon: "warning",
-          title: 'Failed to procces',
+          title: 'Failed to process',
           showConfirmButton: false,
           timer: 1500
         });
