@@ -16,26 +16,14 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { 
-      Carousel, 
-      Slide, 
-    //   MazPhoneNumberInput,
-    //   libraryName: 'maz-ui',
-    //   styleLibraryName: 'css', 
-      VuePhoneNumberInput    },
+  components: { Carousel, Slide, VuePhoneNumberInput },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }  
 //   ],
   data() {
     return {
-    //   phoneNumberExample: null,
-    //   initPhoneNumberExample: '0656565656',
-    //   resultsExample: null,
       phoneNumber: null,
-    //   phoneNumberExample: null,
-    //   initPhoneNumberExample: '0656565656',
-    //   resultsExample: null,
       start: "",
       end: "",
       interval: "",
@@ -573,7 +561,10 @@ export default {
                                 </select>
                             </div>
                             <div class="text-center mt-2">
-                                <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p>
+                                <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p><br><br>
+                                <p class="mt-2 mb-2" style="font-size:18px;">Mohon maaf atas ketidaknyaman ini. <b>Mitra provider pembayaran</b> kami sedang mengalami kendala teknis.</p>
+                                <p class="mt-2 mb-2" style="font-size:18px;">Untuk sementara waktu, mohon dapat menyalurkan dana secara langsung ke akun BCA a/n <b>PT Cahaya Mitra Harapan 7613838777</b> dengan isi berita <b>"Guru 3T"</b>.</p><br>
+                                <p><i>To our overseas supporters, our apology for this inconvenience. Once our payment partner resolves the technical issues on their end, our Credit Card payment methods will be available. Your kind understanding and continuous support are much appreciated!</i></p>
                             </div>
                         </div>
                         <div class="amount-area" id="semester">
@@ -597,6 +588,7 @@ export default {
                                         <span class="info"><p style="font-size:23px; margin-top:2px; margin-left:40px;">{{itemProduct.product_name}} &xrarr; {{itemProduct.description}}</p></span>
                                         <span class="info"><p style="font-size:18px; margin-top:10px; margin-left:40px;">{{itemProduct.narasi}}</p></span>
                                     </div>
+
 
                                 </div>
                                     <div class="mt-5">
@@ -691,20 +683,10 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
-                                        <div class="mt-2">
+                                        <!-- <div class="mt-2">
                                             <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
-                                        </div>
-                                            <VuePhoneNumberInput v-model="phoneNumber" @click="event=input" />
-                                            <!-- <MazPhoneNumberInput
-                                                v-model="phoneNumberExample"
-                                                show-code-on-list
-                                                default-country-code="FR"
-                                                :default-phone-number="initPhoneNumberExample"
-                                                no-flags
-                                                :preferred-countries="['FR', 'BE', 'DE']"
-                                                size="lg"
-                                                @update="resultsExample = $event"
-                                            /> -->
+                                        </div> -->
+                                            <VuePhoneNumberInput v-model="phoneNumber" />
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
                                             <select class="custom-select custom-select-lg" id="telephone">
