@@ -5,7 +5,6 @@ import '@/assets/js/magnific-popup.min.js';
 // import '@/assets/js/intlTelInput-jquery.min.js'
 import VuePhoneNumberInput from 'vue-phone-number-input';
 import 'vue-phone-number-input/dist/vue-phone-number-input.css';
-// import { MazPhoneNumberInput } from 'maz-ui';
 
 
 global.jQuery = require('jquery');
@@ -16,14 +15,13 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide, VuePhoneNumberInput },
+  components: { Carousel, Slide },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }  
 //   ],
   data() {
     return {
-      phoneNumber: null,
       start: "",
       end: "",
       interval: "",
@@ -562,9 +560,6 @@ export default {
                             </div>
                             <div class="text-center mt-2">
                                 <p class="mt-2 mb-2" style="font-size:15px;">The animal icons are only for illustration purpose; NOT to refer to the recipients' location.</p><br><br>
-                                <p class="mt-2 mb-2" style="font-size:18px;">Mohon maaf atas ketidaknyaman ini. <b>Mitra provider pembayaran</b> kami sedang mengalami kendala teknis.</p>
-                                <p class="mt-2 mb-2" style="font-size:18px;">Untuk sementara waktu, mohon dapat menyalurkan dana secara langsung ke akun BCA a/n <b>PT Cahaya Mitra Harapan 7613838777</b> dengan isi berita <b>"Guru 3T"</b>.</p><br>
-                                <p><i>To our overseas supporters, our apology for this inconvenience. Once our payment partner resolves the technical issues on their end, our Credit Card payment methods will be available. Your kind understanding and continuous support are much appreciated!</i></p>
                             </div>
                         </div>
                         <div class="amount-area" id="semester">
@@ -683,10 +678,10 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
-                                        <!-- <div class="mt-2">
+                                        <div class="mt-2">
                                             <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
-                                        </div> -->
-                                            <VuePhoneNumberInput v-model="phoneNumber" />
+                                        </div>
+                                            <VuePhoneNumberInput v-model="yourValue" />
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
                                             <select class="custom-select custom-select-lg" id="telephone">
