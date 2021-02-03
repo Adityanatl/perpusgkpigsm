@@ -681,7 +681,7 @@ export default {
                                         <div class="mt-2">
                                             <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
                                         </div>
-                                            <VuePhoneNumberInput v-model="yourValue" />
+                                            <VuePhoneNumberInput v-model="yourValue" @update="results = $event" />
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
                                             <select class="custom-select custom-select-lg" id="telephone">
