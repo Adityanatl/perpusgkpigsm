@@ -15,7 +15,7 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide },
+  components: { Carousel, Slide, VuePhoneNumberInput },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }  
