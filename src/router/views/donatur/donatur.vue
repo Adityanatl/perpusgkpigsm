@@ -679,9 +679,9 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
-                                        <div class="mt-2">
+                                        <!-- <div class="mt-2">
                                             <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
-                                        </div>
+                                        </div> -->
                                             <VuePhoneNumberInput v-model="numberPhone" @update="results = $event" />
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
