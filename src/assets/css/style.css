@@ -1284,16 +1284,11 @@
 
 .donatur-form .vue-phone-number-input {
     height: 40px;
-    /* border: 1px solid #d5d3d3; */
     border-radius: 10px;
     color: #292929;
-    /* padding-left: 30px; */
     width: 570px;
-    position: relative;
-    display: inline-block;
     margin-top: 9px;
     flex: 1;
-    /* margin-left: 195px; */
 }
 
 .donatur-form .flex {
@@ -1307,17 +1302,14 @@
 
 .donatur-form .country-selector {
     height: 40px;
-    /* border: 1px solid #d5d3d3; */
     border-radius: 10px;
     color: #292929;
-    /* padding-left: 30px; */
     background: #f8f8fb;
     position: relative;
     display: inline-block;
     width: 90px;
     margin-right: 0px;
     flex: 1;
-    /* margin-left: 195px; */
 }
 
 .input-tel__input {
@@ -1329,13 +1321,12 @@
 @media (max-width: 575px) {
     .donatur-form .vue-phone-number-input {
         height: 50px;
-        margin-left: 0px;
         font-size: 14px;
-        width: 330px;
+        width: 220px;
     }
 
     .donatur-form .flex {
-        margin: 0px 0px 0px 10px !important;
+        margin: 0px 0px 0px 0px !important;
         padding: 0px 0px 0px 0px !important;
     }
 
@@ -1352,12 +1343,17 @@
 }
 
 @media (max-width: 766px){
-    /* .donatur-form .vue-phone-number-input {
+    .donatur-form .vue-phone-number-input {
         height: 50px;
         padding-left: 20px;
         font-size: 14px;
-        width: 333px;
-    } */
+        width: 215px;
+    }
+
+    .donatur-form .flex {
+        margin: 0px 0px 0px 5px !important;
+        padding: 0px 0px 0px 0px !important;
+    }
 
     .donatur-form .country-selector {
         width: 65px;
@@ -1365,11 +1361,11 @@
 }
 
 @media (min-width: 992px) {
-        .donatur-form input {
+        /* .donatur-form input {
         height: 50px;
         padding-left: 20px;
         font-size: 14px;
-    }
+    } */
 
     .subscribe-thumb {
         margin-top: -80px;
