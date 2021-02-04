@@ -32,9 +32,7 @@ export default {
     Stat,
     Transaction,
     Earning,
-    Emailsent,
-    GChart,
-    VueGoogleCharts
+    Emailsent
   },
   data() {
     return {
