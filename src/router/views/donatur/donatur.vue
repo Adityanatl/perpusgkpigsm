@@ -3,8 +3,8 @@ import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
 // import '@/assets/js/intlTelInput-jquery.min.js'
-// import VuePhoneNumberInput from 'vue-phone-number-input';
-// import 'vue-phone-number-input/dist/vue-phone-number-input.css';
+import VuePhoneNumberInput from 'vue-phone-number-input';
+import 'vue-phone-number-input/dist/vue-phone-number-input.css';
 
 
 global.jQuery = require('jquery');
@@ -15,7 +15,7 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide },
+  components: { Carousel, Slide, VuePhoneNumberInput },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }  
@@ -666,7 +666,7 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="pricing-range-top pb-3 pt-0">ss
+                    <div class="pricing-range-top pb-3 pt-0">
                         <div class="amount-area">
                             <div class="row text-center mt-3">
                                 <div class="col-sm-12">
@@ -678,10 +678,13 @@ export default {
                                         <div class="mt-2">
                                             <input type="text" placeholder="Email" v-model="payload.email">
                                         </div>
-                                        <div class="mt-2">
+                                        <!-- <div class="mt-2">
                                             <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
+                                        </div> -->
+                                        <div class="mt-2">
+                                            <VuePhoneNumberInput v-model="payload.hp" @update="results = $event" />
                                         </div>
-                                            <!-- <VuePhoneNumberInput v-model="payload.hp" @update="results = $event" /> -->
+                                            
                                         <!-- <div class="mt-2">
                                             <VuePhoneNumberInput v-model="yourValue" />
                                             <select class="custom-select custom-select-lg" id="telephone">
