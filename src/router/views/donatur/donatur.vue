@@ -666,7 +666,7 @@ export default {
                             </div>
                         </div>
                     </div>
-                    <div class="pricing-range-top pb-3 pt-0">ss
+                    <div class="pricing-range-top pb-3 pt-0">
                         <div class="amount-area">
                             <div class="row text-center mt-3">
                                 <div class="col-sm-12">
