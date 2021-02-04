@@ -90,7 +90,7 @@ export default {
             Vue.swal({
                 position: "top-end",
                 icon: "success",
-                title: "Your transaction has been procced",
+                title: "Your transaction has been proceed",
                 showConfirmButton: false,
                 timer: 1500
             });
