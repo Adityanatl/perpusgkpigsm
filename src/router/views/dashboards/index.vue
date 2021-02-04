@@ -12,8 +12,8 @@ import Earning from "@/components/widgets/earning";
 import Stat from "@/components/widgets/stat";
 import Transaction from "@/components/widgets/transaction";
 import Emailsent from "@/components/widgets/emailsent";
-import VueGoogleCharts from 'vue-google-charts';
-import { GChart } from 'vue-google-charts';
+// import VueGoogleCharts from 'vue-google-charts';
+// import { GChart } from 'vue-google-charts';
 
 import { earningLineChart, salesAnalyticsDonutChart, ChatData } from "./saas/data";
 
@@ -42,13 +42,6 @@ export default {
       earningLineChart: earningLineChart,
       salesAnalyticsDonutChart: salesAnalyticsDonutChart,
       ChatData: ChatData,
-      chartData: [
-        ['Year', 'Sales', 'Expenses', 'Profit'],
-        ['2014', 1000, 400, 200],
-        ['2015', 1170, 460, 250],
-        ['2016', 660, 1120, 300],
-        ['2017', 1030, 540, 350]
-      ],
       items: [
         {
           text: "Dashboards",
@@ -172,11 +165,6 @@ export default {
 
     <div class="row">
       <div class="col-xl-4">
-        <GChart
-        type="ColumnChart"
-        :data="chartData"
-        :options="chartOptions"
-        /><br>
         <Profile />
         <!-- <Earning /> -->
       </div>
