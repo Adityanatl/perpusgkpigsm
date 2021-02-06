@@ -18,7 +18,7 @@ export default {
   components: { Carousel, Slide, VuePhoneNumberInput },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
-//     }  
+//     }
 //   ],
   data() {
     return {
@@ -43,7 +43,8 @@ export default {
             "transaction_id":null,
             "name":"",
             "email":"",
-            "hp":""
+            "hp":"",
+            "country":"ID"
         }
     };
   },
@@ -167,6 +168,9 @@ export default {
         prevSlide() {
         this.$refs.carousel.goToPage(this.$refs.carousel.getPreviousPage());
         },
+        countryChanged(country) {
+            this.payload.country = country.iso2
+        },
     },
 
 };
@@ -201,15 +205,15 @@ export default {
 //     initialCountry:"",
 //     utilsScript:""
 //     });
-    
+
 //     input.addEventListener("countrychange",function() {
 //   // do something with iti.getSelectedCountryData()
 //     });
-    
+
 //     input.addEventListener("open:countrydropdown",function() {
 //     // triggered when the user opens the dropdown
 //     });
-    
+
 //     input.addEventListener("close:countrydropdown",function() {
 //     // triggered when the user closes the dropdown
 //     });
@@ -635,7 +639,7 @@ export default {
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/mandiri.png" style="margin-top:0px;" alt="">
-                                    </div>                          
+                                    </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="4" v-model="payload.payment_methode_id" name="gopay" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/gopay.png" style="margin-top:0px;" alt="">
@@ -671,50 +675,26 @@ export default {
                             <div class="row text-center mt-3">
                                 <div class="col-sm-12">
                                     <span class="cate"><b>Personal Information</b></span>
-                                    <form class="donatur-form">
+                                    <form class="donatur-form" >
                                         <div class="mt-3">
-                                            <input type="text" placeholder="Full Name" v-model="payload.name">
+                                            <input type="text" placeholder="Full Name" v-model="payload.name" style="width: 60%">
                                         </div>
                                         <div class="mt-2">
-                                            <input type="text" placeholder="Email" v-model="payload.email">
+                                            <input type="text" placeholder="Email" v-model="payload.email" style="width: 60%">
                                         </div>
-                                        <!-- <div class="mt-2">
-                                            <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
-                                        </div> -->
-                                        <div class="mt-2">
-                                            <VuePhoneNumberInput v-model="payload.hp" @update="results = $event" />
+                                        <div class="mt-2 " style="display: flex; justify-content: center;">
+                                        <vue-tel-input
+                                                defaultCountry="ID"
+                                                v-model="payload.hp"
+                                                style="width: 60%"
+                                                v-on:country-changed="countryChanged"
+                                        >
+
+                                        </vue-tel-input>
                                         </div>
-                                            
-                                        <!-- <div class="mt-2">
-                                            <VuePhoneNumberInput v-model="yourValue" />
-                                            <select class="custom-select custom-select-lg" id="telephone">
-                                                <option selected>ID</option>
-                                                <option value="1">ENG</option>
-                                                <option value="2">ID</option>
-                                                <option value="3">ENG</option>
-                                            </select>
-                                            <input class="pcode" type="text" placeholder="Mobile Phone" v-model="payload.hp">
-                                        </div> -->
-                                            
-                                        <!-- </form> -->
-                                        <i class="mt-2 mb-2">NOTE: For this pioneer effort, any contribution received by <b>Friday, February 5, 2021</b> will be channeled to the pioneer recipients <b>immediately after our Grand Launching event on Saturday, February 6, 2021</b></i>
-                                        <!-- <i class="mt-2 mb-2">*NOTE: Your contribution will be channelled <b>only to teachers in 3T regions</b> on the first day of the following month.</i> -->
-                                            <!-- <a class="btn btn-primary btn-select">
-                                                <span class="btn-select-arrow glyphicon glyphicon-chevron-down"></span>
-                                                <input class="btn-select-input" id="select_league" name="league" type="hidden"> <span class="btn-select-value">All leagues</span>
-                                                <ul style="display: none;">
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                    <li class=""><span class="flag-icon flag-icon-br"></span>Brazil</li>
-                                                </ul>
-                                            </a> -->
                                     </form>
+                                    <i class="mt-2 mb-2">NOTE: For this pioneer effort, any contribution received by <b>Friday, February 5, 2021</b> will be channeled to the pioneer recipients <b>immediately after our Grand Launching event on Saturday, February 6, 2021</b></i>
+
                                     <div class="right mt-5 mb-5">
                                         <b-button tag="a" @click="postCheckout" class="custom-button mb-3">CONTRIBUTE NOW</b-button>
                                     </div>
