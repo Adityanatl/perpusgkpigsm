@@ -9,6 +9,8 @@ import vco from "v-click-outside"
 import router from './router/index'
 import Scrollspy from 'vue2-scrollspy';
 import VueSweetalert2 from 'vue-sweetalert2';
+import VueTelInput from 'vue-tel-input'
+import 'vue-tel-input/dist/vue-tel-input.css'
 
 import "@/design/index.scss"
 // import "@/assets/css/all.min.css"
@@ -85,6 +87,7 @@ Vue.use(VueMask)
 Vue.use(require('vue-chartist'))
 Vue.use(VueSweetalert2);
 Vue.use(VueGoodTablePlugin)
+Vue.use(VueTelInput)
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyAbvyBxmMbFhrzP9Z8moyYr6dCr-pzjhBE',
