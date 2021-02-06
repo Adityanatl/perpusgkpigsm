@@ -1277,23 +1277,35 @@
     }
 }
 
+
+
+
 .vue-recycle-scroller__item-view{
     height: 15px;
     padding: 15px;
 }
 
-.donatur-form .vue-phone-number-input {
+/* .donatur-form .vue-phone-number-input {
     height: 40px;
     border-radius: 10px;
     color: #292929;
-    width: 570px;
+    width: 460px;
     margin-top: 9px;
     flex: 1;
+} */
+
+.vue-phone-number-input .select-country-container [data-v-19c9a1c7]  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 120px;
+    flex: 0 0 100px !important;
+    width: 10px;
+    min-width: 60px;
+    max-width: 10px;
 }
 
 .donatur-form .flex {
-    margin: 9px 0px 0px 0px;
-    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .donatur-form .select-country-container {
@@ -1302,28 +1314,65 @@
 
 .donatur-form .country-selector {
     height: 40px;
+    background: #F8F8FB !important;
     border-radius: 10px;
     color: #292929;
     background: #f8f8fb;
     position: relative;
-    display: inline-block;
-    width: 90px;
+    /* display: inline-block; */
+    width: 60px;
     margin-right: 0px;
     flex: 1;
 }
 
 .input-tel__input {
+    cursor: pointer;
     background: #F8F8FB !important;
-    border: 1px solid #ccc;
     color: #292929;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    position: relative;
+    width: 430px !important;
+    padding: 0 12px;
+    font-weight: 400;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    z-index: 0;
+    margin-left: -1px;
+    height: 40px;
+    min-height: 40px;
 }
 
-@media (max-width: 575px) {
+.flex-1[data-v-19c9a1c7] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; 
+}
+
+.input-tel__label[data-v-e59be3b4] {
+    /* position: absolute; */
+    top: 4px;
+    cursor: pointer;
+    left: 13px;
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%);
+    opacity: 0;
+    -webkit-transition: all .25s cubic-bezier(.645,.045,.355,1);
+    transition: all .25s cubic-bezier(.645,.045,.355,1);
+    font-size: 11px;
+    color: #747474;
+}
+
+/* @media (max-width: 575px) {
     .donatur-form .vue-phone-number-input {
         height: 50px;
-        font-size: 14px;
-        width: 220px;
-    }
+        font-size: 14px;     */
+        /* width: 100%;  */
+    /* }
 
     .donatur-form .flex {
         margin: 0px 0px 0px 0px !important;
@@ -1340,14 +1389,23 @@
         padding: 0 20px;
         height: 50px;
     }
-}
+} */
 
 @media (max-width: 766px){
-    .donatur-form .vue-phone-number-input {
+    /* .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 120px;
+        flex: 0 0 110px;
+        width: 120px;
+        min-width: 120px;
+        max-width: 120px;
+    } */
+
+    .input-tel__input {
         height: 50px;
-        padding-left: 20px;
+        padding-left: 0px;
         font-size: 14px;
-        width: 215px;
+        width: 75% !important;
     }
 
     .donatur-form .flex {
@@ -1360,12 +1418,12 @@
     }
 }
 
-@media (min-width: 992px) {
-        /* .donatur-form input {
+/* @media (min-width: 992px) {
+        .donatur-form input {
         height: 50px;
         padding-left: 20px;
         font-size: 14px;
-    } */
+    }
 
     .subscribe-thumb {
         margin-top: -80px;
@@ -1374,7 +1432,7 @@
     .subscribe-pt {
         padding-top: 80px;
     }
-}
+} */
 
 /* @media (min-width: 1024) {
     .donatur-form .flex {
