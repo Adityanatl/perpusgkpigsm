@@ -18,7 +18,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url('../images/bg_team.jpg');    
+    background-image: url('../images/bg_team.jpg');
 } */
 
 /*Voucher Section Starts Here*/
@@ -177,7 +177,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url('/images/experience-bg.png');    
+    background-image: url('/images/experience-bg.png');
 }
 .bg_footer{
     background-image:rgba(10, 27, 84, 0.892);
@@ -388,7 +388,7 @@
     .coverage-wrapper-donatur {
         min-height: 609px;
         min-width: 700px;
-        
+
     }
 
     .coverage-wrapper-donatur div[class*="border-item"] {
@@ -596,14 +596,14 @@
         right: 450px;
     }
 }
-    
+
 @media (min-width: 768px) and (max-width: 991px) {
     .coverage-wrapper-donatur .border-item-7 {
         left: 365px;
         bottom: 170px;
     }
 }
-    
+
 @media (min-width: 768px) {
     .coverage-wrapper-donatur .border-item-7 .name {
         font-size: 9px;
@@ -628,14 +628,14 @@
         right: 300px;
     }
 }
-    
+
     @media (min-width: 768px) and (max-width: 991px) {
         .coverage-wrapper-donatur .border-item-8 {
             left: 365px;
             bottom: 170px;
     }
 }
-        
+
     @media (min-width: 768px) {
     .coverage-wrapper-donatur .border-item-8 .name {
         font-size: 16px;
@@ -660,7 +660,7 @@
         right: 270px;
     }
 }
-            
+
 @media (min-width: 768px) and (max-width: 991px) {
     .coverage-wrapper-donatur .border-item-9 {
         left: 365px;
@@ -671,7 +671,7 @@
 @media (min-width: 768px) {
     .coverage-wrapper-donatur .border-item-9 .name {
         font-size: 16px;
-        
+
     }
 
     .coverage-wrapper-donatur .border-item-9 .title {
@@ -690,7 +690,7 @@
         right: 170px;
     }
 }
-            
+
 @media (min-width: 768px) and (max-width: 991px) {
     .coverage-wrapper-donatur .border-item-10 {
         left: 365px;
@@ -722,7 +722,7 @@
         right: 10px;
     }
 }
-            
+
 @media (min-width: 768px) and (max-width: 991px) {
     .coverage-wrapper-donatur .border-item-11 {
         left: 365px;
@@ -907,8 +907,8 @@
  */
 .mfp-fade.mfp-bg {
 	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
 	transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-bg.mfp-ready {
@@ -920,8 +920,8 @@
 
 .mfp-fade.mfp-wrap .mfp-content {
 	opacity: 0;
-	-webkit-transition: all 0.15s ease-out; 
-	-moz-transition: all 0.15s ease-out; 
+	-webkit-transition: all 0.15s ease-out;
+	-moz-transition: all 0.15s ease-out;
 	transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
@@ -964,7 +964,7 @@
 }
 
 @media (max-width: 575px) {
-    
+
     .button-area-about{
         /* display: flex;
         flex-wrap: wrap;
@@ -974,12 +974,12 @@
         position: absolute;
         content: ""; */
     }
-    
+
     .features-video-area .button-area-about .title-about-donatur {
         /* margin-bottom: 350px; */
         /* transform: translate(-50%, -90%); */
     }
-    
+
 }
 
 @media (max-width: 575px) {
@@ -1031,7 +1031,7 @@
     position: absolute;
     content: "";
     } */
-    
+
     .video-button-donatur {
         width: 51px;
         height: 51px;
@@ -1046,11 +1046,11 @@
         margin: 0 auto;
         top: -120px;
     }
-    
+
     .video-button-donatur i {
         margin-left: 5px;
     }
-    
+
     .video-button-donatur::after, .video-button-donatur::before {
         animation: video 25s linear infinite;
         -webkit-animation: video 25s linear infinite;
@@ -1059,7 +1059,7 @@
         -moz-transition: all ease 0.3s;
         transition: all ease 0.3s;
     }
-    
+
     .video-button-donatur::before {
         background: rgba(243, 196, 5, 0.161);
         width: 100px;
@@ -1071,7 +1071,7 @@
         -moz-border-radius: 33.33% 50%;
         border-radius: 33.33% 50%;
     }
-    
+
     .video-button-donatur::after {
         background: rgba(247, 212, 13, 0.412);
         height: 73px;
@@ -1179,17 +1179,17 @@
         text-decoration: none;
         font-size: 17px;
       }
-      
+
       .topnav a:hover {
         background-color: #ddd;
         color: black;
       }
-      
+
       .topnav a.active {
         background-color: #4CAF50;
         color: white;
       }
-      
+
       .topnav .icon {
         display: none;
       }
@@ -1201,7 +1201,7 @@
           display: block;
         }
       }
-      
+
       @media screen and (max-width: 600px) {
         .topnav.responsive {position: relative;}
         .topnav.responsive .icon {
@@ -1277,23 +1277,35 @@
     }
 }
 
+
+
+
 .vue-recycle-scroller__item-view{
     height: 15px;
     padding: 15px;
 }
 
-.donatur-form .vue-phone-number-input {
+/* .donatur-form .vue-phone-number-input {
     height: 40px;
     border-radius: 10px;
     color: #292929;
-    width: 570px;
+    width: 460px;
     margin-top: 9px;
     flex: 1;
+} */
+
+.vue-phone-number-input .select-country-container [data-v-19c9a1c7]  {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 120px;
+    flex: 0 0 100px !important;
+    width: 10px;
+    min-width: 60px;
+    max-width: 10px;
 }
 
 .donatur-form .flex {
-    margin: 9px 0px 0px 0px;
-    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 .donatur-form .select-country-container {
@@ -1302,28 +1314,65 @@
 
 .donatur-form .country-selector {
     height: 40px;
+    background: #F8F8FB !important;
     border-radius: 10px;
     color: #292929;
     background: #f8f8fb;
     position: relative;
-    display: inline-block;
-    width: 90px;
+    /* display: inline-block; */
+    width: 60px;
     margin-right: 0px;
     flex: 1;
 }
 
 .input-tel__input {
+    cursor: pointer;
     background: #F8F8FB !important;
-    border: 1px solid #ccc;
     color: #292929;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    position: relative;
+    width: 430px !important;
+    padding: 0 12px;
+    font-weight: 400;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    z-index: 0;
+    margin-left: -1px;
+    height: 40px;
+    min-height: 40px;
 }
 
-@media (max-width: 575px) {
+.flex-1[data-v-19c9a1c7] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.input-tel__label[data-v-e59be3b4] {
+    /* position: absolute; */
+    top: 4px;
+    cursor: pointer;
+    left: 13px;
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%);
+    opacity: 0;
+    -webkit-transition: all .25s cubic-bezier(.645,.045,.355,1);
+    transition: all .25s cubic-bezier(.645,.045,.355,1);
+    font-size: 11px;
+    color: #747474;
+}
+
+/* @media (max-width: 575px) {
     .donatur-form .vue-phone-number-input {
         height: 50px;
-        font-size: 14px;
-        width: 220px;
-    }
+        font-size: 14px;     */
+        /* width: 100%;  */
+    /* }
 
     .donatur-form .flex {
         margin: 0px 0px 0px 0px !important;
@@ -1340,14 +1389,23 @@
         padding: 0 20px;
         height: 50px;
     }
-}
+} */
 
 @media (max-width: 766px){
-    .donatur-form .vue-phone-number-input {
+    /* .vue-phone-number-input .select-country-container[data-v-19c9a1c7] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 120px;
+        flex: 0 0 110px;
+        width: 120px;
+        min-width: 120px;
+        max-width: 120px;
+    } */
+
+    .input-tel__input {
         height: 50px;
-        padding-left: 20px;
+        padding-left: 0px;
         font-size: 14px;
-        width: 215px;
+        width: 75% !important;
     }
 
     .donatur-form .flex {
@@ -1360,12 +1418,12 @@
     }
 }
 
-@media (min-width: 992px) {
-        /* .donatur-form input {
+/* @media (min-width: 992px) {
+        .donatur-form input {
         height: 50px;
         padding-left: 20px;
         font-size: 14px;
-    } */
+    }
 
     .subscribe-thumb {
         margin-top: -80px;
@@ -1374,7 +1432,7 @@
     .subscribe-pt {
         padding-top: 80px;
     }
-}
+} */
 
 /* @media (min-width: 1024) {
     .donatur-form .flex {

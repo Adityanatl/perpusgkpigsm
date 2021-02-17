@@ -176,7 +176,7 @@ export default {
 
 
                       <h5 class="mb-4 mt-3" style="color:#373334;">Metode Pembayaran</h5><hr>
-                      <!-- <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
+                      <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
 
                             <a
@@ -215,7 +215,7 @@ export default {
                             </div>
                           </b-card-body>
                         </b-collapse><hr style="color:#dddddd">
-                      </b-card> -->
+                      </b-card>
 
 
                       <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
@@ -265,11 +265,16 @@ export default {
                                   v-b-toggle.accordion-3
                                   style="background:white;"
                           >
-                            <div>E-Wallet</div>
-                            <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
+                            <div>Internet Banking</div>
+                            <i class="mdi chevron-up mdi-chevron-down"  style="background=white;"></i>
                           </a>
                         </b-card-header>
-                        <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+                        <b-collapse
+                                id="accordion-3"
+                                visible
+                                accordion="my-accordion"
+                                role="tabpanel"
+                        >
                           <b-card-body>
                             <div class="table-responsive">
                               <table class="table table-centered">
@@ -277,7 +282,75 @@ export default {
                                   <tr>
                                     <td>
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                                          v-if="itemPaymentMethode.payment_type=='wallet'">
+                                        v-if="itemPaymentMethode.payment_type=='internet_banking'">
+                                      <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                        <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </b-card-body>
+                        </b-collapse>
+                        <hr>
+                      </b-card>
+
+                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                        <b-card-header header-tag="header" style="background:white;" role="tab">
+                          <a
+                                  href="javascript: void(0);"
+                                  class="accordion-list"
+                                  v-b-toggle.accordion-4
+                                  style="background:white;"
+                          >
+                            <div>E-Wallet</div>
+                            <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
+                          </a>
+                        </b-card-header>
+                        <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
+                          <b-card-body>
+                            <div class="table-responsive">
+                              <table class="table table-centered">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                          v-if="itemPaymentMethode.payment_type=='e-money'">
+                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </b-card-body>
+                        </b-collapse>
+                        <hr>
+                      </b-card>
+
+                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                        <b-card-header header-tag="header" style="background:white;" role="tab">
+                          <a
+                                  href="javascript: void(0);"
+                                  class="accordion-list"
+                                  v-b-toggle.accordion-5
+                                  style="background:white;"
+                          >
+                            <div>Online Credit</div>
+                            <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
+                          </a>
+                        </b-card-header>
+                        <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
+                          <b-card-body>
+                            <div class="table-responsive">
+                              <table class="table table-centered">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                          v-if="itemPaymentMethode.payment_type=='online_credit'">
                                         <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
                                           <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
                                       </div>
