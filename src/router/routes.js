@@ -396,6 +396,13 @@ export default [
   },
 
   {
+    path: '/thankyou',
+    name: 'thankyou',
+    meta: { authRequired: true },
+    component: () => import('./views/template/thankyou')
+  },
+
+  {
     path: '/forgot-password',
     name: 'Forgot password',
     component: () => import('./views/account/forgot-password'),
