@@ -248,7 +248,7 @@ export default {
                                   <tr>
                                     <td>
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                                        v-if="itemPaymentMethode.payment_type=='debet' | itemPaymentMethode.payment_type=='internet_banking'">
+                                        v-if="itemPaymentMethode.payment_type=='debet'">
                                       <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
                                         <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
                                       </div>
