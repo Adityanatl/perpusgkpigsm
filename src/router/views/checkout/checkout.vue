@@ -35,7 +35,8 @@ export default {
         "price":0,
         "payment_methode_id":0,
         "transaction_id":null,
-      }
+      },
+      directHTML:''
     };
   },
   computed: {
@@ -95,16 +96,20 @@ export default {
       if (user != null) {
         this.payload.account_id = user.id
       }
-      console.log('users ',user)
-      console.log('this.payload ',this.payload)
-
       this.$store.dispatch(
               'transaction/POST_TRANSACTION', this.payload
       ).then(() => {
         let resp = this.$store.getters['transaction/transaction']
         this.successmsg()
-        localStorage.removeItem('cart');
-        window.location = resp.redirect_url
+        if (resp.direct === true) {
+          this.directHTML = resp.direct_value
+          localStorage.removeItem('cart');
+          setTimeout(()=> document.getElementById("paideiaForm").submit(),1000)
+
+        } else {
+          localStorage.removeItem('cart');
+          window.location = resp.redirect_url
+        }
       }).catch(function () {
         Vue.swal({
           position: "top-end",
@@ -243,7 +248,7 @@ export default {
                                   <tr>
                                     <td>
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                                        v-if="itemPaymentMethode.payment_type=='debet'">
+                                        v-if="itemPaymentMethode.payment_type=='debet' | itemPaymentMethode.payment_type=='internet_banking'">
                                       <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
                                         <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
                                       </div>
@@ -428,5 +433,7 @@ export default {
     </div>
     </div>
     <!-- end row -->
+    <div v-html="directHTML">
+    </div>
   </Layout>
 </template>
