@@ -262,7 +262,7 @@ export default {
                         <hr>
                       </b-card>
 
-                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                      <!-- <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header header-tag="header" style="background:white;" role="tab">
                           <a
                                   href="javascript: void(0);"
@@ -299,9 +299,9 @@ export default {
                           </b-card-body>
                         </b-collapse>
                         <hr>
-                      </b-card>
+                      </b-card> -->
 
-                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                      <!-- <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header header-tag="header" style="background:white;" role="tab">
                           <a
                                   href="javascript: void(0);"
@@ -333,7 +333,7 @@ export default {
                           </b-card-body>
                         </b-collapse>
                         <hr>
-                      </b-card>
+                      </b-card> -->
 
                       <!-- <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header header-tag="header" style="background:white;" role="tab">
@@ -369,13 +369,13 @@ export default {
                         <hr>
                       </b-card> -->
 
-                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                      <!-- <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
                         <div class="col-md-8" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
                             v-if="itemPaymentMethode.payment_type=='credit_card'">
                           <b-form-radio class="mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
                             <img :src="itemPaymentMethode.image_url" alt="" width="35px" height="25px" class="mr-2">{{ itemPaymentMethode.payment_name}}</b-form-radio>
                         </div>
-                      </b-card><br>
+                      </b-card><br> -->
                       <div>
                         <form class="voucher-form">
                             <input type="text" placeholder="Kode Voucher">
