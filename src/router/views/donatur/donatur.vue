@@ -590,11 +590,11 @@ export default {
 
 
                                 </div>
-                                    <div class="mt-5">
+                                    <!-- <div class="mt-5">
                                         <p class="mt-2 mb-2" style="font-size:18px;">Mohon maaf atas ketidaknyaman ini. <b>Mitra provider pembayaran</b> kami sedang mengalami kendala teknis.</p>
                                         <p class="mt-2 mb-2" style="font-size:18px;">Untuk sementara waktu, mohon dapat menyalurkan dana secara langsung ke akun BCA a/n <b>PT Cahaya Mitra Harapan 7613838777</b> dengan isi berita <b>"Guru 3T"</b>.</p><br>
                                         <p><i>To our overseas supporters, our apology for this inconvenience. Once our payment partner resolves the technical issues on their end, our Credit Card payment methods will be available. Your kind understanding and continuous support are much appreciated!</i></p>
-                                    </div><br><br>
+                                    </div><br><br> -->
 
                             </div>
 
@@ -626,16 +626,20 @@ export default {
                                         <input  type="radio"  :value="13" v-model="payload.payment_methode_id" name="bni" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/BankBni.png" style="margin-top:0px;" alt="">
                                     </div>
-                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                    <!-- <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="briva" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/Briva.png" style="margin-top:0px;" alt="">
+                                    </div> -->
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" >
+                                        <img src="@/assets/images/payment/mandiri.png" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="12" v-model="payload.payment_methode_id" name="permatabank" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/permatabank.png" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
-                                <div class="text-center row">
+                                <!-- <div class="text-center row">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/mandiri.png" style="margin-top:0px;" alt="">
@@ -648,8 +652,8 @@ export default {
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/JCB.png" style="margin-top:0px;" alt="">
                                     </div>
-                                </div>
-                                <div class="text-center row">
+                                </div> -->
+                                <!-- <div class="text-center row">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/Visa.png" style="margin-top:0px;" alt="">
@@ -661,12 +665,12 @@ export default {
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:0px;" alt="">
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:30px;" alt="">
                                     </div> -->
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
@@ -693,7 +697,7 @@ export default {
                                         </vue-tel-input>
                                         </div>
                                     </form>
-                                    <i class="mt-2 mb-2">NOTE: For this pioneer effort, any contribution received by <b>Friday, February 5, 2021</b> will be channeled to the pioneer recipients <b>immediately after our Grand Launching event on Saturday, February 6, 2021</b></i>
+                                    <!-- <i class="mt-2 mb-2">NOTE: For this pioneer effort, any contribution received by <b>Friday, February 5, 2021</b> will be channeled to the pioneer recipients <b>immediately after our Grand Launching event on Saturday, February 6, 2021</b></i> -->
 
                                     <div class="right mt-5 mb-5">
                                         <b-button tag="a" @click="postCheckout" class="custom-button mb-3">CONTRIBUTE NOW</b-button>

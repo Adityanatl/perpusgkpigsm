@@ -1,23 +1,8 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
-
-// import magnific from "magnific-popup";
 import '@/assets/js/magnific-popup.min.js';
-// import '@/assets/js/jquery-3.3.1.min.js';
-// import '@/assets/js/modernizr-3.6.0.min.js';
-// import '@/assets/js/plugins.js';
-// import '@/assets/js/bootstrap.min.js';
-// import '@/assets/js/jquery-ui.min.js';
-// import '@/assets/js/wow.min.js';
-// import '@/assets/js/waypoints.js';
-// import '@/assets/js/nice-select.js';
-// import '@/assets/js/owl.min.js';
-// import '@/assets/js/counterup.min.js';
-// import '@/assets/js/canvasjs.min.js';
-// import '@/assets/js/paroller.js';
-// import '@/assets/js/main.js';
-// import jquery from 'jQuery';
+
 
 global.jQuery = require('jquery');
 var $ = global.jQuery;
@@ -40,19 +25,21 @@ export default {
       starttime: "Nov 5, 2018 15:37:25",
       endtime: "Dec 31, 2020 16:37:25",
       gamification: 1,
+      pickedProduct: [],
+      products: { "id": 1, "price": 20000, "semester_price": 100000, "yearly_price": 200000, "qty": 1, },
         join_telegram_email : ""
     };
   },
   created() {
-    // var scripts = [
-    //   "@/assets/js/magnific-popup.min.js"
-    // ];
-    // scripts.forEach(script => {
-    //   let tag = document.createElement("script");
-    //   tag.setAttribute("src", script);
-    //   document.head.appendChild(tag);
-    // });
-    // window.addEventListener("scroll", this.windowScroll);
+      const cart = localStorage.getItem('product')
+      if(product){
+          this.pickedProduct = JSON.parse(product)
+      }
+      const orderPayload = localStorage.getItem('order')
+      if (orderPayload) {
+          this.orderPayload = JSON.parse(orderPayload)
+      }
+      this.filteredProducts = this.products
   },
   destroyed() {
     window.removeEventListener("scroll", this.windowScroll);
@@ -60,27 +47,39 @@ export default {
   mounted() {
     this.start = new Date(this.starttime).getTime();
     this.end = new Date(this.endtime).getTime();
-    // Update the count down every 1 second
-    // this.timerCount(this.start, this.end);
-    // this.interval = setInterval(() => {
-    //   this.timerCount(this.start, this.end);
-    // }, 1000);
   },
   methods: {
-    // windowScroll() {
-    //   const navbar = document.getElementById("navbar");
-    //   if (
-    //     document.body.scrollTop >= 50 ||
-    //     document.documentElement.scrollTop >= 50
-    //   ) {
-    //     navbar.classList.add("nav-sticky");
-    //   } else {
-    //     navbar.classList.remove("nav-sticky");
-    //   }
-    // },
-    /**
-     * Toggle menu
-     */
+    postCheckout(){
+        if (this.pickedProduct == null){
+            alert("Silahkan Pilih Paket Langganan Anda")
+            return
+        }
+        this.payload.id = this.id
+        this.payload.qty = 1
+        localStorage.setItem('product', JSON.stringify(this.pickedProduct))
+    },
+    completed() {
+      const validate = this.validateOrder()
+		  if (validate.length > 0) {
+        this.raiseValidationError(validate)
+        return
+      }
+      const genoseQty = this.cartItems.filter(x => x.id === 1).map(x => x.quantity)
+      const kantongNafasQty = this.cartItems.filter(x => x.id === 2).map(x => x.quantity)
+      const hmeQty = this.cartItems.filter(x => x.id === 3).map(x => x.quantity)
+      if (genoseQty.length > 0) {
+        this.orderPayload.qty = genoseQty[0]
+      }
+      if (kantongNafasQty.length > 0) {
+        this.orderPayload.kantong_nafas = kantongNafasQty[0]
+      }
+      if (hmeQty.length > 0) {
+        this.orderPayload.hme_filter = hmeQty[0]
+      }
+      localStorage.setItem('order', JSON.stringify(this.orderPayload))
+      this.$router.push({ name: 'konfirmasi-pemesanan', params: this.orderPayload})
+    },
+
     toggleMenu() {
       document.getElementById("topnav-menu-content").classList.toggle("show");
     },
@@ -128,36 +127,6 @@ export default {
       }
     });
 
-    //Menu Dropdown Icon Adding
-    // $("ul>li>.submenu").parent("li").addClass("menu-item-has-children");
-    // drop down menu width overflow problem fix
-    // $('.submenu').parent('li').hover(function () {
-    //   var menu = $(this).find("ul");
-    //   var menupos = $(menu).offset();
-    //   if (menupos.left + menu.width() > $(window).width()) {
-    //     var newpos = -$(menu).width();
-    //     menu.css({
-    //       left: newpos
-    //     });
-    //   }
-    // });
-
-    // $('.menu li a').on('click', function (e) {
-    //   var element = $(this).parent('li');
-    //   if (element.hasClass('open')) {
-    //     element.removeClass('open');
-    //     element.find('li').removeClass('open');
-    //     element.find('ul').slideUp(300, "swing");
-    //   } else {
-    //     element.addClass('open');
-    //     element.children('ul').slideDown(300, "swing");
-    //     element.siblings('li').children('ul').slideUp(300, "swing");
-    //     element.siblings('li').removeClass('open');
-    //     element.siblings('li').find('li').removeClass('open');
-    //     element.siblings('li').find('ul').slideUp(300, "swing");
-    //   }
-    // });
-
     //Click event to scroll to top
     $('.scrollToTop').on('click', function () {
       $('html, body').animate({
@@ -165,28 +134,6 @@ export default {
       }, 500);
       return false;
     });
-
-        // PoPuP
-    // $('.popup').magnificPopup({
-    //   disableOn: 700,
-    //   type: 'iframe',
-    //   mainClass: 'mfp-fade',
-    //   removalDelay: 160,
-    //   preloader: false,
-    //   fixedContentPos: false,
-    //   disableOn: 300
-    // });
-    // $("body").each(function () {
-    //   $(this).find(".img-pop").magnificPopup({
-    //     type: "image",
-    //     gallery: {
-    //       enabled: true
-    //     }
-    //   });
-    // });
-
-    // aos js active
-    // new WOW().init();
 
 </script>
 
@@ -246,29 +193,6 @@ export default {
                         </li>
                     </ul>
                 </div>
-                    <!-- <div class="ml-lg-2">
-                        <a href="javascript: void(0);" class="btn btn-outline-success w-xs">Sign in</a>
-                    </div> -->
-
-
-
-                <!-- <div class="header-right header-bar d-lg-none">
-                    <select class="select-bar">
-                        <option value="en">En</option>
-                        <option value="Bn">Bn</option>
-                        <option value="pk">Pk</option>
-                        <option value="Fr">Fr</option>
-                    </select>
-                </div> -->
-                <!-- <button
-                    type="button"
-                    class="btn btn-sm px-3 font-size-16 d-lg-none header-item"
-                    data-toggle="collapse"
-                    data-target="#topnav-menu-content"
-                    @click="toggleMenu()"
-                    >
-                    <i class="fa fa-fw fa-bars"></i>    
-                </button> -->
                 <router-link tag="a" to="/sign_in/sign-in" class="header-button d-none d-sm-inline-block">SIGN UP/LOGIN</router-link>
             </div>
         </div>
@@ -759,9 +683,9 @@ export default {
                             </div>
                         </div>
                          <div class="radio-flex">
-                                <input class="item" type="radio" name="methodePayment">
-                                <input class="item" type="radio" name="methodePayment">
-                                <input class="item" type="radio" name="methodePayment">
+                                <input :value="products.id.price" class="item" type="radio" v-model="pickedProduct" name="methodePayment">
+                                <input :value="products.id.semester_price" class="item" type="radio" v-model="pickedProduct" name="methodePayment">
+                                <input :value="products.id.yearly_price" class="item" type="radio" v-model="pickedProduct" name="methodePayment">
                         </div>
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
@@ -771,12 +695,12 @@ export default {
                     </div>
                     <div class="text-center mb-3 mt-5">
                         <div class="right mb-4">
-                            <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3">DAFTAR SEKARANG!</router-link>
-                            <ul class="download-options mt-4 mb-4">
+                            <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3" @click="postCheckout">DAFTAR SEKARANG!</router-link>
+                            <!-- <ul class="download-options mt-4 mb-4">
                                 <li>
                                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
