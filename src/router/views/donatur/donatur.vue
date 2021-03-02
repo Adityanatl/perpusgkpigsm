@@ -639,8 +639,8 @@ export default {
                                         <img src="@/assets/images/payment/permatabank.png" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
-                                <!-- <div class="text-center row">
-                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                <div class="text-center row">
+                                    <!-- <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/mandiri.png" style="margin-top:0px;" alt="">
                                     </div>
@@ -651,10 +651,22 @@ export default {
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/JCB.png" style="margin-top:0px;" alt="">
-                                    </div>
-                                </div> -->
-                                <!-- <div class="text-center row">
+                                    </div> -->
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="17" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/bca-donatur.png" style="margin-top:0px;" alt="">
+                                    </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="16" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/danamon-donatur.png" style="margin-top:0px;" alt="">
+                                    </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="11" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/cimb-donatur.png" style="margin-top:0px;" alt="">
+                                    </div>
+                                </div>
+                                <div class="text-center row">
+                                    <!-- <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/Visa.png" style="margin-top:0px;" alt="">
                                     </div>
@@ -665,12 +677,20 @@ export default {
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:0px;" alt="">
-                                    </div> -->
-                                    <!-- <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                    </div> 
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:30px;" alt="">
                                     </div> -->
-                                <!-- </div> -->
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="19" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/maybank-donatur.png" style="margin-top:0px;" alt="">
+                                    </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="20" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/sinarmas-donatur.png" style="margin-top:0px;" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
