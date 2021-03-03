@@ -268,14 +268,6 @@ export default {
                             <img src='@/assets/images/logo-techinspire.png' alt="sponsor">
                         </div>
                     </div>
-                    <div class="row sponsor-slider owl-theme owl-carousel">
-                        <div class="sponsor-thumb">
-                            <img src='@/assets/images/genosedki.png' alt="sponsor">
-                        </div>
-                        <div class="sponsor-thumb">
-                            <img src='@/assets/images/phli.png' alt="sponsor">
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
