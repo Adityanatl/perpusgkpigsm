@@ -25,22 +25,68 @@ export default {
       starttime: "Nov 5, 2018 15:37:25",
       endtime: "Dec 31, 2020 16:37:25",
       gamification: 1,
-      pickedProduct: [],
-      products: { "id": 1, "price": 20000, "semester_price": 100000, "yearly_price": 200000, "qty": 1, },
+      selectedProduct: null,
+      listProducts: [
+        {
+            "id":1,
+            "product_type":"Personal",
+            "product_name":"Monthly",
+            "price":20000,
+            "semester_price":100000,
+            "yearly_price":200000,
+            "account_id":0,
+            "reference_id":0,
+            "month":0,
+            "status":0,
+            "viewed":0,
+            "sold":2,
+            "image_url":"",
+            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)",
+            "narasi":"",
+            "recommended":false
+        },
+        {
+            "id":10,
+            "product_type":"Personal",
+            "product_name":"Semester",
+            "price":100000,
+            "semester_price":null,
+            "yearly_price":null,
+            "account_id":0,
+            "reference_id":0,
+            "month":0,
+            "status":0,
+            "viewed":0,
+            "sold":0,
+            "image_url":"",
+            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)",
+            "narasi":"",
+            "recommended":false
+        },
+        {
+            "id":11,
+            "product_type":"Personal",
+            "product_name":"Yearly",
+            "price":200000,
+            "semester_price":null,
+            "yearly_price":null,
+            "account_id":0,
+            "reference_id":0,
+            "month":0,
+            "status":0,
+            "viewed":0,
+            "sold":0,
+            "image_url":"",
+            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)",
+            "narasi":"",
+            "recommended":true
+        }
+        ],
+    //   selectedPrice: 0,
         join_telegram_email : ""
     };
   },
-  created() {
-      const cart = localStorage.getItem('product')
-      if(product){
-          this.pickedProduct = JSON.parse(product)
-      }
-      const orderPayload = localStorage.getItem('order')
-      if (orderPayload) {
-          this.orderPayload = JSON.parse(orderPayload)
-      }
-      this.filteredProducts = this.products
-  },
+
   destroyed() {
     window.removeEventListener("scroll", this.windowScroll);
   },
@@ -49,36 +95,30 @@ export default {
     this.end = new Date(this.endtime).getTime();
   },
   methods: {
-    postCheckout(){
-        if (this.pickedProduct == null){
-            alert("Silahkan Pilih Paket Langganan Anda")
-            return
+      getListProduct(){
+      let paramsTemp = queryString.stringify({
+        ...{
+          name: null,
+          limit: 17,
+          sort: 1,
         }
-        this.payload.id = this.id
-        this.payload.qty = 1
-        localStorage.setItem('product', JSON.stringify(this.pickedProduct))
+        , ...this.options}
+      )
+      this.$store.dispatch('product/GET_PRODUCTS',{params:paramsTemp}).then(()=>{
+        this.listProducts = this.$store.getters['product/products']
+      })
     },
-    completed() {
-      const validate = this.validateOrder()
-		  if (validate.length > 0) {
-        this.raiseValidationError(validate)
-        return
+    updateCart(){  
+        console.log(this.selectedProduct)
+      if(!this.selectedProduct  || this.selectedProduct == {}) {
+        alert("Mohon pilih Produk terlebih dahulu")
+        return false
       }
-      const genoseQty = this.cartItems.filter(x => x.id === 1).map(x => x.quantity)
-      const kantongNafasQty = this.cartItems.filter(x => x.id === 2).map(x => x.quantity)
-      const hmeQty = this.cartItems.filter(x => x.id === 3).map(x => x.quantity)
-      if (genoseQty.length > 0) {
-        this.orderPayload.qty = genoseQty[0]
-      }
-      if (kantongNafasQty.length > 0) {
-        this.orderPayload.kantong_nafas = kantongNafasQty[0]
-      }
-      if (hmeQty.length > 0) {
-        this.orderPayload.hme_filter = hmeQty[0]
-      }
-      localStorage.setItem('order', JSON.stringify(this.orderPayload))
-      this.$router.push({ name: 'konfirmasi-pemesanan', params: this.orderPayload})
-    },
+
+      localStorage.setItem('cart', JSON.stringify(this.selectedProduct))
+    //   this.$store.dispatch('product/UPDATE_PRODUCT_CART', itemProduct)
+      this.$router.push('/sign_up/sign-up')
+    },  
 
     toggleMenu() {
       document.getElementById("topnav-menu-content").classList.toggle("show");
@@ -682,11 +722,11 @@ export default {
                                 <span class="info"> Diskon 2 Bulan (Rp. 16.700/Bulan)</span>
                             </div>
                         </div>
-                         <div class="radio-flex">
-                                <input :value="products.id.price" class="item" type="radio" v-model="pickedProduct" name="methodePayment">
-                                <input :value="products.id.semester_price" class="item" type="radio" v-model="pickedProduct" name="methodePayment">
-                                <input :value="products.id.yearly_price" class="item" type="radio" v-model="pickedProduct" name="methodePayment">
-                        </div>
+                        <!-- <div v-for="(itemProduct,index) in listProducts" :key="index"> -->
+                            <div class="radio-flex">
+                                <input class="item" type="radio" name="some-radios" v-for="(itemProduct,index) in listProducts" :key="index" v-model="selectedProduct" v-bind:value="itemProduct" style="font-size:16px">
+                            </div>
+                        <!-- </div> -->
                         <div class="invest-range-area">
                             <div class="invest-amount" data-min="1.00 USD" data-max="1000 USD">
                                 <!-- <div id="usd-range" class="invest-range-slider"></div> -->
@@ -695,7 +735,8 @@ export default {
                     </div>
                     <div class="text-center mb-3 mt-5">
                         <div class="right mb-4">
-                            <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3" @click="postCheckout">DAFTAR SEKARANG!</router-link>
+                            <!-- <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3" @click="updateCart()">DAFTAR SEKARANG!</router-link> -->
+                            <button class="custom-button mb-3" @click="updateCart()">DAFTAR SEKARANG!</button>
                             <!-- <ul class="download-options mt-4 mb-4">
                                 <li>
                                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
