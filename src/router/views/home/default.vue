@@ -27,16 +27,67 @@ export default {
       gamification: 1,
       selectedProduct: null,
       listProducts: [
-        { "id": 1, "product_name": "Monthly", "price": 20000, "semester_price": 100000, "yearly_price": 200000 , "qty": 1, },
-        { "id": 2, "product_name": "Semester", "price": 100000, "semester_price": 200000, "yearly_price": 400000, "qty": 1, },
-        { "id": 3, "product_name": "Yearly", "price": 200000, "semester_price": 500000, "yearly_price": 1000000, "qty": 1, },
+        {
+            "id":1,
+            "product_type":"Personal",
+            "product_name":"Monthly",
+            "price":20000,
+            "semester_price":100000,
+            "yearly_price":200000,
+            "account_id":0,
+            "reference_id":0,
+            "month":0,
+            "status":0,
+            "viewed":0,
+            "sold":2,
+            "image_url":"",
+            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)",
+            "narasi":"",
+            "recommended":false
+        },
+        {
+            "id":10,
+            "product_type":"Personal",
+            "product_name":"Semester",
+            "price":100000,
+            "semester_price":null,
+            "yearly_price":null,
+            "account_id":0,
+            "reference_id":0,
+            "month":0,
+            "status":0,
+            "viewed":0,
+            "sold":0,
+            "image_url":"",
+            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)",
+            "narasi":"",
+            "recommended":false
+        },
+        {
+            "id":11,
+            "product_type":"Personal",
+            "product_name":"Yearly",
+            "price":200000,
+            "semester_price":null,
+            "yearly_price":null,
+            "account_id":0,
+            "reference_id":0,
+            "month":0,
+            "status":0,
+            "viewed":0,
+            "sold":0,
+            "image_url":"",
+            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)",
+            "narasi":"",
+            "recommended":true
+        }
         ],
     //   selectedPrice: 0,
         join_telegram_email : ""
     };
   },
 
-  destroyed() {S
+  destroyed() {
     window.removeEventListener("scroll", this.windowScroll);
   },
   mounted() {
@@ -44,6 +95,19 @@ export default {
     this.end = new Date(this.endtime).getTime();
   },
   methods: {
+      getListProduct(){
+      let paramsTemp = queryString.stringify({
+        ...{
+          name: null,
+          limit: 17,
+          sort: 1,
+        }
+        , ...this.options}
+      )
+      this.$store.dispatch('product/GET_PRODUCTS',{params:paramsTemp}).then(()=>{
+        this.listProducts = this.$store.getters['product/products']
+      })
+    },
     updateCart(){  
         console.log(this.selectedProduct)
       if(!this.selectedProduct  || this.selectedProduct == {}) {
@@ -53,7 +117,7 @@ export default {
 
       localStorage.setItem('cart', JSON.stringify(this.selectedProduct))
     //   this.$store.dispatch('product/UPDATE_PRODUCT_CART', itemProduct)
-      this.$router.push('/sign_in/sign-in')
+      this.$router.push('/sign_up/sign-up')
     },  
 
     toggleMenu() {
@@ -660,7 +724,7 @@ export default {
                         </div>
                         <!-- <div v-for="(itemProduct,index) in listProducts" :key="index"> -->
                             <div class="radio-flex">
-                                <input class="item" type="radio" v-for="(itemProduct,index) in listProducts" :key="index" name="some-radios" v-model="selectedProduct" v-bind:value="itemProduct.price" style="font-size:16px">
+                                <input class="item" type="radio" name="some-radios" v-for="(itemProduct,index) in listProducts" :key="index" v-model="selectedProduct" v-bind:value="itemProduct" style="font-size:16px">
                             </div>
                         <!-- </div> -->
                         <div class="invest-range-area">
@@ -671,8 +735,8 @@ export default {
                     </div>
                     <div class="text-center mb-3 mt-5">
                         <div class="right mb-4">
-                            <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3" @click="updateCart()">DAFTAR SEKARANG!</router-link>
-                            <!-- <button class="custom-button mb-3" @click="updateCart()">DAFTAR SEKARANG!</button> -->
+                            <!-- <router-link tag="a" to="/sign_up/sign-up" class="custom-button mb-3" @click="updateCart()">DAFTAR SEKARANG!</router-link> -->
+                            <button class="custom-button mb-3" @click="updateCart()">DAFTAR SEKARANG!</button>
                             <!-- <ul class="download-options mt-4 mb-4">
                                 <li>
                                     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><i class="fab fa-android"></i></a>
