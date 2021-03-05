@@ -62,7 +62,7 @@ export default {
             )
                 .then(() => {
                     this.$router.push(
-                        this.$route.query.redirectFrom || {name: "default"}
+                        this.$route.query.redirectFrom || {name: "Checkout"}
                     );
                 }).catch(error => {
                 console.log('error', error)
