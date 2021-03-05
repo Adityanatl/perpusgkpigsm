@@ -121,7 +121,7 @@ export default {
                   <tbody>
                     <tr>
                       <td>
-                        <h5 style="margin-left:10px; color:#373334" class="ml-3 mt-3 mb-1">{{itemProduct.product_name}}</h5>
+                        <h5 style="margin-left:10px; color:#373334" class="ml-3 mt-3 mb-1"> </h5>
                       </td>
                       <td>
                         <div class="col" style="text-align: right" v-if="itemProduct.recommended" >
