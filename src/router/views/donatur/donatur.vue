@@ -114,7 +114,16 @@ export default {
             ).then(() => {
                 let resp = this.$store.getters['transaction/transaction']
                 this.successmsg()
-                window.location = resp.redirect_url
+                // window.location = resp.redirect_url
+                if (resp.direct === true) {
+                    this.directHTML = resp.direct_value
+
+                    setTimeout(()=> document.getElementById("paideiaForm").submit(),1000)
+
+                } else {
+
+                    window.location = resp.redirect_url
+                }
             }).catch(function () {
                 Vue.swal({
                     position: "top-end",
@@ -677,7 +686,7 @@ export default {
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:0px;" alt="">
-                                    </div> 
+                                    </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:30px;" alt="">
@@ -887,6 +896,7 @@ export default {
             </div>
         </div>
      </footer>
+        <div v-html="directHTML"></div>
      <!--============= Footer Section Ends Here =============-->
     </div>
 </template>
