@@ -48,7 +48,7 @@ export default {
             <div class="row">
               <div class="col-sm-2 mt-5">
                 <div class="avatar-md profile-user-wid ml-2 mb-4 text-center">
-                    <img src="@/assets/images/users/avatar-1.jpg" alt class="img-thumbnail rounded-circle" />
+                    <!-- <img src="@/assets/images/users/avatar-1.jpg" alt class="img-thumbnail rounded-circle" /> -->
                 </div>
               </div>
               <div class="col-sm-10">

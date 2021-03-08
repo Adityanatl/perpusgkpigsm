@@ -573,12 +573,12 @@ export default {
               :src="user.picture"
               alt="Header Avatar"
             />
-             <img
+             <!-- <img
                      class="rounded-circle header-profile-user"
                      v-else
                      src="@/assets/images/users/avatar-1.jpg"
                      alt="Header Avatar"
-             />
+             /> -->
 
              <span class="d-none d-xl-inline-block ml-1">{{ user.name}}</span>
              <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>

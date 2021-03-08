@@ -88,7 +88,7 @@ export default {
           <div class="row">
             <div class="col-5 colavatar-md profile-user-wid mb-4">
               <img v-if="user.picture !== ''" :src="user.picture" alt class="img-thumbnail rounded-circle" />
-              <img v-else src="@/assets/images/users/avatar-1.jpg" alt class="img-thumbnail rounded-circle" />
+              <!-- <img v-else src="@/assets/images/users/avatar-1.jpg" alt class="img-thumbnail rounded-circle" /> -->
 
             </div>
             <!-- <h5 class="font-size-15 text-truncate">{{user.name}}</h5> -->

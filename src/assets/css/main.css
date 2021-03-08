@@ -10256,7 +10256,7 @@ div[class*="elem"] img {
 .ex-item::before {
     width: 100%;
     height: 100%;
-    background: url('../images/ex-bg.png') no-repeat center center;
+    /* background: url('../images/ex-bg.png') no-repeat center center; */
     background-size: cover;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -11937,7 +11937,7 @@ div[class*="col"]:nth-of-type(3n + 2) .pricing-item-4 .pricing-header::before {
     left: 0;
     right: 0;
     top: 0;
-    background: url('../images/team_odd.png') no-repeat center center;
+    /* background: url('../images/team_odd.png') no-repeat center center; */
     background-size: cover;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
@@ -14292,7 +14292,7 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 /*Do Section Starts Here*/
 .do-item {
     text-align: center;
-    background: url('../images/do-bg.png') no-repeat center center;
+    /* background: url('../images/do-bg.png') no-repeat center center; */
     background-size: cover;
     padding: 70px 30px 60px;
     -webkit-border-radius: 20px;
