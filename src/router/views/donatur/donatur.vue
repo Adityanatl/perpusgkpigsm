@@ -690,6 +690,10 @@ export default {
                                         <input  type="radio" :value="20" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
                                         <img src="@/assets/images/sinarmas-donatur.png" style="margin-top:0px;" alt="">
                                     </div>
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/kartukredit_donatur.png" style="margin-top:0px;" alt="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
