@@ -13,16 +13,12 @@ import VueTelInput from 'vue-tel-input'
 import 'vue-tel-input/dist/vue-tel-input.css'
 
 import "@/design/index.scss"
-// import "@/assets/css/all.min.css"
 import "@/assets/css/animate.css"
 import "@/assets/css/flaticon.css"
-// import "@/assets/css/jquery-ui.min.css"
 import "@/assets/css/magnific-popup.css"
 import "@/assets/css/main.css"
 import "@/assets/css/nice-select.css"
-// import "@/assets/css/owl.min.css"
 import "@/assets/css/style.css"
-// import "@/assets/css/intlTelInput.css"
 
 import store from '@/state/store'
 // import store2 from './store'
