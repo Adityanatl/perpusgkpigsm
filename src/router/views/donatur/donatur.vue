@@ -686,7 +686,7 @@ export default {
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" disabled>
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:0px;" alt="">
-                                    </div>
+                                    </div> 
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
                                         <img src="@/assets/images/payment/MasterCard.png" style="margin-top:30px;" alt="">
@@ -896,7 +896,6 @@ export default {
             </div>
         </div>
      </footer>
-        <div v-html="directHTML"></div>
      <!--============= Footer Section Ends Here =============-->
     </div>
 </template>
