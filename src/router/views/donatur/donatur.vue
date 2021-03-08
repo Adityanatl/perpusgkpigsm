@@ -45,7 +45,8 @@ export default {
             "email":"",
             "hp":"",
             "country":"ID"
-        }
+        },
+        directHTML:''
     };
   },
   created() {
