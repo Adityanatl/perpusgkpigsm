@@ -181,7 +181,7 @@ export default {
 
 
                       <h5 class="mb-4 mt-3" style="color:#373334;">Metode Pembayaran</h5><hr>
-                      <!-- <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
+                      <b-card  class="custom-accordion shadow-none mb-3" style="border:none">
                         <b-card-header style="background:white; margin-left: -20px; margin-right: -20px" role="tab" >
 
                             <a
@@ -220,7 +220,7 @@ export default {
                             </div>
                           </b-card-body>
                         </b-collapse><hr style="color:#dddddd">
-                      </b-card> -->
+                      </b-card>
 
 
                       <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
