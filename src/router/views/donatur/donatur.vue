@@ -706,17 +706,17 @@ export default {
                                     </div>
                                 </div>
                                 <div class="text-center row">
-                                    <div class="col-sm-4">
-                                        <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                            <input  type="radio" :value="34" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                            <img src="@/assets/images/dana-donatur.png" style="margin-top:0px;" alt="">
-                                        </div>                                     
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="33" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/ovo-donatur.png" style="margin-top:0px;" alt="">
                                     </div>
-                                    <div class="col-sm-4">
-                                        <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
-                                            <input  type="radio" :value="29" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                            <img src="@/assets/images/linkaja-donatur.png" style="margin-top:0px;" alt="">
-                                        </div>                                        
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="34" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/dana-donatur.png" style="margin-top:0px;" alt="">
+                                    </div>                                 
+                                    <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
+                                        <input  type="radio" :value="29" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
+                                        <img src="@/assets/images/linkaja-donatur.png" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
                             </div>
