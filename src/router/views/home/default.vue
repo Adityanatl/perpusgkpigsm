@@ -569,7 +569,8 @@ export default {
                         <div class="feature-item" @click="gamification=1">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img src='@/assets/images/pro1.png' alt="feature">
+                                    <img class="img1" v-if="gamification==1" src='@/assets/images/pro-1.png' alt="feature">
+                                    <img class="img2" v-else="" src='@/assets/images/pro1.png' alt="feature">
                                 </div>
                             </div>
                             <div class="feature-content">
@@ -580,7 +581,8 @@ export default {
                         <div class="feature-item" @click="gamification=2">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img src='@/assets/images/pro2.png' alt="feature">
+                                    <img class="img1" v-if="gamification==2" src='@/assets/images/pro-2.png' alt="feature">
+                                    <img class="img2" v-else="" src='@/assets/images/pro2.png' alt="feature">
                                 </div>
                             </div>
                             <div class="feature-content">
@@ -591,7 +593,8 @@ export default {
                         <div class="feature-item" @click="gamification=3">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img src='@/assets/images/pro3.png' alt="feature">
+                                    <img class="img1" v-if="gamification==3" src='@/assets/images/pro-3.png' alt="feature">
+                                    <img class="img2" v-else="" src='@/assets/images/pro3.png' alt="feature">
                                 </div>
                             </div>
                             <div class="feature-content">
@@ -602,7 +605,8 @@ export default {
                         <div class="feature-item" @click="gamification=4">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img src='@/assets/images/pro4.png' alt="feature">
+                                    <img class="img1" v-if="gamification==4" src='@/assets/images/pro-4.png' alt="feature">
+                                    <img class="img2" v-else="" src='@/assets/images/pro4.png' alt="feature">
                                 </div>
                             </div>
                             <div class="feature-content">
