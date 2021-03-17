@@ -244,4 +244,11 @@ export default [
     meta: { authRequired: true },
     component: () => import('./views/utility/500')
   },
+
+  {
+    path: '/ui/test',
+    name: 'test',
+    meta: { authRequired: true },
+    component: () => import('./views/ui/test')
+  }
 ]
