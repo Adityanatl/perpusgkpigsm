@@ -6208,10 +6208,12 @@ input[type="submit"] {
 
 .testimonial-wrapper .testi-next {
     left: -20px;
+    margin-left: 10px;
 }
 
 .testimonial-wrapper .testi-prev {
     right: -20px;
+    margin-right: 10px;
 }
 
 @media (min-width: 768px) {
@@ -6277,12 +6279,12 @@ input[type="submit"] {
 
 @media (max-width: 575px) {
     .testimonial-wrapper {
-        padding: 50px 0;
+        padding: 50px 0px;
     }
 
-    .testimonial-wrapper .trigger {
+    /* .testimonial-wrapper .trigger {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 575px) and (max-width: 450px) {
