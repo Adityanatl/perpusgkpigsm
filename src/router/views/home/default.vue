@@ -138,6 +138,30 @@ export default {
           let payload = {"email" : this.join_telegram_email}
           this.$store.dispatch('jointelegram/POST_JOIN_TELEGRAM', payload)
           window.open('https://t.me/gurukreatorgroup', '_blank');
+      },
+
+      analyticHome() {
+          this.$gtag.event('beranda-click', {
+              'event_category': 'home',
+              'event_label': 'Beranda Page Click',
+              'value': 1
+          })
+      },
+
+      analyticGuru() {
+          this.$gtag.event('guru-click', {
+              'event_category': 'home',
+              'event_label': 'Guru Page Click',
+              'value': 1
+          })
+      },
+
+      analyticDonatur() {
+          this.$gtag.event('donatur-click', {
+              'event_category': 'home',
+              'event_label': 'Donatur Page Click',
+              'value': 1
+          })
       }
   }
 };
@@ -199,11 +223,11 @@ export default {
                 <span></span>
                 </div>
                 <ul class="menu">
-                    <li>
+                    <li @click="analyticHome()">
                         <router-link tag="a" to="/">Beranda</router-link>
                     </li>
-                    <li><router-link tag="a" to="/features/features">Guru</router-link></li>
-                    <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
+                    <li @click="analyticGuru()"><router-link tag="a" to="/features/features">Guru</router-link></li>
+                    <li @click="analyticDonatur()"><router-link tag="a" to="/donatur">Donatur</router-link></li>
                     <!-- <li><a href="contact.html">Kontak</a></li> -->
                     <li class="d-sm-none">
                         <router-link tag="a" to="/sign_in/sign-in" class="header-button d-sm-inline-block">SIGN UP/LOGIN</router-link>

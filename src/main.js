@@ -92,6 +92,7 @@ Vue.use(VueGoogleMaps, {
   installComponents: true
 })
 import GoogleAuth from '@/config/google_oAuth.js'
+import VueGtagPlugin from 'vue-gtag'
 //GjpLQgjuwVLCYjP-bYTb51sp
 const gauthOption = {
   clientId: '749746820493-o5fklqpe90t0uoq48u2e6bo6aomq3ct2.apps.googleusercontent.com',
@@ -142,6 +143,10 @@ if (user && user.token) {
 //
 //   return Promise.reject(error.response.data);
 // })
+import VueGtag from "vue-gtag";
+Vue.use(VueGtag, {
+  config: {id : "UA-188133433-1"}
+});
 
 new Vue({
   router,
