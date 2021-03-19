@@ -150,7 +150,7 @@ export default {
 
       analyticGuru() {
           this.$gtag.event('guru-click', {
-              'event_category': 'home',
+              'event_category': 'guru',
               'event_label': 'Guru Page Click',
               'value': 1
           })
@@ -158,7 +158,7 @@ export default {
 
       analyticDonatur() {
           this.$gtag.event('donatur-click', {
-              'event_category': 'home',
+              'event_category': 'donatur',
               'event_label': 'Donatur Page Click',
               'value': 1
           })
