@@ -32,15 +32,17 @@ export default {
       payload:{
         "product_id":0,
         "qty":0,
+        "price":0,
         "payment_methode_id":0,
         "transaction_id":null,
-      }
+      },
+      directHTML:''
     };
   },
   computed: {
   },
   mounted() {
-    //this.product = this.$store.getters['product/cart']
+    this.product = this.$store.getters['product/cart']
     if (this.$route.query.token != null) {
       let token = this.$route.query.token;
       window.axios.defaults.headers.common['Authorization'] = 'jwt ' + token
@@ -57,6 +59,8 @@ export default {
       })
     } else {
       this.product = JSON.parse(localStorage.getItem('cart'))
+      if (this.product!=null)
+      this.payload.price = this.product.price
     }
     this.getListPaymentMethodes()
 
@@ -88,19 +92,29 @@ export default {
       this.payload.qty = 1
       this.payload.payment_methode_id = this.selectedKonter.id
       this.payload.transaction_id = this.transactionId
-
+      let user = JSON.parse(localStorage.getItem('user'))
+      if (user != null) {
+        this.payload.account_id = user.id
+      }
       this.$store.dispatch(
               'transaction/POST_TRANSACTION', this.payload
       ).then(() => {
         let resp = this.$store.getters['transaction/transaction']
         this.successmsg()
-        localStorage.removeItem('cart');
-        window.location = resp.redirect_url
+        if (resp.direct === true) {
+          this.directHTML = resp.direct_value
+          localStorage.removeItem('cart');
+          setTimeout(()=> document.getElementById("paideiaForm").submit(),1000)
+
+        } else {
+          localStorage.removeItem('cart');
+          window.location = resp.redirect_url
+        }
       }).catch(function () {
         Vue.swal({
           position: "top-end",
           icon: "warning",
-          title: 'Failed to procces',
+          title: 'Failed to process',
           showConfirmButton: false,
           timer: 1500
         });
@@ -121,7 +135,7 @@ export default {
       Vue.swal({
         position: "top-end",
         icon: "success",
-        title: "Your transaction has been procced",
+        title: "Your transaction has been proceed",
         showConfirmButton: false,
         timer: 1500
       });
@@ -177,7 +191,7 @@ export default {
                                     style="background:white; "
                             >
                               <div>Pembayaran Konter</div>
-                              <i class="mdi chevron-up chevron-down" style="background=white;"></i>
+                              <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
                             </a>
                           </b-card-header>
 
@@ -205,7 +219,7 @@ export default {
                               </table>
                             </div>
                           </b-card-body>
-                        </b-collapse><hr>
+                        </b-collapse><hr style="color:#dddddd">
                       </b-card>
 
 
@@ -217,7 +231,7 @@ export default {
                                   v-b-toggle.accordion-2
                                   style="background:white;"
                           >
-                            <div>Direct Debit</div>
+                            <div>Bank Transfer</div>
                             <i class="mdi chevron-up mdi-chevron-down"  style="background=white;"></i>
                           </a>
                         </b-card-header>
@@ -256,21 +270,26 @@ export default {
                                   v-b-toggle.accordion-3
                                   style="background:white;"
                           >
-                            <div>E-Wallet</div>
-                            <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
+                            <div>Internet Banking</div>
+                            <i class="mdi chevron-up mdi-chevron-down"  style="background=white;"></i>
                           </a>
                         </b-card-header>
-                        <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+                        <b-collapse
+                                id="accordion-3"
+                                visible
+                                accordion="my-accordion"
+                                role="tabpanel"
+                        >
                           <b-card-body>
                             <div class="table-responsive">
                               <table class="table table-centered">
-                                <tbody> 
+                                <tbody>
                                   <tr>
                                     <td>
                                       <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
-                                          v-if="itemPaymentMethode.payment_type=='wallet'">
-                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
-                                          <img :src="itemPaymentMethode.image_url" alt="" width="82px" height="26px"></b-form-radio>
+                                        v-if="itemPaymentMethode.payment_type=='internet_banking'">
+                                      <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                        <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
                                       </div>
                                     </td>
                                   </tr>
@@ -283,16 +302,92 @@ export default {
                       </b-card>
 
                       <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                        <b-card-header header-tag="header" style="background:white;" role="tab">
+                          <a
+                                  href="javascript: void(0);"
+                                  class="accordion-list"
+                                  v-b-toggle.accordion-4
+                                  style="background:white;"
+                          >
+                            <div>E-Wallet</div>
+                            <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
+                          </a>
+                        </b-card-header>
+                        <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
+                          <b-card-body>
+                            <div class="table-responsive">
+                              <table class="table table-centered">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                          v-if="itemPaymentMethode.payment_type=='e-money'">
+                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </b-card-body>
+                        </b-collapse>
+                        <hr>
+                      </b-card>
+
+                      <!-- <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
+                        <b-card-header header-tag="header" style="background:white;" role="tab">
+                          <a
+                                  href="javascript: void(0);"
+                                  class="accordion-list"
+                                  v-b-toggle.accordion-5
+                                  style="background:white;"
+                          >
+                            <div>Online Credit</div>
+                            <i class="mdi chevron-up mdi-chevron-down" style="background=white;"></i>
+                          </a>
+                        </b-card-header>
+                        <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
+                          <b-card-body>
+                            <div class="table-responsive">
+                              <table class="table table-centered">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <div class="col-xl-5 col-sm-5" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
+                                          v-if="itemPaymentMethode.payment_type=='online_credit'">
+                                        <b-form-radio class="mb-3 mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
+                                          <img :src="itemPaymentMethode.image_url" alt="" width="100px" height="20px"></b-form-radio>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </b-card-body>
+                        </b-collapse>
+                        <hr>
+                      </b-card> -->
+
+                      <b-card no-body class="custom-accordion shadow-none mb-3" style="border:none">
                         <div class="col-md-8" v-for="(itemPaymentMethode,index) in listPaymentMethodes" :key="index"
                             v-if="itemPaymentMethode.payment_type=='credit_card'">
                           <b-form-radio class="mt-3" v-model="selectedKonter"  name="some-radios" :value="itemPaymentMethode">
                             <img :src="itemPaymentMethode.image_url" alt="" width="35px" height="25px" class="mr-2">{{ itemPaymentMethode.payment_name}}</b-form-radio>
                         </div>
-                      </b-card>
+                      </b-card><br>
+                      <div>
+                        <form class="voucher-form">
+                            <input type="text" placeholder="Kode Voucher">
+                            <button type="submit">Gunakan</button>
+                        </form>
+                      </div><br>
                     </div>
                   </div>
               </b-card-text>
             </div>
+
+
           </div>
           <!-- end col -->
           <div class="col-xl-4">
@@ -302,7 +397,7 @@ export default {
                   <div class="table-responsive">
                     <table class="table table-centered">
                       <td>
-                        <tr><h5 class="mt-4 ml-1" style="color:#373334">{{product.product_name}}</h5></tr>
+                        <tr><h6 class="mt-4 ml-1" style="color:#373334">{{product.product_name}}</h6></tr>
                       </td>
                       <td>
                         <tr style="float:right;"><p class="mt-4 mr-2" style="color:#c6c6c6">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</p></tr>
@@ -311,17 +406,25 @@ export default {
                   </div>
                 </div>
               </div>
-              
+
               <div class="card-body">
 
                 <div style="text-align:right">
                   <hr>
                   <p style="color:#373334">Subtotal</p>
-                  <h5 style="color:#00AFEF;"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
+                  <h5 style="color:#00AFEF; font-size:20px"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
                 </div>
-                <div class="text-center">
-                  <b-button @click="postCheckout" class="center-text" variant="primary rounded-pill" style="background-color:#12c45f; border-style:none; width:280px;">Bayar</b-button>
-                </div>
+                  <div class="table-responsive mt-4">
+                    <table class="table table-centered">
+                      <tbody>
+                        <tr>
+                          <div class="text-center">
+                            <b-button @click="postCheckout" class="center-text mt-3" variant="primary rounded-pill" style="background-color:#00afef; border-style:none;">Bayar</b-button>
+                          </div>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
               </div>
             </div>
           </div>
@@ -330,5 +433,7 @@ export default {
     </div>
     </div>
     <!-- end row -->
+    <div v-html="directHTML">
+    </div>
   </Layout>
 </template>

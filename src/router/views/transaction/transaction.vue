@@ -15,7 +15,7 @@ export default {
     title: "Transaction",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout, PageHeader },
+  components: {  },
   data() {
     return {
       // tableData: [],
@@ -41,7 +41,10 @@ export default {
           this.transaction = this.$store.getters['transaction/transaction']
           if (this.transaction.transaction_status=='paid'){
             this.payment_status = 'Pembayaran Berhasil!'
-          } else {
+          }
+          else if (this.transaction.transaction_status=='') {
+                this.payment_status = 'Menunggu!'
+            }  else {
             this.payment_status = this.transaction.transaction_status
           }
         } else {
@@ -77,7 +80,7 @@ export default {
       Vue.swal({
         position: "top-end",
         icon: "success",
-        title: "Your transaction has been procced",
+        title: "Your transaction has been proceed",
         showConfirmButton: false,
         timer: 1500
       });
@@ -108,32 +111,73 @@ export default {
                                   "
                   >
                     <b-card-body
-                            style= "
-                                    padding: 55px 44px;
-                                  "
+                        style= "
+                                padding: 55px 44px;
+                               "
                     >
-                      <div class="text-center">
-                        <h4 class="mb-5">{{this.payment_status}}</h4>
-                        <img src="@/assets/images/checklist.png" alt="" width="100px" height="100px">
-                        <p style="font-size:1em;" class="mt-5">Pesanan #{{this.transaction.invoice_number}}</p><br><br>
+                      <div v-if="payment_status == 'Pembayaran Berhasil!'" >
+                        <div class="text-center">
+                          <h4 class="mb-5">{{this.payment_status}}</h4>
+                          <img src="@/assets/images/checklist.png" alt="" width="100px" height="100px">
+                          <!-- <img v-else-if="payment_status == 'Menunggu'" src="" alt="" width="100px" height="100px"> -->
+                          <p style="font-size:1em;" class="mt-5">Pesanan #{{this.transaction.invoice_number}}</p><br><br>
+                          <hr>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-4 mt-4">
+                            <p style="font-size:1em;">Receipt</p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-4 mt-4">
+                            <p style="font-size:1em;">Akun</p>
+                          </div>
+                          <div class="col-sm-8 mt-4">
+                            <p style="color:#373334;"><b>{{transaction.account_email}}</b></p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-4 mt-4">
+                            <p style="font-size:1em;">Pembayaran</p>
+                          </div>
+                          <div class="col-sm-8 mt-4">
+                            <p style="color:#373334;"><b>{{transaction.payment_methode_name}}</b></p>
+                          </div>
+                        </div>
                         <hr>
+                        <div class="row">
+                          <div class="col-sm-12 mt-3">
+                            <p><b>{{transaction.product_name}}</b><span class="total"><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</span></p><br>
+                            <p style="font-size:1em;">Subtotal<span class="total"><b><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></span></p>
+                          </div>
+                        </div><br><br><br>
                       </div>
-                      <div>
-                        <p style="font-size:1em;">Receipt</p>
-                        <p style="font-size:1em;">Akun</p>
-                        <p style="font-size:1em;">Pembayaran</p>
-                        <hr>
+
+                      <div v-else>
+                        <div>
+                          <p style="font-size:1em; color:#a0a0a0;">Pesanan #{{this.transaction.invoice_number}}</p>
+                          <p style="font-size:1.7em; color:#a0a0a0;"><b><span>IDR</span>{{transaction.gross_amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></p><br>
+                          <hr>
+                        </div><br>
+                        <!-- <div>
+                          <p style="font-size:1em; color:#a0a0a0;">{{ transaction.payment_methode_name}}</p>
+                          <p style="color:#231f20; font-size:1.3em"><b>Paideia</b></p>
+                          <p style="font-size:1em; color:#a0a0a0;">No. Virtual Account</p>
+                          <p style="font-size:1.5em; color:#00afef;"><b><span class="total">{{transaction.va_number}}</span></b></p><br>
+                          <hr>
+                        </div> -->
+                        <div class="text-centercol-sm-8 mt-2 mb-2">
+                          <p class="text-center" style="font-size:1em;">Mohon cek email anda. Kami telah mengirimkan petunjuk pembayaran.</p>
+                        </div><br><hr><br>
+                        <div>
+                          <p style="font-size:1em; color:#a0a0a0">Petunjuk Pembayaran</p><br>
+                          <p style="color:#a0a0a0">Mohon melakukan pembayaran sebelum <span style="color:#0a0a0a"><b>{{transaction.transaction_time}}</b></span> (1x24 jam) melalui Virtual Account. Bila tidak, pesanan ini akan dibatalkan secara otomatis.</p>
+                        </div><br><br>
                       </div>
-                      <div>
-                        <p style="font-size:1.1em"><b>Monthly</b></p><br>
-                      </div>
-                      <div>
-                        <p style="font-size:1em;">Subtotal</p>
-                      </div><br><br>
+
+
                       <div class="text-center">
-                        <p style="font-size:1em;">
-<!--                          <snap class="blue-paideia"><a>Klik Disini</a></snap> -->
-                          untuk kembali ke aplikasi</p>
+                        <!-- <p style="font-size:1em;"> untuk kembali ke aplikasi</p> -->
                       </div>
                     </b-card-body>
                   </div>
@@ -144,7 +188,6 @@ export default {
           </div>
           <!-- end row -->
         </div>
-
         <div class="col-md-1 mt-2 pr-3 pt-4"></div>
       </div>
     </div>

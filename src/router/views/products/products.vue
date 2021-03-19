@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       tableData: [],
-      title: "Pembelian ini ditujukan untuk :",
+      title: " ",
       aaa:'@/assets/images/domba.png',
       listProducts: [],
       monthly_price: [],
@@ -51,7 +51,7 @@ export default {
         ...{
           name: null,
           limit: 17,
-          sort: '-id',
+          sort: 1,
         }
         , ...this.options}
       )
@@ -121,7 +121,7 @@ export default {
                   <tbody>
                     <tr>
                       <td>
-                        <h5 style="margin-left:10px; color:#373334" class="ml-3 mt-3 mb-1">{{itemProduct.product_name}}</h5>
+                        <h5 style="margin-left:10px; color:#373334" class="ml-3 mt-3 mb-1"> </h5>
                       </td>
                       <td>
                         <div class="col" style="text-align: right" v-if="itemProduct.recommended" >
@@ -212,6 +212,8 @@ export default {
 
         </b-card-text></b-tab>
       </b-tabs>
+
+      
     </div>
   </Layout>
 </template>

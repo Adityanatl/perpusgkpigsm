@@ -2,19 +2,27 @@
 import Layout from "../../layouts/main";
 import appConfig from "@/app.config";
 import PageHeader from "@/components/page-header";
+// import Sellingchart from "./sellingchart";
+
+// import simplebar from "simplebar-vue";
+// import { required } from "vuelidate/lib/validators";
 
 import Profile from "@/components/widgets/profile";
 import Earning from "@/components/widgets/earning";
 import Stat from "@/components/widgets/stat";
 import Transaction from "@/components/widgets/transaction";
 import Emailsent from "@/components/widgets/emailsent";
+// import VueGoogleCharts from 'vue-google-charts';
+// import { GChart } from 'vue-google-charts';
+
+import { earningLineChart, salesAnalyticsDonutChart, ChatData } from "./saas/data";
 
 /**
  * Dashboard Component
  */
 export default {
   page: {
-    title: "Dashboard",
+    // title: "Dashboard",
     meta: [{ name: "description", content: appConfig.description }]
   },
   components: {
@@ -28,7 +36,10 @@ export default {
   },
   data() {
     return {
-      title: "Dashboard",
+      // title: "Dashboard",
+      earningLineChart: earningLineChart,
+      salesAnalyticsDonutChart: salesAnalyticsDonutChart,
+      ChatData: ChatData,
       items: [
         {
           text: "Dashboards",
@@ -39,21 +50,32 @@ export default {
           active: true
         }
       ],
+      kreasiku: {
+        "rubrik": 0,
+        "strategi": 0,
+        "silabus": 0,
+        "lesson_plan": 0},
+
       statData: [
         {
           icon: "bx bx-copy-alt",
-          title: "Orders",
+          title: "Silabus",
           value: "1,235"
         },
         {
           icon: "bx bx-archive-in",
-          title: "Revenue",
-          value: "$35, 723"
+          title: "Asesmen/Penilaian",
+          value: "1,235"
         },
         {
           icon: "bx bx-purchase-tag-alt",
-          title: "Average Price",
-          value: "$16.2"
+          title: "RPP",
+          value: "1,235"
+        },
+        {
+          icon: "bx bx-purchase-tag-alt",
+          title: "Aset",
+          value: "1,235"
         }
       ],
       transactions: [
@@ -113,7 +135,25 @@ export default {
         }
       ]
     };
-  }
+  },
+  mounted() {
+    this.getAccountKreasiku()
+    },
+  methods: {
+
+    getAccountKreasiku() {
+      this.$store.dispatch('account/GET_KREASIKU', '').then(() => {
+        this.kreasiku = this.$store.getters['account/kreasiku']
+        this.statData[0].value = this.kreasiku.rubrik
+        this.statData[1].value = this.kreasiku.silabus
+        this.statData[2].value = this.kreasiku.lesson_plan
+        this.statData[3].value = this.kreasiku.strategi
+
+      })
+    },
+  },
+
+
 };
 </script>
 
@@ -121,48 +161,116 @@ export default {
   <Layout>
     <PageHeader :title="title" :items="items" />
 
-    <h4 class="mb-3">Halo! Selamat Datang ...</h4>
-
     <div class="row">
+      <div class="col-xl-4">
+        <Profile />
+        <!-- <Earning /> -->
+      </div>
+      <!-- end col -->
+      <div class="col-xl-8">
+        <div class="row">
+          <div v-for="stat of statData" :key="stat.icon" class="col-md-6">
+            <Stat :icon="stat.icon" :title="stat.title" :value="stat.value" />
+          </div>
+        </div>
+
+        <div class="col-xl-8">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Assesmen/Penilaian</h4>
+
+              <div>
+                <apexchart
+                  class="apex-charts"
+                  dir="ltr"
+                  height="240"
+                  :series="salesAnalyticsDonutChart.series"
+                  :options="salesAnalyticsDonutChart.chartOptions"
+                ></apexchart>
+              </div>
+
+              <div class="text-center text-muted">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="mt-4">
+                      <p class="mb-2 text-truncate">
+                        <i class="mdi mdi-circle text-primary mr-1"></i>
+                        Sikap
+                      </p>
+                      <h5>0</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mt-4">
+                      <p class="mb-2 text-truncate">
+                        <i class="mdi mdi-circle text-success mr-1"></i>
+                        Pengetahuan
+                      </p>
+                      <h5>0</h5>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mt-4">
+                      <p class="mb-2 text-truncate">
+                        <i class="mdi mdi-circle text-danger mr-1"></i>
+                        Keterampilan
+                      </p>
+                      <h5>0</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Email sent -->
+        <!-- <Emailsent /> -->
+      </div>
+    </div>
+    <!-- end row -->
+
+    <!-- <h4 class="mb-3">Halo! Selamat Datang ...</h4> -->
+
+    <!-- <div class="row">
       <div class="col-lg-12">
         <div class="card" style="background-color:yellow">
           <div class="card-body">
             <div class="row">
               <div class="col-8">
-                <h4 class="card-title mb-1">Yuk, dukung guru berkreasi!</h4>
+                <h5 class="mt-2 mb-1"><b>Yuk, dukung guru berkreasi!</b></h5>
                 <p>Mari kita dukung pendidikan didaerah - daerah Indonesia</p>
-                <div class="mt-4" >
+                <div class="mt-4" > -->
                   <!-- <img src="@/assets/images/leaf.png" width="60px" height="50px" alt="">
                   <img src="@/assets/images/leaf.png" width="60px" height="50px" alt="">
                   <img src="@/assets/images/leaf.png" width="60px" height="50px" alt=""> -->
-                  <a href="/products" class="btn btn-primary btn-sm">
-                    Ikut Berpartisipasi !
+                  <!-- <a href="/products" class="btn btn-primary btn-sm">
+                    Ikut Berpartisipasi ! -->
                     <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
-                  </a>
+                  <!-- </a>
                 </div>
               </div>
               <div class="col-4 mt-2">
                 <img src="@/assets/images/img-banner.png" width="100px" height="100px" style="float:right" alt="">
               </div>
-            </div>
+            </div> -->
 
             <!-- Transactions table -->
             <!-- <Transaction :transactions="transactions" /> -->
 
-          </div>
+          <!-- </div>
         </div>
-      </div>
+      </div> -->
       <!-- end col -->
-    </div>
+    <!-- </div> -->
     <!-- end row -->
 
-    <div class="row">
-      <div class="col-xl-4">
+    <!-- <div class="row">
+      <div class="col-xl-4"> -->
         <!-- <Profile /> -->
         <!-- <Earning /> -->
-      </div>
+      <!-- </div> -->
       <!-- end col -->
-      <div class="col-xl-8">
+      <!-- <div class="col-xl-8"> -->
         <!-- <div class="row">
           <div v-for="stat of statData" :key="stat.icon" class="col-md-4">
             <Stat :icon="stat.icon" :title="stat.title" :value="stat.value" />
@@ -171,16 +279,17 @@ export default {
 
         <!-- Email sent -->
         <!-- <Emailsent /> -->
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
     <!-- end row -->
 
-    <div class="row">
+    <!-- <div class="row">
 
       <div class="col-xl-6">
-        <Profile />
+        <Profile /> -->
         <!-- <Earning /> -->
-      </div>
+      <!-- </div> -->
+
 
       <!-- <div class="col-xl-4">
         <div class="card">
@@ -336,11 +445,11 @@ export default {
         </div>
       </div> -->
       <!-- end col -->
-      
-      <div class="col-xl-6">
+
+      <!-- <div class="col-xl-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="text-primary mt-1 mb-1">Subscriptions</h5>
+            <h5 class="text-primary mt-1 mb-1">Subscriptions</h5> -->
 
             <!-- <div class="text-center">
               <div class="mb-4">
@@ -350,37 +459,37 @@ export default {
               <p>San Francisco</p>
             </div> -->
 
-            <div class="table-responsive mt-4">
+            <!-- <div class="table-responsive mt-4">
               <table class="table table-centered">
                 <tbody>
                   <tr>
                     <td style="width: 140px">
                       <p class="mb-0">Status</p>
-                    </td>
+                    </td> -->
                     <!-- <td style="width: 120px">
                       <h5 class="mb-0">1,456</h5>
                     </td>
                     <td>
                       <b-progress :value="94" variant="primary" height="5px"></b-progress>
                     </td> -->
-                  </tr>
+                  <!-- </tr>
                   <tr>
                     <td>
                       <p class="mb-0">Expired</p>
-                    </td>
+                    </td> -->
                     <!-- <td>
                       <h5 class="mb-0">1,123</h5>
                     </td>
                     <td>
                       <b-progress :value="82" variant="success" height="5px"></b-progress>
                     </td> -->
-                  </tr><br>
+                  <!-- </tr><br>
                   <div class="mt-5" style="float:right">
-                    <router-link tag="a" to="/products" class="btn btn-primary btn-sm">
-                      Upgrade
+                    <a href="http://gurukreator.id/products" class="btn btn-primary btn-sm">
+                      Upgrade -->
                       <!-- <i class="mdi mdi-arrow-right ml-1"></i> -->
-                    </router-link>
-                  </div>
+                    <!-- </a>
+                  </div> -->
                   <!-- <tr>
                     <td>
                       <p class="mb-0">San Diego</p>
@@ -392,12 +501,12 @@ export default {
                       <b-progress :value="70" variant="warning" height="5px"></b-progress>
                     </td>
                   </tr> -->
-                </tbody>
+                <!-- </tbody>
               </table>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- end col -->
 
       <!-- <div class="col-xl-4">
@@ -413,7 +522,7 @@ export default {
             <p style="color:#c6c6c6"><span class="blue-paideia ml-2"><b style="color:#00AFEF">Rp 20,000</b></span> / bulan</p>
             <div class="col">
               <p class=""><img src="@/assets/images/star.png" width="20px" height="20px">Recommended</p>
-              <p style="color:#373334" class=""> semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p> 
+              <p style="color:#373334" class=""> semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf).</p>
             </div>
 
             <div class="table-responsive mt-4">
@@ -432,8 +541,9 @@ export default {
       </div> -->
       <!-- end col -->
 
-    </div>
+    <!-- </div> -->
     <!-- end row -->
+
 
 
   </Layout>

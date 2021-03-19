@@ -76,56 +76,56 @@ export default {
 };
 </script>
 <template>
-<!--  <div class="topnav">-->
-<!--    <div class="container-fluid">-->
-<!--      <nav class="navbar navbar-light navbar-expand-lg topnav-menu active">-->
-<!--        <div class="collapse navbar-collapse active" id="topnav-menu-content">-->
-<!--          <ul class="navbar-nav">-->
-<!--            &lt;!&ndash; Menu data &ndash;&gt;-->
+ <div class="topnav">-->
+   <div class="container-fluid">-->
+     <nav class="navbar navbar-light navbar-expand-lg topnav-menu active">-->
+       <div class="collapse navbar-collapse active" id="topnav-menu-content">
+<ul class="navbar-nav">
+    &lt;!&ndash; Menu data &ndash;&gt;
 
-<!--            <li class="nav-item dropdown" v-for="(item, index) of menuItems" :key="index">-->
-<!--              <router-link-->
-<!--                class="nav-link dropdown-toggle arrow-none"-->
-<!--                tag="a"-->
-<!--                href="javascript: void(0);"-->
-<!--                @click.native="onMenuClick"-->
-<!--                :to="item.link ? item.link : ''"-->
-<!--              >-->
-<!--                <i :class="`bx ${item.icon} mr-2`"></i>-->
-<!--                {{ $t(item.label) }}-->
-<!--                <div v-if="hasItems(item)" class="arrow-down"></div>-->
-<!--              </router-link>-->
-<!--              <div-->
-<!--                class="dropdown-menu row"-->
-<!--                aria-labelledby="topnav-dashboard"-->
-<!--                v-if="hasItems(item)"-->
-<!--              >-->
-<!--                <span v-for="(subitem, index) of item.subItems" :key="index">-->
-<!--                  <router-link-->
-<!--                    class="col dropdown-item side-nav-link-ref"-->
-<!--                    v-if="!hasItems(subitem)"-->
-<!--                    :to="subitem.link"-->
-<!--                  >{{ $t(subitem.label) }}</router-link>-->
-<!--                  <div class="dropdown" v-if="hasItems(subitem)">-->
-<!--                    <a class="dropdown-item" href="javascript: void(0);" @click="onMenuClick">-->
-<!--                      {{ $t(subitem.label) }}-->
-<!--                      <div class="arrow-down"></div>-->
-<!--                    </a>-->
-<!--                    <div class="dropdown-menu">-->
-<!--                      <router-link-->
-<!--                        v-for="(subSubitem, index) of subitem.subItems"-->
-<!--                        :key="index"-->
-<!--                        :to="subSubitem.link"-->
-<!--                        class="dropdown-item side-nav-link-ref"-->
-<!--                      >{{ $t(subSubitem.label) }}</router-link>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                </span>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--          </ul>-->
-<!--        </div>-->
-<!--      </nav>-->
-<!--    </div>-->
-<!--  </div>-->
+           <li class="nav-item dropdown" v-for="(item, index) of menuItems" :key="index">
+             <router-link
+               class="nav-link dropdown-toggle arrow-none"
+               tag="a"
+               href="javascript: void(0);"
+               @click.native="onMenuClick"
+               :to="item.link ? item.link : ''"
+             >
+               <i :class="`bx ${item.icon} mr-2`"></i>
+               {{ $t(item.label) }}
+               <div v-if="hasItems(item)" class="arrow-down"></div>
+             </router-link>
+             <div
+               class="dropdown-menu row"
+               aria-labelledby="topnav-dashboard"
+               v-if="hasItems(item)"
+             >
+               <span v-for="(subitem, index) of item.subItems" :key="index">
+                 <router-link
+                   class="col dropdown-item side-nav-link-ref"
+                   v-if="!hasItems(subitem)"
+                   :to="subitem.link"
+                 >{{ $t(subitem.label) }}</router-link>
+                 <div class="dropdown" v-if="hasItems(subitem)">
+                   <a class="dropdown-item" href="javascript: void(0);" @click="onMenuClick">
+                     {{ $t(subitem.label) }}
+                     <div class="arrow-down"></div>
+                   </a>
+                   <div class="dropdown-menu">
+                     <router-link
+                       v-for="(subSubitem, index) of subitem.subItems"
+                       :key="index"
+                       :to="subSubitem.link"
+                       class="dropdown-item side-nav-link-ref"
+                     >{{ $t(subSubitem.label) }}</router-link>
+                   </div>
+                 </div>
+               </span>
+             </div>
+           </li>
+         </ul>
+       </div>
+     </nav>
+   </div>
+</div>
 </template>

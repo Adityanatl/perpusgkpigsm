@@ -373,11 +373,11 @@ export default {
 
                 <div class="col-sm-5">
                   <div>
-                    <img
+                    <!-- <img
                       src="@/assets/images/megamenu-img.png"
                       alt
                       class="img-fluid mx-auto d-block"
-                    />
+                    /> -->
                   </div>
                 </div>
               </div>
@@ -449,19 +449,19 @@ export default {
             <div class="row no-gutters">
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/github.png" alt="Github" />
+                  <!-- <img src="@/assets/images/brands/github.png" alt="Github" /> -->
+                  <span>{{ $t('navbar.dropdown.site.list.github') }}</span>
+                </a>
+              </div>
+              <div class="col"> 
+                <a class="dropdown-icon-item" href="javascript: void(0);">
+                  <!-- <img src="@/assets/images/brands/bitbucket.png" alt="bitbucket" /> -->
                   <span>{{ $t('navbar.dropdown.site.list.github') }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/bitbucket.png" alt="bitbucket" />
-                  <span>{{ $t('navbar.dropdown.site.list.github') }}</span>
-                </a>
-              </div>
-              <div class="col">
-                <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/dribbble.png" alt="dribbble" />
+                  <!-- <img src="@/assets/images/brands/dribbble.png" alt="dribbble" /> -->
                   <span>{{ $t('navbar.dropdown.site.list.dribbble') }}</span>
                 </a>
               </div>
@@ -470,19 +470,19 @@ export default {
             <div class="row no-gutters">
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/dropbox.png" alt="dropbox" />
+                  <!-- <img src="@/assets/images/brands/dropbox.png" alt="dropbox" /> -->
                   <span>{{ $t('navbar.dropdown.site.list.dropbox') }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/mail_chimp.png" alt="mail_chimp" />
+                  <!-- <img src="@/assets/images/brands/mail_chimp.png" alt="mail_chimp" /> -->
                   <span>{{ $t('navbar.dropdown.site.list.mailchimp') }}</span>
                 </a>
               </div>
               <div class="col">
                 <a class="dropdown-icon-item" href="javascript: void(0);">
-                  <img src="@/assets/images/brands/slack.png" alt="slack" />
+                  <!-- <img src="@/assets/images/brands/slack.png" alt="slack" /> -->
                   <span>{{ $t('navbar.dropdown.site.list.slack') }}</span>
                 </a>
               </div>
@@ -541,11 +541,11 @@ export default {
             </a>
             <a href="javascript: void(0);" class="text-reset notification-item">
               <div class="media">
-                <img
+                <!-- <img
                   src="@/assets/images/users/avatar-3.jpg"
                   class="mr-3 rounded-circle avatar-xs"
                   alt="user-pic"
-                />
+                /> -->
                 <div class="media-body">
                   <h6 class="mt-0 mb-1">{{ $t('navbar.dropdown.notification.james.title')}}</h6>
                   <div class="font-size-12 text-muted">
@@ -579,11 +579,11 @@ export default {
             </a>
             <a href="javascript: void(0);" class="text-reset notification-item">
               <div class="media">
-                <img
+                <!-- <img
                   src="@/assets/images/users/avatar-4.jpg"
                   class="mr-3 rounded-circle avatar-xs"
                   alt="user-pic"
-                />
+                /> -->
                 <div class="media-body">
                   <h6 class="mt-0 mb-1">{{ $t('navbar.dropdown.notification.salena.title')}}</h6>
                   <div class="font-size-12 text-muted">
@@ -607,11 +607,11 @@ export default {
 
         <b-dropdown right variant="black" toggle-class="header-item">
           <template v-slot:button-content>
-            <img
+            <!-- <img
               class="rounded-circle header-profile-user"
               src="@/assets/images/users/avatar-1.jpg"
               alt="Header Avatar"
-            />
+            /> -->
             <span class="d-none d-xl-inline-block ml-1">{{ $t('navbar.dropdown.henry.text')}}</span>
             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
           </template>

@@ -9,16 +9,15 @@ import vco from "v-click-outside"
 import router from './router/index'
 import Scrollspy from 'vue2-scrollspy';
 import VueSweetalert2 from 'vue-sweetalert2';
+import VueTelInput from 'vue-tel-input'
+import 'vue-tel-input/dist/vue-tel-input.css'
 
 import "@/design/index.scss"
-// import "@/assets/css/all.min.css"
 import "@/assets/css/animate.css"
 import "@/assets/css/flaticon.css"
-// import "@/assets/css/jquery-ui.min.css"
 import "@/assets/css/magnific-popup.css"
 import "@/assets/css/main.css"
 import "@/assets/css/nice-select.css"
-// import "@/assets/css/owl.min.css"
 import "@/assets/css/style.css"
 
 import store from '@/state/store'
@@ -59,6 +58,18 @@ if (process.env.VUE_APP_DEFAULT_AUTH === "firebase") {
   configureFakeBackend();
 }
 
+Vue.component ('kreasiku',{
+  template: '#kreasiku',
+});
+
+Vue.component ('kelasku',{
+  template: '#kelasku',
+});
+
+Vue.component ('relungku',{
+  template: '#relungku',
+});
+
 Vue.use(VueRouter)
 Vue.use(vco)
 Vue.use(Scrollspy);
@@ -72,6 +83,7 @@ Vue.use(VueMask)
 Vue.use(require('vue-chartist'))
 Vue.use(VueSweetalert2);
 Vue.use(VueGoodTablePlugin)
+Vue.use(VueTelInput)
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyAbvyBxmMbFhrzP9Z8moyYr6dCr-pzjhBE',
@@ -79,6 +91,15 @@ Vue.use(VueGoogleMaps, {
   },
   installComponents: true
 })
+import GoogleAuth from '@/config/google_oAuth.js'
+//GjpLQgjuwVLCYjP-bYTb51sp
+const gauthOption = {
+  clientId: '749746820493-o5fklqpe90t0uoq48u2e6bo6aomq3ct2.apps.googleusercontent.com',
+  scope: 'profile email',
+  prompt: 'select_account'
+}
+Vue.use(GoogleAuth, gauthOption)
+
 Vue.prototype.moment = moment
 Vue.component('apexchart', VueApexCharts)
 
@@ -126,5 +147,8 @@ new Vue({
   router,
   store,
   i18n,
+  data: {
+    currentView : 'kreasiku'
+  },
   render: h => h(App)
 }).$mount('#app')

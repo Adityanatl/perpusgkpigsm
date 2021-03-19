@@ -5,13 +5,13 @@ import { layoutComputed } from "@/state/helpers";
 import NavBar from "@/components/nav-bar";
 import SideBar from "@/components/side-bar";
 import RightBar from "@/components/right-bar";
-import Footer from "@/components/footer";
+// import Footer from "@/components/footer";
 
 /**
  * Vertical layout
  */
 export default {
-  components: { NavBar, SideBar, RightBar, Footer },
+  components: { NavBar, SideBar, RightBar },
   data() {
     return {
       isMenuCondensed: false,

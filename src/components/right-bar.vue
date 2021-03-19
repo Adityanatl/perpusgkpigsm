@@ -120,19 +120,19 @@ export default {
         <div class="p-4">
           <div class="mb-2">
             <router-link tag="a" target="_blank" to="//skote.vuejs-light.themesbrand.com/">
-              <img src="@/assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt />
+              <!-- <img src="@/assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt /> -->
             </router-link>
           </div>
 
           <div class="mb-2">
             <router-link tag="a" target="_blank" to="//skote.vuejs-dark.themesbrand.com/">
-              <img src="@/assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt />
+              <!-- <img src="@/assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt /> -->
             </router-link>
           </div>
 
           <div class="mb-2">
             <router-link tag="a" target="_blank" to="//skote.vuejs-rtl.themesbrand.com/">
-              <img src="@/assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt />
+              <!-- <img src="@/assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt /> -->
             </router-link>
           </div>
         </div>

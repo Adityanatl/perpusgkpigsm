@@ -1,14 +1,16 @@
 <script>
 import Layout from "../../layouts/auth";
+import SocialLogin from '@/components/SocialLogin'
 import {
   authMethods,
   authFackMethods,
-  notificationMethods
+  notificationMethods,
 } from "@/state/helpers";
 import { mapState } from "vuex";
 
 import appConfig from "@/app.config";
 import { required, email } from "vuelidate/lib/validators";
+import Vue from "vue";
 
 /**
  * Login component
@@ -18,7 +20,7 @@ export default {
     title: "Login",
     meta: [{ name: "description", content: appConfig.description }]
   },
-  components: { Layout },
+  components: { Layout , SocialLogin},
   data() {
     return {
       email: "Masukkan Email",
@@ -53,8 +55,7 @@ export default {
       if (this.$v.$invalid) {
         return;
       } else {
-        console.log('process.env.VUE_APP_DEFAULT_AUTH {} ',process.env.VUE_APP_DEFAULT_AUTH)
-        if (process.env.VUE_APP_DEFAULT_AUTH === "backend") {
+
           this.tryingToLogIn = true;
           // Reset the authError if it existed.
           this.authError = null;
@@ -73,9 +74,12 @@ export default {
                 console.log('token ',token)
 
 
-                this.$router.push(
-                  this.$route.query.redirectFrom || { name: "default" }
-                );
+                if (token != null ) {
+                    this.$router.push(
+                        this.$route.query.redirectFrom || {name: "default"}
+                    );
+                    this.successmsg()
+                } else this.warningmsg('User atau password belum benar')
               })
               .catch(error => {
                 this.tryingToLogIn = false;
@@ -83,14 +87,105 @@ export default {
                 this.isAuthError = true;
               })
           );
-        } else {
-          const { email, password } = this;
-          if (email && password) {
-            this.login({ email, password });
-          }
-        }
+
       }
     },
+      tryToLogInSsoGoogle(){
+
+        //   this.$store.dispatch('account/LOGIN_SSO_GOOGLE').then(function(resp) {
+        //     console.log('12')
+        //     this.$router.push(
+        //         this.$route.query.redirectFrom || {name: "default"}
+        //     );
+        // })
+          this.$store.dispatch(
+              'account/LOGIN_SSO_GOOGLE'
+          )
+              .then(() => {
+
+              console.log('12')
+              this.$router.push(
+                  this.$route.query.redirectFrom || {name: "default"}
+              );
+          }).catch(function () {
+              // this.stillLoading=false
+              // this.listMapel = []
+              console.log('12 errorr')
+          })
+          // if (getters.loggedIn) return dispatch('validate')
+          // commit("LOADING")
+          // console.log('11')
+          // return await axios({url: '/login/oauth/google', method: 'GET'})
+          //     .then(resp => {
+          //         if(resp.data.code === 200) {
+          //             commit("SET_CURRENT_USER", resp.data.data)
+          //             axios.defaults.headers.common['Authorization'] = 'jwt ' + resp.data.data.token
+          //             console.log('token ->>>>> ',resp)
+          //             return resp.data.data
+          //         }
+          //         return resp
+          //     })
+          //     .catch( e => {
+          //         console.log(e)
+          //     })
+
+      },
+      tryToLogInSsoGoogle2() {
+          this.submitted = true;
+          // stop here if form is invalid
+          this.$v.$touch();
+
+              this.tryingToLogIn = true;
+              // Reset the authError if it existed.
+              this.authError = null;
+              console.log(5)
+              return (
+                  this.logInSsoGoogle()
+                      // eslint-disable-next-line no-unused-vars
+                      .then(token => {
+                          console.log(6)
+                          this.tryingToLogIn = false;
+                          this.isAuthError = false;
+                          // Redirect to the originally requested page, or to the home page
+                          console.log('this.$route.query.redirectFrom ',this.$route.query)
+                          console.log('name ',name)
+                          console.log('token ',token)
+
+
+                          if (token != null ) {
+                              this.$router.push(
+                                  this.$route.query.redirectFrom || {name: "default"}
+                              );
+                              this.successmsg()
+                          } else this.warningmsg('User atau password belum benar')
+                      })
+                      .catch(error => {
+                          this.tryingToLogIn = false;
+                          this.authError = error ? error : "";
+                          this.isAuthError = true;
+                      })
+              );
+
+
+      },
+      successmsg() {
+          Vue.swal({
+              position: "top-end",
+              icon: "success",
+              title: "Login berhasil",
+              showConfirmButton: false,
+              timer: 1500
+          });
+      },
+      warningmsg(text) {
+          Vue.swal({
+              position: "top-end",
+              icon: "warning",
+              title: text,
+              showConfirmButton: false,
+              timer: 1500
+          });
+      },
 
   }
 };
@@ -103,9 +198,9 @@ export default {
         <div class="container">
             <div class="account-title text-center">
                     <router-link tag="a" to="/" class="back-home"><i class="fas fa-angle-left"></i><span>Kembali <span class="d-none d-sm-inline-block">ke Beranda</span></span></router-link>
-                <a href="#0" class="logo">
-                    <!-- <img src='@/assets/images/new-gurukreator-logo.png' alt="logo"> -->
-                </a>
+                <router-link class="nav-link" tag="a" to="/">
+                    <img src='@/assets/images/new-gurukreator-logo.png' width="185vw" height="49vh" alt="logo">
+                </router-link>
             </div>
             <div class="account-wrapper">
                 <div class="account-body">
@@ -116,7 +211,7 @@ export default {
                     <div
                     v-if="notification.message"
                     :class="'alert ' + notification.type"
-                    >{{notification.message}}</div>                    
+                    >{{notification.message}}</div>
 
                     <form class="account-form" @submit.prevent="tryToLogIn">
                     <b-form-group id="input-group-1" label="Email" label-for="input-1">
@@ -150,19 +245,14 @@ export default {
                             <b-button type="submit" class="mt-2 mb-2" @click="tryingToLogIn">Masuk</b-button>
                         </div>
                     </form>
-
-
-
-
-
-
                 </div>
                 <div class="or">
                     <span style="color:#0b507d">Atau</span>
                 </div>
+
                 <div class="account-header pb-0">
-                    <span class="d-block mb-30 mt-2">Daftar dengan email yang kamu miliki</span>
-                    <a href="#0" class="sign-in-with"><img src='@/assets/images/google.png' alt="icon"><span>Sign Up with Google</span></a>
+                    <span class="d-block mb-30 mt-2"></span>
+                    <SocialLogin />
                     <span class="d-block mt-15">Tidak memiliki akun? <router-link tag="a" to="/sign_up/sign-up" style="color:#0b507d">DAFTAR disini</router-link></span>
                 </div>
             </div>
