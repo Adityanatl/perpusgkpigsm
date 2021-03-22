@@ -83,7 +83,24 @@ export default {
         }
         ],
     //   selectedPrice: 0,
-        join_telegram_email : ""
+        join_telegram_email : "",
+        image_banner: 'https://api.paideia.id/api/files/public/8bd80c80b396428ba575dcfec07a4b20banner11.png',
+        logo1: 'https://api.paideia.id/api/files/public/47063a1db9d043c8bb0e46eb74e7b892sponsor1.png',
+        logo2: 'https://api.paideia.id/api/files/public/1f83e9810013448fbefd3a29c2e24d0elogowti.png',
+        logo3: 'https://api.paideia.id/api/files/public/92081145a7324b5f8e8257200e6ab506logotechinspire.png',
+        keunggulan1: 'https://api.paideia.id/api/files/public/b990ac5b68024205b2d78a186afb1961amfea1.png',
+        keunggulan2: 'https://api.paideia.id/api/files/public/ed55e63df8cd41cd9d237792c5670eb9amfea2.png',
+        keunggulan3: 'https://api.paideia.id/api/files/public/2d18a88db67343e0837e386fcc19d371amfea3.png',
+        keunggulan4: 'https://api.paideia.id/api/files/public/6be81494673a4099b428c99ca67ee894amfea4.png',
+        cara1: 'https://api.paideia.id/api/files/public/8f276db10ac14bbb9e0a8000315c1d6ehow1.png',
+        cara2: 'https://api.paideia.id/api/files/public/fd5548f716ed4d7bb5401745d1698ca9how2.png',
+        cara3: 'https://api.paideia.id/api/files/public/80b5fae731134a0aa8fa617d6103ba51how3.png',
+        team: 'https://api.paideia.id/api/files/public/6840d747a21d499da0e090752f728fc3community.png',
+        fitur_phone1: 'https://api.paideia.id/api/files/public/1361659da7de47e7bca82941bc17c818promain.png',
+        fitur_phone2: 'https://api.paideia.id/api/files/public/48f29261ce0342f9ab153cc8fc152e36promain2.png',
+        fitur_phone3: 'https://api.paideia.id/api/files/public/7b26760fd8fd439daab738abc6e834d6promain3.png',
+        fitur_phone4: 'https://api.paideia.id/api/files/public/62995e07977e4a799358d712dc392864promain4.png',
+        map: 'https://api.paideia.id/api/files/public/06d98a7e50a24fea99aba7c17a69bfbbmap.png',
     };
   },
 
@@ -298,7 +315,7 @@ export default {
                     <div class="banner-1-slider-wrapper">
                         <div class="banner-1-slider owl-carousel owl-theme">
                             <div class="banner-thumb">
-                                <img src='@/assets/images/banner1-1.png' alt="banner">
+                                <img :src="image_banner" alt="banner">
                             </div>
                             <!-- <div class="banner-thumb">
                                 <img src='@/assets/images/banner/banner1-2.png' alt="banner">
@@ -344,16 +361,16 @@ export default {
                 <div class="col-lg-9">
                     <div class="row sponsor-slider owl-theme owl-carousel">
                         <div class="sponsor-thumb">
-                            <img src='@/assets/images/sponsor1.png' alt="sponsor">
+                            <img :src="logo1" alt="sponsor">
                         </div>
                         <div class="sponsor-thumb">
-                            <img src='@/assets/images/logo/logo_wti.png' alt="sponsor">
+                            <img :src="logo2" alt="sponsor">
                         </div>
                         <!-- <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-mika.png' alt="sponsor">
                         </div> -->
                         <div class="sponsor-thumb">
-                            <img src='@/assets/images/logo-techinspire.png' alt="sponsor">
+                            <img :src="logo3" alt="sponsor">
                         </div>
                     </div>
                 </div>
@@ -419,7 +436,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img src='@/assets/images/am-fea1.png' alt="feature">
+                                        <img :src="keunggulan1" alt="feature">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">Low Bandwidth<br> 2G di 3T</h5>
@@ -429,7 +446,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img src='@/assets/images/am-fea2.png' alt="feature">
+                                        <img :src="keunggulan2" alt="feature">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">Solusi <br>Administrasi</h5>  
@@ -439,7 +456,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img src='@/assets/images/am-fea3.png' alt="feature">
+                                        <img :src="keunggulan3" alt="feature">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">Profil Pelajar Pancasila</h5>
@@ -449,7 +466,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img src='@/assets/images/am-fea4.png' alt="feature">
+                                        <img :src="keunggulan4" alt="feature">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">“Backward by Design”</h5>
@@ -476,7 +493,7 @@ export default {
                 <div class="col-lg-4 col-sm-6 col-xl-3">
                     <div class="how-item">
                         <div class="how-thumb">
-                            <img src='@/assets/images/how1.png' alt="how">
+                            <img :src="cara1" alt="how">
                         </div>
                         <div class="how-content">
 
@@ -499,7 +516,7 @@ export default {
                 <div class="col-lg-4 col-sm-6 col-xl-3">
                     <div class="how-item">
                         <div class="how-thumb">
-                            <img src='@/assets/images/how2.png' alt="how">
+                            <img :src="cara2" alt="how">
                         </div>
                         <div class="how-content">
                             <router-link tag="a" to="/sign_up/sign-up" class="button-3">BUAT AKUN</router-link>
@@ -511,7 +528,7 @@ export default {
                 <div class="col-lg-4 col-sm-6 col-xl-3">
                     <div class="how-item">
                         <div class="how-thumb">
-                            <img src='@/assets/images/how3.png' alt="how">
+                            <img :src="cara3" alt="how">
                         </div>
                         <div class="how-content">
                             <router-link tag="a" to="/features/features" class="button-3">SAATNYA BERKREASI</router-link>
@@ -554,7 +571,7 @@ export default {
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
                     <div class="subscribe-thumb-2">
-                        <img src='@/assets/images/community.png' alt="newslater">
+                        <img :src="team" alt="newslater">
                     </div>
                 </div>
             </div>
@@ -580,10 +597,10 @@ export default {
                     <div class="feature--thumb pr-xl-4 ltr">
                         <div class="feat-slider owl-carousel owl-theme" data-slider-id="1">
                             <div class="main-thumb">
-                                <img v-if="gamification==1" src='@/assets/images/pro-main.png' alt="feature">
-                                <img v-else-if="gamification==2" src='@/assets/images/pro-main2.png' alt="feature">
-                                <img v-else-if="gamification==3" src='@/assets/images/pro-main3.png' alt="feature">
-                                <img v-else="" src='@/assets/images/pro-main4.png' alt="feature">
+                                <img v-if="gamification==1" :src="fitur_phone1" alt="feature">
+                                <img v-else-if="gamification==2" :src="fitur_phone2" alt="feature">
+                                <img v-else-if="gamification==3" :src="fitur_phone3" alt="feature">
+                                <img v-else="" :src="fitur_phone4" alt="feature">
                             </div>
                         </div>
                     </div>
@@ -867,7 +884,7 @@ export default {
             </div> -->
             <div class="row mt-5">
                 <div class="col-md">
-                    <img src="@/assets/images/map.png" height="auto" width="100%"/> 
+                    <img :src="map" height="auto" width="100%"/> 
                 </div>
             </div>  
         </div>
