@@ -16,7 +16,35 @@ export default {
 
   data() {
     return {
-
+        cube: 'https://api.paideia.id/api/files/public/4d2a158022484a43b2e6e805e9d85322cube.png',
+        feat1: 'https://api.paideia.id/api/files/public/90207ade8fb247eeaad754eeff5735cbfeat1.png',
+        feat2: 'https://api.paideia.id/api/files/public/c7547c5adf4f4077aa8fb02babc8da23feat2.png',
+        feat3: 'https://api.paideia.id/api/files/public/44f0392b62f44c65834408e72399f527feat3.png',
+        feat4: 'https://api.paideia.id/api/files/public/b0a98cf03b5d49909ea5949c090a5442feat4.png',
+        feat5: 'https://api.paideia.id/api/files/public/d9bec11587cd4b439fd6d227b0c66795feat5.png',
+        feat6: 'https://api.paideia.id/api/files/public/0b99860300f443279cea48a436eb1106feat6.png',
+        feat7: 'https://api.paideia.id/api/files/public/0d04e7f3b19b4797b4e887111c409dc0feat7.png',
+        feat8: 'https://api.paideia.id/api/files/public/fc40a19963ed406585a5f2a0e7c88daefeat8.png',
+        feat9: 'https://api.paideia.id/api/files/public/e4ff362808d74d1197a99f8159959c79feat9.png',
+        feat10: 'https://api.paideia.id/api/files/public/6107558357214e879d30be634da348c4feat10.png',
+        feat11: 'https://api.paideia.id/api/files/public/925ce7d17f964cf988038e16888238dafeat11.png',
+        kotak1: 'https://api.paideia.id/api/files/public/d45499e8c9924a429dd6b0dc10083f731.png',
+        kotak2: 'https://api.paideia.id/api/files/public/27ef2561fdc149bbb0bb91047091533e2.png',
+        kotak3: 'https://api.paideia.id/api/files/public/dcb46fec9b744c6fbd8f990680fdba513.png',
+        kotak4: 'https://api.paideia.id/api/files/public/bab6c91be7bd4419babf20d6294b6f844.png',
+        kotak5: 'https://api.paideia.id/api/files/public/03613c13da7c463ebef2d8cf85c186465.png',
+        picA: 'https://api.paideia.id/api/files/public/e1d81069ea244138b6ea6204c0378fbda.png',
+        picB: 'https://api.paideia.id/api/files/public/449c56877a5544edacc248e35d87403eb.png',
+        picC: 'https://api.paideia.id/api/files/public/df69809b9a154df9aeb83998f3885b48c.png',
+        picD: 'https://api.paideia.id/api/files/public/894cd50586004238ad32d7b25974e5b4d.png',
+        picE: 'https://api.paideia.id/api/files/public/f5f71d0357a24aacbf669566f221092de.png',
+        picF: 'https://api.paideia.id/api/files/public/50306ca5fb5f409891537b2465fc129af.png',
+        picG: 'https://api.paideia.id/api/files/public/8ccf368f7d034e50a2b266dbaeb58718g.png',
+        logo1: 'https://api.paideia.id/api/files/public/47063a1db9d043c8bb0e46eb74e7b892sponsor1.png',
+        logo2: 'https://api.paideia.id/api/files/public/1f83e9810013448fbefd3a29c2e24d0elogowti.png',
+        logo3: 'https://api.paideia.id/api/files/public/92081145a7324b5f8e8257200e6ab506logotechinspire.png',
+        logo4: 'https://api.paideia.id/api/files/public/c11dd54bc575461dab061146564360f1paideialogo.png',
+        logo5: 'https://api.paideia.id/api/files/public/6a2ce089de9f4ed0ad07744b6ba6a24asponsor2.png'
     };
   },
     methods: {
@@ -243,7 +271,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Silabus yang ringkas dan menyeluruh</h5>
@@ -256,7 +284,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat1.png' alt="feature">
+                                    <img :src="feat1" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -264,7 +292,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Fleksibitas RPP yang melampaui batas</h5>
@@ -277,7 +305,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat2.png' alt="feature">
+                                    <img :src="feat2" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -285,7 +313,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Penilaian yang memiliki tujuan dan kaya akan pilihan</h5>
@@ -298,7 +326,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat3.png' alt="feature">
+                                    <img :src="feat3" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -306,7 +334,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Bentuk penilaian yang variatif sesuai AKM</h5>
@@ -319,7 +347,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat4.png' alt="feature">
+                                    <img :src="feat4" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -327,7 +355,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Stategi pembelajaran yang tepat sasaran</h5>
@@ -340,7 +368,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat5.png' alt="feature">
+                                    <img :src="feat5" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -366,7 +394,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Perangkat Ajar</h5>
@@ -379,7 +407,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat6.png' alt="feature">
+                                    <img :src="feat6" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -387,7 +415,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Bahan Ajar</h5>
@@ -400,7 +428,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat7.png' alt="feature">
+                                    <img :src="feat7" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -408,7 +436,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Pelajar</h5>
@@ -421,7 +449,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat8.png' alt="feature">
+                                    <img :src="feat8" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -429,7 +457,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Hasil Ajar</h5>
@@ -442,7 +470,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat9.png' alt="feature">
+                                    <img :src="feat9" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -466,7 +494,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Relungku</span>
                                     <h5 class="title">3 kemudahan bagi Guru</h5>
@@ -479,7 +507,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat10.png' alt="feature">
+                                    <img :src="feat10" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -487,7 +515,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img src='@/assets/images/cube.png' alt="feature">
+                                        <img :src="cube" alt="feature">
                                     </div>
                                     <span class="cate">Relungku</span>
                                     <h5 class="title">Kurasi yang teruji</h5>
@@ -500,7 +528,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img src='@/assets/images/feat11.png' alt="feature">
+                                    <img :src="feat11" alt="feature">
                                 </div>
                             </div>
                         </div>
@@ -531,76 +559,76 @@ export default {
             <div class="comunity-wrapper">
                 <div class="buttons"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
                 <div class="comunity-area">
-                    <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/d.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/e.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/a.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/b.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/f.png' alt="comunity"></div>
+                    <div class="community-item"><img :src="picC" alt="comunity"></div>
+                    <div class="community-item"><img :src="picG" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="community-item"><img :src="picD" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="community-item"><img :src="picE" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="community-item"><img :src="picA" alt="comunity"></div>
+                    <div class="community-item"><img :src="picB" alt="comunity"></div>
+                    <div class="community-item"><img :src="picF" alt="comunity"></div>
                 </div>
                 <div class="comunity-area two">
-                    <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/d.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/e.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/a.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/b.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/f.png' alt="comunity"></div>
+                    <div class="community-item"><img :src="picC" alt="comunity"></div>
+                    <div class="community-item"><img :src="picG" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="community-item"><img :src="picD" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="community-item"><img :src="picE" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="community-item"><img :src="picA" alt="comunity"></div>
+                    <div class="community-item"><img :src="picB" alt="comunity"></div>
+                    <div class="community-item"><img :src="picF" alt="comunity"></div>
                 </div>
                 <div class="comunity-area three">
-                    <div class="community-item"><img src='@/assets/images/comunity/c.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/g.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/d.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/5.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/e.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/1.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/2.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/3.png' alt="comunity"></div>
-                    <div class="comunity-item"><img src='@/assets/images/comunity/4.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/a.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/b.png' alt="comunity"></div>
-                    <div class="community-item"><img src='@/assets/images/comunity/f.png' alt="comunity"></div>
+                    <div class="community-item"><img :src="picC" alt="comunity"></div>
+                    <div class="community-item"><img :src="picG" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="community-item"><img :src="picD" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="community-item"><img :src="picE" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
+                    <div class="community-item"><img :src="picA" alt="comunity"></div>
+                    <div class="community-item"><img :src="picB" alt="comunity"></div>
+                    <div class="community-item"><img :src="picF" alt="comunity"></div>
                 </div>
             </div>
         </div>
@@ -660,24 +688,24 @@ export default {
             </div> -->
             <div class="text-center row">
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src="@/assets/images/logo/logo_wti.png" width="200vw" height="200vw" alt="">
+                    <img :src="logo2" height="200vw" alt="">
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src="@/assets/images/logo/paideia-logo.png" style="margin-top:65px;" width="200vw" height="55vw" alt="">
+                    <img :src="logo4" style="margin-top:65px;" width="200vw" height="55vw" alt="">
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src="@/assets/images/logo/refo.png" width="200vw" height="200vw" alt="">
+                    <img :src="logo1" width="200vw" height="200vw" alt="">
                 </div>
             </div>
             <div class="text-center row">
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src='@/assets/images/sponsor2.png' width="200vw" height="200vw" alt="sponsor">
+                    <img :src="logo5" width="200vw" height="200vw" alt="sponsor">
                 </div>
                 <!-- <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-mika.png' width="200vw" height="200vw" alt="sponsor">
                 </div> -->
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src='@/assets/images/logo-techinspire.png' width="200vw" height="200vw" alt="sponsor">
+                    <img :src="logo3" width="200vw" height="200vw" alt="sponsor">
                 </div>
             </div>
         </div>

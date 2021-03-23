@@ -49,7 +49,30 @@ export default {
             "hp":"",
             "country":"ID"
         },
-        directHTML:''
+        directHTML:'',
+      video: 'https://api.paideia.id/api/files/public/91221555db7c4016996ca7dd0ccacb07faturevideo.png',
+      counter1: 'https://api.paideia.id/api/files/public/90dbd00c7c664fa3829aabc3d36fb920counter1.png',
+      counter2: 'https://api.paideia.id/api/files/public/c48acd1fcb6f45ceac7f74b3498e7379counter2.png',
+      counter3: 'https://api.paideia.id/api/files/public/768429f490404c33b1d85f24493be7d8counter3.png',
+      map: 'https://api.paideia.id/api/files/public/06d98a7e50a24fea99aba7c17a69bfbbmap.png',
+      payment1: 'https://api.paideia.id/api/files/public/172626a2f93e4fce8f456a3c001956d9BankBni.png',
+      payment2: 'https://api.paideia.id/api/files/public/64961531bc184d1bb87df106ba9611f0mandiri.png',
+      payment3: 'https://api.paideia.id/api/files/public/3bf55d02650644b39db4646ae5a91177permatabank.png',
+      payment4: 'https://api.paideia.id/api/files/public/e2a5197b6d7a4898874f19d9643f95bcBankBCA.png',
+      payment5: 'https://api.paideia.id/api/files/public/68e4fe640ace46ea808a1dbaaf24d22cdanamondonatur.png',
+      payment6: 'https://api.paideia.id/api/files/public/ed8a5458a3cf4f3fab5a4d09de6e0223cimbdonatur.png',
+      payment7: 'https://api.paideia.id/api/files/public/4a4032a5fdd14c538f00a41dc3c9b39bmaybankdonatur.png',
+      payment8: 'https://api.paideia.id/api/files/public/a854cb8750ea45449b25d4dee3b8ab4bsinarmasdonatur.png',
+      payment9: 'https://api.paideia.id/api/files/public/b00b613c02bf4a0bb4b08a6556e733c3creditCard.png',
+      payment10: 'https://api.paideia.id/api/files/public/7ff4644fa2274bf0811487d61f0531e9ovo.png',
+      payment11: 'https://api.paideia.id/api/files/public/7874bb85bac04615a466e4ec6a0a0367dana.png',
+      payment12: 'https://api.paideia.id/api/files/public/40ae9df91750480382944d0a295ec9fblinkaja.png',
+      ball1: 'https://api.paideia.id/api/files/public/f63dc8cb5e644bc8af6421e23cc139d41.png',
+      ball2: 'https://api.paideia.id/api/files/public/76f044c80b354d70971b1d2a8c680b262.png',
+      ball3: 'https://api.paideia.id/api/files/public/ea1da180c8e64662a8bfc3c440d61b8b3.png',
+      ball4: 'https://api.paideia.id/api/files/public/6f1a4977a9674a0a9fdeca56a9457e4a4.png',
+      ball5: 'https://api.paideia.id/api/files/public/2279e5b755494b4988cd3336fbed18af5.png',
+      ball6: 'https://api.paideia.id/api/files/public/451555d44d474631afdc658fa49d5cd26.png'
     };
   },
   created() {
@@ -353,7 +376,7 @@ export default {
                     <div class="video-donatur col-xl-6">
                         <a href="https://www.youtube.com/watch?v=kkpuq3m0Em4" class="features-video-area popup">
                             <div class="thumb rtl pr-xl-15">
-                                <img src='@/assets/images/fature-video.png' alt="feature">
+                                <img :src="video" alt="feature">
                             </div>
                             <div class="button-area">
                                 <h4 class="title-about-donatur">
@@ -391,7 +414,7 @@ export default {
                             <div class="counter-area-5">
                                 <div class="counter-item-5">
                                     <div class="counter-thumb">
-                                        <img src='@/assets/images/counter/counter1.png' alt="counter">
+                                        <img :src="counter1" alt="counter">
                                     </div>
                                     <div class="counter-content">
                                         <h3 class="title"><span class="counter">120</span><span>k</span></h3>
@@ -400,7 +423,7 @@ export default {
                                 </div>
                                 <div class="counter-item-5">
                                     <div class="counter-thumb">
-                                        <img src='@/assets/images/counter/counter2.png' alt="counter">
+                                        <img :src="counter2" alt="counter">
                                     </div>
                                     <div class="counter-content">
                                         <h3 class="title"><span class="counter">62</span><span></span></h3>
@@ -409,7 +432,7 @@ export default {
                                 </div>
                                 <div class="counter-item-5">
                                     <div class="counter-thumb">
-                                        <img src='@/assets/images/counter/counter3.png' alt="counter">
+                                        <img :src="counter3" alt="counter">
                                     </div>
                                     <div class="counter-content">
                                         <h3 class="title"><span class="counter">11</span></h3>
@@ -443,16 +466,6 @@ export default {
                 </div>
                 <div class="col-lg-5">
                     <div class="coverage-right-area text-lg-right">
-                        <!-- <div class="rating-area">
-                            <div class="ratings">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                            <span class="average">5.0 / 5.0</span>
-                        </div> -->
                         <h2 class="amount">62 Regions*</h2>
                         <p>3T Areas</p>
                         <p>The most forefront<br>
@@ -465,55 +478,9 @@ export default {
             </div>
             <div class="row mt-5">
                 <div class="col-md">
-                    <img src="@/assets/images/map.png" height="auto" width="100%"/>
+                    <img :src="map" height="auto" width="100%"/>
                 </div>
             </div>
-            <!-- <div class="coverage-wrapper coverage_img">
-                <div class="border-item-1 text-center">
-                    <span class="name">Sumatera Utara</span><br>
-                    <h4 class="title">4</h4>
-                </div>
-                <div class="border-item-2 text-center">
-                    <span class="name">Sumatera Barat</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-3 text-center">
-                    <span class="name">Sumatera Selatan</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-4 text-center">
-                    <span class="name">Lampung</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-5 text-center">
-                    <span class="name">Sulawesi Tengah</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-6 text-center">
-                    <span class="name">Maluku Utara</span>
-                    <h4 class="title">2</h4>
-                </div>
-                <div class="border-item-7">
-                    <span class="name">Nusa Tenggara Barat</span>
-                    <h2 class="title">1</h2>
-                </div>
-                <div class="border-item-8">
-                    <span class="name">Nusa Tenggara Timur</span>
-                    <h2 class="title">13</h2>
-                </div>
-                <div class="border-item-9">
-                    <span class="name">Maluku</span>
-                    <h2 class="title">6</h2>
-                </div>
-                <div class="border-item-10">
-                    <span class="name">Papua Barat</span>
-                    <h2 class="title">8</h2>
-                </div>
-                <div class="border-item-11">
-                    <span class="name">Papua</span>
-                    <h2 class="title">22</h2>
-                </div>
-            </div> -->
         </div>
      </section>
      <!--============= Coverage Section Ends Here =============-->
@@ -528,27 +495,27 @@ export default {
         </div>
         <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/1.png' alt="balls">
+            <img :src="ball1" alt="balls">
         </div>
         <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/2.png' alt="balls">
+            <img :src="ball2" alt="balls">
         </div>
         <div class="ball-4" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/3.png' alt="balls">
+            <img :src="ball3" alt="balls">
         </div>
         <div class="ball-5" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img src='@/assets/images/4.png' alt="balls">
+            <img :src="ball4" alt="balls">
         </div>
         <div class="ball-6" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/5.png' alt="balls">
+            <img :src="ball5" alt="balls">
         </div>
         <div class="ball-7" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img src='@/assets/images/6.png' alt="balls">
+            <img :src="ball6" alt="balls">
         </div>
         <div class="container">
             <div class="section-header pb-30 cl-white">
@@ -603,12 +570,6 @@ export default {
 
 
                                 </div>
-                                    <!-- <div class="mt-5">
-                                        <p class="mt-2 mb-2" style="font-size:18px;">Mohon maaf atas ketidaknyaman ini. <b>Mitra provider pembayaran</b> kami sedang mengalami kendala teknis.</p>
-                                        <p class="mt-2 mb-2" style="font-size:18px;">Untuk sementara waktu, mohon dapat menyalurkan dana secara langsung ke akun BCA a/n <b>PT Cahaya Mitra Harapan 7613838777</b> dengan isi berita <b>"Guru 3T"</b>.</p><br>
-                                        <p><i>To our overseas supporters, our apology for this inconvenience. Once our payment partner resolves the technical issues on their end, our Credit Card payment methods will be available. Your kind understanding and continuous support are much appreciated!</i></p>
-                                    </div><br><br> -->
-
                             </div>
 
                         </div>
@@ -624,20 +585,10 @@ export default {
                         <div class="amount-area">
                             <div class="text-center mt-3">
                                 <span class="cate"><b>Payment Methods</b></span>
-                                <!-- <div class="counter-area-5">
-                                    <div class="counter-item-5">
-                                        <div class="counter-thumb">
-                                        <input  type="radio"  :value="10" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;" >
-                                        </div>
-                                        <div class="counter-content">
-                                        <img src="@/assets/images/payment/BCA.png" style="margin-top:30px;" alt="">
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="13" v-model="payload.payment_methode_id" name="bni" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/payment/BankBni.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment1" style="margin-top:0px;" alt="">
                                     </div>
                                     <!-- <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="briva" style="width:25px; height:25px; margin-right:10px;" disabled>
@@ -645,11 +596,11 @@ export default {
                                     </div> -->
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/payment/mandiri.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment2" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="12" v-model="payload.payment_methode_id" name="permatabank" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img src="@/assets/images/payment/permatabank.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment3" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row">
@@ -667,15 +618,15 @@ export default {
                                     </div> -->
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="17" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/bca-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment4" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="16" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/danamon-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment5" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="11" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/cimb-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment6" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row">
@@ -697,29 +648,29 @@ export default {
                                     </div> -->
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="19" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/maybank-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment7" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="20" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/sinarmas-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment8" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/kartukredit_donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment9" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
                                 <div class="text-center row">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="33" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/ovo-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment10" style="margin-top:0px;" alt="">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="34" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/dana-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment11" style="margin-top:0px;" alt="">
                                     </div>                                 
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="29" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img src="@/assets/images/linkaja-donatur.png" style="margin-top:0px;" alt="">
+                                        <img :src="payment12" style="margin-top:0px;" alt="">
                                     </div>
                                 </div>
                             </div>

@@ -85,6 +85,8 @@ export default {
     //   selectedPrice: 0,
         join_telegram_email : "",
         image_banner: 'https://api.paideia.id/api/files/public/8bd80c80b396428ba575dcfec07a4b20banner11.png',
+        video: 'https://api.paideia.id/api/files/public/91221555db7c4016996ca7dd0ccacb07faturevideo.png',
+        arrow: 'https://api.paideia.id/api/files/public/fe97b2b5d8e94d76abd862c249282488downarrow.png',
         logo1: 'https://api.paideia.id/api/files/public/47063a1db9d043c8bb0e46eb74e7b892sponsor1.png',
         logo2: 'https://api.paideia.id/api/files/public/1f83e9810013448fbefd3a29c2e24d0elogowti.png',
         logo3: 'https://api.paideia.id/api/files/public/92081145a7324b5f8e8257200e6ab506logotechinspire.png',
@@ -101,6 +103,12 @@ export default {
         fitur_phone3: 'https://api.paideia.id/api/files/public/7b26760fd8fd439daab738abc6e834d6promain3.png',
         fitur_phone4: 'https://api.paideia.id/api/files/public/62995e07977e4a799358d712dc392864promain4.png',
         map: 'https://api.paideia.id/api/files/public/06d98a7e50a24fea99aba7c17a69bfbbmap.png',
+        ball1: 'https://api.paideia.id/api/files/public/f63dc8cb5e644bc8af6421e23cc139d41.png',
+        ball2: 'https://api.paideia.id/api/files/public/76f044c80b354d70971b1d2a8c680b262.png',
+        ball3: 'https://api.paideia.id/api/files/public/ea1da180c8e64662a8bfc3c440d61b8b3.png',
+        ball4: 'https://api.paideia.id/api/files/public/6f1a4977a9674a0a9fdeca56a9457e4a4.png',
+        ball5: 'https://api.paideia.id/api/files/public/2279e5b755494b4988cd3336fbed18af5.png',
+        ball6: 'https://api.paideia.id/api/files/public/451555d44d474631afdc658fa49d5cd26.png'
     };
   },
 
@@ -405,7 +413,7 @@ export default {
                     <div class="videohome col-lg-6">
                         <a href="https://www.youtube.com/watch?v=cmzhtpuu6c0" class="feature-video-area popup">
                             <div class="thumb">
-                                <img src='@/assets/images/fature-video.png' alt="feature">
+                                <img :src="video" alt="feature">
                             </div>
                             <div class="button-area">
                                 <h4 class="title">
@@ -672,27 +680,27 @@ export default {
         </div>
         <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/1.png' alt="balls">
+            <img :src="ball1" alt="balls">
         </div>
         <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/2.png' alt="balls">
+            <img :src="ball2" alt="balls">
         </div>
         <div class="ball-4" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/3.png' alt="balls">
+            <img :src="ball3" alt="balls">
         </div>
         <div class="ball-5" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img src='@/assets/images/4.png' alt="balls">
+            <img :src="ball4" alt="balls">
         </div>
         <div class="ball-6" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img src='@/assets/images/5.png' alt="balls">
+            <img :src="ball5" alt="balls">
         </div>
         <div class="ball-7" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img src='@/assets/images/6.png' alt="balls">
+            <img :src="ball6" alt="balls">
         </div>
         <div class="container">
             <div class="section-header pb-30 cl-white">
