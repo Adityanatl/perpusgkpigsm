@@ -70,7 +70,7 @@ export default {
                             <label for="sign-up">Email </label>
                             <input type="text"  v-model="payload.email" placeholder="Masukkan email disini " id="sign-up">
                         </div>
-                        <div class="form-group active text-center">
+                        <div class="group active text-center">
                             <button @click="postSignup">Guru Kreator!</button>
                             <span class="d-block mt-15">Sudah punya akun? <a href="sign-in.html" style="color:#0b507d">Masuk</a></span>
                         </div>
