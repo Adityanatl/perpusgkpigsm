@@ -2,6 +2,7 @@
 import appConfig from "@/app.config";
 import SocialSignup from '@/components/SocialSignup'
 import Layout from "../../layouts/auth";
+import Vue from "vue";
 
 /**
  * Dashboard Component
@@ -15,8 +16,29 @@ export default {
   data() {
     return {
       title: "Dashboard",
+        payload: {email: ''}
     };
-  }
+  },
+    methods:{
+        postSignup(){
+
+            this.$store.dispatch(
+                'account/SIGNUP', this.payload
+            ).then(() => {
+                this.successmsg()
+            }).catch(function () {
+                Vue.swal({
+                    position: "top-end",
+                    icon: "warning",
+                    title: 'Failed to process',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+
+
+        },
+    }
 };
 </script>
 
@@ -46,10 +68,10 @@ export default {
                     <form class="account-form">
                         <div class="form-group">
                             <label for="sign-up">Email </label>
-                            <input type="text" placeholder="Masukkan email disini " id="sign-up">
+                            <input type="text"  v-model="payload.email" placeholder="Masukkan email disini " id="sign-up">
                         </div>
                         <div class="form-group active text-center">
-                            <button type="submit">Guru Kreator!</button>
+                            <button @click="postSignup">Guru Kreator!</button>
                             <span class="d-block mt-15">Sudah punya akun? <a href="sign-in.html" style="color:#0b507d">Masuk</a></span>
                         </div>
                     </form>
