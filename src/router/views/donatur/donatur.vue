@@ -265,7 +265,7 @@ export default {
             <div class="header-wrapper">
             <div class="logo">
                 <router-link tag="a" to="/">
-                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo_gurukreator">
                 </router-link>
             </div>
                             <div
@@ -346,7 +346,7 @@ export default {
     <!--============= Header Section Ends Here =============-->
     <section class="page-header bg_img_feature" data-background="./assets/images/page-header.png">
         <div class="bottom-shape d-none d-md-block">
-            <img src='@/assets/images/page-header3.png' alt="css">
+            <img src='@/assets/images/page-header3.png' alt="css_gurukreator">
         </div>
         <div class="container">
             <div class="page-header-content cl-white">
@@ -376,7 +376,7 @@ export default {
                     <div class="video-donatur col-xl-6">
                         <a href="https://www.youtube.com/watch?v=kkpuq3m0Em4" class="features-video-area popup">
                             <div class="thumb rtl pr-xl-15">
-                                <img :src="video" alt="feature">
+                                <img :src="video" alt="feature_gurukreator">
                             </div>
                             <div class="button-area">
                                 <h4 class="title-about-donatur">
@@ -414,7 +414,7 @@ export default {
                             <div class="counter-area-5">
                                 <div class="counter-item-5">
                                     <div class="counter-thumb">
-                                        <img :src="counter1" alt="counter">
+                                        <img :src="counter1" alt="counter_gurukreator">
                                     </div>
                                     <div class="counter-content">
                                         <h3 class="title"><span class="counter">120</span><span>k</span></h3>
@@ -423,7 +423,7 @@ export default {
                                 </div>
                                 <div class="counter-item-5">
                                     <div class="counter-thumb">
-                                        <img :src="counter2" alt="counter">
+                                        <img :src="counter2" alt="counter_gurukreator">
                                     </div>
                                     <div class="counter-content">
                                         <h3 class="title"><span class="counter">62</span><span></span></h3>
@@ -432,7 +432,7 @@ export default {
                                 </div>
                                 <div class="counter-item-5">
                                     <div class="counter-thumb">
-                                        <img :src="counter3" alt="counter">
+                                        <img :src="counter3" alt="counter_gurukreator">
                                     </div>
                                     <div class="counter-content">
                                         <h3 class="title"><span class="counter">11</span></h3>
@@ -488,34 +488,34 @@ export default {
         <!--============= Pricing Section Starts Here =============-->
      <section class="pricing-section padding-top oh padding-bottom pb-md-0 bg_img pos-rel" data-background="./assets/images/bg/pricing-bg.jpg" id="pricing">
         <div class="top-shape d-none d-md-block">
-            <img src='@/assets/images/top-shape.png' alt="css">
+            <img src='@/assets/images/top-shape.png' alt="css_gurukreator">
         </div>
         <div class="bottom-shape d-none d-md-block">
-            <img src='@/assets/images/bottom-shape.png' alt="css">
+            <img src='@/assets/images/bottom-shape.png' alt="css_gurukreator">
         </div>
         <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball1" alt="balls">
+            <img :src="ball1" alt="balls_gurukreator">
         </div>
         <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball2" alt="balls">
+            <img :src="ball2" alt="balls_gurukreator">
         </div>
         <div class="ball-4" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball3" alt="balls">
+            <img :src="ball3" alt="balls_gurukreator">
         </div>
         <div class="ball-5" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img :src="ball4" alt="balls">
+            <img :src="ball4" alt="balls_gurukreator">
         </div>
         <div class="ball-6" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball5" alt="balls">
+            <img :src="ball5" alt="balls_gurukreator">
         </div>
         <div class="ball-7" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img :src="ball6" alt="balls">
+            <img :src="ball6" alt="balls_gurukreator">
         </div>
         <div class="container">
             <div class="section-header pb-30 cl-white">
@@ -554,7 +554,7 @@ export default {
                                         <tr>
                                             <td>
                                                 <input  type="radio" name="donaturPrice" :value="itemProduct"  style="width:25px; height:25px; margin-right:10px;" v-model="pickedProduct"></td>
-                                            <td><img class="" :src="itemProduct.image_url" alt="" width="65px" height="65px" style="float:left"></td>
+                                            <td><img class="" :src="itemProduct.image_url" alt="gurukreator" width="65px" height="65px" style="float:left"></td>
 
                                             <!-- <td> -->
                                                 <h2 class="title mt-3"><sup>IDR</sup>
@@ -588,7 +588,7 @@ export default {
                                 <div class="text-center row mt-3">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="13" v-model="payload.payment_methode_id" name="bni" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img :src="payment1" style="margin-top:0px;" alt="">
+                                        <img :src="payment1" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                     <!-- <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio"  :value="2" v-model="payload.payment_methode_id" name="briva" style="width:25px; height:25px; margin-right:10px;" disabled>
@@ -596,11 +596,11 @@ export default {
                                     </div> -->
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="18" v-model="payload.payment_methode_id" name="mandiri" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img :src="payment2" style="margin-top:0px;" alt="">
+                                        <img :src="payment2" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="12" v-model="payload.payment_methode_id" name="permatabank" style="width:25px; height:25px; margin-right:10px;" >
-                                        <img :src="payment3" style="margin-top:0px;" alt="">
+                                        <img :src="payment3" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                 </div>
                                 <div class="text-center row">
@@ -618,15 +618,15 @@ export default {
                                     </div> -->
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="17" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment4" style="margin-top:0px;" alt="">
+                                        <img :src="payment4" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="16" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment5" style="margin-top:0px;" alt="">
+                                        <img :src="payment5" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="11" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment6" style="margin-top:0px;" alt="">
+                                        <img :src="payment6" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                 </div>
                                 <div class="text-center row">
@@ -648,29 +648,29 @@ export default {
                                     </div> -->
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="19" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment7" style="margin-top:0px;" alt="">
+                                        <img :src="payment7" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="20" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment8" style="margin-top:0px;" alt="">
+                                        <img :src="payment8" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="15" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment9" style="margin-top:0px;" alt="">
+                                        <img :src="payment9" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                 </div>
                                 <div class="text-center row">
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="33" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment10" style="margin-top:0px;" alt="">
+                                        <img :src="payment10" style="margin-top:0px;" alt="gurukreator">
                                     </div>
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="34" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment11" style="margin-top:0px;" alt="">
+                                        <img :src="payment11" style="margin-top:0px;" alt="gurukreator">
                                     </div>                                 
                                     <div class="col-md mt-2" data-aos="zoom-in-up" data-aos-duration="1500">
                                         <input  type="radio" :value="29" v-model="payload.payment_methode_id" name="methodePayment" style="width:25px; height:25px; margin-right:10px;">
-                                        <img :src="payment12" style="margin-top:0px;" alt="">
+                                        <img :src="payment12" style="margin-top:0px;" alt="_gurukreator">
                                     </div>
                                 </div>
                             </div>
@@ -763,7 +763,7 @@ export default {
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <div class="thumb">
-                                                <img src='@/assets/images/donatur/mintarsih_circle_img.png' alt="client">
+                                                <img src='@/assets/images/donatur/mintarsih_circle_img.png' alt="client_gurukreator">
                                             </div>
                                         </div>
                                         <div class="testimonial-content">
@@ -789,7 +789,7 @@ export default {
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <div class="thumb">
-                                                <img src='@/assets/images/donatur/eirene.png' alt="client">
+                                                <img src='@/assets/images/donatur/eirene.png' alt="client_gurukreator">
                                             </div>
                                         </div>
                                         <div class="testimonial-content">
@@ -813,7 +813,7 @@ export default {
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <div class="thumb">
-                                                <img src='@/assets/images/donatur/sri.png' alt="client">
+                                                <img src='@/assets/images/donatur/sri.png' alt="client_gurukreator">
                                             </div>
                                         </div>
                                         <div class="testimonial-content">
@@ -837,7 +837,7 @@ export default {
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <div class="thumb">
-                                                <img src='@/assets/images/donatur/hannah.png' alt="client">
+                                                <img src='@/assets/images/donatur/hannah.png' alt="client_gurukreator">
                                             </div>
                                         </div>
                                         <div class="testimonial-content">
@@ -861,7 +861,7 @@ export default {
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <div class="thumb">
-                                                <img src='@/assets/images/donatur/sugihono.png' alt="client">
+                                                <img src='@/assets/images/donatur/sugihono.png' alt="client_gurukreator">
                                             </div>
                                         </div>
                                         <div class="testimonial-content">
@@ -882,10 +882,10 @@ export default {
                             </SliderSlide>
                         </SliderSlides>
                         <a href="#0" @click="prev" class="testi-next trigger">
-                            <img src='@/assets/images/client/left.png' alt="client">
+                            <img src='@/assets/images/client/left.png' alt="client_gurukreator">
                         </a>
                         <a href="#0" @click="next" class="testi-prev trigger">
-                            <img src='@/assets/images/client/right.png' alt="client">
+                            <img src='@/assets/images/client/right.png' alt="client_gurukreator">
                         </a>
                     </div>
                 </div>
@@ -900,7 +900,7 @@ export default {
             <div class="footer-top padding-top padding-bottom">
                 <div class="logo">
                     <a href="#0">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo_gurukreator">
                     </a>
                 </div>
                 <ul class="social-icons">

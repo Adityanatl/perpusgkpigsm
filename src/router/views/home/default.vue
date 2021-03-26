@@ -224,6 +224,50 @@ export default {
       return false;
     });
 
+    $(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/id_ID/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+	// var userFeed = new Instafeed({
+	// 	get: 'user',
+	// 	target: "instafeed-container",
+    // 	resolution: 'low_resolution',
+	// 	accessToken: 'IGQVJWWEl4dDRpQXRDNHAwRU9weDhVTG9kUHgtTnlpcmRScDEyUTRvSjAxV1dLeDBvRlBYb3RoQzItQmtEbWdsNjJ0ci1rbUlQTEVMYWxEV001QVVjcGxFa0hBLWFZANTZAHak5zNVRIaGhLX3M3Wml6TgZDZD'
+	// });
+	// userFeed.run();
+
+    // $(function () { 
+	// var userFeed = new Instafeed({
+    // get: 'user',
+    // target: "instafeed-container",
+    // resolution: 'low_resolution',
+    // accessToken: 'IGQVJWWEl4dDRpQXRDNHAwRU9weDhVTG9kUHgtTnlpcmRScDEyUTRvSjAxV1dLeDBvRlBYb3RoQzItQmtEbWdsNjJ0ci1rbUlQTEVMYWxEV001QVVjcGxFa0hBLWFZANTZAHak5zNVRIaGhLX3M3Wml6TgZDZD'
+	// });
+	// userFeed.run()
+    // });
+
+    // $(function(){
+    // var i, e, d = document, 
+    // s = "script"; 
+    // i = d.createElement("script");
+    // i.async=1;
+    // i.src = "https://cdn.curator.io/published/0fd79280-29de-4135-b9ee-0deb510a08e8.js";
+    // e = d.getElementsByTagName(s)[0];
+    // e.parentNode.insertBefore(i, e);
+    // })();
+
+    // $(function(i, e, d) {
+    // var js, ijs = d.getElementsByTagName(e)[0];
+    // if (d.getElementById(i)) return;
+    // js = d.createElement(e);  js.id.async=1;
+    // js.src = "https://cdn.curator.io/published/0fd79280-29de-4135-b9ee-0deb510a08e8.js";
+    // ijs.parentNode.insertBefore(js, ijs);
+    // }(document, 'script', 'instagram-jssdk'));
+
 </script>
 
 <template>
@@ -233,7 +277,7 @@ export default {
             <div class="header-wrapper">
             <div class="logo">
                 <router-link tag="a" to="/">
-                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo_gurukreator">
                 </router-link>
             </div>
                 <div 
@@ -291,16 +335,16 @@ export default {
         <!--============= Banner Section Starts Here =============-->
      <section class="banner-1 bg_img oh">
         <div class="dot-1 d-none d-lg-block">
-            <img src='@/assets/images/dot-big.png' alt="banner">
+            <img src='@/assets/images/dot-big.png' alt="banner_gurukreator">
         </div>
         <div class="dot-2 d-none d-lg-block">
-            <img src='@/assets/images/dot-big.png' alt="banner">
+            <img src='@/assets/images/dot-big.png' alt="banner_gurukreator">
         </div>
         <div class="dot-3">
-            <img src='@/assets/images/dot-sm.png' alt="banner">
+            <img src='@/assets/images/dot-sm.png' alt="banner_gurukreator">
         </div>
         <div class="dot-4">
-            <img src='@/assets/images/dot-sm.png' alt="banner">
+            <img src='@/assets/images/dot-sm.png' alt="banner_gurukreator">
         </div>
         <div class="banner-1-shape d-none d-lg-block">
             <img src='@/assets/images/banner1-shape.png' alt="css">
@@ -343,12 +387,12 @@ export default {
                         </div>
                         <div class="ban-click">
                             <div class="thumb">
-                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/click.png' alt="banner"></a>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/click.png' alt="banner_gurukreator"></a>
                             </div>
                             <span class="cl-white"><a a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id">Klik Disini</a></span>
                         </div>
                         <div class="arrow">
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/arrow.png' alt="banner"></a>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id"><img src='@/assets/images/arrow.png' alt="banner_gurukreator"></a>
                         </div>
                     </div>
                 </div>
@@ -369,16 +413,16 @@ export default {
                 <div class="col-lg-9">
                     <div class="row sponsor-slider owl-theme owl-carousel">
                         <div class="sponsor-thumb">
-                            <img :src="logo1" alt="sponsor">
+                            <img :src="logo1" alt="sponsor_gurukreator">
                         </div>
                         <div class="sponsor-thumb">
-                            <img :src="logo2" alt="sponsor">
+                            <img :src="logo2" alt="sponsor_gurukreator">
                         </div>
                         <!-- <div class="sponsor-thumb">
                             <img src='@/assets/images/logo-mika.png' alt="sponsor">
                         </div> -->
                         <div class="sponsor-thumb">
-                            <img :src="logo3" alt="sponsor">
+                            <img :src="logo3" alt="sponsor_gurukreator">
                         </div>
                     </div>
                 </div>
@@ -392,7 +436,7 @@ export default {
         <div class="shape-container oh">
             <div class="bg_img_feature feature-background" data-background='@/assets/images/amazing-feature-bg.jpg'></div>
             <div class="feature-top-shape d-none d-lg-block">
-                <img src='@/assets/images/feature-shape.png' alt="css">
+                <img src='@/assets/images/feature-shape.png' alt="gurukreator">
             </div>
         </div>
         <div class="topper-feature oh padding-top">
@@ -406,14 +450,14 @@ export default {
                             mendampingi guru dalam menciptakan rancangan pembelajaran,
                             menata dan mengelola kelas serta menjadi wadah berbagi karya</p>
                             <div class="downarrow d-none d-lg-block">
-                                <img src='@/assets/images/downarrow.png' alt="feature">
+                                <img src='@/assets/images/downarrow.png' alt="feature_gurukreator">
                             </div>
                         </div>
                     </div>
                     <div class="videohome col-lg-6">
                         <a href="https://www.youtube.com/watch?v=cmzhtpuu6c0" class="feature-video-area popup">
                             <div class="thumb">
-                                <img :src="video" alt="feature">
+                                <img :src="video" alt="feature_gurukreator">
                             </div>
                             <div class="button-area">
                                 <h4 class="title">
@@ -444,7 +488,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img :src="keunggulan1" alt="feature">
+                                        <img :src="keunggulan1" alt="feature_gurukreator">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">Low Bandwidth<br> 2G di 3T</h5>
@@ -454,7 +498,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img :src="keunggulan2" alt="feature">
+                                        <img :src="keunggulan2" alt="feature_gurukreator">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">Solusi <br>Administrasi</h5>  
@@ -464,7 +508,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img :src="keunggulan3" alt="feature">
+                                        <img :src="keunggulan3" alt="feature_gurukreator">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">Profil Pelajar Pancasila</h5>
@@ -474,7 +518,7 @@ export default {
                             <div class="col-sm-6 col-lg-3">
                                 <div class="am-item">
                                     <div class="am-thumb">
-                                        <img :src="keunggulan4" alt="feature">
+                                        <img :src="keunggulan4" alt="feature_gurukreator">
                                     </div>
                                     <div class="am-content">
                                         <h5 class="title">“Backward by Design”</h5>
@@ -501,7 +545,7 @@ export default {
                 <div class="col-lg-4 col-sm-6 col-xl-3">
                     <div class="how-item">
                         <div class="how-thumb">
-                            <img :src="cara1" alt="how">
+                            <img :src="cara1" alt="how_gurukreator">
                         </div>
                         <div class="how-content">
 
@@ -524,7 +568,7 @@ export default {
                 <div class="col-lg-4 col-sm-6 col-xl-3">
                     <div class="how-item">
                         <div class="how-thumb">
-                            <img :src="cara2" alt="how">
+                            <img :src="cara2" alt="how_gurukreator">
                         </div>
                         <div class="how-content">
                             <router-link tag="a" to="/sign_up/sign-up" class="button-3">BUAT AKUN</router-link>
@@ -536,7 +580,7 @@ export default {
                 <div class="col-lg-4 col-sm-6 col-xl-3">
                     <div class="how-item">
                         <div class="how-thumb">
-                            <img :src="cara3" alt="how">
+                            <img :src="cara3" alt="how_gurukreator">
                         </div>
                         <div class="how-content">
                             <router-link tag="a" to="/features/features" class="button-3">SAATNYA BERKREASI</router-link>
@@ -553,10 +597,10 @@ export default {
         <!--============= Newslater Section Starts Here =============-->
      <section class="newslater-section oh bg_img_newslatter pos-rel" data-background='@/assets/images/newslater2.jpg'>
         <div class="top-shape d-none d-lg-block">
-            <img src='@/assets/images/top-shape2.png' alt="css">
+            <img src='@/assets/images/top-shape2.png' alt="css_gurukreator">
         </div>
         <div class="bottom-shape d-none d-lg-block">
-            <img src='@/assets/images/bottom-shape2.png' alt="css">
+            <img src='@/assets/images/bottom-shape2.png' alt="css_gurukreator">
         </div>
         <div class="container">
             <div class="row align-items-center">
@@ -579,7 +623,7 @@ export default {
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
                     <div class="subscribe-thumb-2">
-                        <img :src="team" alt="newslater">
+                        <img :src="team" alt="newslater_gurukreator">
                     </div>
                 </div>
             </div>
@@ -590,7 +634,7 @@ export default {
         <!--============= Feature Section Starts Here =============-->
      <section class="feature-section padding-top padding-bottom oh pos-rel">
         <div class="feature-shapes d-none d-lg-block">
-            <img src='@/assets/images/feature-shape.png' alt="feature">
+            <img src='@/assets/images/feature-shape.png' alt="feature_gurukreator">
         </div>
         <div class="container">
             <div class="section-header mw-725">
@@ -605,10 +649,10 @@ export default {
                     <div class="feature--thumb pr-xl-4 ltr">
                         <div class="feat-slider owl-carousel owl-theme" data-slider-id="1">
                             <div class="main-thumb">
-                                <img v-if="gamification==1" :src="fitur_phone1" alt="feature">
-                                <img v-else-if="gamification==2" :src="fitur_phone2" alt="feature">
-                                <img v-else-if="gamification==3" :src="fitur_phone3" alt="feature">
-                                <img v-else="" :src="fitur_phone4" alt="feature">
+                                <img v-if="gamification==1" :src="fitur_phone1" alt="feature_gurukreator">
+                                <img v-else-if="gamification==2" :src="fitur_phone2" alt="feature_gurukreator">
+                                <img v-else-if="gamification==3" :src="fitur_phone3" alt="feature_gurukreator">
+                                <img v-else="" :src="fitur_phone4" alt="feature_gurukreator">
                             </div>
                         </div>
                     </div>
@@ -618,8 +662,8 @@ export default {
                         <div class="feature-item" @click="gamification=1">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img class="img1" v-if="gamification==1" src='@/assets/images/pro-1.png' alt="feature">
-                                    <img class="img2" v-else="" src='@/assets/images/pro1.png' alt="feature">
+                                    <img class="img1" v-if="gamification==1" src='@/assets/images/pro-1.png' alt="feature_gurukreator">
+                                    <img class="img2" v-else="" src='@/assets/images/pro1.png' alt="feature_gurukreator">
                                 </div>
                             </div>
                             <div class="feature-content">
@@ -630,8 +674,8 @@ export default {
                         <div class="feature-item" @click="gamification=2">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img class="img1" v-if="gamification==2" src='@/assets/images/pro-2.png' alt="feature">
-                                    <img class="img2" v-else="" src='@/assets/images/pro2.png' alt="feature">
+                                    <img class="img1" v-if="gamification==2" src='@/assets/images/pro-2.png' alt="feature_gurukreator">
+                                    <img class="img2" v-else="" src='@/assets/images/pro2.png' alt="feature_gurukreator">
                                 </div>
                             </div>
                             <div class="feature-content">
@@ -642,8 +686,8 @@ export default {
                         <div class="feature-item" @click="gamification=3">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img class="img1" v-if="gamification==3" src='@/assets/images/pro-3.png' alt="feature">
-                                    <img class="img2" v-else="" src='@/assets/images/pro3.png' alt="feature">
+                                    <img class="img1" v-if="gamification==3" src='@/assets/images/pro-3.png' alt="feature_gurukreator">
+                                    <img class="img2" v-else="" src='@/assets/images/pro3.png' alt="feature_gurukreator">
                                 </div>
                             </div>
                             <div class="feature-content">
@@ -654,8 +698,8 @@ export default {
                         <div class="feature-item" @click="gamification=4">
                             <div class="feature-thumb">
                                 <div class="thumb">
-                                    <img class="img1" v-if="gamification==4" src='@/assets/images/pro-4.png' alt="feature">
-                                    <img class="img2" v-else="" src='@/assets/images/pro4.png' alt="feature">
+                                    <img class="img1" v-if="gamification==4" src='@/assets/images/pro-4.png' alt="feature_gurukreator">
+                                    <img class="img2" v-else="" src='@/assets/images/pro4.png' alt="feature_gurukreator">
                                 </div>
                             </div>
                             <div class="feature-content">
@@ -673,34 +717,34 @@ export default {
         <!--============= Pricing Section Starts Here =============-->
      <section class="pricing-section padding-top oh padding-bottom pb-md-0 bg_img_pricing pos-rel" data-background="./assets/images/bg/pricing-bg.jpg" id="pricing">
         <div class="top-shape d-none d-md-block">
-            <img src='@/assets/images/top-shape.png' alt="css">
+            <img src='@/assets/images/top-shape.png' alt="css_gurukreator">
         </div>
         <div class="bottom-shape d-none d-md-block">
-            <img src='@/assets/images/bottom-shape.png' alt="css">
+            <img src='@/assets/images/bottom-shape.png' alt="css_gurukreator">
         </div>
         <div class="ball-2" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball1" alt="balls">
+            <img :src="ball1" alt="balls_gurukreator">
         </div>
         <div class="ball-3" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball2" alt="balls">
+            <img :src="ball2" alt="balls_gurukreator">
         </div>
         <div class="ball-4" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball3" alt="balls">
+            <img :src="ball3" alt="balls_gurukreator">
         </div>
         <div class="ball-5" data-paroller-factor="0.30" data-paroller-factor-lg="-0.30"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img :src="ball4" alt="balls">
+            <img :src="ball4" alt="balls_gurukreator">
         </div>
         <div class="ball-6" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="horizontal">
-            <img :src="ball5" alt="balls">
+            <img :src="ball5" alt="balls_gurukreator">
         </div>
         <div class="ball-7" data-paroller-factor="-0.30" data-paroller-factor-lg="0.60"
         data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img :src="ball6" alt="balls">
+            <img :src="ball6" alt="balls_gurukreator">
         </div>
         <div class="container">
             <div class="section-header pb-30 cl-white">
@@ -905,7 +949,7 @@ export default {
             <div class="footer-top padding-top padding-bottom">
                 <div class="logo">
                     <a href="#0">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo_gurukreator">
                     </a>
                 </div>
                 <ul class="social-icons">
@@ -927,6 +971,11 @@ export default {
                     </li>
                 </ul>
             </div>
+            <!-- <div class="fb-like-box" data-href="https://www.facebook.com/gurukreator/" data-width="300" data-height="570" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+            <div id="instafeed-container"></div> -->
+            <!-- <div class="fb-like-box" data-href="https://www.instagram.com/gurukreator/" data-width="300" data-height="570" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div> -->
+        
+            <!-- <div id="curator-feed-instagram-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.id</a></div> -->
             <div class="footer-bottom">
                 <ul class="footer-link">
                     <li>

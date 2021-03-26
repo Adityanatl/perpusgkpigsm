@@ -116,7 +116,7 @@ export default {
             <div class="header-wrapper">
             <div class="logo">
                 <router-link tag="a" to="/">
-                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                    <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo_gurukreator">
                 </router-link>
             </div>
                             <div 
@@ -197,7 +197,7 @@ export default {
     <!--============= Header Section Ends Here =============-->
     <section class="page-header bg_img_feature" data-background="./assets/images/page-header.png">
         <div class="bottom-shape d-none d-md-block">
-            <img src='@/assets/images/page-header3.png' alt="css">
+            <img src='@/assets/images/page-header3.png' alt="css_gurukreator">
         </div>
         <div class="container">
             <div class="page-header-content cl-white">
@@ -271,7 +271,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Silabus yang ringkas dan menyeluruh</h5>
@@ -284,7 +284,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat1" alt="feature">
+                                    <img :src="feat1" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -305,7 +305,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat2" alt="feature">
+                                    <img :src="feat2" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -326,7 +326,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat3" alt="feature">
+                                    <img :src="feat3" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -334,7 +334,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Bentuk penilaian yang variatif sesuai AKM</h5>
@@ -347,7 +347,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat4" alt="feature">
+                                    <img :src="feat4" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -355,7 +355,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Kreasiku</span>
                                     <h5 class="title">Stategi pembelajaran yang tepat sasaran</h5>
@@ -368,7 +368,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat5" alt="feature">
+                                    <img :src="feat5" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -394,7 +394,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Perangkat Ajar</h5>
@@ -407,7 +407,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat6" alt="feature">
+                                    <img :src="feat6" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -415,7 +415,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Bahan Ajar</h5>
@@ -428,7 +428,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat7" alt="feature">
+                                    <img :src="feat7" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -436,7 +436,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Pelajar</h5>
@@ -449,7 +449,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat8" alt="feature">
+                                    <img :src="feat8" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -457,7 +457,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Kelasku</span>
                                     <h5 class="title">Hasil Ajar</h5>
@@ -470,7 +470,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat9" alt="feature">
+                                    <img :src="feat9" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -494,7 +494,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Relungku</span>
                                     <h5 class="title">3 kemudahan bagi Guru</h5>
@@ -507,7 +507,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat10" alt="feature">
+                                    <img :src="feat10" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -515,7 +515,7 @@ export default {
                             <div class="col-md-6 col-lg-5 col-xl-4">
                                 <div class="cola-content">
                                     <div class="thumb">
-                                        <img :src="cube" alt="feature">
+                                        <img :src="cube" alt="feature_gurukreator">
                                     </div>
                                     <span class="cate">Relungku</span>
                                     <h5 class="title">Kurasi yang teruji</h5>
@@ -528,7 +528,7 @@ export default {
                             </div>
                             <div class="col-md-6 col-lg-7 col-xl-8">
                                 <div class="cola-thumb">
-                                    <img :src="feat11" alt="feature">
+                                    <img :src="feat11" alt="feature_gurukreator">
                                 </div>
                             </div>
                         </div>
@@ -559,76 +559,76 @@ export default {
             <div class="comunity-wrapper">
                 <div class="buttons"><a target="_blank" href="https://play.google.com/store/apps/details?id=com.paideia.id" class="button-3 active">Unduh SEKARANG <i class="flaticon-right"></i></a></div>
                 <div class="comunity-area">
-                    <div class="community-item"><img :src="picC" alt="comunity"></div>
-                    <div class="community-item"><img :src="picG" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="community-item"><img :src="picD" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="community-item"><img :src="picE" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="community-item"><img :src="picA" alt="comunity"></div>
-                    <div class="community-item"><img :src="picB" alt="comunity"></div>
-                    <div class="community-item"><img :src="picF" alt="comunity"></div>
+                    <div class="community-item"><img :src="picC" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picG" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picD" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picE" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picA" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picB" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picF" alt="comunity_gurukreator"></div>
                 </div>
                 <div class="comunity-area two">
-                    <div class="community-item"><img :src="picC" alt="comunity"></div>
-                    <div class="community-item"><img :src="picG" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="community-item"><img :src="picD" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="community-item"><img :src="picE" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="community-item"><img :src="picA" alt="comunity"></div>
-                    <div class="community-item"><img :src="picB" alt="comunity"></div>
-                    <div class="community-item"><img :src="picF" alt="comunity"></div>
+                    <div class="community-item"><img :src="picC" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picG" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picD" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picE" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picA" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picB" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picF" alt="comunity_gurukreator"></div>
                 </div>
                 <div class="comunity-area three">
-                    <div class="community-item"><img :src="picC" alt="comunity"></div>
-                    <div class="community-item"><img :src="picG" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="community-item"><img :src="picD" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak5" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="community-item"><img :src="picE" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak1" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak2" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak3" alt="comunity"></div>
-                    <div class="comunity-item"><img :src="kotak4" alt="comunity"></div>
-                    <div class="community-item"><img :src="picA" alt="comunity"></div>
-                    <div class="community-item"><img :src="picB" alt="comunity"></div>
-                    <div class="community-item"><img :src="picF" alt="comunity"></div>
+                    <div class="community-item"><img :src="picC" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picG" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picD" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak5" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picE" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak1" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak2" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak3" alt="comunity_gurukreator"></div>
+                    <div class="comunity-item"><img :src="kotak4" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picA" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picB" alt="comunity_gurukreator"></div>
+                    <div class="community-item"><img :src="picF" alt="comunity_gurukreator"></div>
                 </div>
             </div>
         </div>
@@ -688,24 +688,24 @@ export default {
             </div> -->
             <div class="text-center row">
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img :src="logo2" height="200vw" alt="">
+                    <img :src="logo2" height="200vw" alt="gurukreator">
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img :src="logo4" style="margin-top:65px;" width="200vw" height="55vw" alt="">
+                    <img :src="logo4" style="margin-top:65px;" width="200vw" height="55vw" alt="gurukreator">
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img :src="logo1" width="200vw" height="200vw" alt="">
+                    <img :src="logo1" width="200vw" height="200vw" alt="gurukreator">
                 </div>
             </div>
             <div class="text-center row">
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img :src="logo5" width="200vw" height="200vw" alt="sponsor">
+                    <img :src="logo5" width="200vw" height="200vw" alt="sponsor_gurukreator">
                 </div>
                 <!-- <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
                     <img src='@/assets/images/logo-mika.png' width="200vw" height="200vw" alt="sponsor">
                 </div> -->
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img :src="logo3" width="200vw" height="200vw" alt="sponsor">
+                    <img :src="logo3" width="200vw" height="200vw" alt="sponsor_gurukreator">
                 </div>
             </div>
         </div>
@@ -718,7 +718,7 @@ export default {
             <div class="footer-top padding-top padding-bottom">
                 <div class="logo">
                     <router-link tag="a" to="/">
-                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo">
+                        <img src='@/assets/images/footer-gurukreator-logo.png' alt="logo_gurukreator">
                     </router-link>
                 </div>
                 <ul class="social-icons">
