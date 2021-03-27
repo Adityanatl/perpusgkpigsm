@@ -71,6 +71,16 @@ export const actions = {
         return resp
       })
   },
+  SIGNUP: async({commit}, payload) => {
+    commit("LOADING")
+    return await axios({url: 'api/account/signup', data: payload, method: 'POST'})
+        .then(resp => {
+          if(resp.data.code === 200) {
+            commit("ACCOUNT", resp.data.data)
+          }
+          return resp
+        })
+  },
   LOGIN_SSO_GOOGLE: async({commit}, payload) => {
     commit("LOADING")
     return await axios({url: 'login/sso/google', data: payload, method: 'POST'})
