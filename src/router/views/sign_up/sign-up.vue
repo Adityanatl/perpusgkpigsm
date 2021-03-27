@@ -23,6 +23,16 @@ export default {
     };
   },
     methods:{
+        successmsg() {
+            Vue.swal({
+                position: "top-end",
+                icon: "success",
+                title: "Success",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        },
+
         postSignup(){
 
             this.$store.dispatch(
@@ -68,7 +78,7 @@ export default {
                 </div>
                 <div class="account-body">
                     <span class="d-block mb-20">Daftar dengan email yang kamu miliki</span>
-                    <form class="account-form">
+                    <div class="account-form">
                         <div class="form-group">
                             <label for="sign-up">Email </label>
                             <input type="text"  v-model="payload.email" placeholder="Masukkan email disini " id="sign-up">
@@ -78,10 +88,10 @@ export default {
                             <input type="text" v-model="payload.password" placeholder="Masukkan password disini " id="sign-up">
                         </div>
                         <div class="form-group active text-center">
-                            <button type="submit">Guru Kreator!</button>
+                            <button @click="postSignup">Guru Kreator!</button>
                             <span class="d-block mt-15">Sudah punya akun? <router-link to="/sign_in/sign-in" style="color:#0b507d">Masuk</router-link></span>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             <div class="sponsor-slider-wrapper cl-white text-center mt-40">
