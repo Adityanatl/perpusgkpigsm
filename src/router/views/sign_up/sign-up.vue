@@ -48,9 +48,13 @@ export default {
                             <label for="sign-up">Email </label>
                             <input type="text" placeholder="Masukkan email disini " id="sign-up">
                         </div>
+                        <div class="form-group">
+                            <label for="sign-up">Password </label>
+                            <input type="text" placeholder="Masukkan password disini " id="sign-up">
+                        </div>
                         <div class="form-group active text-center">
                             <button type="submit">Guru Kreator!</button>
-                            <span class="d-block mt-15">Sudah punya akun? <a href="sign-in.html" style="color:#0b507d">Masuk</a></span>
+                            <span class="d-block mt-15">Sudah punya akun? <router-link to="/sign_in/sign-in" style="color:#0b507d">Masuk</router-link></span>
                         </div>
                     </form>
                 </div>
