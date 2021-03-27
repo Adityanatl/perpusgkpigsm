@@ -8,6 +8,7 @@ const state = {
   account_session: {
     refreshEnabled:false,
     email : '',
+    password: '',
     hp : '',
     token : {
       name:'',
