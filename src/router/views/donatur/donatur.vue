@@ -93,6 +93,9 @@ export default {
     }, 1000);
   },
     methods: {
+
+
+        
         getListProduct(){
             let paramsTemp = queryString.stringify({
                 ...{
