@@ -896,28 +896,28 @@ export default {
     <!--============= Testimonial Section Ends Here =============-->
 
         <!--============= Donatur Mapping Starts Here =============-->
-     <!-- <section class="coverage-section padding-top padding-bottom" id="coverage">
+     <section class="coverage-section padding-top padding-bottom" id="coverage">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-9">
-                    <div class="section-header left-style coverage-header"> -->
+                    <div class="section-header left-style coverage-header">
                         <!-- <h5 class="cate">Wujudkan 3T menjadi Terluar Tapi Terdepan!</h5> -->
-                        <!-- <h2 class="title">Thank you, Cheerful Givers   </h2> -->
+                        <h2 class="title">Thank you, Cheerful Givers   </h2>
                         <!-- <p>
                             Kami sangat peduli atas hidup setiap insan dan bagaimana mereka berproses dalam keunikan keberadaan mereka. Mari bersama, wujudkan mereka menjadi Guru Kreator!
                         </p>
                         <div class="how-content">
                             <router-link tag="a" to="/donatur#pricing" class="button-3 active">Dukung Guru 3T</router-link>
                         </div> -->
-                    <!-- </div>
+                    </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="coverage-right-area text-lg-right"> -->
+                    <div class="coverage-right-area text-lg-right">
                         <!-- <h2 class="amount">62 Kab*</h2>
                         <p>Daerah 3T</p>
                         <p>(Terdepan, Terluar, Tertinggal)</p>
                         <p style="color:#f0c900">*Perpres No. 63 Tahun 2020</p> -->
-                    <!-- </div>
+                    </div>
                 </div>
             </div>
             <div class="row mt-5">
@@ -926,7 +926,7 @@ export default {
                 </div>
             </div>  
         </div>
-     </section> -->
+     </section>
      <!--=============Donatur Mapping Ends Here =============-->
 
         <!--============= Footer Section Starts Here =============-->
