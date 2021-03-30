@@ -55,7 +55,7 @@ export default {
       counter2: 'https://api.paideia.id/api/files/public/c48acd1fcb6f45ceac7f74b3498e7379counter2.png',
       counter3: 'https://api.paideia.id/api/files/public/768429f490404c33b1d85f24493be7d8counter3.png',
       map: 'https://api.paideia.id/api/files/public/06d98a7e50a24fea99aba7c17a69bfbbmap.png',
-      map_donatur: 'https://api.paideia.id/api/files/public/951d6a143f3f481ba2d9e3a864558fa2mappingdonatur.png',
+      map_donatur: 'https://api.paideia.id/api/files/public/87276534b9464b069376ef24f47977abOptional2.png',
       payment1: 'https://api.paideia.id/api/files/public/172626a2f93e4fce8f456a3c001956d9BankBni.png',
       payment2: 'https://api.paideia.id/api/files/public/64961531bc184d1bb87df106ba9611f0mandiri.png',
       payment3: 'https://api.paideia.id/api/files/public/3bf55d02650644b39db4646ae5a91177permatabank.png',
@@ -899,13 +899,13 @@ export default {
     <!--============= Testimonial Section Ends Here =============-->
 
         <!--============= Donatur Mapping Starts Here =============-->
-     <section class="coverage-section padding-top padding-bottom" id="coverage">
+     <section class="coverage-section padding-bottom" id="coverage">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-9">
+                <div class="col-lg-9 mb-5">
                     <div class="section-header left-style coverage-header">
                         <!-- <h5 class="cate">Wujudkan 3T menjadi Terluar Tapi Terdepan!</h5> -->
-                        <h2 class="title">Thank you, Cheerful Givers   </h2>
+                        <h2 class="title">Thank you, Cheerful Givers</h2>
                         <!-- <p>
                             Kami sangat peduli atas hidup setiap insan dan bagaimana mereka berproses dalam keunikan keberadaan mereka. Mari bersama, wujudkan mereka menjadi Guru Kreator!
                         </p>
