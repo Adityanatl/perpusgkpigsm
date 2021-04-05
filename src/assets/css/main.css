@@ -16468,12 +16468,12 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 
 .testi-prev-ig {
     right: -20px;
-    margin-right: 18px;
+    margin-right: 23px;
 }
 
 .testi-next-ig {
     left: -20px;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 .trigger-ig {

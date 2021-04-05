@@ -920,7 +920,7 @@ export default {
                         </div>
                         <div style="margin-top:16px; margin-left:24px">
                             <h4>Guru Kreator</h4>
-                            <p style="font-size:20px; color:#235897; padding-top:5px;"><i class="fab fa-instagram"></i> Instagram Feed</p>
+                            <p style="font-size:20px; color:#235897; padding-top:5px;"><img src="@/assets/images/widget/ig.png" alt=""> Instagram Feed</p>
                         </div>
                     </div>
                     <div>
@@ -1513,11 +1513,13 @@ export default {
                             <p style="font-size:20px; color:#235897; padding-top:5px;"><img src="@/assets/images/widget/youtube-logo.png" alt=""> Youtube Channel</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <iframe class="social-youtube" src="https://www.youtube.com/embed/SSatzZ1uA6g"> </iframe>
-                    </div>
-                    <div class="row">
-                        <iframe class="social-youtube" src="https://www.youtube.com/embed/NaZ4xJEZX0Q"> </iframe>
+                    <div>
+                        <div class="row">
+                            <iframe class="social-youtube" src="https://www.youtube.com/embed/SSatzZ1uA6g"> </iframe>
+                        </div>
+                        <div class="row">
+                            <iframe class="social-youtube" src="https://www.youtube.com/embed/NaZ4xJEZX0Q"> </iframe>
+                        </div>                        
                     </div>
                 </div>
             </div>  
