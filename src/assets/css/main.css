@@ -16481,7 +16481,7 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     flex-wrap: wrap;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-750%);
+    transform: translateY(-930%);
 }
 
 .trigger-ig {
