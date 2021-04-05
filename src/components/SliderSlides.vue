@@ -13,5 +13,6 @@ export default {
 <style lang="scss">
 .SliderSlides {
   position: relative;
+  width: 330px;
 }
 </style>

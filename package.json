@@ -43,6 +43,7 @@
     "sass-loader": "^8.0.0",
     "simplebar-vue": "^1.5.1",
     "sweetalert2": "^9.17.0",
+    "swiper": "^6.5.3",
     "v-click-outside": "^3.0.1",
     "v-mask": "^2.2.1",
     "v-model": "0.0.9",

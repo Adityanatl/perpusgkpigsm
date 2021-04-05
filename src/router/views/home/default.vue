@@ -2,6 +2,9 @@
 import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
+import SliderFrame from '@/components/SliderFrame';
+import SliderSlide from '@/components/SliderSlide.vue';
+import SliderSlides from '@/components/SliderSlides.vue';
 
 
 global.jQuery = require('jquery');
@@ -12,7 +15,7 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide },
+  components: { Carousel, Slide, SliderFrame, SliderSlide, SliderSlides, },
   data() {
     return {
       start: "",
@@ -108,7 +111,9 @@ export default {
         ball3: 'https://api.paideia.id/api/files/public/ea1da180c8e64662a8bfc3c440d61b8b3.png',
         ball4: 'https://api.paideia.id/api/files/public/6f1a4977a9674a0a9fdeca56a9457e4a4.png',
         ball5: 'https://api.paideia.id/api/files/public/2279e5b755494b4988cd3336fbed18af5.png',
-        ball6: 'https://api.paideia.id/api/files/public/451555d44d474631afdc658fa49d5cd26.png'
+        ball6: 'https://api.paideia.id/api/files/public/451555d44d474631afdc658fa49d5cd26.png',
+        logo_circle: 'https://api.paideia.id/api/files/public/f412ade9b34346b7acca7d511dc37eafLogoGuruKreatoricononly1.png',
+        facebook: 'https://api.paideia.id/api/files/public/4415b0b2e46e41ad8593006a63e4890dfaceboklogo.png'
     };
   },
 
@@ -865,16 +870,6 @@ export default {
                 </div>
                 <div class="col-lg-5">
                     <div class="coverage-right-area text-lg-right">
-                        <!-- <div class="rating-area">
-                            <div class="ratings">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                            <span class="average">5.0 / 5.0</span>
-                        </div> -->
                         <h2 class="amount">62 Kab*</h2>
                         <p>Daerah 3T</p>
                         <p>(Terdepan, Terluar, Tertinggal)</p>
@@ -882,58 +877,6 @@ export default {
                     </div>
                 </div>
             </div>
-            <!-- <div class="coverage-wrapper coverage_img">
-                <div class="border-item-1 text-center">
-                    <span class="name">Sumatera Utara</span><br>
-                    <h4 class="title">4</h4>
-                </div>
-                <div class="border-item-2 text-center">
-                    <span class="name">Sumatera Barat</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-3 text-center">
-                    <span class="name">Sumatera Selatan</span><br>
-                    <h4 class="title">1</h4> -->
-                    <!-- <span class="name">Sumatera Selatan<br><h2 style="font-size:20px; line-height:35px">1</h2></span><br> -->
-                <!-- </div>
-                <div class="border-item-4 text-center"> -->
-                    <!-- <p class="name">Lampung</p><br>
-                    <h4 class="title">1</h4> -->
-                    <!-- <span class="name mt-3">Lampung <br><h2 style="font-size:20px; line-height:35px">1</h2></span><br>
-                </div>
-                <div class="border-item-5 text-center">
-                    <span class="name">Sulawesi Tengah</span>
-                    <h4 class="title">1</h4>
-                </div>
-                <div class="border-item-6 text-center"> -->
-                    <!-- <span class="name">Maluku Utara</span>
-                    <h4 class="title">2</h4> -->
-                    <!-- <span class="name">Maluku Utara <br><h2 style="font-size:15px; line-height:25px">1</h2></span><br>
-                </div>
-                <div class="border-item-7 text-center"> -->
-                    <!-- <span class="name">Nusa Tenggara Barat</span>
-                    <h2 class="title">1</h2> -->
-                    <!-- <span class="name">Nusa Tenggara Barat<br><h2 style="font-size:15px; line-height:15px">1</h2></span><br>
-                </div>
-                <div class="border-item-8 text-center"> -->
-                    <!-- <span class="name">Nusa Tenggara Timur</span><br>
-                    <h2 class="title">13</h2> -->
-                    <!-- <span class="name mt-2">Nusa Tenggara Timur<br><h2 style="font-size:20px; line-height:35px">13</h2></span><br>
-                </div>
-                <div class="border-item-9 text-center"> -->
-                    <!-- <span class="name">Maluku</span>
-                    <h2 class="title">6</h2> -->
-                    <!-- <span class="name mt-2">Maluku <br><h2 style="font-size:20px; line-height:20px">1</h2></span><br>
-                </div>
-                <div class="border-item-10 text-center"> -->
-                    <!-- <span class="name">Papua Barat</span>
-                    <h2 class="title">8</h2> -->
-                    <!-- <span class="name mt-2">Papua Barat<br><h2 style="font-size:20px; line-height:35px">8</h2></span><br>
-                </div>
-                <div class="border-item-11 text-center">
-                    <span class="name">Papua <br><h2 style="line-height:35px; font-size:30px">22</h2></span><br>
-                </div>
-            </div> -->
             <div class="row mt-5">
                 <div class="col-md">
                     <img :src="map" height="auto" width="100%"/> 
@@ -942,6 +885,771 @@ export default {
         </div>
      </section>
      <!--============= Coverage Section Ends Here =============-->
+
+     <!--============= Social Media Starts Here =============-->
+     <section class="padding-top padding-bottom" id="coverage">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="section-header left-style coverage-header">
+                        <!-- <h5 class="cate">Wujudkan 3T menjadi Terluar Tapi Terdepan!</h5> -->
+                        <h2 class="title">Our Social Media Channel</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 mt-3">
+                    <div class="row mb-4 ml-2">
+                        <div>
+                            <img :src="logo_circle" height="62px" width="62px"/> 
+                        </div>
+                        <div style="margin-top:16px; margin-left:24px">
+                            <h4>Guru Kreator</h4>
+                            <p style="font-size:20px; color:#235897; padding-top:5px;"><img :src="facebook" alt=""> Facebook Page</p>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- <div class="fb-like-box" data-href="https://www.facebook.com/gurukreator/" data-width="326" data-height="550" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>  -->
+                        <iframe name="f13901404aafe08" width="auto" height="650px" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1411b4b9a242f4%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A9921%252Ff2075e56c632f3c%26relation%3Dparent.parent&amp;container_width=356&amp;header=false&amp;height=550&amp;href=https%3A%2F%2Fwww.facebook.com%2Fgurukreator%2F&amp;locale=id_ID&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=true&amp;width=326" class="social-facebook"></iframe> 
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="row mb-4 ml-2">
+                        <div>
+                            <img :src="logo_circle" height="62px" width="62px"/> 
+                        </div>
+                        <div style="margin-top:16px; margin-left:24px">
+                            <h4>Guru Kreator</h4>
+                            <p style="font-size:20px; color:#235897; padding-top:5px;"><i class="fab fa-instagram"></i> Instagram Feed</p>
+                        </div>
+                    </div>
+                    <div>
+                        <SliderFrame>
+                            <div slot-scope="{ next, prev }">
+                                <div>
+                                    <SliderSlides>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CNRSmTeLVgd/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CNOWtJ1LRrq/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CNJVE61LwV_/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMzRYHgp6Va/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMrdF1CJ9ze/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMmOr1hJWlu/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMcHEVtreVv/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMYygHCFPku/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CMREIyxFOvD/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CMOiGmol9f_/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CMOGDwcFmS5/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CMJTpcfFyb2/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CMCHzd9Fcw3/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CL_fmE2r4f9/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CL-zxpwFCXP/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLrIP7eJU5X/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLrILgmpkHH/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLrHYwfJSiy/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLV5_-YpLB_/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLVzMOzJD3F/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLLW02Bpcxc/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLJkZqTJ90r/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLJkBgwJkon/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLJjY1Pphgw/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLGrDt6JULo/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CLGqHEFpafO/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CK2xeMOpHWG/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CK2xX3cJ3Yj/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CK2xS5ppOfg/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKyYABypdcI/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKyWcwxJXB0/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKyCoBFJ0zg/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKvosnuB_cz/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKvomMRpK2R/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKvoDPgpKNn/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKqHVEyp9ZE/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKktwjQpqO5/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKktWt3Jx1V/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKaeDO1odeh/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKad7goIQ6z/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKad4LaLKuv/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJ-cv3sJ6jM/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKGQMBBJRPi/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKGPnwIJyia/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKBYzx-p8mO/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CKBYDYwJh8C/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJ-cv3sJ6jM/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJ7wAZqpvHd/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJ2_rASp-UJ/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJu-xN7pOpi/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJtLwRfpf6N/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJtLtj2p5VD/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJlCyuPJM3a/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJc0tOopH1D/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJc0gsVpAYc/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJc0F0Dps5I/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJNa5nEp865/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CJF8HFrpFZb/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CI4w2SCpcTg/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CIxI3dsJaXc/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CIxIuo-pFNu/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CIxIamhJkwR/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CIdCCpNJ_aN/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CIUt1HjpqVs/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CIUtuQxJ3vg/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CIUtXBXJ2s2/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CH_oI65p6lV/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CH-JV6FplEI/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>        
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CH290TJpwOo/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CH29vmjJiVZ/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CH29rsZpyGg/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHuoimnpUn2/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHununBJuCr/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHunGRLJfJZ/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHrh1FbhSl-/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHrhKQZhdC_/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHrgotqhpnB/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHp9KcUBOW7/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>          
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHp8eaohnbv/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" 
+                                                    src="https://www.instagram.com/p/CHpoWZwJpr0/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>                                                                                                                                                                                                                                                                                                              
+                                        <a href="#0" @click="prev" class="testi-next-ig trigger-ig  ">
+                                            <img src='@/assets/images/client/left.png' alt="client_gurukreator">
+                                        </a>
+                                        <a href="#0" @click="next" class="testi-prev-ig trigger-ig">
+                                            <img src='@/assets/images/client/right.png' alt="client_gurukreator">
+                                        </a>
+
+                                    </SliderSlides>
+                                </div>
+                            </div>
+                        </SliderFrame>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-3">
+                    <div class="row mb-4 ml-2">
+                        <div>
+                            <img :src="logo_circle" height="62px" width="62px"/> 
+                        </div>
+                        <div style="margin-top:16px; margin-left:24px">
+                            <h4>Guru Kreator</h4>
+                            <p style="font-size:20px; color:#235897; padding-top:5px;"><img src="@/assets/images/widget/youtube-logo.png" alt=""> Youtube Channel</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <iframe class="social-youtube" src="https://www.youtube.com/embed/SSatzZ1uA6g"> </iframe>
+                    </div>
+                    <div class="row">
+                        <iframe class="social-youtube" src="https://www.youtube.com/embed/NaZ4xJEZX0Q"> </iframe>
+                    </div>
+                </div>
+            </div>  
+        </div>
+     </section>
+     <!--============= Social Media Ends Here =============-->
+
+     <!-- <section>
+         <div class="container">
+             <div>
+                <SliderFrame>
+                    <div slot-scope="{ next, prev }">
+                        <div>
+                            <SliderSlides>
+                                <SliderSlide class="o-vertical-spacing">
+                                    <div class="col-md-4 mt-3">
+                                        <div>
+                                            <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMzRYHgp6Va/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                        </div>
+                                    </div>
+                                </SliderSlide>
+                                <SliderSlide class="o-vertical-spacing">
+                                    <div class="col-md-4 mt-3">
+                                        <div>
+                                            <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMrdF1CJ9ze/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                        </div>
+                                    </div>
+                                </SliderSlide>
+                                <SliderSlide class="o-vertical-spacing">
+                                    <div class="col-md-4 mt-3">
+                                        <div>
+                                            <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMmOr1hJWlu/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                        </div>
+                                    </div>
+                                </SliderSlide>
+                                <SliderSlide class="o-vertical-spacing">
+                                    <div class="col-md-4 mt-3">
+                                        <div>
+                                            <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMcHEVtreVv/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                        </div>
+                                    </div>
+                                </SliderSlide>
+                                <SliderSlide class="o-vertical-spacing">
+                                    <div class="col-md-4 mt-3">
+                                        <div>
+                                            <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CMYygHCFPku/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                        </div>
+                                    </div>
+                                </SliderSlide>
+                                <a href="#0" @click="prev" class="testi-prev-ig trigger-ig">
+                                    <img src='@/assets/images/client/right.png' alt="client_gurukreator">
+                                </a>
+                                <a href="#0" @click="next" class="testi-next-ig trigger-ig  ">
+                                    <img src='@/assets/images/client/left.png' alt="client_gurukreator">
+                                </a>
+                            </SliderSlides>
+                        </div>
+                    </div>
+                </SliderFrame>
+            </div>
+         </div>
+     </section> -->
 
         <!--============= Footer Section Starts Here =============-->
      <footer class="footer-section bg_img_footer" data-background='@/assets/images/footer-bg.jpg'>
