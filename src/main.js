@@ -19,7 +19,6 @@ import "@/assets/css/magnific-popup.css"
 import "@/assets/css/main.css"
 import "@/assets/css/nice-select.css"
 import "@/assets/css/style.css"
-import 'swiper/swiper.scss';
 
 import store from '@/state/store'
 // import store2 from './store'
