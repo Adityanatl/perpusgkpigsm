@@ -1,10 +1,10 @@
 <script>
-import Layout from "../../layouts/main";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 import Vue from "vue";
 import VueJwtDecode from "vue-jwt-decode";
 import backgroundUrl from '@/assets/images/background.png';
+import axios from "axios";
 
 // import { tableData } from "./dataAdvancedtable";
 
@@ -36,7 +36,10 @@ export default {
         "payment_methode_id":0,
         "transaction_id":null,
       },
-      directHTML:''
+      directHTML:'',
+      invalidVoucher: null,
+      voucherCode: "",
+      voucher: {}
     };
   },
   computed: {
@@ -92,6 +95,9 @@ export default {
       this.payload.qty = 1
       this.payload.payment_methode_id = this.selectedKonter.id
       this.payload.transaction_id = this.transactionId
+      if (Object.keys(this.voucher) !== 0) {
+        this.payload.voucher_code = this.voucher.code
+      }
       let user = JSON.parse(localStorage.getItem('user'))
       if (user != null) {
         this.payload.account_id = user.id
@@ -140,6 +146,16 @@ export default {
         timer: 1500
       });
     },
+    useVoucher() {
+      axios.get("/api/voucher/code/"+this.voucherCode)
+          .then(resp => {
+            const { data } = resp.data
+            this.invalidVoucher = false
+            this.voucher = data
+          }).catch(resp => {
+            this.invalidVoucher = true
+          });
+    }
   },
 
 };
@@ -378,8 +394,12 @@ export default {
                       </b-card><br>
                       <div>
                         <form class="voucher-form">
-                            <input type="text" placeholder="Kode Voucher">
-                            <button type="submit">Gunakan</button>
+                            <input v-model="voucherCode" type="text" placeholder="Kode Voucher" class="form-control"
+                                   v-bind:class="{ 'is-invalid': invalidVoucher }">
+                            <div v-show="invalidVoucher" class="invalid-feedback">
+                              Voucher tidak ada atau tidak dapat digunakan.
+                            </div>
+                            <button type="button" @click="useVoucher">Gunakan</button>
                         </form>
                       </div><br>
                     </div>
@@ -398,10 +418,13 @@ export default {
                     <table class="table table-centered">
                       <td>
                         <tr><h6 class="mt-4 ml-1" style="color:#373334">{{product.product_name}}</h6></tr>
+                        <tr v-if="Object.keys(voucher).length !== 0"><h6 class="mt-4 ml-1" style="color:#373334">{{voucher.code}}</h6></tr>
                       </td>
                       <td>
                         <tr style="float:right;"><p class="mt-4 mr-2" style="color:#c6c6c6">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</p></tr>
+                        <tr v-if="Object.keys(voucher).length !== 0" style="float:right;"><p class="mt-5 mr-2" style="color:#c6c6c6">Rp -{{ voucher.discount_price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') }}</p></tr>
                       </td>
+
                     </table>
                   </div>
                 </div>
@@ -412,7 +435,10 @@ export default {
                 <div style="text-align:right">
                   <hr>
                   <p style="color:#373334">Subtotal</p>
-                  <h5 style="color:#00AFEF; font-size:20px"><b>Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b></h5>
+                  <h5 style="color:#00AFEF; font-size:20px">
+                    <b v-if="Object.keys(voucher).length === 0">Rp {{product.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b>
+                    <b v-else>Rp {{ (product.price - voucher.discount_price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}}</b>
+                  </h5>
                 </div>
                   <div class="table-responsive mt-4">
                     <table class="table table-centered">
