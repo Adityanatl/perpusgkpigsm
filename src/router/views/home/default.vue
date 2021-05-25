@@ -483,7 +483,7 @@ export default {
                     <div class="col-lg-8 col-xl-7">
                         <div class="section-header left-style cl-white">
                             <h5 class="cate">Keunggulan yang Unik</h5>
-                            <h2 class="title">Karena kreatifitas <br>tidak berbatas</h2>
+                            <h2 class="title">Karena kreativitas <br>tidak berbatas</h2>
                             <p>Dengan fleksibilitas memberikan keleluasaan dalam berkreasi
                             dan mengasah potensi</p>
                         </div>
@@ -898,7 +898,7 @@ export default {
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-4 mt-3">
+                <div class="col-md-4 mt-3 facebook">
                     <div class="row mb-4 ml-2">
                         <div>
                             <img :src="logo_circle" height="62px" width="62px"/> 
@@ -913,7 +913,7 @@ export default {
                         <iframe name="f13901404aafe08" width="auto" height="650px" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1411b4b9a242f4%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A9921%252Ff2075e56c632f3c%26relation%3Dparent.parent&amp;container_width=356&amp;header=false&amp;height=550&amp;href=https%3A%2F%2Fwww.facebook.com%2Fgurukreator%2F&amp;locale=id_ID&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=true&amp;width=326" class="social-facebook"></iframe> 
                     </div>
                 </div>
-                <div class="col-md-4 mt-3">
+                <div class="col-md-4 mt-3 instagram">
                     <div class="row mb-4 ml-2">
                         <div>
                             <img :src="logo_circle" height="62px" width="62px"/> 
@@ -1503,7 +1503,7 @@ export default {
                         </SliderFrame>
                     </div>
                 </div>
-                <div class="col-md-4 mt-3">
+                <div class="col-md-4 mt-3 youtube">
                     <div class="row mb-4 ml-2">
                         <div>
                             <img :src="logo_circle" height="62px" width="62px"/> 

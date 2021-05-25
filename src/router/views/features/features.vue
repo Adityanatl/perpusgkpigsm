@@ -640,7 +640,7 @@ export default {
         <div class="container">
             <div class="section-header mw-100">
                 <h5 class="cate">Aplikasi pendidikan pertama yang menjangkau<br> hampir seluruh wilayah terluar Indonesia</h5>
-                <h2 class="title">Sobat Kreator</h2>
+                <h2 class="title">Kawan Kreator</h2>
             </div>
             <!-- <div class="sponsor-slider-4 owl-theme owl-carousel">
                 <div class="sponsor-thumb">
