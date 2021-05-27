@@ -39,6 +39,12 @@ export default {
                 'account/SIGNUP', this.payload
             ).then(() => {
                 this.successmsg()
+              const product = localStorage.getItem('cart')
+              if (product) {
+                this.$router.push(
+                    this.$route.query.redirectFrom || {name: "Checkout"}
+                );
+              }
             }).catch(function () {
                 Vue.swal({
                     position: "top-end",
@@ -85,7 +91,7 @@ export default {
                         </div>
                         <div class="form-group">
                             <label for="sign-up">Password </label>
-                            <input type="text" v-model="payload.password" placeholder="Masukkan password disini " id="sign-up">
+                            <input type="password" v-model="payload.password" placeholder="Masukkan password disini " id="sign-up">
                         </div>
                         <div class="form-group active text-center">
                             <button @click="postSignup">Guru Kreator!</button>
