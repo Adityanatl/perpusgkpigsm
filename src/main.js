@@ -148,6 +148,18 @@ Vue.use(VueGtag, {
   config: {id : "UA-188133433-1"}
 });
 
+// add referral middleware
+router.beforeEach((to, from, next) => {
+  if (to.query.ref) {
+    if (to.query.ref === 'refo' || to.query.ref === 'pinnacle') {
+      localStorage.setItem('referral', to.query.ref)
+    }
+    next()
+  } else {
+    next()
+  }
+})
+
 new Vue({
   router,
   store,

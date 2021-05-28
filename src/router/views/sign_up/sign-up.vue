@@ -35,6 +35,10 @@ export default {
 
         postSignup(){
 
+          const referralData = localStorage.getItem('referral')
+          if (referralData) {
+            this.payload.referral = referralData
+          }
             this.$store.dispatch(
                 'account/SIGNUP', this.payload
             ).then(() => {

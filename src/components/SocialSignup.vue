@@ -57,6 +57,11 @@ export default {
                 "provider": "google"
             }
 
+            const referralData = localStorage.getItem('referral')
+          if (referralData) {
+            payload.referral = referralData
+          }
+
             this.$store.dispatch(
                 'account/LOGIN_SSO_GOOGLE',payload
             )
