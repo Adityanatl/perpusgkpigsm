@@ -898,7 +898,7 @@ export default {
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-md-4 mt-3 facebook">
+                <div class="col-md-4 mt-3 ">
                     <div class="row mb-4 ml-2">
                         <div>
                             <img :src="logo_circle" height="62px" width="62px"/> 
@@ -908,12 +908,12 @@ export default {
                             <p style="font-size:20px; color:#235897; padding-top:5px;"><img :src="facebook" alt=""> Facebook Page</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="facebook">
                         <!-- <div class="fb-like-box" data-href="https://www.facebook.com/gurukreator/" data-width="326" data-height="550" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>  -->
                         <iframe name="f13901404aafe08" width="auto" height="650px" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1411b4b9a242f4%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A9921%252Ff2075e56c632f3c%26relation%3Dparent.parent&amp;container_width=356&amp;header=false&amp;height=550&amp;href=https%3A%2F%2Fwww.facebook.com%2Fgurukreator%2F&amp;locale=id_ID&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=true&amp;width=326" class="social-facebook"></iframe> 
                     </div>
                 </div>
-                <div class="col-md-4 mt-3 instagram">
+                <div class="col-md-4 mt-3">
                     <div class="row mb-4 ml-2">
                         <div>
                             <img :src="logo_circle" height="62px" width="62px"/> 
@@ -923,7 +923,7 @@ export default {
                             <p style="font-size:20px; color:#235897; padding-top:5px;"><img src="@/assets/images/widget/ig.png" alt=""> Instagram Feed</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="instagram">
                         <SliderFrame>
                             <div slot-scope="{ next, prev }">
                                 <div>
@@ -1681,7 +1681,7 @@ export default {
                             <p style="font-size:20px; color:#235897; padding-top:5px;"><img src="@/assets/images/widget/youtube-logo.png" alt=""> Youtube Channel</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="youtube">
                         <div class="row">
                             <iframe class="social-youtube" src="https://www.youtube.com/embed/SSatzZ1uA6g"> </iframe>
                         </div>
