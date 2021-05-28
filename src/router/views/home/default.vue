@@ -1695,7 +1695,7 @@ export default {
                             <p style="font-size:20px; color:#235897; padding-top:5px;"><img src="@/assets/images/widget/youtube-logo.png" alt=""> Youtube Channel</p>
                         </div>
                     </div>
-                    <div class="youtube">
+                    <div>
                         <div class="row">
                             <iframe class="social-youtube" src="https://www.youtube.com/embed/SSatzZ1uA6g"> </iframe>
                         </div>

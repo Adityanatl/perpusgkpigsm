@@ -1528,17 +1528,14 @@
     .facebook {
         display: flex !important;
         justify-content: center !important;
+        margin: auto;
     }
 
     .instagram {
         /* margin: 0px 30px 0px 0px; */
         display: flex !important;
         justify-content: center !important;
-    }
-
-    .youtube {
-        display: flex !important;
-        justify-content: center !important;
+        margin: auto;
     }
 }
 
