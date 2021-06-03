@@ -6877,7 +6877,7 @@ input[type="submit"] {
 
 @media (max-width: 1199px) and (min-width: 992px) {
     .pricing-range .pricing-header {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 }
 
@@ -7259,7 +7259,7 @@ input[type="submit"] {
 
 @media (min-width: 576px) {
     .range-wrapper-2 .pricing-range .pricing-range-top .pricing-header {
-        margin-bottom: 100px;
+        margin-bottom: 30px;
     }
 }
 

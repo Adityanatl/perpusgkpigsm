@@ -931,6 +931,27 @@ export default {
                                         <SliderSlide class="o-vertical-spacing">
                                             <div>
                                                 <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CPnPi60r4j8/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CPky6sDLMCU/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
+                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CPjm3l1LCGw/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
+                                                </div>
+                                            </div>
+                                        </SliderSlide>
+                                        <SliderSlide class="o-vertical-spacing">
+                                            <div>
+                                                <div>
                                                     <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CPVKHerrs-_/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
                                                 </div>
                                             </div>
