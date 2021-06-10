@@ -65,13 +65,21 @@ export default {
             this.$store.dispatch(
                 'account/LOGIN_SSO_GOOGLE',payload
             )
-                .then(() => {
-                    this.$router.push(
-                        this.$route.query.redirectFrom || {name: "Checkout"}
-                    );
-                }).catch(error => {
-                console.log('error', error)
-            })
+            const product = localStorage.getItem('cart')
+            if(product){
+                this.$router.push(
+                  this.$route.query.redirectFrom || {name: "Checkout"}
+                );
+            } else if (!this.product || this.product == {}) {
+                this.$router.push(
+                  this.$route.query.redirectFrom || {name: "default"}
+                );
+            }
+            //     .then(() => {
+
+            //     }).catch(error => {
+            //     console.log('error', error)
+            // })
 
           // router.push('/home')
         })

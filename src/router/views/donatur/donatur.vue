@@ -2,9 +2,9 @@
 import { Carousel, Slide } from "vue-carousel";
 import Vue from "vue";
 import '@/assets/js/magnific-popup.min.js';
-import SliderFrame from '@/components/SliderFrame';
-import SliderSlide from '@/components/SliderSlide.vue';
-import SliderSlides from '@/components/SliderSlides.vue';
+import SliderTestimony from '@/components/SliderTestimony';
+import TestimonySlide from '@/components/TestimonySlide.vue';
+import TestimonySlides from '@/components/TestimonySlides.vue';
 // import '@/assets/js/intlTelInput-jquery.min.js'
 // import VuePhoneNumberInput from 'vue-phone-number-input';
 // import 'vue-phone-number-input/dist/vue-phone-number-input.css';
@@ -18,7 +18,7 @@ window.$ = $;
  * Crypto ICO-landing page
  */
 export default {
-  components: { Carousel, Slide, SliderFrame, SliderSlide, SliderSlides, },
+  components: { Carousel, Slide, SliderTestimony, TestimonySlide, TestimonySlides, },
 //   script: [{
 //         src: "https://code.jquery.com/jquery-latest.min.js"
 //     }
@@ -539,7 +539,7 @@ export default {
                             <h3 class="tags">We’re in this together</h3>
                         </div>
                         <div class="pricing-header">
-                            <span class="cate">Available Packages:</span>
+                            <span class="cate">Available One Time Donation Packages:</span>
                             <div class="select-container">
                                 <select class="select-bar" v-model="selectedPrice">
                                     <option value="semester_price">Semester-based</option>
@@ -758,11 +758,11 @@ export default {
                 <h2 class="title">Continuously creating with
                     innovative technology</h2>
             </div>
-            <SliderFrame>
+            <SliderTestimony>
                 <div slot-scope="{ next, prev }">
                     <div class="testimonial-wrapper mb-5">
-                        <SliderSlides>
-                            <SliderSlide class="o-vertical-spacing">
+                        <TestimonySlides>
+                            <TestimonySlide class="o-vertical-spacing">
                                 <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
@@ -787,8 +787,8 @@ export default {
                                         </div>
                                     </div>
                                 </div>
-                            </SliderSlide>
-                            <SliderSlide class="o-vertical-spacing">
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
                                 <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
@@ -811,8 +811,8 @@ export default {
                                         </div>
                                     </div>
                                 </div>
-                            </SliderSlide>
-                            <SliderSlide class="o-vertical-spacing">
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
                                 <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
@@ -835,8 +835,8 @@ export default {
                                         </div>
                                     </div>
                                 </div>
-                            </SliderSlide>
-                            <SliderSlide class="o-vertical-spacing">
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
                                 <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
@@ -859,8 +859,8 @@ export default {
                                         </div>
                                     </div>
                                 </div>
-                            </SliderSlide>
-                            <SliderSlide class="o-vertical-spacing">
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
                                 <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
                                     <div class="testimonial-item">
                                         <div class="testimonial-thumb">
@@ -883,8 +883,8 @@ export default {
                                         </div>
                                     </div>
                                 </div>
-                            </SliderSlide>
-                        </SliderSlides>
+                            </TestimonySlide>
+                        </TestimonySlides>
                         <a href="#0" @click="prev" class="testi-next trigger">
                             <img src='@/assets/images/client/left.png' alt="client_gurukreator">
                         </a>
@@ -893,7 +893,7 @@ export default {
                         </a>
                     </div>
                 </div>
-            </SliderFrame>
+            </SliderTestimony>
         </div>
     </section> 
     <!--============= Testimonial Section Ends Here =============-->
