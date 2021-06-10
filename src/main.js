@@ -156,10 +156,10 @@ router.beforeEach((to, from, next) => {
   if (to.query.ref) {
     if (validReferral.includes(to.query.ref)) {
       if (isAndroid) {
-        window.location.replace("intent://paideia.id/#Intent;scheme=https;package=com.paideia.id;end")
+        window.location.href = "intent://paideia.id/#Intent;scheme=https;package=com.paideia.id;end"
 
         setTimeout(() => {
-          window.location.replace("https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id");
+          window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id"
         }, 10000);
       } else {
         localStorage.setItem('referral', to.query.ref)
