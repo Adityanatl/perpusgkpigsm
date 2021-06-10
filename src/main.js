@@ -159,10 +159,11 @@ router.beforeEach((to, from, next) => {
         window.location.replace("intent://paideia.id/#Intent;scheme=https;package=com.paideia.id;end")
 
         setTimeout(() => {
-          window.location.replace("https://play.google.com/store/apps/details?id=com.paideia.id");
+          window.location.replace("https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id");
         }, 10000);
+      } else {
+        localStorage.setItem('referral', to.query.ref)
       }
-      // localStorage.setItem('referral', to.query.ref)
     }
     next()
   } else {
