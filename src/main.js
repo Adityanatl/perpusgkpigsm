@@ -149,10 +149,20 @@ Vue.use(VueGtag, {
 });
 
 // add referral middleware
+import { isAndroid } from "mobile-device-detect";
+
+const validReferral = ["refo", "pinnacle", "wti"]
 router.beforeEach((to, from, next) => {
   if (to.query.ref) {
-    if (to.query.ref === 'refo' || to.query.ref === 'pinnacle') {
-      localStorage.setItem('referral', to.query.ref)
+    if (validReferral.includes(to.query.ref)) {
+      if (isAndroid) {
+        window.location.replace("intent://paideia.id/#Intent;scheme=https;package=com.paideia.id;end")
+
+        setTimeout(() => {
+          window.location.replace("https://play.google.com/store/apps/details?id=com.paideia.id");
+        }, 10000);
+      }
+      // localStorage.setItem('referral', to.query.ref)
     }
     next()
   } else {
