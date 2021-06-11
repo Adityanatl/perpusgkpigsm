@@ -245,10 +245,10 @@ export default [
     component: () => import('./views/utility/500')
   },
 
-  {
-    path: '/pingguru',
-    name: 'ping_guru',
-    meta: { authRequired: true },
-    component: () => import('./views/ping_guru/ping_guru')
-  }
+  // {
+  //   path: '/pingguru',
+  //   name: 'ping_guru',
+  //   meta: { authRequired: true },
+  //   component: () => import('./views/ping_guru/ping_guru')
+  // }
 ]
