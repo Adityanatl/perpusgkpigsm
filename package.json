@@ -7,6 +7,7 @@
     "dev": "NODE_ENV=development vue-cli-service serve --port 9921",
     "serve": "NODE_ENV=development vue-cli-service serve --port 9921",
     "build": "vue-cli-service build",
+    "build-serve-dev": "vue-cli-service build --mode development && serve -s -l 9921 dist",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
@@ -37,6 +38,7 @@
     "magnific-popup": "^1.1.0",
     "maz-ui": "^2.3.5",
     "metismenujs": "^1.2.1",
+    "mobile-device-detect": "^0.4.3",
     "paroller.js": "^1.4.7",
     "query-string": "^6.13.6",
     "sass": "^1.24.2",
