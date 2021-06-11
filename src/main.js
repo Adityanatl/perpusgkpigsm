@@ -102,10 +102,10 @@ const gauthOption = {
 Vue.use(GoogleAuth, gauthOption)
 
 Vue.prototype.moment = moment
-Vue.component('apexchart', VueApexCharts)
+Vue.component('apexchart', VueApexCharts) 
 
 if(process.env.NODE_ENV === 'production') {
-  window.axios.defaults.baseURL = "https://api.paideia.id/"
+  window.axios.defaults.baseURL = "http://staging-api.paideia.id/"
 } else {
   window.axios.defaults.baseURL = "http://staging-api.paideia.id/"
 }
