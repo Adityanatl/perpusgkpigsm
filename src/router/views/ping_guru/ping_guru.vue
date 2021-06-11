@@ -2,16 +2,20 @@
 import Vue from "vue";
 // import vSelect from "vue-select";
 import Multiselect from "vue-multiselect";
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Datepicker from 'vuejs-datepicker';
+import moment from "moment";
 
 export default {
-  components: {Multiselect, },
+  components: {Multiselect, Datepicker },
   data() {
     return {
       data_guru: {
         "first_name":"",
         "last_name":"",
         "birth_date":"",
-        "hp":0,
+        "hp":"",
         "email":"",
         "classroom_topic":"",
         "payment_method_id":0
@@ -35,9 +39,14 @@ export default {
         return
       }
 
+      let date = moment(this.data_guru.birth_date).format("YYYY-MM-DD")
       this.data_guru.payment_method_id = Number(this.data_guru.payment_method_id)
       localStorage.setItem('payload', JSON.stringify(this.data_guru))
-      const payload = this.data_guru
+      const payload = {
+        ...this.data_guru, 
+        birth_date: date,
+      }
+      // const payload = this.data_guru
       axios.post('api/account/ping-guru', payload)
       .then((r) => {
         const resp = r.data.data
@@ -358,6 +367,21 @@ export default {
         max-width: 1140px
       }
     }
+
+    .b-form-datepicker {
+      display: block;
+      width: 100%;
+      height: 54px;
+      background-color: #E5E5E5;
+      border: none;
+      padding: 10px !important;
+      font-size: 16px;
+      color: #444;
+      position: relative;
+      -webkit-transition: 0.6s;
+      transition: 0.6s;
+      text-align: center;
+    }
 </style>
 
 <template>
@@ -417,7 +441,7 @@ export default {
               <div id="u_content_text_1" class="u_content_text" style="overflow-wrap: break-word;padding: 10px;">
 
                 <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
-                  <p style="font-size: 14px; line-height: 140%;"><span style="color: #ffffff; font-size: 14px; line-height: 19.6px;">Saya mendaftarkan diri untuk mengikuti Kelas <strong>P</strong>endampingan <strong>IN</strong>ovatif yang ber<strong>G</strong>una bagi <strong>GURU</strong> 32 JP yang diadakan oleh Guru Kreator (Paideia). Untuk itu, di bawah ini saya telah mengisi informasi pendaftaran dan melakukan registrasi pembayaran.</span></p>
+                  <p style="font-size: 14px; line-height: 140%;"><span style="color: #ffffff; font-size: 14px; line-height: 19.6px;">Saya mendaftarkan diri untuk mengikuti Kelas <strong><b>P</b></strong>endampingan <strong><b>IN</b></strong>ovatif yang ber<strong><b>G</b></strong>una bagi <strong><b>GURU</b></strong> 32 JP yang diadakan oleh Guru Kreator (Paideia). Untuk itu, di bawah ini saya telah mengisi informasi pendaftaran dan melakukan registrasi pembayaran.</span></p>
                 </div>
 
               </div>
@@ -465,8 +489,8 @@ export default {
                       <div style="padding-bottom:10px">
                         <div style="text-align:left;color:#fdfdfd;font-size:14px;padding:0px 0px 3px"><label>Tanggal Lahir *</label></div>
                         <div style="position:relative">
-                           <b-form-datepicker v-model="data_guru.birth_date" type="text" required="" name="birthday" placeholder="" style="border-top-width:1px;border-top-style:solid;border-top-color:#CCC;border-left-width:1px;border-left-style:solid;border-left-color:#CCC;border-right-width:1px;border-right-style:solid;border-right-color:#CCC;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#CCC;padding:10px;color:#000000;background-color:#FFF;font-size:12px;width:100%;border-radius:0px" ></b-form-datepicker>
-                        </div>
+                          <datepicker v-model="data_guru.birth_date" name="birthday" placeholder="" locale="id"></datepicker>
+                          </div>
                       </div>
                     </div>
                     <div color="#000000" class="sc-crrsfI goXqGd">
