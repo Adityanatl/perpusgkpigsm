@@ -35,6 +35,7 @@ export default {
         return
       }
 
+      this.data_guru.payment_method_id = Number(this.data_guru.payment_method_id)
       localStorage.setItem('payload', JSON.stringify(this.data_guru))
       const payload = this.data_guru
       axios.post('api/account/ping-guru', payload)
@@ -463,8 +464,9 @@ export default {
                     <div color="#000000" class="sc-crrsfI goXqGd">
                       <div style="padding-bottom:10px">
                         <div style="text-align:left;color:#fdfdfd;font-size:14px;padding:0px 0px 3px"><label>Tanggal Lahir *</label></div>
-                        <div style="position:relative"><input v-model="data_guru.birth_date" type="text" required="" name="birthday" placeholder="" style="border-top-width:1px;border-top-style:solid;border-top-color:#CCC;border-left-width:1px;border-left-style:solid;border-left-color:#CCC;border-right-width:1px;border-right-style:solid;border-right-color:#CCC;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#CCC;padding:10px;color:#000000;background-color:#FFF;font-size:12px;width:100%;border-radius:0px"
-                          /></div>
+                        <div style="position:relative">
+                           <b-form-datepicker v-model="data_guru.birth_date" type="text" required="" name="birthday" placeholder="" style="border-top-width:1px;border-top-style:solid;border-top-color:#CCC;border-left-width:1px;border-left-style:solid;border-left-color:#CCC;border-right-width:1px;border-right-style:solid;border-right-color:#CCC;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#CCC;padding:10px;color:#000000;background-color:#FFF;font-size:12px;width:100%;border-radius:0px" ></b-form-datepicker>
+                        </div>
                       </div>
                     </div>
                     <div color="#000000" class="sc-crrsfI goXqGd">

@@ -105,7 +105,7 @@ Vue.prototype.moment = moment
 Vue.component('apexchart', VueApexCharts) 
 
 if(process.env.NODE_ENV === 'production') {
-  window.axios.defaults.baseURL = "http://staging-api.paideia.id/"
+  window.axios.defaults.baseURL = "https://api.paideia.id/"
 } else {
   window.axios.defaults.baseURL = "http://staging-api.paideia.id/"
 }
@@ -149,26 +149,10 @@ Vue.use(VueGtag, {
 });
 
 // add referral middleware
-import { isAndroid } from "mobile-device-detect";
-
-const validReferral = ["refo", "pinnacle", "wti"]
 router.beforeEach((to, from, next) => {
   if (to.query.ref) {
-    if (validReferral.includes(to.query.ref)) {
-      if (isAndroid) {
-        var download = document.createElement('a');
-        download.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id";
-        document.body.appendChild(download);
-        download.click();
-        document.body.removeChild(download);
-        // window.location.href = "intent://paideia.id/#Intent;scheme=https;package=com.paideia.id;end"
-
-        // setTimeout(() => {
-        //   window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id"
-        // }, 10000);
-      } else {
-        localStorage.setItem('referral', to.query.ref)
-      }
+    if (to.query.ref === 'refo' || to.query.ref === 'pinnacle') {
+      localStorage.setItem('referral', to.query.ref)
     }
     next()
   } else {
