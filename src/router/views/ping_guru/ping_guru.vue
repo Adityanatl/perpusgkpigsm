@@ -39,13 +39,10 @@ export default {
         return
       }
 
-      let date = moment(this.data_guru.birth_date).format("YYYY-MM-DD")
+      let date = moment(this.data_guru.birth_date).format('YYYY-MM-DD')
       this.data_guru.payment_method_id = Number(this.data_guru.payment_method_id)
       localStorage.setItem('payload', JSON.stringify(this.data_guru))
-      const payload = {
-        ...this.data_guru, 
-        birth_date: date,
-      }
+      const payload = {...this.data_guru, birth_date: date, }
       // const payload = this.data_guru
       axios.post('api/account/ping-guru', payload)
       .then((r) => {
@@ -382,20 +379,6 @@ export default {
       transition: 0.6s;
       text-align: center;
     }
-
-    .date {
-      font-size:12px; 
-      color:#000 !important;
-      background: #fff;
-    }    
-
-    .datepicker {
-      color: #000 !important;
-    }
-
-    input[type=text] {
-      color: #000 !important;
-    }
 </style>
 
 <template>
@@ -502,9 +485,9 @@ export default {
                     <div color="#000000" class="sc-crrsfI goXqGd">
                       <div style="padding-bottom:10px">
                         <div style="text-align:left;color:#fdfdfd;font-size:14px;padding:0px 0px 3px"><label>Tanggal Lahir *</label></div>
-                        <div style="position:relative; color:#000">
-                          <datepicker v-model="data_guru.birth_date" name="birthday" placeholder="" locale="id" class="date dark" style="color:#000"></datepicker>
-                          </div>
+                        <div style="position:relative">
+                          <datepicker v-model="data_guru.birth_date" name="birthday" placeholder="" locale="id" style="font-size:12px; color:#000"></datepicker>
+                        </div>
                       </div>
                     </div>
                     <div color="#000000" class="sc-crrsfI goXqGd">
@@ -536,14 +519,14 @@ export default {
                         <div style="text-align:left;color:#fdfdfd;font-size:14px;padding:0px 0px 3px"><label>Metode Pembayaran *</label></div>
                         <div style="position:relative">
                           <select v-model="data_guru.payment_method_id" name="payment_method" style="border-top-width:1px;border-top-style:solid;border-top-color:#CCC;border-left-width:1px;border-left-style:solid;border-left-color:#CCC;border-right-width:1px;border-right-style:solid;border-right-color:#CCC;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#CCC;padding:10px;color:#000000;background-color:#FFF;font-size:12px;width:100%;border-radius:0px">
-                            <option value= 13>Bank BNI</option>
-                            <option value= 17>Bank BCA</option>
-                            <option value= 11>Bank CIMB</option>
-                            <option value= 18>Bank Mandiri</option>
-                            <option value= 12>Bank Permata</option>
-                            <option value= 33>OVO</option>
-                            <option value= 34>Dana</option>
-                            <option value= 29>LinkAja</option>
+                            <option value= 833>Bank BNI</option>
+                            <option value= 837>Bank BCA</option>
+                            <option value= 831>Bank CIMB</option>
+                            <option value= 838>Bank Mandiri</option>
+                            <option value= 832>Bank Permata</option>
+                            <option value= 853>OVO</option>
+                            <option value= 854>Dana</option>
+                            <option value= 849>LinkAja</option>
                           </select>
                         </div>
                       </div>
