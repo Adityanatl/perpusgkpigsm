@@ -39,13 +39,10 @@ export default {
         return
       }
 
-      let date = moment(this.data_guru.birth_date).format("YYYY-MM-DD")
+      let date = moment(this.data_guru.birth_date).format('YYYY-MM-DD')
       this.data_guru.payment_method_id = Number(this.data_guru.payment_method_id)
       localStorage.setItem('payload', JSON.stringify(this.data_guru))
-      const payload = {
-        ...this.data_guru, 
-        birth_date: date,
-      }
+      const payload = {...this.data_guru, birth_date: date, }
       // const payload = this.data_guru
       axios.post('api/account/ping-guru', payload)
       .then((r) => {
@@ -489,8 +486,8 @@ export default {
                       <div style="padding-bottom:10px">
                         <div style="text-align:left;color:#fdfdfd;font-size:14px;padding:0px 0px 3px"><label>Tanggal Lahir *</label></div>
                         <div style="position:relative">
-                          <datepicker v-model="data_guru.birth_date" name="birthday" placeholder="" locale="id"></datepicker>
-                          </div>
+                          <datepicker v-model="data_guru.birth_date" name="birthday" placeholder="" locale="id" style="font-size:12px; color:#000"></datepicker>
+                        </div>
                       </div>
                     </div>
                     <div color="#000000" class="sc-crrsfI goXqGd">
