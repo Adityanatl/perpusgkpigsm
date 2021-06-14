@@ -47,6 +47,11 @@ export default {
         content: '130592428995558',
         vmid: 'fb:app_id'
       },
+      {
+        property: 'og:updated_time',
+        content: '1623653294',
+        vmid: 'og:updated_time'
+      },
     ],
   },
   page: {
