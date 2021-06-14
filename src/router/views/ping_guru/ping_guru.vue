@@ -9,6 +9,15 @@ import moment from "moment";
 
 export default {
   components: {Multiselect, Datepicker },
+  metaInfo: {
+    meta: [
+      {
+        property: 'og:url',
+        content: 'https://gurukreator.id/pingguru',
+        vmid: 'og:url'
+      },
+    ],
+  },
   data() {
     return {
       data_guru: {
