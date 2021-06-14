@@ -5,6 +5,50 @@ import { notificationMethods } from "@/state/helpers";
 
 export default {
   name: "app",
+  metaInfo: {
+    meta: [
+      {
+        property: 'og:title',
+        content: 'Guru Kreator by Paideia',
+        vmid: 'og:title'
+      },
+      {
+        property: 'og:type',
+        content: 'website',
+        vmid: 'og:type'
+      },
+      {
+        property: 'og:locale',
+        content: 'id_ID',
+        vmid: 'og:locale'
+      },
+      {
+        property: 'og:description',
+        content: 'Aplikasi Guru Kreator adalah aplikasi edukasi pertama yang dapat menjangkau hampir seluruh daerah terluar di Indonesia',
+        vmid: 'og:description'
+      },
+      {
+        property: 'og:image',
+        content: 'https://api.paideia.id/api/files/public/508ccd6e19324ae89e17bfc3cef8a2edFB.png',
+        vmid: 'og:image'
+      },
+      {
+        property: 'og:url',
+        content: 'https://gurukreator.id',
+        vmid: 'og:url'
+      },
+      {
+        property: 'og:site_name',
+        content: 'Guru Kreator',
+        vmid: 'og:site_name'
+      },
+      {
+        property: 'fb:app_id',
+        content: '130592428995558',
+        vmid: 'fb:app_id'
+      },
+    ],
+  },
   page: {
     // All subcomponent titles will be injected into this template.
     titleTemplate(title) {

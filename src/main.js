@@ -170,6 +170,9 @@ router.beforeEach((to, from, next) => {
   }
 })
 
+import VueMeta from "vue-meta";
+Vue.use(VueMeta)
+
 new Vue({
   router,
   store,
