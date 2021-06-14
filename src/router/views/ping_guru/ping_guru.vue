@@ -16,6 +16,11 @@ export default {
         content: 'https://gurukreator.id/pingguru',
         vmid: 'og:url'
       },
+      {
+        property: 'og:title',
+        content: 'Ping Guru by Paideia',
+        vmid: 'og:title'
+      },
     ],
   },
   data() {
