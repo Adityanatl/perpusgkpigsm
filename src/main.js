@@ -93,7 +93,6 @@ Vue.use(VueGoogleMaps, {
 })
 import GoogleAuth from '@/config/google_oAuth.js'
 import VueGtagPlugin from 'vue-gtag'
-//GjpLQgjuwVLCYjP-bYTb51sp
 const gauthOption = {
   clientId: '749746820493-o5fklqpe90t0uoq48u2e6bo6aomq3ct2.apps.googleusercontent.com',
   scope: 'profile email',
@@ -156,16 +155,11 @@ router.beforeEach((to, from, next) => {
   if (to.query.ref) {
     if (validReferral.includes(to.query.ref)) {
       if (isAndroid) {
-        var download = document.createElement('a');
-        download.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id";
-        document.body.appendChild(download);
-        download.click();
-        document.body.removeChild(download);
-        // window.location.href = "intent://paideia.id/#Intent;scheme=https;package=com.paideia.id;end"
+        window.location.href = "intent://paideia.id/#Intent;scheme=https;package=com.paideia.id;end"
 
-        // setTimeout(() => {
-        //   window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id"
-        // }, 10000);
+        setTimeout(() => {
+          window.location.href = "https://play.app.goo.gl/?link=https://play.google.com/store/apps/details?id=com.paideia.id&launch=true"
+        }, 10000);
       } else {
         localStorage.setItem('referral', to.query.ref)
       }
