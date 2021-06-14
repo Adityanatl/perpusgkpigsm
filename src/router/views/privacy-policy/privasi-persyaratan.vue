@@ -359,6 +359,8 @@ export default {
                                 pembayaran dan pengantaran, jaringan periklanan, penyedia analisis, penyedia pencarian informasi, serta agen acuan kredit) (“Mitra Kami”) dan dapat menerima 
                                 informasi dari mereka. Kami akan mengambil langkah-langkah dalam batas kewajaran untuk melakukan verifikasi terhadap informasi yang Kami dapatkan dari sumber 
                                 lain sesuai dengan Peraturan yang Berlaku.</p>
+                            <p>4. Data dari Pengaturan Perangkat Seluler. Kami memperoleh informasi yang Anda izinkan kami terima seperti akses ke kamera atau foto, video, pesan suara, file, 
+                                dan lokasi Anda untuk menyediakan fitur layanan kami.</p>
                         </div>
                         <div class="privacy-item" id="secu">
                             <h3 class="title">Penggunaan Informasi</h3>

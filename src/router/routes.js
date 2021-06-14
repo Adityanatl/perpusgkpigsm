@@ -246,9 +246,9 @@ export default [
   },
 
   {
-    path: '/ui/test',
-    name: 'test',
+    path: '/pingguru',
+    name: 'ping_guru',
     meta: { authRequired: true },
-    component: () => import('./views/ui/test')
+    component: () => import('./views/ping_guru/ping_guru')
   }
 ]
