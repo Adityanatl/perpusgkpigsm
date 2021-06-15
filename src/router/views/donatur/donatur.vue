@@ -128,7 +128,7 @@ export default {
         },
         postCheckout(){
             if (this.pickedProduct == null){
-                alert("Silahkan pilih Berkontribusi")
+                alert("Silahkan pilih Berkontribusi")   
                 return
             }
             this.payload.product_id = this.pickedProduct.id
@@ -880,6 +880,102 @@ export default {
                                                 To help, support, and equip others, especially teachers in the most forefront, outskirts, and behind areas is a noble cause.
                                             </p>
                                             <h5 class="title" style="line-height:35px"><a href="#0">Sugihino Subeno<br><p style="font-size:15px">Ngabang, West Kalimantan</p></a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
+                                <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-thumb">
+                                            <div class="thumb">
+                                                <img src='@/assets/images/donatur/cici.png' alt="client_gurukreator">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <div class="ratings">
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <p>
+                                                Thank you, I am starting to understand how to utilize the features in Guru Kreator 🙏. Keep up the good work 💪💪💪 This is such a helpful app for teachers to plan learning, accessible within a hand-held device 📲
+                                            </p>
+                                            <h5 class="title" style="line-height:35px"><a href="#0">Cici Wulandari<br><p style="font-size:15px">Langkat Regency, North Sumatra</p></a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
+                                <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-thumb">
+                                            <div class="thumb">
+                                                <img src='@/assets/images/donatur/nathania.png' alt="client_gurukreator">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <div class="ratings">
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <p>
+                                                Thank you for an app that is such a help for teachers. Administrative work made simple so that teachers have time to plan for creative and contextual learning for our students.
+                                            </p>
+                                            <h5 class="title" style="line-height:35px"><a href="#0">Nathania Kristanti<br><p style="font-size:15px">South Tangerang, Banten</p></a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
+                                <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-thumb">
+                                            <div class="thumb">
+                                                <img src='@/assets/images/donatur/matius.png' alt="client_gurukreator">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <div class="ratings">
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <p>
+                                                An awesome app. When you use it, they simplify the lengthy process of teacher's administrative work such as lesson plan (RPP). In a matter of minutes, press here & click that, download the file and there you have the pdf version of your lesson plan. Just amazing.
+                                            </p>
+                                            <h5 class="title" style="line-height:35px"><a href="#0">Matius Kyadu<br><p style="font-size:15px">Village of Lete Kamouna, Tambolaka, NTT</p></a></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TestimonySlide>
+                            <TestimonySlide class="o-vertical-spacing">
+                                <div class="testimonial-area testimonial-slider owl-carousel owl-theme">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-thumb">
+                                            <div class="thumb">
+                                                <img src='@/assets/images/donatur/ulul.png' alt="client_gurukreator">
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <div class="ratings">
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                                <span><i class="fas fa-star"></i></span>
+                                            </div>
+                                            <p>
+                                                Effectively efficient in supporting teachers to develop learning materials. Thank you so much 😇
+                                            </p>
+                                            <h5 class="title" style="line-height:35px"><a href="#0">Ulul Reza<br><p style="font-size:15px">Wonosobo, Central Java</p></a></h5>
                                         </div>
                                     </div>
                                 </div>
