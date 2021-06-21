@@ -78,9 +78,19 @@ export const actions = {
         .then(resp => {
           if(resp.data.code === 200) {
             commit("ACCOUNT", resp.data.data)
-          }
+          } else if
+          (resp.data.code === 403) {
+            // Vue.swal({
+            //     position: "top-end",
+            //     icon: "warning",
+            //     title: 'Email sudah digunakan',
+            //     showConfirmButton: false,
+            //     timer: 1500
+            // });
+          } 
+          
           return resp
-        })
+        }) 
   },
   LOGIN_SSO_GOOGLE: async({commit}, payload) => {
     commit("LOADING")

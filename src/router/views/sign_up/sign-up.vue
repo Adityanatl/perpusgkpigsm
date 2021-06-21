@@ -53,7 +53,7 @@ export default {
                 Vue.swal({
                     position: "top-end",
                     icon: "warning",
-                    title: 'Failed to process',
+                    title: 'Email sudah digunakan',
                     showConfirmButton: false,
                     timer: 1500
                 });
