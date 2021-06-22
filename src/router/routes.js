@@ -260,9 +260,9 @@ export default [
   },
 
   {
-    path: '/social_media',
-    name: 'social_media',
+    path: '/murid_kreatif',
+    name: 'murid_kreatif',
     meta: { authRequired: true },
-    component: () => import('./views/sosmed_page/sosmed_page')
+    component: () => import('./views/murid_kreatif/murid_kreatif')
   }
 ]

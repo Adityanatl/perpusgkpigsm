@@ -2454,7 +2454,7 @@ input[type="submit"] {
     width: 100%;
     position: fixed;
     z-index: 999;
-    top: 10px;
+    /* top: 10px; */
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
     transition: all ease 0.3s;
@@ -16511,6 +16511,117 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.5);
 }
 
+.thumbnail-1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.thumbnail-1 h5 {
+    padding:0px 0px 10px 0px;
+}
+
+.thumbnail-1 .p-1 {
+    font-size:12px; 
+    color:#235897; 
+    line-height:15px; 
+    padding: 0px 15px 0px 15px;
+}
+
+.thumbnail-1 .p-2 {
+    font-size:12px; 
+    color:#235897; 
+    line-height:15px; 
+    padding: 0px 60px 0px 60px;
+}
+
+.thumbnail-1 .p-3 {
+    font-size:12px; 
+    color:#235897; 
+    line-height:15px; 
+    padding: 0px 30px 0px 30px;
+}
+
+@media (max-width: 575px) {
+    .kominfo img {
+        width: 100%;
+        padding: 0px 10px 10px 10px;
+    }
+
+    .thumbnail-1 {  
+        display: block;
+    }
+
+    .kominfo .thumbnail-1 img {
+        width: 20%;
+        padding: 0px 10px 10px 10px;
+        margin: 40px 0px 20px 0px;
+    }
+    
+    .thumbnail-1 .p-1 {
+        padding: 0px 35px 0px 35px !important;
+    }
+    
+    .thumbnail-1 .p-2 {
+
+        padding: 0px 60px 0px 60px !important;
+    }
+    
+    .thumbnail-1 .p-3 {
+        padding: 0px 30px 0px 30px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .kominfo h2 {
+        font-size: 28px;
+    }
+
+    .kominfo p {
+        font-size: 10px;
+    }
+    .thumbnail-1 {
+        display: flex;
+    }
+
+    .thumbnail-1 .p-1 {
+        padding: 0px 35px 0px 35px !important;
+    }
+    
+    .thumbnail-1 .p-2 {
+
+        padding: 0px 60px 0px 60px !important;
+    }
+    
+    .thumbnail-1 .p-3 {
+        padding: 0px 30px 0px 30px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .kominfo h2 {
+        font-size: 34px;
+    }
+
+    .kominfo p {
+        font-size: 16px;
+    }
+
+    .thumbnail-1 {
+        display: flex;
+    }
+}
+
+.kominfo img {
+    padding: 0px 0px 10px 0px;
+}
+
+.kominfo .thumbnail-1 img {
+    padding: 0px 0px 10px 0px;
+}
+
+/*=============================*/
+
 .thumbnail {
     display: flex;
     justify-content: space-around;
@@ -16526,8 +16637,57 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     background: #235897;
 }
 
-.thumbnail-1 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.thumbnail .kominfo {
+    width:260px; 
+    height:218px;
+}
+
+.thumbnail .p {
+    font-size:18px; 
+    color:#235897;
+}
+
+.thumbnail .qrcode {
+    width:217px; 
+    height:217px;
+}
+
+.thumbnail a {
+    font-size:18px; 
+    color:#235897;
+}
+
+@media (max-width: 575px) {
+    .thumbnail {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .thumbnail::after {
+        position: absolute;
+        border: 1px;
+        content: '';
+        width: 85%;
+        height: 2px;
+        top: 290px;
+        left: 20px;
+        right: 0;
+        background: #235897;
+    }
+
+    .thumbnail .kominfo {
+        width:50%; 
+        padding: 0px 5px 0px 5px;
+    }
+
+    .thumbnail .qrcode {
+        width:50%; 
+        padding: 0px 5px 0px 5px;
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
 }

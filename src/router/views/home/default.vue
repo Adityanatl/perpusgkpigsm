@@ -858,12 +858,12 @@ export default {
                     <div class="card-body">
                         <div class="thumbnail">
                             <div>
-                                <img src="@/assets/images/kominfo-logo.svg" alt="" style="width:260px; height:218px">
-                                <p style="font-size:18px; color:#235897;">Guru Kreator telah resmi terdaftar di KOMINFO</p>
+                                <img class="kominfo" src="@/assets/images/kominfo-logo.svg" alt="">
+                                <p>Guru Kreator telah resmi terdaftar di KOMINFO</p>
                             </div>
                             <div>
-                                <img src="@/assets/images/kominfo-qrcode.svg" alt="" style="width:217px; height:217px">
-                                <p><a target="_blank" href="https://pse.kominfo.go.id/tdpse-detail/1418" style="font-size:18px; color:#235897;">https://pse.kominfo.go.id/tdpse-detail/1418</a></p>
+                                <img class="qrcode" src="@/assets/images/kominfo-qrcode.svg" alt="">
+                                <p><a target="_blank" href="https://pse.kominfo.go.id/tdpse-detail/1418">https://pse.kominfo.go.id/tdpse-detail/1418</a></p>
                             </div>
                         </div>
                     </div>
@@ -1712,7 +1712,7 @@ export default {
                 </div>
             </div>  
         </div>
-     </section> -->
+     </section>
      <!--============= Social Media Ends Here =============-->
 
      <!-- <section>

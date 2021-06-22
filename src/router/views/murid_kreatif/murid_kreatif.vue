@@ -29,91 +29,6 @@ export default {
       endtime: "Dec 31, 2020 16:37:25",
       gamification: 1,
       selectedProduct: null,
-      listProducts: [
-        {
-            "id":1,
-            "product_type":"Personal",
-            "product_name":"Monthly",
-            "price":20000,
-            "semester_price":100000,
-            "yearly_price":200000,
-            "account_id":0,
-            "reference_id":0,
-            "month":0,
-            "status":0,
-            "viewed":0,
-            "sold":2,
-            "image_url":"",
-            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 bulan tanpa batasan eksport dokumen (pdf)",
-            "narasi":"",
-            "recommended":false
-        },
-        {
-            "id":10,
-            "product_type":"Personal",
-            "product_name":"Semester",
-            "price":100000,
-            "semester_price":null,
-            "yearly_price":null,
-            "account_id":0,
-            "reference_id":0,
-            "month":0,
-            "status":0,
-            "viewed":0,
-            "sold":0,
-            "image_url":"",
-            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 6 bulan tanpa batasan eksport dokumen (pdf)",
-            "narasi":"",
-            "recommended":false
-        },
-        {
-            "id":11,
-            "product_type":"Personal",
-            "product_name":"Yearly",
-            "price":200000,
-            "semester_price":null,
-            "yearly_price":null,
-            "account_id":0,
-            "reference_id":0,
-            "month":0,
-            "status":0,
-            "viewed":0,
-            "sold":0,
-            "image_url":"",
-            "description":"Akses semua fitur Guru Kreator (Kelasku, Kreasiku dan Relungku) untuk 1 jenjang pendidikan selama 1 tahun tanpa batasan eksport dokumen (pdf)",
-            "narasi":"",
-            "recommended":true
-        }
-        ],
-    //   selectedPrice: 0,
-        join_telegram_email : "",
-        image_banner: 'https://api.paideia.id/api/files/public/8bd80c80b396428ba575dcfec07a4b20banner11.png',
-        video: 'https://api.paideia.id/api/files/public/91221555db7c4016996ca7dd0ccacb07faturevideo.png',
-        arrow: 'https://api.paideia.id/api/files/public/fe97b2b5d8e94d76abd862c249282488downarrow.png',
-        logo1: 'https://api.paideia.id/api/files/public/47063a1db9d043c8bb0e46eb74e7b892sponsor1.png',
-        logo2: 'https://api.paideia.id/api/files/public/1f83e9810013448fbefd3a29c2e24d0elogowti.png',
-        logo3: 'https://api.paideia.id/api/files/public/92081145a7324b5f8e8257200e6ab506logotechinspire.png',
-        keunggulan1: 'https://api.paideia.id/api/files/public/b990ac5b68024205b2d78a186afb1961amfea1.png',
-        keunggulan2: 'https://api.paideia.id/api/files/public/ed55e63df8cd41cd9d237792c5670eb9amfea2.png',
-        keunggulan3: 'https://api.paideia.id/api/files/public/2d18a88db67343e0837e386fcc19d371amfea3.png',
-        keunggulan4: 'https://api.paideia.id/api/files/public/6be81494673a4099b428c99ca67ee894amfea4.png',
-        cara1: 'https://api.paideia.id/api/files/public/8f276db10ac14bbb9e0a8000315c1d6ehow1.png',
-        cara2: 'https://api.paideia.id/api/files/public/fd5548f716ed4d7bb5401745d1698ca9how2.png',
-        cara3: 'https://api.paideia.id/api/files/public/80b5fae731134a0aa8fa617d6103ba51how3.png',
-        team: 'https://api.paideia.id/api/files/public/6840d747a21d499da0e090752f728fc3community.png',
-        fitur_phone1: 'https://api.paideia.id/api/files/public/1361659da7de47e7bca82941bc17c818promain.png',
-        fitur_phone2: 'https://api.paideia.id/api/files/public/48f29261ce0342f9ab153cc8fc152e36promain2.png',
-        fitur_phone3: 'https://api.paideia.id/api/files/public/7b26760fd8fd439daab738abc6e834d6promain3.png',
-        fitur_phone4: 'https://api.paideia.id/api/files/public/62995e07977e4a799358d712dc392864promain4.png',
-        map: 'https://api.paideia.id/api/files/public/06d98a7e50a24fea99aba7c17a69bfbbmap.png',
-        ball1: 'https://api.paideia.id/api/files/public/f63dc8cb5e644bc8af6421e23cc139d41.png',
-        ball2: 'https://api.paideia.id/api/files/public/76f044c80b354d70971b1d2a8c680b262.png',
-        ball3: 'https://api.paideia.id/api/files/public/ea1da180c8e64662a8bfc3c440d61b8b3.png',
-        ball4: 'https://api.paideia.id/api/files/public/6f1a4977a9674a0a9fdeca56a9457e4a4.png',
-        ball5: 'https://api.paideia.id/api/files/public/2279e5b755494b4988cd3336fbed18af5.png',
-        ball6: 'https://api.paideia.id/api/files/public/451555d44d474631afdc658fa49d5cd26.png',
-        logo_circle: 'https://api.paideia.id/api/files/public/f412ade9b34346b7acca7d511dc37eafLogoGuruKreatoricononly1.png',
-        facebook: 'https://api.paideia.id/api/files/public/4415b0b2e46e41ad8593006a63e4890dfaceboklogo.png'
     };
   },
 
@@ -229,19 +144,11 @@ export default {
       return false;
     });
 
-    $(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/id_ID/all.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
 </script>
 
 <template>
     <div>
-     <header class="navigation header-section">
+     <header class="navigation header-section" style="background:#09a3f2;">
         <div class="container">
             <div class="header-wrapper">
             <div class="logo">
@@ -302,20 +209,20 @@ export default {
      <!--============= Header Section Ends Here =============-->
 
     <!--============= Kominfo Starts Here =============-->
-     <section class="kominfo padding-top">
+     <section class="kominfo" style="padding-top:200px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 mb-4 text-center">
                     <div class="">
-                        <h2 style="font-size:34px;">Guru dan Murid sebagai satu Komunitas</h2>
+                        <h2>Guru dan Murid sebagai satu Komunitas</h2>
                     </div>
                 </div>
             </div>
             <div class="text-center">
-                <img src="@/assets/images/mkgk.png" alt="">
+                <img src="@/assets/images/mkgk.png" alt="" >
             </div>
             <div class="col-lg-12 text-center">
-                <p style="font-size:16px">Murid Kreatif hadir sebagai aplikasi pendamping murid. Integrasi ini membuat aplikasi Guru Kreator lebih maksimal.</p>
+                <p>Murid Kreatif hadir sebagai aplikasi pendamping murid. Integrasi ini membuat aplikasi Guru Kreator lebih maksimal.</p>
             </div>
         </div>
      </section>
@@ -334,31 +241,30 @@ export default {
             <div>
                 <div class="thumbnail-1">
                     <div>
-                        <img style="padding:0px 0px 10px 0px" src="@/assets/images/thumbnail/Group-1.png" alt="">
-                        <h5 style="padding:0px 0px 10px 0px">Bahan Belajarku</h5>
-                        <p style="font-size:12px; color:#235897; line-height:15px; padding: 0px 15px 0px 15px;">Bahan-bahan belajar dari guru dalam satu wadah terintegrasi.</p>
+                        <img src="@/assets/images/thumbnail/Group-1.png" alt="">
+                        <h5>Bahan Belajarku</h5>
+                        <p class="p-1">Bahan-bahan belajar dari guru dalam satu wadah terintegrasi.</p>
                     </div>
                     <div>
-                        <img style="padding:0px 0px 15px 0px" src="@/assets/images/thumbnail/Group-2.svg" alt="">
-                        <h5 style="padding:0px 0px 10px 0px">Bahan Belajarku</h5>
-                        <p style="font-size:12px; color:#235897; line-height:15px; padding: 0px 60px 0px 60px;">Mengumpulkan tugas tidak akan terlewatkan lagi, semua dalam satu tempat yang terintegrasi.</p>
+                        <img src="@/assets/images/thumbnail/Group-2.svg" alt="">
+                        <h5>Bahan Belajarku</h5>
+                        <p class="p-2">Mengumpulkan tugas tidak akan terlewatkan lagi, semua dalam satu tempat yang terintegrasi.</p>
                     </div>
                     <div>
-                        <img style="padding:0px 0px 15px 0px" src="@/assets/images/thumbnail/Group-3.svg" alt="">
-                        <h5 style="padding:0px 0px 10px 0px">Ruang Diskusiku</h5>
-                        <p style="font-size:12px; color:#235897; line-height:15px; padding: 0px 60px 0px 60px;">Menjadi komunitas digital yang sehat, serta menjadi sarana dalam berkolaborasi.</p>
+                        <img src="@/assets/images/thumbnail/Group-3.svg" alt="">
+                        <h5>Ruang Diskusiku</h5>
+                        <p class="p-2">Menjadi komunitas digital yang sehat, serta menjadi sarana dalam berkolaborasi.</p>
                     </div>
                     <div>
-                        <img style="padding:0px 0px 15px 0px" src="@/assets/images/thumbnail/Group-4.svg" alt="">
-                        <h5 style="padding:0px 0px 10px 0px">Pencapaianku</h5>
-                        <p style="font-size:12px; color:#235897; line-height:15px; padding: 0px 30px 0px 30px;">Berfokus pada proses untuk mendapatkan hasil yang maksimal.</p>
+                        <img src="@/assets/images/thumbnail/Group-4.svg" alt="">
+                        <h5>Pencapaianku</h5>
+                        <p class="p-1">Berfokus pada proses untuk mendapatkan hasil yang maksimal.</p>
                     </div>
                 </div>
             </div>
         </div>
      </section>
     <!--============= Kominfo Starts Here =============-->
-
 
      <!--============= Footer Section Starts Here =============-->
      <footer class="footer-section bg_img_footer" data-background='@/assets/images/footer-bg.jpg'>
