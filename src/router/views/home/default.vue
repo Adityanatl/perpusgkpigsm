@@ -237,42 +237,6 @@ export default {
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-	// var userFeed = new Instafeed({
-	// 	get: 'user',
-	// 	target: "instafeed-container",
-    // 	resolution: 'low_resolution',
-	// 	accessToken: 'IGQVJWWEl4dDRpQXRDNHAwRU9weDhVTG9kUHgtTnlpcmRScDEyUTRvSjAxV1dLeDBvRlBYb3RoQzItQmtEbWdsNjJ0ci1rbUlQTEVMYWxEV001QVVjcGxFa0hBLWFZANTZAHak5zNVRIaGhLX3M3Wml6TgZDZD'
-	// });
-	// userFeed.run();
-
-    // $(function () { 
-	// var userFeed = new Instafeed({
-    // get: 'user',
-    // target: "instafeed-container",
-    // resolution: 'low_resolution',
-    // accessToken: 'IGQVJWWEl4dDRpQXRDNHAwRU9weDhVTG9kUHgtTnlpcmRScDEyUTRvSjAxV1dLeDBvRlBYb3RoQzItQmtEbWdsNjJ0ci1rbUlQTEVMYWxEV001QVVjcGxFa0hBLWFZANTZAHak5zNVRIaGhLX3M3Wml6TgZDZD'
-	// });
-	// userFeed.run()
-    // });
-
-    // $(function(){
-    // var i, e, d = document, 
-    // s = "script"; 
-    // i = d.createElement("script");
-    // i.async=1;
-    // i.src = "https://cdn.curator.io/published/0fd79280-29de-4135-b9ee-0deb510a08e8.js";
-    // e = d.getElementsByTagName(s)[0];
-    // e.parentNode.insertBefore(i, e);
-    // })();
-
-    // $(function(i, e, d) {
-    // var js, ijs = d.getElementsByTagName(e)[0];
-    // if (d.getElementById(i)) return;
-    // js = d.createElement(e);  js.id.async=1;
-    // js.src = "https://cdn.curator.io/published/0fd79280-29de-4135-b9ee-0deb510a08e8.js";
-    // ijs.parentNode.insertBefore(js, ijs);
-    // }(document, 'script', 'instagram-jssdk'));
-
 </script>
 
 <template>
@@ -374,21 +338,7 @@ export default {
                             <div class="banner-thumb">
                                 <img :src="image_banner" alt="banner">
                             </div>
-                            <!-- <div class="banner-thumb">
-                                <img src='@/assets/images/banner/banner1-2.png' alt="banner">
-                            </div>
-                            <div class="banner-thumb">
-                                <img src='@/assets/images/banner/banner1-3.png' alt="banner">
-                            </div>
-                            <div class="banner-thumb">
-                                <img src='@/assets/images/banner/banner1-1.png' alt="banner">
-                            </div>
-                            <div class="banner-thumb">
-                                <img src='@/assets/images/banner/banner1-2.png' alt="banner">
-                            </div>
-                            <div class="banner-thumb">
-                                <img src='@/assets/images/banner/banner1-3.png' alt="banner">
-                            </div> -->
+
                         </div>
                         <div class="ban-click">
                             <div class="thumb">
@@ -886,13 +836,49 @@ export default {
      </section>
      <!--============= Coverage Section Ends Here =============-->
 
+     <!--============= Kominfo Starts Here =============-->
+     <section class="kominfo padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="section-header left-style coverage-header">
+                        <h2 class="title">Terdaftar di Kominfo</h2>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="card"
+                    style= "
+                            border-radius: 29px;
+                            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.10);
+                            margin: 0rem 1rem 1rem 1rem;
+                            text-align:center;
+                            "
+                >
+                    <div class="card-body">
+                        <div class="thumbnail">
+                            <div>
+                                <img src="@/assets/images/kominfo-logo.svg" alt="" style="width:260px; height:218px">
+                                <p style="font-size:18px; color:#235897;">Guru Kreator telah resmi terdaftar di KOMINFO</p>
+                            </div>
+                            <div>
+                                <img src="@/assets/images/kominfo-qrcode.svg" alt="" style="width:217px; height:217px">
+                                <p><a target="_blank" href="https://pse.kominfo.go.id/tdpse-detail/1418" style="font-size:18px; color:#235897;">https://pse.kominfo.go.id/tdpse-detail/1418</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <!--============= Kominfo Starts Here =============-->
+
      <!--============= Social Media Starts Here =============-->
      <section class="padding-top padding-bottom" id="coverage">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mb-4">
                     <div class="section-header left-style coverage-header">
-                        <!-- <h5 class="cate">Wujudkan 3T menjadi Terluar Tapi Terdepan!</h5> -->
                         <h2 class="title">Our Social Media Channel</h2>
                     </div>
                 </div>
@@ -909,7 +895,6 @@ export default {
                         </div>
                     </div>
                     <div class="facebook">
-                        <!-- <div class="fb-like-box" data-href="https://www.facebook.com/gurukreator/" data-width="326" data-height="550" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"></div>  -->
                         <iframe name="f13901404aafe08" width="auto" height="650px" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1411b4b9a242f4%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A9921%252Ff2075e56c632f3c%26relation%3Dparent.parent&amp;container_width=356&amp;header=false&amp;height=550&amp;href=https%3A%2F%2Fwww.facebook.com%2Fgurukreator%2F&amp;locale=id_ID&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=true&amp;width=326" class="social-facebook"></iframe> 
                     </div>
                 </div>
@@ -1727,7 +1712,7 @@ export default {
                 </div>
             </div>  
         </div>
-     </section>
+     </section> -->
      <!--============= Social Media Ends Here =============-->
 
      <!-- <section>
@@ -1784,7 +1769,7 @@ export default {
                 </SliderFrame>
             </div>
          </div>
-     </section> -->
+     </section>
 
         <!--============= Footer Section Starts Here =============-->
      <footer class="footer-section bg_img_footer" data-background='@/assets/images/footer-bg.jpg'>

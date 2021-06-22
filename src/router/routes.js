@@ -250,5 +250,19 @@ export default [
     name: 'ping_guru',
     meta: { authRequired: true },
     component: () => import('./views/ping_guru/ping_guru')
+  },
+
+  {
+    path: '/testAPI',
+    name: 'testAPI',
+    meta: { authRequired: true },
+    component: () => import('./views/ui/testAPI')
+  },
+
+  {
+    path: '/social_media',
+    name: 'social_media',
+    meta: { authRequired: true },
+    component: () => import('./views/sosmed_page/sosmed_page')
   }
 ]

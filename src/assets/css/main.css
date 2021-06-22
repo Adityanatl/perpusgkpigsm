@@ -16510,3 +16510,24 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     background: -ms-linear-gradient(-30deg, #c165dd 0%, #5c27fe 100%);
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.5);
 }
+
+.thumbnail {
+    display: flex;
+    justify-content: space-around;
+}
+
+.thumbnail::after {
+    position: absolute;
+    border: 1px;
+    content: '';
+    width: 2px;
+    height: 85%;
+    top: 5;
+    background: #235897;
+}
+
+.thumbnail-1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
