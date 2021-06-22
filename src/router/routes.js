@@ -252,12 +252,12 @@ export default [
     component: () => import('./views/ping_guru/ping_guru')
   },
 
-  {
-    path: '/testAPI',
-    name: 'testAPI',
-    meta: { authRequired: true },
-    component: () => import('./views/ui/testAPI')
-  },
+  // {
+  //   path: '/testAPI',
+  //   name: 'testAPI',
+  //   meta: { authRequired: true },
+  //   component: () => import('./views/ui/testAPI')
+  // },
 
   {
     path: '/murid_kreatif',
