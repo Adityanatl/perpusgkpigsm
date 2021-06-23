@@ -16464,39 +16464,20 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     }
 }
 
-
-
 .testi-prev-ig {
-    right: -20px;
-    margin-right: 53px !important;
+    right: 0px;
+    margin-right: 23px;
 }
 
 .testi-next-ig {
-    left: -20px;
+    left: -25px;
     margin-left: 20px;
 }
 
-@media only screen and (max-width: 700px){
+@media (max-width: 768px) {
     .testi-prev-ig {
-        right: -60px !important;
-        margin-right: 43px;
-    }
-    
-    .testi-next-ig {
-        left: -20px;
-        margin-left: 20px;
-    }
-}    
-
-@media only screen and (min-width: 280px){
-    .testi-prev-ig {
-        right: -40px;
-        margin-right: 30px;
-    }
-    
-    .testi-next-ig {
-        left: -40px;
-        margin-left: 30px;
+        right: -28px;
+        margin-right: 23px;
     }
 }
 
@@ -16693,6 +16674,7 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
         display: inline-block;
         justify-content: center;
         height: auto;
+        width: 100%;
     }   
 
     .thumbnail::after {
