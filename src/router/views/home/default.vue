@@ -266,6 +266,7 @@ export default {
                     </li>
                     <li @click="analyticGuru()"><router-link tag="a" to="/features/features">Guru</router-link></li>
                     <li @click="analyticDonatur()"><router-link tag="a" to="/donatur">Donatur</router-link></li>
+                    <li><router-link tag="a" to="/murid_kreatif">Murid Kreatif</router-link></li>
                     <!-- <li><a href="contact.html">Kontak</a></li> -->
                     <li class="d-sm-none">
                         <router-link tag="a" to="/sign_in/sign-in" class="header-button d-sm-inline-block">SIGN UP/LOGIN</router-link>
@@ -286,6 +287,9 @@ export default {
                         </li><hr>
                         <li class="nav-item">
                         <router-link tag="a" to="/donatur" style="color:#ffffff">Donatur</router-link>
+                        </li><hr>
+                        <li class="nav-item">
+                        <router-link tag="a" to="/murid_kreatif" style="color:#ffffff">Murid Kreatif</router-link>
                         </li><hr>
                         <!-- <li class="nav-item">
                         <router-link tag="a" to="#kontak">Kontak</router-link>
@@ -856,15 +860,23 @@ export default {
                             "
                 >
                     <div class="card-body">
-                        <div class="thumbnail">
-                            <div>
-                                <img class="kominfo" src="@/assets/images/kominfo-logo.svg" alt="">
-                                <p>Guru Kreator telah resmi terdaftar di KOMINFO</p>
-                            </div>
-                            <div>
-                                <img class="qrcode" src="@/assets/images/kominfo-qrcode.svg" alt="">
-                                <p><a target="_blank" href="https://pse.kominfo.go.id/tdpse-detail/1418">https://pse.kominfo.go.id/tdpse-detail/1418</a></p>
-                            </div>
+                        <div class="table-responsive">
+                        <!-- <table class="table table-centered">
+                            <tbody>
+                                <tr> -->
+                                    <div class="thumbnail">
+                                        <div>
+                                            <img class="kominfo" src="@/assets/images/kominfo-logo.svg" alt="">
+                                            <p>Guru Kreator telah resmi terdaftar di KOMINFO</p>
+                                        </div>
+                                        <div>
+                                            <img class="qrcode" src="@/assets/images/kominfo-qrcode.svg" alt="">
+                                            <p><a target="_blank" href="https://pse.kominfo.go.id/tdpse-detail/1418">https://pse.kominfo.go.id/tdpse-detail/1418</a></p>
+                                        </div>
+                                    </div>
+                                <!-- </tr>
+                            </tbody>
+                        </table> -->
                         </div>
                     </div>
                 </div>

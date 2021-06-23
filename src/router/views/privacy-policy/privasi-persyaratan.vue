@@ -216,6 +216,7 @@ export default {
                     </li>
                     <li><router-link tag="a" to="/features/features">Guru</router-link></li>
                     <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
+                    <li><router-link tag="a" to="/murid_kreatif">Murid Kreatif</router-link></li>
                     <!-- ss -->
                     <li class="d-sm-none">
                         <router-link tag="a" to="/sign_in/sign-in" class="header-button d-sm-inline-block">SIGN UP/LOGIN</router-link>
@@ -236,6 +237,9 @@ export default {
                         </li><hr>
                         <li class="nav-item">
                         <router-link tag="a" to="/donatur" style="color:#ffffff">Donatur</router-link>
+                        </li><hr>
+                        <li class="nav-item">
+                        <router-link tag="a" to="/murid_kreatif" style="color:#ffffff">Murid Kreatif</router-link>
                         </li><hr>
                         <!-- <li class="nav-item">
                         <router-link tag="a" to="#kontak">Kontak</router-link>

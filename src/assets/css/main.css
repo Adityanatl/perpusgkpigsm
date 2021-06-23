@@ -16625,6 +16625,8 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 .thumbnail {
     display: flex;
     justify-content: space-around;
+    height: 230px;
+    overflow-y: hidden;
 }
 
 .thumbnail::after {
@@ -16632,7 +16634,7 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     border: 1px;
     content: '';
     width: 2px;
-    height: 85%;
+    height: 80%;
     top: 5;
     background: #235897;
 }
@@ -16642,7 +16644,7 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     height:218px;
 }
 
-.thumbnail .p {
+.thumbnail p {
     font-size:18px; 
     color:#235897;
 }
@@ -16657,11 +16659,17 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     color:#235897;
 }
 
+@media only screen and (min-device-width: 414px) and (max-device-width: 540px) and (orientation: portrait) {
+    .thumbnail::after {
+        top: 285px !important;
+    }
+}
 @media (max-width: 575px) {
     .thumbnail {
         display: inline-block;
         justify-content: center;
-    }
+        height: auto;
+    }   
 
     .thumbnail::after {
         position: absolute;
@@ -16669,8 +16677,8 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
         content: '';
         width: 85%;
         height: 2px;
-        top: 290px;
-        left: 20px;
+        top: 320px;
+        left: 23.5px;
         right: 0;
         background: #235897;
     }
@@ -16680,13 +16688,41 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
         padding: 0px 5px 0px 5px;
     }
 
+    .thumbnail p {
+        font-size:14px; 
+        color:#235897;
+    }
+
     .thumbnail .qrcode {
         width:50%; 
         padding: 0px 5px 0px 5px;
     }
+
+    .thumbnail a {
+        font-size:14px; 
+        color:#235897;
+    }
+}
+
+@media (max-width: 768px) {
+    .thumbnail {
+        height: auto!important;
+    }
+
+    .thumbnail p {
+        font-size:14px; 
+        color:#235897;
+        padding: 0px 20px 0px 20px;
+    }
+
+    .thumbnail a {
+        font-size:14px; 
+        color:#235897;
+    }
 }
 
 @media (min-width: 992px) {
+    
 }
 
 @media (min-width: 1200px) {
