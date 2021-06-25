@@ -251,7 +251,12 @@ export default [
     meta: { authRequired: true },
     component: () => import('./views/ping_guru/ping_guru')
   },
-
+  {
+    path: '/limited_member',
+    name: 'limited_member',
+    meta: { authRequired: true },
+    component: () => import('./views/ping_guru/handal_digital_full')
+  },
   // {
   //   path: '/testAPI',
   //   name: 'testAPI',
@@ -264,5 +269,11 @@ export default [
     name: 'murid_kreatif',
     meta: { authRequired: true },
     component: () => import('./views/murid_kreatif/murid_kreatif')
-  }
+  },
+  {
+    path: '/test',
+    name: 'test',
+    meta: { authRequired: true },
+    component: () => import('./views/ui/test')
+  },
 ]
