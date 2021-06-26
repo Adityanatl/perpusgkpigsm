@@ -116,8 +116,7 @@ export default {
           localStorage.removeItem('cart');
           window.location = resp.redirect_url
         }
-      }).catch(err => {
-        const {data} = err.response
+      }).catch(function () {
         Vue.swal({
           position: "top-end",
           icon: "warning",
