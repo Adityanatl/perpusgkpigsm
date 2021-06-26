@@ -18,7 +18,24 @@ export default {
     
   },
   mounted() {
-
+    const urlParams = new URLSearchParams(window.location.search);
+    let trxID = urlParams.get('MERCHANT_TRANID');
+    let agg = 'faspay'
+    if(trxID) {
+      const errID = urlParams.get('ERR_CODE');
+      if (errID && errID !== '0') {
+        this.$router.push("/")
+      }
+      trxID = trxID.split("-")[1]
+    } else {
+      agg = 'paypal'
+      trxID = urlParams.get('token');
+    }
+    axios.get('/order/trx-id/'+agg+"/"+trxID)
+    .then((resp) => {
+      const data = resp.data.data
+      this.post = data
+    })
   },
   methods: {
 
