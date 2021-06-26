@@ -155,7 +155,8 @@ export default {
 
                     window.location = resp.redirect_url
                 }
-            }).catch(function () {
+            }).catch(err => {
+                const {data} = err.response
                 Vue.swal({
                     position: "top-end",
                     icon: "warning",
