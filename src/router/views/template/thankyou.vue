@@ -27,10 +27,7 @@ export default {
         this.$router.push("/")
       }
       trxID = trxID.split("-")[1]
-    } else {
-      agg = 'paypal'
-      trxID = urlParams.get('token');
-    }
+    } 
     axios.get('/order/trx-id/'+agg+"/"+trxID)
     .then((resp) => {
       const data = resp.data.data
