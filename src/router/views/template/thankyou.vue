@@ -26,13 +26,7 @@ export default {
       if (errID && errID !== '0') {
         this.$router.push("/")
       }
-      trxID = trxID.split("-")[1]
     } 
-    axios.get('/order/trx-id/'+agg+"/"+trxID)
-    .then((resp) => {
-      const data = resp.data.data
-      this.post = data
-    })
   },
   methods: {
 
