@@ -18,15 +18,14 @@ export default {
     
   },
   mounted() {
-    const urlParams = new URLSearchParams(window.location.search);
-    let trxID = urlParams.get('MERCHANT_TRANID');
-    let agg = 'faspay'
-    if(trxID) {
-      const errID = urlParams.get('ERR_CODE');
-      if (errID && errID !== '0') {
+    const urlParams = this.$route.query
+    if (urlParams.status && urlParams.status !== '0') {
+      this.$router.push("/")
+    } else {
+      if (urlParams.TXN_STATUS === 'F') {
         this.$router.push("/")
       }
-    } 
+    }
   },
   methods: {
 
