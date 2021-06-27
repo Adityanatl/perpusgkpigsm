@@ -12,12 +12,6 @@ export default {
     };
   },
   created() {
-    
-  },
-  destroyed() {
-    
-  },
-  mounted() {
     const urlParams = this.$route.query
     if (urlParams.status && urlParams.status !== '0') {
       this.$router.push("/")
@@ -26,6 +20,12 @@ export default {
         this.$router.push("/")
       }
     }
+  },
+  destroyed() {
+    
+  },
+  mounted() {
+
   },
   methods: {
 
