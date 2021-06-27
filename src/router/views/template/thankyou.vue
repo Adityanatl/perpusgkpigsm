@@ -16,13 +16,15 @@ export default {
   },
   destroyed() {
     
-  },
+  },  
   mounted() {
     const urlParams = new URLSearchParams(window.location.search);
+    console.log('URL PARAM',urlParams)
     let trxID = urlParams.get('MERCHANT_TRANID');
     let agg = 'faspay'
     if(trxID) {
       const errID = urlParams.get('ERR_CODE');
+      console.log('ERR_CODE',ERR_CODE)
       if (errID && errID !== '0') {
         this.$router.push("/")
       }
