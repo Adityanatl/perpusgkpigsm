@@ -8,18 +8,20 @@ export default {
   components: { Carousel, Slide },
   data() {
     return {
-
+      completed: false
     };
   },
   created() {
     const urlParams = this.$route.query
-    if (urlParams.status && urlParams.status !== '0') {
+    if ('status' in urlParams && urlParams.status !== '2') {
       this.$router.push("/")
-    } else {
-      if (urlParams.TXN_STATUS === 'F') {
-        this.$router.push("/")
-      }
+      return
+    } else if ('TXN_STATUS' in urlParams && urlParams.TXN_STATUS !== 'S') {
+      this.$router.push("/")
+      return
     }
+
+    this.completed = true
   },
   destroyed() {
     
@@ -34,9 +36,8 @@ export default {
 </script>
 
 <template>
-    
 
-  <div id="u_body" class="u_body" style="min-height: 100vh; background-color: #ffffff; font-family: arial,helvetica,sans-serif;">
+  <div v-if="completed" id="u_body" class="u_body" style="min-height: 100vh; background-color: #ffffff; font-family: arial,helvetica,sans-serif;">
 
     <div id="u_row_2" class="u_row v-row-background-color" style="padding: 0px;">
       <div class="container" style="max-width: 500px;margin: 0 auto;">
