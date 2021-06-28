@@ -8,18 +8,22 @@ export default {
   components: { Carousel, Slide },
   data() {
     return {
-
+      completed: false
     };
   },
   created() {
     const urlParams = this.$route.query
     if (urlParams.status && urlParams.status !== '2') {
       this.$router.push("/")
+      return
     } else {
-      if (urlParams.TXN_STATUS === 'F') {
+      if (urlParams.TXN_STATUS !== 'S') {
         this.$router.push("/")
+        return
       }
     }
+
+    this.completed = true
   },
   destroyed() {
     
@@ -35,7 +39,7 @@ export default {
 
 <template>
 
-  <div id="u_body" class="u_body" style="min-height: 100vh; background-color: #ffffff; font-family: arial,helvetica,sans-serif;">
+  <div v-if="completed" id="u_body" class="u_body" style="min-height: 100vh; background-color: #ffffff; font-family: arial,helvetica,sans-serif;">
 
     <div id="u_row_2" class="u_row v-row-background-color" style="padding: 0px;">
       <div class="container" style="max-width: 500px;margin: 0 auto;">
