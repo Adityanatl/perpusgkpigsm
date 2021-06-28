@@ -13,7 +13,7 @@ export default {
   },
   created() {
     const urlParams = this.$route.query
-    if (urlParams.status && urlParams.status !== '0') {
+    if (urlParams.status && urlParams.status !== '2') {
       this.$router.push("/")
     } else {
       if (urlParams.TXN_STATUS === 'F') {
@@ -34,7 +34,6 @@ export default {
 </script>
 
 <template>
-    
 
   <div id="u_body" class="u_body" style="min-height: 100vh; background-color: #ffffff; font-family: arial,helvetica,sans-serif;">
 
