@@ -13,14 +13,12 @@ export default {
   },
   created() {
     const urlParams = this.$route.query
-    if (urlParams.status && urlParams.status !== '2') {
+    if ('status' in urlParams && urlParams.status !== '2') {
       this.$router.push("/")
       return
-    } else {
-      if (urlParams.TXN_STATUS !== 'S') {
-        this.$router.push("/")
-        return
-      }
+    } else if ('TXN_STATUS' in urlParams && urlParams.TXN_STATUS !== 'S') {
+      this.$router.push("/")
+      return
     }
 
     this.completed = true
