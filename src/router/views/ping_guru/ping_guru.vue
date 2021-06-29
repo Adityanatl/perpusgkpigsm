@@ -80,8 +80,8 @@ export default {
             showConfirmButton: false,
             timer: 1500
           });
-        } else if (x.response.status == '423 Locked') {
-          this.$routes.push('limited_member')
+        } else if (x.response.status === 423) {
+          this.$router.push('limited_member')
         }
       })
     },
