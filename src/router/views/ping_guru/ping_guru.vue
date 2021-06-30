@@ -48,6 +48,7 @@ export default {
   },
   methods: {
     async postData(){ 
+      this.isButton = true;
       const validate = this.validateOrder()
 		  if (validate.length > 0) {
         this.raiseValidationError(validate)
@@ -558,7 +559,7 @@ export default {
                       <button 
                       :disabled="isButton"
                       type="submit" 
-                      @click="postData" 
+                      @click="postData()" 
                       style="border:none;display:inline-block;text-align:center;overflow:hidden;cursor:pointer;text-decoration:none;padding:10px;margin:5px 0px 0px;font-size:14px;width:100%;border-radius:4px;color:#FFF;background-color:#3AAEE0"
                       >DAFTAR</button></div>
 
