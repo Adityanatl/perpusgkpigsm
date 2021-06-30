@@ -33,7 +33,8 @@ export default {
         "email":"",
         "classroom_topic":"",
         "payment_method_id":0
-      }
+      },
+      isButton: false,
     };
   },
   created() {
@@ -60,6 +61,7 @@ export default {
       // const payload = this.data_guru
       await axios.post('api/account/ping-guru', payload)
       .then( r => {
+        this.isButton=true;
         const resp = r.data.data
         if (resp.direct === true) {
           this.directHTML = resp.direct_value
@@ -552,7 +554,13 @@ export default {
                         </div>
                       </div>
                     </div>
-                    <div style="text-align:center"><button type="submit" @click="postData" style="border:none;display:inline-block;text-align:center;overflow:hidden;cursor:pointer;text-decoration:none;padding:10px;margin:5px 0px 0px;font-size:14px;width:100%;border-radius:4px;color:#FFF;background-color:#3AAEE0">DAFTAR</button></div>
+                    <div style="text-align:center">
+                      <button 
+                      :disabled="isButton"
+                      type="submit" 
+                      @click="postData" 
+                      style="border:none;display:inline-block;text-align:center;overflow:hidden;cursor:pointer;text-decoration:none;padding:10px;margin:5px 0px 0px;font-size:14px;width:100%;border-radius:4px;color:#FFF;background-color:#3AAEE0"
+                      >DAFTAR</button></div>
 
                 </div>
               </div>
