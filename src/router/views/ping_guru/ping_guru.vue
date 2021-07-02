@@ -541,7 +541,7 @@ export default {
                       <div style="padding-bottom:10px">
                         <div style="text-align:left;color:#fdfdfd;font-size:14px;padding:0px 0px 3px"><label>Metode Pembayaran *</label></div>
                         <div style="position:relative">
-                          <select v-model="data_guru.payment_method_id" name="payment_method" style="border-top-width:1px;border-top-style:solid;border-top-color:#CCC;border-left-width:1px;border-left-style:solid;border-left-color:#CCC;border-right-width:1px;border-right-style:solid;border-right-color:#CCC;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#CCC;padding:10px;color:#000000;background-color:#FFF;font-size:12px;width:100%;border-radius:0px">
+                          <select disabled v-model="data_guru.payment_method_id" name="payment_method" style="border-top-width:1px;border-top-style:solid;border-top-color:#CCC;border-left-width:1px;border-left-style:solid;border-left-color:#CCC;border-right-width:1px;border-right-style:solid;border-right-color:#CCC;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#CCC;padding:10px;color:#000000;background-color:#FFF;font-size:12px;width:100%;border-radius:0px">
                             <option value= 2>Bank BRI</option>
                             <option value= 13>Bank BNI</option>
                             <option value= 17>Bank BCA</option>
