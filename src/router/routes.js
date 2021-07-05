@@ -264,12 +264,12 @@ export default [
   //   component: () => import('./views/ui/testAPI')
   // },
 
-  {
-    path: '/murid_kreatif',
-    name: 'murid_kreatif',
-    meta: { authRequired: true },
-    component: () => import('./views/murid_kreatif/murid_kreatif')
-  },
+  // {
+  //   path: '/murid_kreatif',
+  //   name: 'murid_kreatif',
+  //   meta: { authRequired: true },
+  //   component: () => import('./views/murid_kreatif/murid_kreatif')
+  // },
   {
     path: '/test',
     name: 'test',
