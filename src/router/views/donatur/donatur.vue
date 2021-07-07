@@ -288,7 +288,7 @@ export default {
                         <router-link tag="a" to="/">Home</router-link>
                     </li>
                     <li><router-link tag="a" to="/features/features">Teacher</router-link></li>
-                    <li><router-link tag="a" to="/donatur">Supporter</router-link></li>
+                    <li><router-link tag="a" to="/donatur">Donatur</router-link></li>
                     <li><router-link tag="a" to="/murid_kreatif">Murid Kreatif</router-link></li>
                     <!-- <li><a href="contact.html">Kontak</a></li> -->
                     <li class="d-sm-none">
@@ -309,7 +309,7 @@ export default {
                         <router-link tag="a" to="/features/features" style="color:#ffffff">Teacher</router-link>
                         </li><hr>
                         <li class="nav-item">
-                        <router-link tag="a" to="/donatur" style="color:#ffffff">Supporter</router-link>
+                        <router-link tag="a" to="/donatur" style="color:#ffffff">Donatur</router-link>
                         </li><hr>
                         <li class="nav-item">
                         <router-link tag="a" to="/murid_kreatif" style="color:#ffffff">Murid Kreatif</router-link>
