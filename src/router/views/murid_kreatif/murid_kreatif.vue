@@ -217,8 +217,8 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 mb-4 text-center">
-                    <div class="">
-                        <h2>Guru dan Murid sebagai satu Komunitas</h2>
+                    <div class="Montserrat-Bold">
+                        <h2 class="Montserrat-Bold">Guru dan Murid dalam Satu Ekosistem Terpadu!</h2>
                     </div>
                 </div>
             </div>
@@ -226,7 +226,7 @@ export default {
                 <img src="@/assets/images/mkgk.png" alt="" >
             </div>
             <div class="col-lg-12 text-center">
-                <p>Murid Kreatif hadir sebagai aplikasi pendamping murid. Integrasi ini membuat aplikasi Guru Kreator lebih maksimal.</p>
+                <p>Murid Kreatif hadir sebagai aplikasi pendampingan murid menuju siklus pembelajaran yang utuh.</p>
             </div>
         </div>
      </section>
@@ -247,22 +247,22 @@ export default {
                     <div>
                         <img src="@/assets/images/thumbnail/Group-1.png" alt="">
                         <h5>Bahan Belajarku</h5>
-                        <p class="p-1">Bahan-bahan belajar dari guru dalam satu wadah terintegrasi.</p>
+                        <p class="p-1">Bahan dari guru jadi mudah dicari saat dibutuhkan</p>
                     </div>
                     <div>
                         <img src="@/assets/images/thumbnail/Group-2.svg" alt="">
-                        <h5>Bahan Belajarku</h5>
-                        <p class="p-2">Mengumpulkan tugas tidak akan terlewatkan lagi, semua dalam satu tempat yang terintegrasi.</p>
+                        <h5>Tugasku</h5>
+                        <p class="p-2">Pengumpulan tugas jadi tepat waktu & penilaian jadi anti ribet</p>
                     </div>
                     <div>
                         <img src="@/assets/images/thumbnail/Group-3.svg" alt="">
                         <h5>Ruang Diskusiku</h5>
-                        <p class="p-2">Menjadi komunitas digital yang sehat, serta menjadi sarana dalam berkolaborasi.</p>
+                        <p class="p-2">Dikusi jadi seru dalam komunitas gaul bareng teman dan guru</p>
                     </div>
                     <div>
                         <img src="@/assets/images/thumbnail/Group-4.svg" alt="">
                         <h5>Pencapaianku</h5>
-                        <p class="p-1">Berfokus pada proses untuk mendapatkan hasil yang maksimal.</p>
+                        <p class="p-2">Tampilan proses selalu tersedia saat membagi hasil akhir, serta sangat akurat dan bermanfaat</p>
                     </div>
                 </div>
             </div>

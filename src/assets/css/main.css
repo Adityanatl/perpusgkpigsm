@@ -16727,3 +16727,11 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     }
 }
 
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url("~@/assets/fonts/Montserrat-SemiBold.otf");
+}
+
+.Montserrat-Bold {
+    font-family: "Montserrat-SemiBold";
+}
