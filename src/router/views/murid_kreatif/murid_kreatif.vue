@@ -247,7 +247,7 @@ export default {
                     <div class="wrapper">
                         <img src="@/assets/images/thumbnail/Group-1.png" alt="">
                         <h6>Bahan Belajarku</h6>
-                        <p class="p-1">Bahan dari guru jadi mudah dicari saat dibutuhkan</p>
+                        <p class="p-2">Bahan dari guru jadi mudah dicari saat dibutuhkan</p>
                     </div>
                     <div class="wrapper">
                         <img src="@/assets/images/thumbnail/Group-2.svg" alt="">
@@ -260,9 +260,9 @@ export default {
                         <p class="p-2">Dikusi jadi seru dalam komunitas gaul bareng teman dan guru</p>
                     </div>
                     <div class="wrapper">
-                        <img src="@/assets/images/thumbnail/Group-4.svg" alt="">
+                        <img class="img-group4" src="@/assets/images/thumbnail/Group-4.svg" alt="">
                         <h6>Pencapaianku</h6>
-                        <p class="p-3">Tampilan proses selalu tersedia saat membagi hasil akhir, serta sangat akurat dan bermanfaat</p>
+                        <p class="p-2">Tampilan proses selalu tersedia saat membagi hasil akhir, serta sangat akurat dan bermanfaat</p>
                     </div>
                 </div>
             </div>

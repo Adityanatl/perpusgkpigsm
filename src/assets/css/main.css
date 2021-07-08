@@ -16553,6 +16553,10 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     padding: 0px 50px 0px 0px;
 }
 
+.kominfo .thumbnail-1 .img-group4 {
+    margin-bottom:5px;
+}
+
 @media (max-width: 575px) {
     .wrapper-thumbnail {
         padding: 0px 150px 0px 150px;
@@ -16578,8 +16582,12 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 
     .kominfo .thumbnail-1 img {
         width: 20%;
-        padding: 0px 10px 10px 10px;
+        /* padding: 0px 10px 10px 10px; */
         margin: 40px 0px 20px 0px;
+    }
+    
+    .kominfo .thumbnail-1 .img-group4 {
+        margin-bottom:15px;
     }
     
     .thumbnail-1 h6 {
