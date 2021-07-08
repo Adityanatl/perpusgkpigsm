@@ -242,27 +242,27 @@ export default {
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="wrapper-thumbnail">
                 <div class="thumbnail-1">
-                    <div>
+                    <div class="wrapper">
                         <img src="@/assets/images/thumbnail/Group-1.png" alt="">
-                        <h5>Bahan Belajarku</h5>
+                        <h6>Bahan Belajarku</h6>
                         <p class="p-1">Bahan dari guru jadi mudah dicari saat dibutuhkan</p>
                     </div>
-                    <div>
+                    <div class="wrapper">
                         <img src="@/assets/images/thumbnail/Group-2.svg" alt="">
-                        <h5>Tugasku</h5>
+                        <h6>Tugasku</h6>
                         <p class="p-2">Pengumpulan tugas jadi tepat waktu & penilaian jadi anti ribet</p>
                     </div>
-                    <div>
+                    <div class="wrapper">
                         <img src="@/assets/images/thumbnail/Group-3.svg" alt="">
-                        <h5>Ruang Diskusiku</h5>
+                        <h6>Ruang Diskusiku</h6>
                         <p class="p-2">Dikusi jadi seru dalam komunitas gaul bareng teman dan guru</p>
                     </div>
-                    <div>
+                    <div class="wrapper">
                         <img src="@/assets/images/thumbnail/Group-4.svg" alt="">
-                        <h5>Pencapaianku</h5>
-                        <p class="p-2">Tampilan proses selalu tersedia saat membagi hasil akhir, serta sangat akurat dan bermanfaat</p>
+                        <h6>Pencapaianku</h6>
+                        <p class="p-3">Tampilan proses selalu tersedia saat membagi hasil akhir, serta sangat akurat dan bermanfaat</p>
                     </div>
                 </div>
             </div>
