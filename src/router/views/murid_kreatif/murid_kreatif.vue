@@ -223,7 +223,7 @@ export default {
                 </div>
             </div>
             <div class="text-center">
-                <img src="@/assets/images/mkgk.png" alt="" >
+                <img src="@/assets/images/Group8.svg" alt="" >
             </div>
             <div class="col-lg-12 text-center">
                 <p>Murid Kreatif hadir sebagai aplikasi pendampingan murid menuju siklus pembelajaran yang utuh.</p>
