@@ -16553,6 +16553,14 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     padding: 0px 50px 0px 0px;
 }
 
+.kominfo .thumbnail-1 .wrapper img {
+    width: 40px;
+    height: 40px;
+    /* width: 100%; */
+    /* padding: 0px 10px 10px 10px; */
+    /* margin: 40px 0px 20px 0px; */
+}
+
 .kominfo .thumbnail-1 .img-group4 {
     margin-bottom:5px;
 }
@@ -16580,7 +16588,7 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
         display: block;
     }
 
-    .kominfo .thumbnail-1 img {
+    .kominfo .thumbnail-1 .wrapper img {
         width: 20%;
         /* padding: 0px 10px 10px 10px; */
         margin: 40px 0px 20px 0px;

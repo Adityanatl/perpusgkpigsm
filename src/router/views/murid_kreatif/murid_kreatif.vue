@@ -245,22 +245,22 @@ export default {
             <div class="wrapper-thumbnail">
                 <div class="thumbnail-1">
                     <div class="wrapper">
-                        <img src="@/assets/images/thumbnail/Group-1.png" alt="">
+                        <img src="@/assets/images/murid-kreatif/Group-1.svg" alt="">
                         <h6>Bahan Belajarku</h6>
                         <p class="p-2">Bahan dari guru jadi mudah dicari saat dibutuhkan</p>
                     </div>
                     <div class="wrapper">
-                        <img src="@/assets/images/thumbnail/Group-2.svg" alt="">
+                        <img src="@/assets/images/murid-kreatif/Group-2.svg" alt="">
                         <h6>Tugasku</h6>
                         <p class="p-2">Pengumpulan tugas jadi tepat waktu & penilaian jadi anti ribet</p>
                     </div>
                     <div class="wrapper">
-                        <img src="@/assets/images/thumbnail/Group-3.svg" alt="">
+                        <img src="@/assets/images/murid-kreatif/Group-3.svg" alt="">
                         <h6>Ruang Diskusiku</h6>
                         <p class="p-2">Dikusi jadi seru dalam komunitas gaul bareng teman dan guru</p>
                     </div>
                     <div class="wrapper">
-                        <img class="img-group4" src="@/assets/images/thumbnail/Group-4.svg" alt="">
+                        <img src="@/assets/images/murid-kreatif/Group-4.svg" alt="">
                         <h6>Pencapaianku</h6>
                         <p class="p-2">Tampilan proses selalu tersedia saat membagi hasil akhir, serta sangat akurat dan bermanfaat</p>
                     </div>
