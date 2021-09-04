@@ -1,5 +1,5 @@
 Paideia
-# Skote - Vue based admin template
+
 
 ## Project setup
 ```

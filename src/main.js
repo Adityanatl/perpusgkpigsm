@@ -18,7 +18,7 @@ import "@/assets/css/flaticon.css"
 import "@/assets/css/magnific-popup.css"
 import "@/assets/css/main.css"
 import "@/assets/css/nice-select.css"
-import "@/assets/css/style.css"
+// import "@/assets/css/style.css"
 
 import store from '@/state/store'
 // import store2 from './store'
@@ -104,9 +104,9 @@ Vue.prototype.moment = moment
 Vue.component('apexchart', VueApexCharts) 
 
 if(process.env.NODE_ENV === 'production') {
-  window.axios.defaults.baseURL = "https://api.paideia.id/"
+  window.axios.defaults.baseURL = "localhost"
 } else {
-  window.axios.defaults.baseURL = "http://staging-api.paideia.id/"
+  window.axios.defaults.baseURL = "localhost"
 }
 window.axios.defaults.headers.post['Content-Type'] = "application/json"
 let user = JSON.parse(localStorage.getItem('user'));
@@ -116,32 +116,6 @@ if (user && user.token) {
   window.axios.defaults.headers.common['Authorization'] = ''
 }
 
-// Axios Request interceptor
-// axios.interceptors.request.use(function (config) {
-//   router.app.$Progress.start()
-//   return config;
-// }, function (error) {
-//   console.log('error -> ',error)
-//   router.app.$Progress.fail()
-//   return Promise.reject(error);
-// });
-// // Axios Response interceptor
-//
-// axios.interceptors.response.use(function(resp) {
-//   router.app.$Progress.finish()
-//   return resp
-// }, function(error) {
-//   console.log('error -> ',error)
-//   router.app.$Progress.fail()
-//   if (error.response.status === 401 || error.response.status === 403) {
-//     store2.dispatch('customer/LOGOUT').then(function(resp) {
-//       router.push('/pages/login')
-//     })
-//   }
-//   //sweetalert2(error.response.data.message)
-//
-//   return Promise.reject(error.response.data);
-// })
 import VueGtag from "vue-gtag";
 Vue.use(VueGtag, {
   config: {id : "UA-188133433-1"}

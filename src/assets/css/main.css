@@ -16758,3 +16758,162 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 .Montserrat-Bold {
     font-family: "Montserrat-SemiBold";
 }
+
+.range-wrapper-2 .pricing-range .custom-button3 {
+    color: #fff;
+    border: 1px solid #0b507d;
+    /* border: ; */
+    border-radius: 25px;
+    height: 50px;
+    width: 230px;
+    text-transform: capitalize;
+    padding: 10px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: #0b507d;
+}
+
+.social-youtube {
+    width: 427px !important;
+    height: 265px;
+    left: 762px;
+    top: 349px;
+    margin: 7px 10px 10px 10px;
+    border: none;
+    background: #235897;
+    box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.social-facebook {
+    width: calc(100% - 420px);
+    min-width: 326px !important;
+    height: 550px;
+    margin: 7px 10px 10px 0px;
+    left: 259px;
+    top: 349px;
+    background: #FFFFFF;
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 700px){
+    .facebook {
+        display: flex !important;
+        justify-content: center !important;
+        margin: auto;
+    }
+
+    .instagram {
+        /* margin: 0px 30px 0px 0px; */
+        display: flex !important;
+        justify-content: center !important;
+        margin: auto;
+    }
+}
+
+._2zfs {
+    border-radius: 15px !important;
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+._2p3a {
+    width: 426px !important;
+}
+
+._2lqg {
+   max-height: 419px !important;
+}
+
+.social-ig {
+    width: calc(100% - 420px);
+    min-width: 326px !important;
+    height: 550px;
+    margin: 7px 10px 10px 0px;
+    left: 259px;
+    top: 349px;
+    background: #FFFFFF;
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.dark {
+    color: #000000;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    .social-facebook {
+        width: calc(100% - 420px);
+        min-width: 326px;
+        height: 550px;
+        margin: 7px 10px 10px 0px;
+        left: 259px;
+        top: 349px;
+        background: #FFFFFF;
+        box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+
+    .social-ig {
+        width: calc(100% - 420px);
+        min-width: 326px;
+        height: 550px;
+        margin: 7px 10px 10px 0px;
+        left: 259px;
+        top: 349px;
+        background: #FFFFFF;
+        box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+
+    .social-youtube {
+        width: 427px;
+        height: 265px;
+        left: 762px;
+        top: 349px;
+        margin: 7px 10px 10px 10px;
+        border: none;
+        background: #235897;
+        box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (min-width: 280px){
+    .social-facebook {
+        width: calc(100% - 420px);
+        min-width: 255px;
+        height: 550px;
+        margin: 7px 10px 10px 0px;
+        left: 259px;
+        top: 349px;
+        background: #FFFFFF;
+        box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+
+    .social-ig {
+        width: calc(50% - 20px);
+        min-width: 255px;
+        height: 560px;
+        margin: 7px 0px 10px 0px;
+        left: 0;
+        top: 349px;
+        background: #FFFFFF;
+        box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+
+    .social-youtube {
+        width: calc(100% - 420px);
+        min-width: 255px;
+        height: 265px;
+        left: 762px;
+        top: 349px;
+        margin: 7px 10px 10px 10px;
+        border: none;
+        background: #235897;
+        box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+}
