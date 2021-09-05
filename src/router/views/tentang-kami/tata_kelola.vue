@@ -141,7 +141,7 @@ export default {
                 </div>
 
                 <div style="color:black;">
-                  <ol>
+                  <ul>
                       <li>Alamat laman situs web resmi Perpustakaan Virtual BKS Sekolah Minggu GKPI adalah https://perpusgkpism.com</li>
                       <li>Informasi yang di tampilkan laman web Perpustakaan Virtual adalah ditujukan bagi setiap anak sekolah, guru sekolah minggu, dan warga jemaat GKPI maupun dari luar GKPI</li>
                       <li>Dokumen berupa halaman, banner, dokumentasi surat, foto, video, buku, artikel, renungan, dan berita pengumuman merupakan dokumen legal yang telah di sepakati bersama oleh koordinator dan setiap masing – masing koordinator bidang dalam setiap publikasi konten.</li>
@@ -149,7 +149,7 @@ export default {
                       <li>Masing – masing personal yang berasal dari kontributor stakeholder BKS GSM memiliki akses ke koordinator perpustakaan virtual untuk mengajukan dokumen sebagai bahan publikasi di website.</li>
                       <li>Dalam melakukan update/menggunggah dokumen yang sudah di validasi oleh koordinator website/ Ketua BKS, koordinator website di bantu oleh pengelola website yang melakukan update dengan atas nama pengusul.</li>
                       <li>Laman situs web di evaluasi secara berkala melalui rapat pengurus BKS GSM minimal 3 bulan sekali.</li>
-                  </ol>
+                  </ul>
                 </div>  
 
                 <div class="section-header mb-5">

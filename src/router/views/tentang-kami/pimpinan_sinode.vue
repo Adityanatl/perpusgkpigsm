@@ -127,100 +127,166 @@ export default {
 
 
 
-     <!--============= Social Media Starts Here =============-->
-     <section class="padding-top padding-bottom" id="coverage">
-        <div class="container">
-            <div class="section-header">
-                <h3 class="title">Social Media</h3>
+     <!--============= Visi Misi Starts Here =============-->
+     <section class="mt-5">
+         <div class="container">
+            <div class="section-header mb-5">
+                <h4 style="color:black;" class="psbfont text-center">PIMPINAN SINODE GKPI</h4>
             </div>
-            <div class="row mt-5">
-                <div class="col-md-4 mt-3 ">
-                    <!-- <div class="row mb-4 ml-2">
-                    </div>
-                    <div class="facebook">
-                        <iframe name="f13901404aafe08" width="auto" height="650px" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1411b4b9a242f4%26domain%3Dlocalhost%26origin%3Dhttp%253A%252F%252Flocalhost%253A9921%252Ff2075e56c632f3c%26relation%3Dparent.parent&amp;container_width=356&amp;header=false&amp;height=550&amp;href=https%3A%2F%2Fwww.facebook.com%2Fgurukreator%2F&amp;locale=id_ID&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=true&amp;width=326" class="social-facebook"></iframe> 
-                    </div> -->
-                </div>
-                <div class="col-md-4 mt-3">
-                    <div class="row mb-4 ml-2">
-                    </div>
-                    <div class="instagram">
-                        <SliderFrame>
-                            <div slot-scope="{ next, prev }">
-                                <div>
-                                    <SliderSlides>
-                                        <SliderSlide class="o-vertical-spacing">
-                                            <div>
-                                                <div>
-                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CS9Ymp9DnLD/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
-                                                </div>
-                                            </div>
-                                        </SliderSlide>
-                                        <SliderSlide class="o-vertical-spacing">
-                                            <div>
-                                                <div>
-                                                    <iframe class="social-ig instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/p/CJalw3Zjwf3/embed/captioned/?cr=1&amp;v=13&amp;wp=588#%7B%22ci%22%3A0%2C%22os%22%3A13688.2199998945%7D" allowtransparency="true" frameborder="0" height="390" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no"></iframe>
-                                                </div>
-                                            </div>
-                                        </SliderSlide>
-
-                                        <a href="#0" @click="prev" class="testi-next-ig trigger-ig  ">
-                                            <img src='@/assets/images/client/left.png' alt="">
-                                        </a>
-                                        <a href="#0" @click="next" class="testi-prev-ig trigger-ig">
-                                            <img src='@/assets/images/client/right.png' alt="">
-                                        </a>
-
-                                    </SliderSlides>
-                                </div>
-                            </div>
-                        </SliderFrame>
-                    </div>
-                </div>
-            </div>  
-        </div>
+            <div class="text-center">
+                <p>VISI</p>
+                <p>"Menjadi Persekutuan Penyembahan dan Persembahan Pada Tahun 2030"</p>
+                <p>MISI</p>
+                <p>"Dalam rangka mendukung Visi GKPI maka Misi GKPI dijabarkan dalam Panca Pelayanan GKPI: 1.Koinonia. 2. Marturia. 3. Diakonia. 4. Liturgia. 5. Oikonomia"</p>
+            </div>
+         </div>
      </section>
-     <!--============= Social Media Ends Here =============-->
+     <!--============= Visi Misi Ends Here =============-->     
 
-    <!--============= Custom-Plan Section Starts Here =============-->
-    <section class="help-section padding-bottom padding-top oh">
+    <!--============= Pimpinan Pictures Starts Here =============-->
+      <section class="develop-teach">
         <div class="container">
-            <div class="section-header">
-                <h3 class="title">Kalender Kegiatan</h3>
-            </div>
-            <div class="row justify-content-between">
-                <div class="col-lg-2 rtl d-none d-lg-block">
-                    
+          <div class="row thumbnail-icon-develop">
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/abdul-hutauruk.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark"><b>Pdt. Abdul Hutauruk, MTh</b></h6>
+                  <p>Bishop</p>
                 </div>
-                <div class="col-lg-8 col-xl-8 mb-30-none">
-                    <div class="help-item">
-                        <div class="help-thumb">
-                            <img src="@/assets/images/date1.png" alt="help">
-                        </div>
-                        <div class="help-content">
-                            <p><span><i class="fas fa-clipboard-list mr-2" style="color:#2662A4;"></i></span>Launching Perpustakaan Virtual GSM GKPI</p>
-                            <p><span><i class="far fa-clock mr-2" style="color:#2662A4;"></i></span>18.00 WIB - 20.00 WIB</p>
-                            <p><span><i class="fas fa-map-marker-alt mr-2" style="color:#2662A4;"></i></span>Zoom Meeting dan You Tube BKS GSM GKPI</p>
-                        </div>
-                    </div>
-                    <div class="help-item">
-                        <div class="help-thumb">
-                            <img src="@/assets/images/date2.png" alt="help">
-                        </div>
-                        <div class="help-content">
-                            <p><span><i class="fas fa-clipboard-list mr-2" style="color:#2662A4;"></i></span>Ibadah HUT GKPI Ke - 57 Th</p>
-                            <p><span><i class="far fa-clock mr-2" style="color:#2662A4;"></i></span>19.00 WIB - 23.00 WIB</p>
-                            <p><span><i class="fas fa-map-marker-alt mr-2" style="color:#2662A4;"></i></span>Youtube GKPI</p>
-                        </div>
-                    </div>
+              </div>
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/humala-lbntobing.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark"><b>Pdt. Humala Lumbantobing MTh</b></h6>
+                  <p>Sekjen</p>
                 </div>
-                <div class="col-lg-2 rtl d-none d-lg-block">
-                    
-                </div>                
-            </div>
+              </div>
+          </div>
+          <div class="row thumbnail-icon-develop">
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/maria-simatupang.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark text-center"><b>Pdt. Maria L. Simatupang, M.Th</b></h6>
+                  <p>Departemen Apostolat</p>
+                </div>
+              </div>
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/rudolf-pakpahan.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark"><b>Pdt. Rudolf G. Pakpahan, M.Th</b></h6>
+                  <p>Biro Umum & Organisasi</p>
+                </div>
+              </div>
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/tp-sihombing.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark"><b>Pdt. TP Sihombing, MM., M.Th</b></h6>
+                  <p>Departemen Pastorat</p>
+                </div>
+              </div>
+          </div>
+          <div class="row thumbnail-icon-develop">
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/jp-siregar.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark"><b>Pdt. JP. Robinsar Siregar, M.Th</b></h6>
+                  <p>Biro Adm, Informasi dan Komunikasi</p>
+                </div>
+              </div>
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/parsaoran-sinaga.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark"><b>Pdt. Parsaoran Sinaga, M.Min., M.Th</b></h6>
+                  <p>Departemen Diakonat</p>
+                </div>
+              </div>
+              <div class="text-center thumbnail-age">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/sondang-samosir.svg" alt="">
+                <div class="detail-wrapper mt-2">
+                  <h6 class="bold dark"><b>Sondang Samosir, SE</b></h6>
+                  <p>Biro Keuangan</p>
+                </div>
+              </div>
+          </div>       
         </div>
-    </section>
-    <!--============= Custom-Plan Section Ends Here =============-->  
+      </section>
+    <!--============= Pimpinan Pictures Starts Here =============-->
 
     </div>
 </template>
+
+<style scoped>
+  .develop-teach .text-wrapper h2 {
+      font-size: 45px;
+      color: #000000;
+      font-family: 'PoppinsBold';
+      font-style: Bold;
+      line-height: 80px;
+  }
+
+  .develop-teach .text-wrapper p {
+      font-family: 'PoppinsRegular';
+      color: #000000;
+      font-size: 25px;
+      line-height: 40px;
+  }
+
+  .thumbnail-age p {
+    font-size: 16px;
+    margin-top: -10px;
+    color: #000000;
+  }
+
+  @media only screen and (max-width: 700px){
+    .develop-teach .text-wrapper{
+      margin: 0px 10px 0px 10px;
+    }
+
+    .develop-teach .text-wrapper h2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .develop-teach .text-wrapper p {
+        font-size: 18px;
+    }
+  }
+
+.thumbnail-icon-develop {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 80px 0px;
+  }
+
+.thumbnail-age {
+   margin: 0px 40px 0px 40px;
+ }
+
+.thumbnail-age p {
+    font-size: 16px;
+    margin-top: -10px;
+    color: #000000;
+}
+
+@media (max-width: 991px) { 
+.kiddy-people {
+    margin: 95px 0px 0px 15px !important;
+}
+
+.junior-people {
+    margin: 56px 0px 0px 0px !important;
+}
+
+.upper-people {
+    margin: 32px 0px 0px 0px !important;
+}
+
+.thumbnail-age {
+    margin: 0px 15px 0px 10px;
+}
+}
+
+.detail-wrapper {
+   text-align: center;
+ }
+</style>

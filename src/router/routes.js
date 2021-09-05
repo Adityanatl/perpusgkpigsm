@@ -23,4 +23,25 @@ export default [
     meta:{ authRequired: true, }, 
     component: () => import('./views/tentang-kami/tata_kelola')
   },
+
+  {
+    path:'/wilayah_cakupan',
+    name:'wilayah cakupan',
+    meta:{ authRequired: true, }, 
+    component: () => import('./views/tentang-kami/wilayah_cakupan')
+  },
+
+  {
+    path:'/mitra_kerja',
+    name:'mitra kerja',
+    meta:{ authRequired: true, }, 
+    component: () => import('./views/tentang-kami/mitra_kerja')
+  },
+
+  {
+    path:'/latar_belakang',
+    name:'latar belakang',
+    meta:{ authRequired: true, }, 
+    component: () => import('./views/tentang-kami/latar_belakang')
+  },
 ]
