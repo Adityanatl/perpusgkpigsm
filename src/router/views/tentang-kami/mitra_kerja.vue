@@ -169,13 +169,16 @@ export default {
 
               <div class="text-center row">
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src="@/assets/images/logo/logo_gkpi.svg" width="200vw" height="200vw" alt="">
+                  <a target="_blank" href="https://gkpi.or.id/">
+                    <img src="@/assets/images/logo/logo_gkpi.svg" width="200vw" height="200vw" alt=""></a>
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src="@/assets/images/logo/logo_sahabatanak.svg" width="200vw" height="200vw" alt="">
+                  <a target="_blank" href="https://sahabatanak.org/">
+                    <img src="@/assets/images/logo/logo_sahabatanak.svg" width="200vw" height="200vw" alt=""></a>
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <img src="@/assets/images/logo/logo_uem.svg" width="200vw" height="200vw" alt="">
+                  <a target="_blank" href="https://www.vemission.org/en/about-uem/uem-in-africa-asia-germany/uem-in-germany">
+                    <img src="@/assets/images/logo/logo_uem.svg" width="200vw" height="200vw" alt=""></a>
                 </div>
               </div>
 
