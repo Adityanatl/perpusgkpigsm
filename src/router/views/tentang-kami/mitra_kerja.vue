@@ -169,7 +169,7 @@ export default {
 
               <div class="text-center row">
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">
-                  <a target="_blank" href="https://gkpi.or.id/">
+                  <a target="_blank" href="https://gkpisinode.org/">
                     <img src="@/assets/images/logo/logo_gkpi.svg" width="200vw" height="200vw" alt=""></a>
                 </div>
                 <div class="col-md" data-aos="zoom-in-up" data-aos-duration="1500">

@@ -171,10 +171,10 @@ export default {
                 </div>
               </div>
               <div class="text-center thumbnail-age">
-                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/rudolf-pakpahan.svg" alt="">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/parsaoran-sinaga.svg" alt="">
                 <div class="detail-wrapper mt-2">
-                  <h6 class="bold dark"><b>Pdt. Rudolf G. Pakpahan, M.Th</b></h6>
-                  <p>Biro Umum & Organisasi</p>
+                  <h6 class="bold dark"><b>Pdt. Parsaoran Sinaga, M.Min., M.Th</b></h6>
+                  <p>Departemen Diakonat</p>
                 </div>
               </div>
               <div class="text-center thumbnail-age">
@@ -194,10 +194,10 @@ export default {
                 </div>
               </div>
               <div class="text-center thumbnail-age">
-                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/parsaoran-sinaga.svg" alt="">
+                <img class="kiddy-people" src="@/assets/images/pimpinan-sinode/rudolf-pakpahan.svg" alt="">
                 <div class="detail-wrapper mt-2">
-                  <h6 class="bold dark"><b>Pdt. Parsaoran Sinaga, M.Min., M.Th</b></h6>
-                  <p>Departemen Diakonat</p>
+                  <h6 class="bold dark"><b>Pdt. Rudolf G. Pakpahan, M.Th</b></h6>
+                  <p>Biro Umum & Organisasi</p>
                 </div>
               </div>
               <div class="text-center thumbnail-age">
